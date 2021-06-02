@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rocks.png">
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="rocks instance 10000" x="0" y="0" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10001" x="1730" y="0" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10002" x="3460" y="0" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10003" x="5190" y="0" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10004" x="0" y="956" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10005" x="1730" y="956" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10006" x="3460" y="956" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10007" x="5190" y="956" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10008" x="0" y="1912" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10009" x="1730" y="1912" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10010" x="3460" y="1912" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10011" x="5190" y="1912" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10012" x="0" y="2868" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10013" x="1730" y="2868" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10014" x="3460" y="2868" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10015" x="5190" y="2868" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10016" x="0" y="3824" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10017" x="1730" y="3824" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10018" x="3460" y="3824" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10019" x="5190" y="3824" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10020" x="0" y="4780" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10021" x="1730" y="4780" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10022" x="3460" y="4780" width="1730" height="956"/>
+	<SubTexture name="rocks instance 10023" x="5190" y="4780" width="1730" height="956"/>
+</TextureAtlas>

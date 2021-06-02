@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="FNF_main_menu_assets.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="donate basic0000" x="0" y="0" width="444" height="117"/>
+	<SubTexture name="donate basic0001" x="0" y="0" width="444" height="117"/>
+	<SubTexture name="donate basic0002" x="0" y="0" width="444" height="117"/>
+	<SubTexture name="donate basic0003" x="444" y="0" width="444" height="117"/>
+	<SubTexture name="donate basic0004" x="444" y="0" width="444" height="117"/>
+	<SubTexture name="donate basic0005" x="444" y="0" width="444" height="117"/>
+	<SubTexture name="donate basic0006" x="888" y="0" width="444" height="117"/>
+	<SubTexture name="donate basic0007" x="888" y="0" width="444" height="117"/>
+	<SubTexture name="donate basic0008" x="888" y="0" width="444" height="117"/>
+	<SubTexture name="donate white0000" x="1332" y="0" width="590" height="159"/>
+	<SubTexture name="donate white0001" x="1922" y="0" width="590" height="159"/>
+	<SubTexture name="donate white0002" x="2512" y="0" width="590" height="159"/>
+	<SubTexture name="freeplay basic0000" x="3102" y="0" width="294" height="128"/>
+	<SubTexture name="freeplay basic0001" x="3102" y="0" width="294" height="128"/>
+	<SubTexture name="freeplay basic0002" x="3102" y="0" width="294" height="128"/>
+	<SubTexture name="freeplay basic0003" x="3396" y="0" width="294" height="128"/>
+	<SubTexture name="freeplay basic0004" x="3690" y="0" width="294" height="128"/>
+	<SubTexture name="freeplay basic0005" x="3690" y="0" width="294" height="128"/>
+	<SubTexture name="freeplay basic0006" x="0" y="159" width="294" height="128"/>
+	<SubTexture name="freeplay basic0007" x="0" y="159" width="294" height="128"/>
+	<SubTexture name="freeplay basic0008" x="294" y="159" width="294" height="128"/>
+	<SubTexture name="freeplay white0000" x="588" y="159" width="428" height="186"/>
+	<SubTexture name="freeplay white0001" x="1016" y="159" width="428" height="186"/>
+	<SubTexture name="freeplay white0002" x="1444" y="159" width="428" height="186"/>
+	<SubTexture name="options basic0000" x="1872" y="159" width="487" height="111"/>
+	<SubTexture name="options basic0001" x="1872" y="159" width="487" height="111"/>
+	<SubTexture name="options basic0002" x="1872" y="159" width="487" height="111"/>
+	<SubTexture name="options basic0003" x="2359" y="159" width="487" height="111"/>
+	<SubTexture name="options basic0004" x="2359" y="159" width="487" height="111"/>
+	<SubTexture name="options basic0005" x="2359" y="159" width="487" height="111"/>
+	<SubTexture name="options basic0006" x="2846" y="159" width="487" height="111"/>
+	<SubTexture name="options basic0007" x="2846" y="159" width="487" height="111"/>
+	<SubTexture name="options basic0008" x="2846" y="159" width="487" height="111"/>
+	<SubTexture name="options white0000" x="3333" y="159" width="610" height="163"/>
+	<SubTexture name="options white0001" x="0" y="345" width="610" height="163"/>
+	<SubTexture name="options white0002" x="610" y="345" width="610" height="163"/>
+	<SubTexture name="story mode basic0000" x="1220" y="345" width="615" height="122"/>
+	<SubTexture name="story mode basic0001" x="1220" y="345" width="615" height="122"/>
+	<SubTexture name="story mode basic0002" x="1220" y="345" width="615" height="122"/>
+	<SubTexture name="story mode basic0003" x="1835" y="345" width="615" height="122"/>
+	<SubTexture name="story mode basic0004" x="1835" y="345" width="615" height="122"/>
+	<SubTexture name="story mode basic0005" x="1835" y="345" width="615" height="122"/>
+	<SubTexture name="story mode basic0006" x="2450" y="345" width="615" height="122"/>
+	<SubTexture name="story mode basic0007" x="2450" y="345" width="615" height="122"/>
+	<SubTexture name="story mode basic0008" x="2450" y="345" width="615" height="122"/>
+	<SubTexture name="story mode white0000" x="3065" y="345" width="796" height="181"/>
+	<SubTexture name="story mode white0001" x="0" y="526" width="796" height="181"/>
+	<SubTexture name="story mode white0002" x="796" y="526" width="796" height="181"/>
+</TextureAtlas>

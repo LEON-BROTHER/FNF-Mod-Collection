@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pillars_break.png">
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="pillars cracking0000" x="0" y="0" width="1825" height="1025"/>
+	<SubTexture name="pillars cracking0001" x="1825" y="0" width="1825" height="1025"/>
+	<SubTexture name="pillars cracking0002" x="0" y="1025" width="1825" height="1025"/>
+	<SubTexture name="pillars cracking0003" x="1825" y="1025" width="1825" height="1025"/>
+	<SubTexture name="pillars cracking0004" x="0" y="2050" width="1825" height="1025"/>
+</TextureAtlas>

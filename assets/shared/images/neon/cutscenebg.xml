@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cutscenebg.png">
+	<!-- Created with Adobe Animate version 20.0.0.37000 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cutscene10000" x="0" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10001" x="0" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10002" x="650" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10003" x="650" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10004" x="1300" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10005" x="1300" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10006" x="1950" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10007" x="1950" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10008" x="1300" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10009" x="1300" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10010" x="0" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10011" x="0" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10012" x="650" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10013" x="650" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10014" x="1300" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10015" x="1300" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10016" x="1950" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10017" x="1950" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10018" x="1300" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10019" x="1300" y="0" width="640" height="360" />
+
+	<SubTexture name="cutscene10024" x="0" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10025" x="0" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10026" x="650" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10027" x="650" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10028" x="1300" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10029" x="1300" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10030" x="1950" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10031" x="1950" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10032" x="1300" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10033" x="1300" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10033" x="0" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10025" x="0" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10034" x="650" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10027" x="650" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10035" x="1300" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10029" x="1300" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10036" x="1950" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10037" x="1950" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10038" x="1300" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10039" x="1300" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10040" x="0" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10041" x="0" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10042" x="650" y="0" width="640" height="360" />
+	<SubTexture name="cutscene10043" x="1300" y="0" width="640" height="360" />
+	
+	<SubTexture name="cutscene10044" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10045" x="0" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10046" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10047" x="650" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10048" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10049" x="1300" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10050" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10051" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10052" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10053" x="1300" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10054" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10055" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10056" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10057" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10058" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10059" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10060" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10061" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10062" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10063" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10064" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10065" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10066" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10067" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10068" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10069" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10070" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10071" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10072" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10073" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10074" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10075" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10076" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10077" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10078" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10079" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10080" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10081" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10082" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10083" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10084" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10085" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10086" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10087" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10088" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10089" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10090" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10091" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10092" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10093" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10094" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10095" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10096" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10097" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10098" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10099" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10100" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10101" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10102" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10103" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10104" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10105" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10106" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10107" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10108" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10109" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10110" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10111" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10112" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10113" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10114" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10115" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10116" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10117" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10118" x="0" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10119" x="0" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10120" x="650" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10121" x="650" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10122" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10123" x="1300" y="370" width="640" height="360" />
+	                                 
+	<SubTexture name="cutscene10124" x="1950" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10640" x="1950" y="370" width="640" height="360" />
+	
+	<SubTexture name="cutscene10126" x="1300" y="370" width="640" height="360" />
+	<SubTexture name="cutscene10127" x="1300" y="370" width="640" height="360" />
+	
+</TextureAtlas>

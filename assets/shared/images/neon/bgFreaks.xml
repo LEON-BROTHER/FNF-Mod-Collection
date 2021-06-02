@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="blank.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BG fangirls dissuaded0000" x="0" y="0" width="1" height="1"/>
+	<SubTexture name="BG girls group0000" x="0" y="0" width="1" height="1"/>
+</TextureAtlas>
