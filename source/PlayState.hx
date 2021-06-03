@@ -132,6 +132,11 @@ class PlayState extends MusicBeatState
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 
 	var halloweenBG:FlxSprite;
+	var halloweenBG3:FlxSprite;
+	var halloweenBG4:FlxSprite;
+	var halloweenBG5:FlxSprite;
+	var halloweenBG6:FlxSprite;
+	var halloweenBG7:FlxSprite;
 	var curl1:FlxSprite;
 	var curl2:FlxSprite;
 	var curl3:FlxSprite;
@@ -2545,97 +2550,128 @@ class PlayState extends MusicBeatState
 				var waveEffectBG = new FlxWaveEffect(FlxWaveMode.ALL, 2, -1, 3, 2); // creo que esta weá no hace nada
 			}
 		}
-		else if (SONG.song.toLowerCase() == 'ugh' || SONG.song.toLowerCase() == 'guns')
+		else if (SONG.song.toLowerCase() == 'ugh' || SONG.song.toLowerCase() == 'guns' || SONG.song.toLowerCase() == 'stress')
 		{
 			defaultCamZoom = 0.9;
 			curStage = 'tankman1';
-			var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('tank/tankSky'));
+			var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('tank/tankSky'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.1, 0.1);
 			bg.active = false;
 			add(bg);
 
-			var stageCurtains:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('tank/tankClouds'));
+			var stageCurtains:FlxSprite = new FlxSprite(-700,-100).loadGraphic(Paths.image('tank/tankClouds'));
 			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.3));
 			stageCurtains.updateHitbox();
 			stageCurtains.antialiasing = true;
 			stageCurtains.scrollFactor.set(0.1, 0.1);
 			stageCurtains.active = false;
 			add(stageCurtains);
-			var stageCurtains1:FlxSprite = new FlxSprite(-120, -100).loadGraphic(Paths.image('tank/tankMountains'));
-			stageCurtains1.setGraphicSize(Std.int(stageCurtains.width * 0.7));
+			var stageCurtains1:FlxSprite = new FlxSprite(-300,-20).loadGraphic(Paths.image('tank/tankMountains'));
+			stageCurtains1.setGraphicSize(Std.int(stageCurtains1.width * 1.2));
 			stageCurtains1.updateHitbox();
 			stageCurtains1.antialiasing = true;
-			stageCurtains1.scrollFactor.set(0.1, 0.1);
+			stageCurtains1.scrollFactor.set(0.2, 0.2);
 			stageCurtains1.active = false;
 			add(stageCurtains1);
-			var stageCurtains2:FlxSprite = new FlxSprite(-180, 10).loadGraphic(Paths.image('tank/tankBuildings'));
+			var stageCurtains2:FlxSprite = new FlxSprite(-200,0).loadGraphic(Paths.image('tank/tankBuildings'));
 			stageCurtains2.setGraphicSize(Std.int(stageCurtains2.width * 1.1));
 			stageCurtains2.updateHitbox();
 			stageCurtains2.antialiasing = true;
-			stageCurtains2.scrollFactor.set(0.1, 0.1);
+			stageCurtains2.scrollFactor.set(0.3, 0.3);
 			stageCurtains2.active = false;
 			add(stageCurtains2);
 			var stageCurtains3:FlxSprite = new FlxSprite(-180, 10).loadGraphic(Paths.image('tank/tankRuins'));
 			stageCurtains3.setGraphicSize(Std.int(stageCurtains3.width * 1.1));
 			stageCurtains3.updateHitbox();
 			stageCurtains3.antialiasing = true;
-			stageCurtains3.scrollFactor.set(0.1, 0.1);
+			stageCurtains3.scrollFactor.set(0.35, 0.35);
 			stageCurtains3.active = false;
 			add(stageCurtains3);
-			var stageCurtains4:FlxSprite = new FlxSprite(-250, 40).loadGraphic(Paths.image('tank/tankGround'));
-			stageCurtains4.setGraphicSize(Std.int(stageCurtains.width * 0.7));
+			var hallowTex1 = Paths.getSparrowAtlas('tank/smokeLeft');
+			var halloweenBG1:FlxSprite = new FlxSprite(-200,-100);
+			halloweenBG1.frames = hallowTex1;
+			halloweenBG1.animation.addByPrefix('idle', 'SmokeBlurLeft');
+			halloweenBG1.animation.play('idle');
+			halloweenBG1.antialiasing = true;
+			halloweenBG1.scrollFactor.set(0.4, 0.4);
+			add(halloweenBG1);
+			var hallowTex2 = Paths.getSparrowAtlas('tank/smokeRight');
+			var halloweenBG2:FlxSprite = new FlxSprite(1100,-100);
+			halloweenBG2.frames = hallowTex2;
+			halloweenBG2.animation.addByPrefix('idle', 'SmokeRight');
+			halloweenBG2.animation.play('idle');
+			halloweenBG2.antialiasing = true;
+			halloweenBG2.scrollFactor.set(0.4, 0.4);
+			add(halloweenBG2);
+			var hallowTex = Paths.getSparrowAtlas('tank/tankWatchtower');
+			halloweenBG = new FlxSprite(100, 50);
+			halloweenBG.frames = hallowTex;
+			halloweenBG.animation.addByPrefix('idle', 'watchtower gradient color', false);
+			halloweenBG.antialiasing = true;
+			halloweenBG.scrollFactor.set(0.55, 0.55);
+			add(halloweenBG);
+			
+			var stageCurtains4:FlxSprite = new FlxSprite(-420,-150).loadGraphic(Paths.image('tank/tankGround'));
+			stageCurtains4.setGraphicSize(Std.int(stageCurtains4.width * 1.15));
 			stageCurtains4.updateHitbox();
 			stageCurtains4.antialiasing = true;
 			stageCurtains4.scrollFactor.set(1.1, 1.1);
 			stageCurtains4.active = false;
 			add(stageCurtains4);
-		}
-		else if (SONG.song.toLowerCase() == 'stress')
-		{
-			defaultCamZoom = 0.9;
-			curStage = 'tankman2';
-			var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('tank/tankSky'));
-			bg.antialiasing = true;
-			bg.scrollFactor.set(0.1, 0.1);
-			bg.active = false;
-			add(bg);
+			var stageCurtains4:FlxSprite = new FlxSprite(-420,-150).loadGraphic(Paths.image('tank/tankGround'));
+			stageCurtains4.setGraphicSize(Std.int(stageCurtains4.width * 1.15));
+			stageCurtains4.updateHitbox();
+			stageCurtains4.antialiasing = true;
+			stageCurtains4.scrollFactor.set(1.1, 1.1);
+			stageCurtains4.active = false;
+			add(stageCurtains4);
 
-			var stageCurtains:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('tank/tankClouds'));
-			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.3));
-			stageCurtains.updateHitbox();
-			stageCurtains.antialiasing = true;
-			stageCurtains.scrollFactor.set(0.1, 0.1);
-			stageCurtains.active = false;
-			add(stageCurtains);
-			var stageCurtains1:FlxSprite = new FlxSprite(-100, 100).loadGraphic(Paths.image('tank/tankMountains'));
-			stageCurtains1.setGraphicSize(Std.int(stageCurtains.width * 0.7));
-			stageCurtains1.updateHitbox();
-			stageCurtains1.antialiasing = true;
-			stageCurtains1.scrollFactor.set(0.1, 0.1);
-			stageCurtains1.active = false;
-			add(stageCurtains1);
-			var stageCurtains2:FlxSprite = new FlxSprite(-150, 100).loadGraphic(Paths.image('tank/tankBuildings'));
-			stageCurtains2.setGraphicSize(Std.int(stageCurtains2.width * 4.0));
-			stageCurtains2.updateHitbox();
-			stageCurtains2.antialiasing = true;
-			stageCurtains2.scrollFactor.set(0.1, 0.1);
-			stageCurtains2.active = false;
-			add(stageCurtains2);
-			var stageCurtains3:FlxSprite = new FlxSprite(-150, 100).loadGraphic(Paths.image('tank/tankRuins'));
-			stageCurtains3.setGraphicSize(Std.int(stageCurtains3.width * 4.0));
-			stageCurtains3.updateHitbox();
-			stageCurtains3.antialiasing = true;
-			stageCurtains3.scrollFactor.set(0.1, 0.1);
-			stageCurtains3.active = false;
-			add(stageCurtains3);
-			var stageCurtains4:FlxSprite = new FlxSprite(-250, 0).loadGraphic(Paths.image('tank/tankGround'));
-			stageCurtains4.setGraphicSize(Std.int(stageCurtains.width * 0.7));
-			stageCurtains4.updateHitbox();
-			stageCurtains4.antialiasing = true;
-			stageCurtains4.scrollFactor.set(1.1, 1.1);
-			stageCurtains4.active = false;
-			add(stageCurtains4);
+			var hallowTex3 = Paths.getSparrowAtlas('tank/tank0');
+			halloweenBG3 = new FlxSprite(-500,650);
+			halloweenBG3.frames = hallowTex3;
+			halloweenBG3.animation.addByPrefix('idle', 'fg', false);
+			halloweenBG3.antialiasing = true;
+			halloweenBG3.scrollFactor.set(1.7, 1.5);
+		
+
+			var hallowTex4 = Paths.getSparrowAtlas('tank/tank1');
+			halloweenBG4 = new FlxSprite(-300,750);
+			halloweenBG4.frames = hallowTex4;
+			halloweenBG4.animation.addByPrefix('idle', 'fg', false);
+			halloweenBG4.antialiasing = true;
+			halloweenBG4.scrollFactor.set(2.0, 0.2);
+	
+
+			var hallowTex5 = Paths.getSparrowAtlas('tank/tank2');
+			halloweenBG5 = new FlxSprite(450,940);
+			halloweenBG5.frames = hallowTex5;
+			halloweenBG5.animation.addByPrefix('idle', 'foreground', false);
+			halloweenBG5.antialiasing = true;
+			halloweenBG5.scrollFactor.set(1.5, 1.5);
+
+
+			
+	
+
+			var hallowTex6 = Paths.getSparrowAtlas('tank/tank4');
+			halloweenBG6 = new FlxSprite(1300,900);
+			halloweenBG6.frames = hallowTex6;
+			halloweenBG6.animation.addByPrefix('idle', 'fg', false);
+			halloweenBG6.antialiasing = true;
+			halloweenBG6.scrollFactor.set(1.5, 1.5);
+		
+
+			var hallowTex7 = Paths.getSparrowAtlas('tank/tank5');
+			halloweenBG7 = new FlxSprite(1620,700);
+			halloweenBG7.frames = hallowTex7;
+			halloweenBG7.animation.addByPrefix('idle', 'fg', false);
+			halloweenBG7.antialiasing = true;
+			halloweenBG7.scrollFactor.set(1.5, 1.5);
+			add(halloweenBG7);
+			
+
+
 		}
 		else if (SONG.song.toLowerCase() == 'always-running')
 		{
@@ -3196,7 +3232,7 @@ class PlayState extends MusicBeatState
 		if (curStage == 'touhou')
 			add(limo);
 
-		if (curStage != 'tankman2')
+		if (SONG.song.toLowerCase() != 'stress')
 			if (curStage != 'limo-star')
 				if (curStage != 'eddhouse')
 					add(gf);
@@ -3212,6 +3248,13 @@ class PlayState extends MusicBeatState
 			add(stageFront);
 		if (curStage == 'garl')
 			add(halloweenBG);
+		if (curStage == 'tankman1')
+			add(halloweenBG3);
+			add(halloweenBG4);
+			add(halloweenBG5);
+			add(halloweenBG6);
+			add(halloweenBG7);
+
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
 		// doof.x += 70;
 		// doof.y = FlxG.height * 0.5;
@@ -4966,14 +5009,12 @@ class PlayState extends MusicBeatState
 
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 				FlxG.sound.music.stop();
-				switch(SONG.song.toLowerCase())
-				{
-					
-					case 'ugh':
-						LoadingState.loadAndSwitchState(new VideoState("assets/videos/ughCutscene.webm",new PlayState()));
-					default:
-						LoadingState.loadAndSwitchState(new PlayState());
-				}
+				
+				if (SONG.song == 'Guns')
+					LoadingState.loadAndSwitchState(new VideoState("assets/videos/gunsCutscene.webm",new PlayState()));
+				if (SONG.song == 'Stress')
+					LoadingState.loadAndSwitchState(new VideoState("assets/videos/stressCutscene.webm",new PlayState()));
+				
 				
 
 			
@@ -6082,7 +6123,13 @@ class PlayState extends MusicBeatState
 				bgGirls.dance();
 			case 'school-b':
 				bgGirls.dance();
-
+			case 'tankman1':
+				halloweenBG.animation.play('idle', true);
+				halloweenBG3.animation.play('idle', true);
+				halloweenBG4.animation.play('idle', true);
+				halloweenBG5.animation.play('idle', true);
+				halloweenBG6.animation.play('idle', true);
+				halloweenBG7.animation.play('idle', true);
 			case 'mall':
 				upperBoppers.animation.play('bop', true);
 				bottomBoppers.animation.play('bop', true);

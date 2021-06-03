@@ -1184,18 +1184,18 @@ class Character extends FlxSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'Tankman Idle Dance instance 1', 24);
 				animation.addByPrefix('singUP', 'Tankman UP note instance 1', 24);
-				animation.addByPrefix('singRIGHT', 'Tankman Right Note instance 1', 24);
+				animation.addByPrefix('singRIGHT', 'Tankman Note Left instance 1', 24);
 				animation.addByPrefix('singDOWN', 'Tankman DOWN note instance 1', 24);
 				animation.addByPrefix('singDOWN-alt', 'PRETTY GOOD tankman instance 1', 24);
 
 				animation.addByPrefix('ugh', 'TANKMAN UGH instance 1', 24);
-				animation.addByPrefix('singLEFT', 'Tankman Note Left instance 1', 24);
+				animation.addByPrefix('singLEFT', 'Tankman Right Note instance 1', 24);
 
 				addOffset('idle');
 				addOffset("singUP", 24, 56);
 				addOffset("ugh", -16, -8);
-				addOffset("singRIGHT", 109, -17);
-				addOffset("singLEFT", -10, -24);
+				addOffset("singRIGHT", -21, -27);
+				addOffset("singLEFT", 70, -14);
 
 				addOffset("singDOWN", 58, -110);
 
