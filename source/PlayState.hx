@@ -7,6 +7,7 @@ import Section.SwagSection;
 import Song.SwagSong;
 import WiggleEffect.WiggleEffectType;
 import PauseSubState;
+import openfl.media.Video;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -60,7 +61,7 @@ class PlayState extends MusicBeatState
 	public static var mania:Int = 0;
 	public static var keyAmmo:Array<Int> = [4, 6, 9];
 
-	public static var bfsel:Int = 0;
+	public static var bfsel:Int = 5000;
 
 	var babymodep:String = PauseSubState.babymode;
 	var sickmode:String = PauseSubState.sickmode;
@@ -4965,8 +4966,17 @@ class PlayState extends MusicBeatState
 
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 				FlxG.sound.music.stop();
+				switch(SONG.song.toLowerCase())
+				{
+					
+					case 'ugh':
+						LoadingState.loadAndSwitchState(new VideoState("assets/videos/ughCutscene.webm",new PlayState()));
+					default:
+						LoadingState.loadAndSwitchState(new PlayState());
+				}
+				
 
-				LoadingState.loadAndSwitchState(new PlayState());
+			
 			}
 		}
 		else

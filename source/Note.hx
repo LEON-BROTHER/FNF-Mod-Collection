@@ -236,34 +236,8 @@ class Note extends FlxSprite
 				prevNote.animation.play(frameN[prevNote.noteData] + 'hold');
 				
 				
-				if (FlxG.save.data.down == 'down' && PlayState.SONG.speed < 2.0)
-				{
-					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.0 * PlayState.SONG.speed;
-					trace('0');
-				}
-
 			
-
-				else if (FlxG.save.data.down == 'down' && PlayState.SONG.speed > 1.9 && PlayState.SONG.speed < 2.6)  
-				{ 
-					prevNote.scale.y *= Conductor.stepCrochet / 100 * 0.9 * PlayState.SONG.speed;
-					trace('1');
-				}
-				else if (FlxG.save.data.down == 'down' && PlayState.SONG.speed > 2.5 && PlayState.SONG.speed < 2.9) 
-				{
-					prevNote.scale.y *= Conductor.stepCrochet / 100 * 0.8 * PlayState.SONG.speed;
-					trace('2');
-				}
-				else if (FlxG.save.data.down == 'down' && PlayState.SONG.speed > 2.9) 
-				{
-					prevNote.scale.y *= Conductor.stepCrochet / 100 * 0.7 * PlayState.SONG.speed;
-					trace('3');
-				}
-				else
-				{
-					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * PlayState.SONG.speed * (0.7 / noteScale);
-					trace('Upscroll');
-				}
+				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * PlayState.SONG.speed * (0.7 / noteScale);
 				prevNote.updateHitbox();
 				// prevNote.setGraphicSize();
 			}
