@@ -58,8 +58,6 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-	
-
 		#if ng
 		var ng:NGio = new NGio(APIStuff.API, APIStuff.EncKey);
 		trace('NEWGROUNDS LOL');
@@ -69,15 +67,19 @@ class TitleState extends MusicBeatState
 
 		if (FlxG.save.data.controlstype == null)
 			FlxG.save.data.controlstype = 'wasd';
-			FlxG.save.flush();
 		if (FlxG.save.data.down == null)
 			FlxG.save.data.down = 'up';
-			FlxG.save.flush();
+		if (FlxG.save.data.week7Cut == null)
+			FlxG.save.data.week7Cut = 'Yes';
+		if (FlxG.save.data.bobCrash == null)
+			FlxG.save.data.bobCrash = 'No';
+		FlxG.save.flush();
 		trace('Controls: ' + FlxG.save.data.controlstype);
+		trace('Week 7 Cutscene: ' + FlxG.save.data.week7Cut);
+		trace('Bob Crash: ' + FlxG.save.data.bobCrash);
 		trace('Scroll?: ' + FlxG.save.data.down);
-		
-	
-		
+
+		CachedFrames.loadEverything();
 
 		Highscore.load();
 
@@ -109,7 +111,6 @@ class TitleState extends MusicBeatState
 		#if desktop
 		DiscordClient.initialize();
 		#end
-
 	}
 
 	var logoBl:FlxSprite;
@@ -272,9 +273,23 @@ class TitleState extends MusicBeatState
 	}
 
 	var transitioning:Bool = false;
+	var once:Bool = false;
 
 	override function update(elapsed:Float)
 	{
+		if (!CachedFrames.cachedInstance.loaded)
+		{
+		}
+		else if (!once)
+		{
+			once = true;
+			new FlxTimer().start(1.2, function(tmr:FlxTimer)
+			{
+				canSkip = true;
+				startIntro();
+			});
+		}
+
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
 		// FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
@@ -321,7 +336,6 @@ class TitleState extends MusicBeatState
 
 			titleText.animation.play('press');
 
-			
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
 			transitioning = true;
@@ -329,21 +343,20 @@ class TitleState extends MusicBeatState
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
-
-	
 				FlxG.switchState(new OutdatedSubState());
-				
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}
 
-		if (pressedEnter && !skippedIntro)
+		if (pressedEnter && !skippedIntro && CachedFrames.cachedInstance.loaded && canSkip)
 		{
 			skipIntro();
 		}
 
 		super.update(elapsed);
 	}
+
+	var canSkip = false;
 
 	function createCoolText(textArray:Array<String>)
 	{
@@ -400,7 +413,6 @@ class TitleState extends MusicBeatState
 
 		switch (curBeat)
 		{
-			
 			case 5:
 				createCoolText(['leon brother', '', 'the makers of', 'fnf', 'and the mod makers']);
 			// credTextShit.visible = true;
@@ -452,7 +464,6 @@ class TitleState extends MusicBeatState
 				FlxG.camera.flash(FlxColor.WHITE, 2);
 				gfDance5.visible = false;
 				gfDance4.visible = true;
-
 		}
 	}
 

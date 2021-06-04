@@ -126,12 +126,11 @@ class HealthIcon extends FlxSprite
 		animation.add('anders-fearsome', [158, 159], 0, false, isPlayer);
 		animation.add('tari', [160, 161], 0, false, isPlayer);
 		animation.add('belle', [162, 163], 0, false, isPlayer);
-
-
-
-
-
-
+		animation.add('bob', [164, 165], 0, false, isPlayer);
+		animation.add('angrybob', [164, 165], 0, false, isPlayer);
+		animation.add('hellbob', [166, 166], 0, false, isPlayer);
+		animation.add('trickyH', [167, 168], 0, false, isPlayer);
+		animation.add('exTricky', [169, 170], 0, false, isPlayer);
 
 		animation.play(char);
 		scrollFactor.set();

@@ -39,12 +39,23 @@ class GameOverSubstate extends MusicBeatSubstate
 				stageSuffix = '-pixel';
 				daBf = 'bf-pixel-dead';
 			case 'stage-neo' | 'limo-neo' | 'spooky-neo' | 'philly-neo':
-				daBf= 'bf-neo';
+				daBf = 'bf-neo';
 			case 'stage-b' | 'limo-b' | 'spooky-b' | 'philly-b' | 'mall-b' | 'mallEvil-b':
-				daBf= 'bf-b';
+				daBf = 'bf-b';
 			case 'stage-star' | 'spooky-star' | 'philly-star' | 'limo-star':
-				daBf= 'bf-star';
+				daBf = 'bf-star';
 				stageSuffix = '-star';
+			case 'hellstage':
+				if (FlxG.save.data.bobCrash == 'Yes')
+				{
+					daBf = 'fdkapojiokfsdj';
+				}
+				else
+				{
+					daBf = 'bf';
+				}
+			case 'nevada' | 'nevadaSpook' | 'auditorHell':
+				daBf = 'signDeath';
 			default:
 				daBf = 'bf';
 		}
@@ -121,7 +132,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			isEnding = true;
 			bf.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
-		
+
 			FlxG.sound.play(Paths.music('gameOverEnd' + stageSuffix));
 			new FlxTimer().start(0.7, function(tmr:FlxTimer)
 			{

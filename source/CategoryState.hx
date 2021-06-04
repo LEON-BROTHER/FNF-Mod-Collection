@@ -14,50 +14,35 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 
-
 class CategoryState extends MusicBeatState
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
-	public var menuItems:Array<String> = ['Normal','Annie','Anders','B-Sides','Beatstreets','Carol','Chara','Duet Mod','Duet B-Sides','Garcello','Hex','Kapi','Matt','Miku','Mid-Fight-Masses','Neo','Neon','Sans','Sky','Shaggy','Starcatcher','Tord','Touhou','X-Event','Y Mods','Singles'];
+
+	public var menuItems:Array<String> = [
+		'Normal', 'Annie', 'Anders', 'B-Sides', 'Beatstreets', 'Bob', 'Carol', 'Chara', 'Duet Mod', 'Duet B-Sides', 'Garcello', 'Hex', 'Kapi', 'Matt', 'Miku',
+		'Mid-Fight-Masses', 'Neo', 'Neon', 'Sans', 'Sky', 'Shaggy', 'Starcatcher', 'Tord', 'Tricky', 'Touhou', 'Whitty', 'X-Event', 'Zardy', 'Singles'
+	];
 
 	public var curSelected:Int = 0;
 
 	public var pauseMusic:FlxSound;
+
 	public static var playlist:Int;
 	public static var chara:Int;
-	
-	
 
-
-	
 	override function create()
 	{
-		
-		
-	
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		if (CategoryState.chara != 1)
 			bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
-	 	else
-		    bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
+		else
+			bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
 		bg.scrollFactor.set();
 		add(bg);
 
-	
-
-
-	
-	
-		
-	
-
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('category'), true, true);
 
-
 		FlxG.sound.list.add(pauseMusic);
-
-
-
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
@@ -97,7 +82,7 @@ class CategoryState extends MusicBeatState
 		{
 			changeSelection(1);
 		}
-		
+
 		if (controls.BACK)
 		{
 			FlxG.switchState(new MainMenuState());
@@ -105,7 +90,6 @@ class CategoryState extends MusicBeatState
 		if (accepted)
 		{
 			var daSelected:String = menuItems[curSelected];
-			
 
 			switch (daSelected)
 			{
@@ -115,7 +99,7 @@ class CategoryState extends MusicBeatState
 
 					playlist = 1;
 					FlxG.switchState(new FreeplayState());
-                case "Neo":
+				case "Neo":
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
 
@@ -126,13 +110,6 @@ class CategoryState extends MusicBeatState
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					playlist = 3;
-					FlxG.switchState(new FreeplayState());
-			
-				case "Y Mods":
-					transIn = FlxTransitionableState.defaultTransIn;
-					transOut = FlxTransitionableState.defaultTransOut;
-
-					playlist = 4;
 					FlxG.switchState(new FreeplayState());
 				case "Singles":
 					transIn = FlxTransitionableState.defaultTransIn;
@@ -149,19 +126,19 @@ class CategoryState extends MusicBeatState
 				case "Carol":
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
-		
+
 					playlist = 9;
 					FlxG.switchState(new FreeplayState());
 				case "Sky":
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
-					
+
 					playlist = 10;
 					FlxG.switchState(new FreeplayState());
 				case "Duet Mod":
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
-					
+
 					playlist = 5;
 					FlxG.switchState(new FreeplayState());
 				case "Duet B-Sides":
@@ -170,8 +147,6 @@ class CategoryState extends MusicBeatState
 					playlist = 8;
 					FlxG.switchState(new FreeplayState());
 				case "Miku":
-					
-					
 					playlist = 11;
 					FlxG.switchState(new FreeplayState());
 				case "Touhou":
@@ -257,11 +232,31 @@ class CategoryState extends MusicBeatState
 
 					playlist = 26;
 					FlxG.switchState(new FreeplayState());
-				
-				
+				case "Bob":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 27;
+					FlxG.switchState(new FreeplayState());
+				case "Tricky":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 28;
+					FlxG.switchState(new FreeplayState());
+				case "Whitty":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 29;
+					FlxG.switchState(new FreeplayState());
+				case "Zardy":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 30;
+					FlxG.switchState(new FreeplayState());
 			}
-
-
 		}
 
 		if (FlxG.keys.justPressed.J)
