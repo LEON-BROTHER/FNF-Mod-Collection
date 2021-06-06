@@ -16,7 +16,6 @@ class Note extends FlxSprite
 	public var strumTime:Float = 0;
 
 	public var mustPress:Bool = false;
-	public var burning:Bool = false;
 	public var noteData:Int = 0;
 	public var canBeHit:Bool = false;
 
@@ -41,7 +40,7 @@ class Note extends FlxSprite
 	public static var EX2_NOTE:Int = 5;
 	public static var tooMuch:Float = 30;
 
-	public function new(strumTime:Float, _noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false)
 	{
 		swagWidth = 160 * 0.7; // factor not the same as noteScale
 		noteScale = 0.7;
@@ -74,16 +73,13 @@ class Note extends FlxSprite
 		// MAKE SURE ITS DEFINITELY OFF SCREEN?
 		y -= 2000;
 
-		burning = _noteData > 7;
+	
 		// if(!isSustainNote) { burning = Std.random(3) == 1; } //Set random notes to burning
 
 		// No held fire notes :[ (Part 1)
-		if (isSustainNote && prevNote.burning)
-		{
-			burning = true;
-		}
 
-		this.noteData = _noteData % 4;
+
+		this.noteData = noteData % 9;
 
 		this.strumTime = strumTime;
 
@@ -194,45 +190,10 @@ class Note extends FlxSprite
 				updateHitbox();
 				antialiasing = true;
 
-				if (burning)
-				{
-					if (daStage == 'auditorHell')
-					{
-						frames = Paths.getSparrowAtlas('fourth/mech/ALL_deathnotes');
-						animation.addByPrefix('greenScroll', 'Green Arrow');
-						animation.addByPrefix('redScroll', 'Red Arrow');
-						animation.addByPrefix('blueScroll', 'Blue Arrow');
-						animation.addByPrefix('purpleScroll', 'Purple Arrow');
-						x -= 165;
-					}
-					else
-					{
-						trace("fire pog");
-
-						frames = Paths.getSparrowAtlas('NOTE_fire');
-						if (!FlxG.save.data.downscroll)
-						{
-							animation.addByPrefix('blueScroll', 'blue fire');
-							animation.addByPrefix('greenScroll', 'green fire');
-						}
-						else
-						{
-							animation.addByPrefix('greenScroll', 'blue fire');
-							animation.addByPrefix('blueScroll', 'green fire');
-						}
-						animation.addByPrefix('redScroll', 'red fire');
-						animation.addByPrefix('purpleScroll', 'purple fire');
-
-						if (FlxG.save.data.downscroll)
-							flipY = true;
-
-						x -= 50;
-					}
-				}
+				
+				
 		}
 
-		if (burning)
-			setGraphicSize(Std.int(width * 0.86));
 
 		switch (noteData)
 		{
@@ -297,40 +258,18 @@ class Note extends FlxSprite
 		super.update(elapsed);
 
 				//No held fire notes :[ (Part 2)
-				if(isSustainNote && prevNote.burning) { 
-					this.kill(); 
-				}
+				
 
 		if (mustPress)
 		{
-			if (!burning)
-				{
+			
+				
 					if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset
 						&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.5))
 						canBeHit = true;
 					else
 						canBeHit = false;
-				}
-				else
-				{
-					if (PlayState.curStage == 'auditorHell') // these though, REALLY hard to hit.
-					{
-						if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * 0.3)
-							&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.2)) // also they're almost impossible to hit late!
-							canBeHit = true;
-						else
-							canBeHit = false;
-					}
-					else
-					{
-					// make burning notes a lot harder to accidently hit because they're weirdchamp!
-						if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * 0.6)
-							&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.4)) // also they're almost impossible to hit late!
-							canBeHit = true;
-						else
-							canBeHit = false;
-					}
-				}
+				
 				if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
 					tooLate = true;
 		}

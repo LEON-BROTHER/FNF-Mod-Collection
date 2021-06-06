@@ -52,24 +52,28 @@ class FreeplayState extends MusicBeatState
 				addWeek(['Tutorial'], 0, ['gf']);
 			if (StoryMenuState.weekUnlocked[1] || isDebug)
 				addWeek(['Bopeebo', 'Fresh', 'Dadbattle'], 1, ['dad']);
-
+		
 			if (StoryMenuState.weekUnlocked[2] || isDebug)
 				addWeek(['Spookeez', 'South', 'Monster'], 2, ['spooky', 'spooky', 'monster']);
-
+		
 			if (StoryMenuState.weekUnlocked[3] || isDebug)
 				addWeek(['Pico', 'Philly', 'Blammed'], 3, ['pico']);
-
+		
 			if (StoryMenuState.weekUnlocked[4] || isDebug)
 				addWeek(['Satin-Panties', 'High', 'Milf'], 4, ['mom']);
-
+		
 			if (StoryMenuState.weekUnlocked[5] || isDebug)
 				addWeek(['Cocoa', 'Eggnog', 'Winter-Horrorland'], 5, ['parents-christmas', 'parents-christmas', 'monster-christmas']);
-
+		
 			if (StoryMenuState.weekUnlocked[6] || isDebug)
 				addWeek(['Senpai', 'Roses', 'Thorns'], 6, ['senpai', 'senpai', 'spirit']);
-
 			if (StoryMenuState.weekUnlocked[7] || isDebug)
-				addWeek(['Ugh', 'Guns', 'Stress'], 7, ['tankman', 'tankman', 'tankman']);
+				addWeek(['Ugh', 'Guns', 'Stress'], 7, ['tankman']);
+			
+
+			
+	
+		
 		}
 		if (CategoryState.playlist == 2)
 		{
@@ -93,10 +97,62 @@ class FreeplayState extends MusicBeatState
 			if (StoryMenuState.weekUnlocked[15] || isDebug)
 				addWeek(['Satin-Panties-B-Sides', 'High-B-Sides', 'Milf-B-Sides'], 15, ['mom-car-b']);
 			if (StoryMenuState.weekUnlocked[16] || isDebug)
-				addWeek(['Cocoa-B-Sides', 'Eggnog-B-Sides', 'W-HL-B-Sides'], 16, ['parents-christmas-b', 'parents-christmas-b', 'monster-christmas-b']);
+				addWeek(['Cocoa-B-Sides', 'Eggnog-B-Sides', 'W-HL-B-Sides'], 16, ['parents-christmas-b', 'parents-christmas-b','monster-christmas-b']);
 			if (StoryMenuState.weekUnlocked[17] || isDebug)
-				addWeek(['Senpai-B-Sides', 'Roses-B-Sides', 'Thorns-B-Sides'], 17, ['senpai-b', 'senpai-b', 'spirit-b']);
+				addWeek(['Senpai-B-Sides', 'Roses-B-Sides', 'Thorns-B-Sides'], 17, ['senpai-b', 'senpai-b','spirit-b']);
+		
 		}
+		if (CategoryState.playlist == 27)
+			{
+				if (StoryMenuState.weekUnlocked[35] || isDebug)
+					addWeek(['Sunshine', 'Withered'], 35, ['bob', 'angrybob']);
+	
+				if (StoryMenuState.weekUnlocked[35] || isDebug)
+					addWeek([
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
+						'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run'
+					], 35, ['hellbob']);
+			}
+	
+		if (CategoryState.playlist == 28)
+			{
+				if (StoryMenuState.weekUnlocked[35] || isDebug)
+					addWeek(['Improbable-Outset', 'Madness', 'Hellclown', 'Expurgation'], 35, ['trickyMask', 'tricky', 'trickyH', 'exTricky']);
+			}
+	
+		if (CategoryState.playlist == 29)
+			{
+				if (StoryMenuState.weekUnlocked[18] || isDebug)
+					addWeek(['Lo-Fight', 'Overhead', 'Ballistic', 'Ballistic-Old'], 18, ['whitty', 'whitty', 'whitty-crazy', 'whitty-crazy']);
+			}
+	
+		if (CategoryState.playlist == 30)
+			{
+				if (StoryMenuState.weekUnlocked[30] || isDebug)
+					addWeek(['Foolhardy', 'Foolhardy-Duet'], 30, ['zardy']);
+			}
 		if (CategoryState.playlist == 5)
 		{
 			if (StoryMenuState.weekUnlocked[22] || isDebug)
@@ -108,14 +164,14 @@ class FreeplayState extends MusicBeatState
 			if (StoryMenuState.weekUnlocked[25] || isDebug)
 				addWeek(['Satin-Panties-Duet', 'High-Duet', 'Milf-Duet'], 25, ['mom-car']);
 			if (StoryMenuState.weekUnlocked[26] || isDebug)
-				addWeek(['Cocoa-Duet', 'Eggnog-Duet', 'Winter-Horrorland-Duet'], 26, ['parents-christmas', 'parents-christmas', 'monster-christmas']);
+				addWeek(['Cocoa-Duet', 'Eggnog-Duet', 'Winter-Horrorland-Duet'], 26, ['parents-christmas', 'parents-christmas','monster-christmas']);
 			if (StoryMenuState.weekUnlocked[27] || isDebug)
-				addWeek(['Senpai-Duet', 'Roses-Duet', 'Thorns-Duet'], 27, ['senpai', 'senpai', 'spirit']);
+				addWeek(['Senpai-Duet', 'Roses-Duet','Thorns-Duet'], 27, ['senpai', 'senpai','spirit']);
 		}
 		if (CategoryState.playlist == 7)
 		{
 			if (StoryMenuState.weekUnlocked[29] || isDebug)
-				addWeek(['Dunk', 'RAM', 'Hello-World', 'Glitcher', 'Encore'], 29, ['hex', 'hex', 'hex', 'hex-hack', 'hex',]);
+				addWeek(['Dunk', 'RAM', 'Hello-World', 'Glitcher', 'Encore'], 29, ['hex', 'hex', 'hex', 'hex-hack', 'hex', ]);
 		}
 		if (CategoryState.playlist == 6)
 		{
@@ -129,6 +185,7 @@ class FreeplayState extends MusicBeatState
 				addWeek(['Fresh-Remix'], 1, ['dad']);
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['Always-Running'], 35, ['belle']);
+
 		}
 		if (CategoryState.playlist == 8)
 		{
@@ -143,8 +200,8 @@ class FreeplayState extends MusicBeatState
 			if (StoryMenuState.weekUnlocked[16] || isDebug)
 				addWeek(['Cocoa-B-Sides-Duet', 'Eggnog-B-Sides-Duet'], 16, ['parents-christmas-b']);
 			if (StoryMenuState.weekUnlocked[17] || isDebug)
-				addWeek(['Senpai-B-Sides-Duet', 'Roses-B-Sides-Duet', 'Thorns-B-Sides-Duet'], 17, ['senpai-b', 'senpai-b', 'spirit-b']);
-		}
+				addWeek(['Senpai-B-Sides-Duet', 'Roses-B-Sides-Duet', 'Thorns-B-Sides-Duet'], 17, ['senpai-b', 'senpai-b','spirit-b']);
+			}
 		if (CategoryState.playlist == 9)
 		{
 			if (StoryMenuState.weekUnlocked[20] || isDebug)
@@ -153,51 +210,44 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 10)
 		{
 			if (StoryMenuState.weekUnlocked[33] || isDebug)
-				addWeek(['Wife-Forever', 'Sky', 'Manifest'], 33, ['sky', 'sky', 'sky-mad']);
+				addWeek(['Wife-Forever', 'Sky', 'Manifest'], 33, ['sky','sky','sky-mad']);	
 		}
 		if (CategoryState.playlist == 11)
 		{
 			if (StoryMenuState.weekUnlocked[33] || isDebug)
-				addWeek(['PoPiPo', 'Aishite', 'Siu', 'Disappearance', 'Chug'], 34, ['miku']);
+				addWeek(['PoPiPo','Aishite','Siu','Disappearance','Chug'], 34, ['miku']);
 		}
 		if (CategoryState.playlist == 12)
 		{
 			if (StoryMenuState.weekUnlocked[34] || isDebug)
-				addWeek(['The-Pocket-Watch-Of-Blood', 'Lunar-Dial', 'Night-of-Nights'], 34, ['touhou']);
+				addWeek(['The-Pocket-Watch-Of-Blood','Lunar-Dial','Night-of-Nights'], 34, ['touhou']);
 		}
 		if (CategoryState.playlist == 13)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek([
-					'Tutorial-Starcatcher', 'Bopeebo-Starcatcher', 'Fresh-Starcatcher', 'Dadbattle-Starcatcher', 'Spookeez-Starcatcher', 'South-Starcatcher',
-					'Sugar-Rush', 'Pico-Starcatcher', 'Philly-Starcatcher', 'Blammed-Starcatcher', 'Satin-Panties-Starcatcher', 'High-Starcatcher',
-					'Milf-Starcatcher'
-				], 35, [
-					'gf-star', 'dad-star', 'dad-star', 'dad-star', 'spooky-star', 'spooky-star', 'spooky-star', 'pico-star', 'pico-star', 'pico-star',
-					'mom-car-star', 'mom-car-star', 'mom-car-star'
-				]);
+				addWeek(['Tutorial-Starcatcher','Bopeebo-Starcatcher','Fresh-Starcatcher','Dadbattle-Starcatcher', 'Spookeez-Starcatcher', 'South-Starcatcher', 'Sugar-Rush','Pico-Starcatcher', 'Philly-Starcatcher', 'Blammed-Starcatcher', 'Satin-Panties-Starcatcher', 'High-Starcatcher', 'Milf-Starcatcher'], 35, ['gf-star','dad-star','dad-star','dad-star','spooky-star','spooky-star','spooky-star','pico-star','pico-star','pico-star','mom-car-star','mom-car-star','mom-car-star']);
 		}
 		if (CategoryState.playlist == 14)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Light-It-Up', 'Ruckus', 'Target-Practice', 'Sporting', 'Boxing-Match'], 35, ['matt', 'matt', 'matt', 'mattmad', 'mattmad']);
+				addWeek(['Light-It-Up','Ruckus','Target-Practice','Sporting', 'Boxing-Match'], 35, ['matt','matt','matt','mattmad','mattmad']);
 		}
 		if (CategoryState.playlist == 15)
 		{
 			if (StoryMenuState.weekUnlocked[1] || isDebug)
-				addWeek(['Overwrite', 'inkingmistake', 'relighted'], 1, ['xchara', 'ink', 'xgaster']);
+				addWeek(['Overwrite','inkingmistake','relighted'], 1, ['xchara','ink','xgaster']);
 		}
 		if (CategoryState.playlist == 16)
 		{
 			if (StoryMenuState.weekUnlocked[32] || isDebug)
-				addWeek(['parish', 'Worship', 'Zavodila', 'Gospel', 'Casanova'], 32, ['sarvente', 'sarvente-dark', 'ruv', 'luci-sarv', 'selever']);
+				addWeek(['parish','Worship','Zavodila','Gospel','Casanova'], 32, ['sarvente','sarvente-dark','ruv','luci-sarv','selever']);
 		}
 		if (CategoryState.playlist == 17)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Bopeebo-Beatstreets', 'Fresh-Beatstreets', 'Dadbattle-Beatstreets'], 35, ['dad-beat']);
+				addWeek(['Bopeebo-Beatstreets','Fresh-Beatstreets','Dadbattle-Beatstreets'], 35, ['dad-beat']);
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Spookeez-Beatstreets', 'South-Beatstreets'], 35, ['spooky-beat']);
+				addWeek(['Spookeez-Beatstreets','South-Beatstreets'], 35, ['spooky-beat']);
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['Pico-Beatstreets', 'Philly-Beatstreets', 'Blammed-Beatstreets'], 35, ['pico-beat']);
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
@@ -206,103 +256,59 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 18)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Headache', 'Nerves', 'Release', 'Headache-Duet', 'Nerves-Duet', 'Release-Duet'], 35, [
-					'garcello',
-					'garcellotired',
-					'garcellodead',
-					'garcello',
-					'garcellotired',
-					'garcellodead'
-				]);
+				addWeek(['Headache','Nerves','Release','Headache-Duet','Nerves-Duet','Release-Duet'], 35, ['garcello','garcellotired','garcellodead','garcello','garcellotired','garcellodead']);
+			
 		}
 		if (CategoryState.playlist == 19)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Stronger', 'Megalomaniac', 'Reality-Check'], 35, ['sans', 'sans2', 'sans3']);
+				addWeek(['Stronger','Megalomaniac','Reality-Check'], 35, ['sans','sans2','sans3']);
+			
 		}
 		if (CategoryState.playlist == 20)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['HighRise', 'Ordinance', 'Transgression'], 35, ['senpai-2', 'senpai-2', 'spirit-2']);
+				addWeek(['HighRise','Ordinance','Transgression'], 35, ['senpai-2','senpai-2','spirit-2']);
+			
 		}
 		if (CategoryState.playlist == 21)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['Megalo-Strike-Back'], 35, ['chara']);
+			
+			
 		}
 		if (CategoryState.playlist == 22)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Wocky', 'Beathoven', 'Flatzone'], 35, ['kapi', 'kapi', 'gaw']);
+				addWeek(['Wocky','Beathoven','Hairball','Nyaw','Flatzone'], 35, ['kapi','kapi','kapi','kapi','gaw']);
+			
 		}
 		if (CategoryState.playlist == 23)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Good-Enough', 'Lover', 'Tug-Of-War', 'Animal'], 35, ['annie', 'annie', 'annie', 'annie2']);
+				addWeek(['Good-Enough','Lover','Tug-Of-War','Animal'], 35, ['annie','annie','annie','annie2']);
+				
 		}
 		if (CategoryState.playlist == 24)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Norway', 'Tordbot'], 35, ['tord', 'tordbot']);
+				addWeek(['Norway','Tordbot'], 35, ['tord','tordbot']);
+				
 		}
 		if (CategoryState.playlist == 25)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek([
-					'Where-are-you',
-					'Eruption',
-					'Kaio-ken',
-					'Whats-new',
-					'Blast',
-					'Super-saiyan',
-					'GOD-EATER'
-				], 35, ['shaggy']);
+				addWeek(['Where-are-you', 'Eruption', 'Kaio-ken','Whats-new', 'Blast', 'Super-saiyan','GOD-EATER'], 35, ['shaggy']);
+				
 		}
 		if (CategoryState.playlist == 26)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Pentafluoride', 'Diminished', 'Psychoneurotic'], 35, ['anders', 'anders', 'anders-fearsome']);
+				addWeek(['Pentafluoride','Diminished','Psychoneurotic'], 35, ['anders','anders','anders-fearsome']);
+				
 		}
-		if (CategoryState.playlist == 27)
-		{
-			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Sunshine', 'Withered'], 35, ['bob', 'angrybob']);
-
-			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek([
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
-					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run'
-				], 35, ['hellbob']);
-		}
-
-		if (CategoryState.playlist == 28)
-		{
-			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Improbable-Outset', 'Madness', 'Hellclown', 'Expurgation'], 35, ['trickyMask', 'tricky', 'trickyH', 'exTricky']);
-		}
-
-		if (CategoryState.playlist == 29)
-		{
-			if (StoryMenuState.weekUnlocked[18] || isDebug)
-				addWeek(['Lo-Fight', 'Overhead', 'Ballistic'], 18, ['whitty', 'whitty', 'whitty-crazy']);
-		}
-
-		if (CategoryState.playlist == 30)
-		{
-			if (StoryMenuState.weekUnlocked[30] || isDebug)
-				addWeek(['Foolhardy', 'Foolhardy-Duet'], 30, ['zardy']);
-		}
-
+		
 		/* 
 
 			if (FlxG.sound.music != null)
@@ -311,19 +317,22 @@ class FreeplayState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			}
 		 */
-		/*
-			Credits:
-			Die Mod Creators
-			GamerMichi_
-			RED Timmy Stone
-		 */
+/*
+Credits:
+Die Mod Creators
+GamerMichi_
+RED Timmy Stone
+*/
+		
+
+		
 
 		// LOAD MUSIC
 
 		// LOAD CHARACTERS
 		var bg:FlxSprite;
 		if (CategoryState.chara != 1)
-			bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
+			 bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		else
 			bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
 		add(bg);
@@ -370,7 +379,7 @@ class FreeplayState extends MusicBeatState
 
 		// FlxG.sound.playMusic(Paths.music('title'), 0);
 		// FlxG.sound.music.fadeIn(2, 0, 0.8);
-
+		
 		selector = new FlxText();
 
 		selector.size = 40;
@@ -397,8 +406,8 @@ class FreeplayState extends MusicBeatState
 		 */
 
 		super.create();
+	
 	}
-
 	public function addSong(songName:String, weekNum:Int, songCharacter:String)
 	{
 		songs.push(new SongMetadata(songName, weekNum, songCharacter));
@@ -441,10 +450,12 @@ class FreeplayState extends MusicBeatState
 
 		if (upP)
 		{
+			
 			changeSelection(-1);
 		}
 		if (downP)
 		{
+			
 			changeSelection(1);
 		}
 
@@ -469,42 +480,49 @@ class FreeplayState extends MusicBeatState
 
 			PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
 			PlayState.isStoryMode = false;
-
+			
 			PlayState.storyDifficulty = curDifficulty;
 
 			PlayState.storyWeek = songs[curSelected].week;
 			trace('CUR WEEK' + PlayState.storyWeek);
-			// FlxG.switchState(new ChangePlayerState());
 			FlxG.switchState(new ChangePlayerState());
 		}
 	}
 
 	function changeDiff(change:Int = 0)
-	{
+	{	
+		
 		curDifficulty += change;
+
 
 		if (curDifficulty < 0)
 			curDifficulty = 2;
 		if (curDifficulty > 2)
 			curDifficulty = 0;
+		
 
 		#if !switch
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
 		#end
-
+		
 		switch (curDifficulty)
 		{
 			case 0:
+				
 				diffText.text = "EASY";
 			case 1:
+				
 				diffText.text = 'NORMAL';
 			case 2:
 				diffText.text = "HARD";
 		}
+		
 	}
 
 	function changeSelection(change:Int = 0)
 	{
+		
+
 		// NGio.logEvent('Fresh');
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 

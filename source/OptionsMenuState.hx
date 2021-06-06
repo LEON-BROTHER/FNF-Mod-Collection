@@ -14,31 +14,48 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 
+
 class OptionsMenuState extends MusicBeatState
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
-
-	public var menuItems:Array<String> = ['Background Music', 'Pause Menu Music', 'Note Skins', 'Scroll', 'Mod Options'];
+	public var menuItems:Array<String> = ['Background Music','Pause Menu Music','Note Skins','Scroll'];
 
 	public var curSelected:Int = 0;
 
 	public var pauseMusic:FlxSound;
-
 	public static var playlist:Int;
 
+	
+
+
+	
 	override function create()
 	{
+		
+	
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		if (CategoryState.chara != 1)
 			bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
-		else
-			bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
+	 	else
+		    bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
 		bg.scrollFactor.set();
 		add(bg);
 
+	
+
+
+	
+	
+		
+	
+
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('category'), true, true);
 
+
 		FlxG.sound.list.add(pauseMusic);
+
+
+
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
@@ -78,7 +95,7 @@ class OptionsMenuState extends MusicBeatState
 		{
 			changeSelection(1);
 		}
-
+		
 		if (controls.BACK)
 		{
 			FlxG.switchState(new MainMenuState());
@@ -97,9 +114,12 @@ class OptionsMenuState extends MusicBeatState
 					FlxG.switchState(new PauseMenuMusic());
 				case "Scroll":
 					FlxG.switchState(new ScrollState());
-				case "Mod Options":
-					FlxG.switchState(new ModOptionsState());
+
+
+					
 			}
+
+
 		}
 
 		if (FlxG.keys.justPressed.J)

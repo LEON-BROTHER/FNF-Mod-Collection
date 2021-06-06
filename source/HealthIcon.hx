@@ -116,6 +116,7 @@ class HealthIcon extends FlxSprite
 		animation.add('chara', [140, 141], 0, false, isPlayer);
 		animation.add('gaw', [142, 143], 0, false, isPlayer);
 		animation.add('kapi', [144, 145], 0, false, isPlayer);
+		animation.add('dadmad', [144, 145], 0, false, isPlayer);
 		animation.add('annie', [146, 147], 0, false, isPlayer);
 		animation.add('annie2', [148, 149], 0, false, isPlayer);
 		animation.add('tord', [150, 151], 0, false, isPlayer);
@@ -131,6 +132,12 @@ class HealthIcon extends FlxSprite
 		animation.add('hellbob', [166, 166], 0, false, isPlayer);
 		animation.add('trickyH', [167, 168], 0, false, isPlayer);
 		animation.add('exTricky', [169, 170], 0, false, isPlayer);
+
+
+
+
+
+
 
 		animation.play(char);
 		scrollFactor.set();
