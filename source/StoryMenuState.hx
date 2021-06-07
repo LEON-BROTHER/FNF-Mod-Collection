@@ -30,12 +30,15 @@ class StoryMenuState extends MusicBeatState
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],
-		['Ugh','Guns','Stress']
-		
+		['Ugh', 'Guns', 'Stress']
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [
+		true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true, true
+	];
 
 	var weekCharacters:Array<Dynamic> = [
 		['dad', 'bf', 'gf'],
@@ -46,7 +49,6 @@ class StoryMenuState extends MusicBeatState
 		['parents-christmas', 'bf', 'gf'],
 		['senpai', 'bf', 'gf'],
 		['tankman', 'bf', 'gf']
-	
 	];
 
 	var weekNames:Array<String> = [
@@ -58,7 +60,6 @@ class StoryMenuState extends MusicBeatState
 		"RED SNOW",
 		"hating simulator ft. moawling",
 		"Tankman"
-	
 	];
 
 	var txtWeekTitle:FlxText;
@@ -87,17 +88,16 @@ class StoryMenuState extends MusicBeatState
 		{
 			if (CategoryState.chara == 1)
 				FlxG.sound.playMusic(Paths.music('freakyMenu-chara'));
-			else
-				if (BackgroundMusicState.normal == 1)
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-				if (BackgroundMusicState.neo == 1)
-					FlxG.sound.playMusic(Paths.music('freakyMenu-n'));
-				if (BackgroundMusicState.hex == 1)
-					FlxG.sound.playMusic(Paths.music('freakyMenu-h'));
-				if (BackgroundMusicState.bsides == 1)
-					FlxG.sound.playMusic(Paths.music('freakyMenu-b'));
-				if (BackgroundMusicState.beat == 1)
-					FlxG.sound.playMusic(Paths.music('freakyMenu-beat'));
+			else if (BackgroundMusicState.normal == 1)
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			if (BackgroundMusicState.neo == 1)
+				FlxG.sound.playMusic(Paths.music('freakyMenu-n'));
+			if (BackgroundMusicState.hex == 1)
+				FlxG.sound.playMusic(Paths.music('freakyMenu-h'));
+			if (BackgroundMusicState.bsides == 1)
+				FlxG.sound.playMusic(Paths.music('freakyMenu-b'));
+			if (BackgroundMusicState.beat == 1)
+				FlxG.sound.playMusic(Paths.music('freakyMenu-beat'));
 		}
 
 		persistentUpdate = persistentDraw = true;
@@ -130,7 +130,7 @@ class StoryMenuState extends MusicBeatState
 		add(grpLocks);
 
 		trace("Line 70");
-		
+
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
@@ -181,7 +181,7 @@ class StoryMenuState extends MusicBeatState
 					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
 					weekCharacterThing.updateHitbox();
 				case 'pico':
-		
+
 				case 'parents-christmas':
 					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
 					weekCharacterThing.updateHitbox();
@@ -341,13 +341,11 @@ class StoryMenuState extends MusicBeatState
 			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
 			PlayState.storyWeek = curWeek;
 			PlayState.campaignScore = 0;
-			if (curWeek == 7)
+			if (curWeek == 7 && FlxG.save.data.week7Cut == 'Yes')
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
-					
-					LoadingState.loadAndSwitchState(new VideoState("assets/videos/ughCutscene.webm",new PlayState()));
-
-				});	
+					LoadingState.loadAndSwitchState(new VideoState("assets/videos/ughCutscene.webm", new PlayState()));
+				});
 			else
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
@@ -463,7 +461,6 @@ class StoryMenuState extends MusicBeatState
 			txtTracklist.text += "\n" + i;
 		}
 		txtTracklist.text += "\n";
-
 
 		txtTracklist.screenCenter(X);
 		txtTracklist.x -= FlxG.width * 0.35;

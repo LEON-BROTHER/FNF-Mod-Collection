@@ -16,42 +16,48 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 
-
 class NoteSkinState extends MusicBeatState
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
-	public var menuItems:Array<String> = ['Normal','Neo','X-Event','Starcatcher','Sarv-Notes','Beatstreets'];
+
+	public var menuItems:Array<String> = [
+		'Normal',
+		'Neo',
+		'X-Event',
+		'Starcatcher',
+		'Sarv-Notes',
+		'Beatstreets',
+		'Tabi-Notes'
+	];
 
 	public var curSelected:Int = 0;
 
 	public var pauseMusic:FlxSound;
+
 	public static var normal:Int = 1;
 	public static var neo:Int = 0;
 	public static var xe:Int = 0;
 	public static var star:Int = 0;
 	public static var sarv:Int = 0;
 	public static var beats:Int = 0;
+	public static var tabi:Int = 0;
 	public static var keys:FlxText;
 	public static var sel:String = "Normal";
-	
+
 	public var strumLine:FlxSprite;
-    public var strumLineNotes:FlxTypedGroup<FlxSprite>;
-    public var playerStrums:FlxTypedGroup<FlxSprite>;
+	public var strumLineNotes:FlxTypedGroup<FlxSprite>;
+	public var playerStrums:FlxTypedGroup<FlxSprite>;
+
 	private var camHUD:FlxCamera;
 	var babyArrow:FlxSprite;
-	
 
-
-	
 	override function create()
 	{
-		
-	
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		if (CategoryState.chara != 1)
 			bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
-	 	else
-		    bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
+		else
+			bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
 		bg.scrollFactor.set();
 		add(bg);
 		keys = new FlxText(70, 0, 0, "", 32);
@@ -64,7 +70,7 @@ class NoteSkinState extends MusicBeatState
 
 		camHUD = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
-        FlxG.cameras.add(camHUD);
+		FlxG.cameras.add(camHUD);
 
 		strumLine = new FlxSprite(0, 25).makeGraphic(FlxG.width, 10);
 		strumLine.scrollFactor.set();
@@ -73,25 +79,12 @@ class NoteSkinState extends MusicBeatState
 
 		playerStrums = new FlxTypedGroup<FlxSprite>();
 
-        strumLine.cameras = [camHUD];
-        playerStrums.cameras = [camHUD];
-        
-		
-	
-
-
-	
-	
-		
-	
+		strumLine.cameras = [camHUD];
+		playerStrums.cameras = [camHUD];
 
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('category'), true, true);
 
-
 		FlxG.sound.list.add(pauseMusic);
-
-
-
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
@@ -123,22 +116,15 @@ class NoteSkinState extends MusicBeatState
 		var back = controls.BACK;
 		var controlsStrings:Array<String> = [];
 
-		
-		
-
 		if (upP)
 		{
-			
 			changeSelection(-1);
-			
 		}
 		if (downP)
 		{
-			
 			changeSelection(1);
-			
 		}
-		
+
 		if (controls.BACK)
 		{
 			FlxG.switchState(new MainMenuState());
@@ -156,6 +142,7 @@ class NoteSkinState extends MusicBeatState
 					star = 0;
 					beats = 0;
 					sarv = 0;
+					tabi = 0;
 					sel = "Normal";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -165,11 +152,12 @@ class NoteSkinState extends MusicBeatState
 					add(keys);
 				case "Neo":
 					normal = 0;
-					neo = 1;	
+					neo = 1;
 					xe = 0;
 					star = 0;
 					sarv = 0;
 					beats = 0;
+					tabi = 0;
 					sel = "Neo";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -180,10 +168,11 @@ class NoteSkinState extends MusicBeatState
 				case "X-Event":
 					normal = 0;
 					neo = 0;
-					star = 0;	
+					star = 0;
 					xe = 1;
 					sarv = 0;
 					beats = 0;
+					tabi = 0;
 					sel = "X-Event";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -193,11 +182,12 @@ class NoteSkinState extends MusicBeatState
 					add(keys);
 				case "Starcatcher":
 					normal = 0;
-					neo = 0;	
+					neo = 0;
 					star = 1;
 					xe = 0;
 					sarv = 0;
 					beats = 0;
+					tabi = 0;
 					sel = "Starcatcher";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -207,11 +197,12 @@ class NoteSkinState extends MusicBeatState
 					add(keys);
 				case "Beatstreets":
 					normal = 0;
-					neo = 0;	
+					neo = 0;
 					star = 0;
 					xe = 0;
 					sarv = 0;
 					beats = 1;
+					tabi = 0;
 					sel = "Beatstreets";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -221,11 +212,12 @@ class NoteSkinState extends MusicBeatState
 					add(keys);
 				case "Sarv-Notes":
 					normal = 0;
-					neo = 0;	
+					neo = 0;
 					star = 0;
 					xe = 0;
 					sarv = 1;
 					beats = 0;
+					tabi = 0;
 					sel = "Sarv-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -233,9 +225,22 @@ class NoteSkinState extends MusicBeatState
 					keys.setFormat(Paths.font('vcr.ttf'), 32);
 					keys.updateHitbox();
 					add(keys);
+				case "Tabi-Notes":
+					normal = 0;
+					neo = 0;
+					star = 0;
+					xe = 0;
+					sarv = 0;
+					beats = 0;
+					tabi = 1;
+					sel = "Tabi-Notes";
+					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
+					keys.text = "CurSelected: " + sel;
+					keys.scrollFactor.set();
+					keys.setFormat(Paths.font('vcr.ttf'), 32);
+					keys.updateHitbox();
+					add(keys);
 			}
-
-
 		}
 
 		if (FlxG.keys.justPressed.J)
@@ -251,16 +256,13 @@ class NoteSkinState extends MusicBeatState
 
 		super.destroy();
 	}
-	
-	
+
 	private function generateStaticArrows(player:Int):Void
-    {
-		
-        for (i in 0...4)
-    	{
-			
-            // FlxG.log.add(i);
-            babyArrow = new FlxSprite(0, strumLine.y);
+	{
+		for (i in 0...4)
+		{
+			// FlxG.log.add(i);
+			babyArrow = new FlxSprite(0, strumLine.y);
 			if (curSelected == 1)
 				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-neo');
 			if (curSelected == 2)
@@ -273,74 +275,65 @@ class NoteSkinState extends MusicBeatState
 				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets2');
 			if (curSelected == 5)
 				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-beats');
-            babyArrow.animation.addByPrefix('green', 'arrowUP');
-            babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
-            babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
-        	babyArrow.animation.addByPrefix('red', 'arrowRIGHT');
-            babyArrow.antialiasing = true;
-            babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7));
-            switch (Math.abs(i))
-            {
-		 	    case 0:
-			
-                    babyArrow.x += Note.swagWidth * 0;
-                    babyArrow.animation.addByPrefix('static', 'purple0', 24, false);
-                    babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
-                    babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
-                case 1:
-				
-                    babyArrow.x += Note.swagWidth * 1;
-                    babyArrow.animation.addByPrefix('static', 'blue0', 24, false);
-                    babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
-                    babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
-                case 2:
-					
-                    babyArrow.x += Note.swagWidth * 2;
-                    babyArrow.animation.addByPrefix('static', 'green0', 24, false);
-                    babyArrow.animation.addByPrefix('pressed', 'up press', 24, false);
-                    babyArrow.animation.addByPrefix('confirm', 'up confirm', 24, false);
-                case 3:
-					
-                    babyArrow.x += Note.swagWidth * 3;
-                    babyArrow.animation.addByPrefix('static', 'red0', 24, false);
-                    babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
-                	babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
-            }
-            babyArrow.updateHitbox();
-            babyArrow.scrollFactor.set();
-    
-            babyArrow.ID = i;
-    
-            if (player == 1)
-            {
-                playerStrums.add(babyArrow);
-         	}
-    
-            babyArrow.animation.play('static');
-            babyArrow.x += 50;
-            babyArrow.x += ((FlxG.width / 2) * player);
-    
-			
-            strumLineNotes.add(babyArrow);
+			if (curSelected == 6)
+				babyArrow.frames = Paths.getSparrowAtlas('tabi/mad/NOTE_assets');
+			babyArrow.animation.addByPrefix('green', 'arrowUP');
+			babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
+			babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
+			babyArrow.animation.addByPrefix('red', 'arrowRIGHT');
+			babyArrow.antialiasing = true;
+			babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7));
+			switch (Math.abs(i))
+			{
+				case 0:
+					babyArrow.x += Note.swagWidth * 0;
+					babyArrow.animation.addByPrefix('static', 'purple0', 24, false);
+					babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
+					babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
+				case 1:
+					babyArrow.x += Note.swagWidth * 1;
+					babyArrow.animation.addByPrefix('static', 'blue0', 24, false);
+					babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
+					babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
+				case 2:
+					babyArrow.x += Note.swagWidth * 2;
+					babyArrow.animation.addByPrefix('static', 'green0', 24, false);
+					babyArrow.animation.addByPrefix('pressed', 'up press', 24, false);
+					babyArrow.animation.addByPrefix('confirm', 'up confirm', 24, false);
+				case 3:
+					babyArrow.x += Note.swagWidth * 3;
+					babyArrow.animation.addByPrefix('static', 'red0', 24, false);
+					babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
+					babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
+			}
+			babyArrow.updateHitbox();
+			babyArrow.scrollFactor.set();
 
-        }
-    }
-	
+			babyArrow.ID = i;
+
+			if (player == 1)
+			{
+				playerStrums.add(babyArrow);
+			}
+
+			babyArrow.animation.play('static');
+			babyArrow.x += 50;
+			babyArrow.x += ((FlxG.width / 2) * player);
+
+			strumLineNotes.add(babyArrow);
+		}
+	}
+
 	function changeSelection(change:Int = 0):Void
 	{
 		curSelected += change;
-		
 
 		if (curSelected < 0)
 			curSelected = menuItems.length - 1;
 		if (curSelected >= menuItems.length)
 			curSelected = 0;
 		generateStaticArrows(1);
-		//Chopper.exe is auf mordliste//
-		
-		
-
-
+		// Chopper.exe is auf mordliste//
 
 		var bullShit:Int = 0;
 

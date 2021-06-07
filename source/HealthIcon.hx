@@ -76,21 +76,21 @@ class HealthIcon extends FlxSprite
 		animation.add('sky', [75, 76], 0, false, isPlayer);
 		animation.add('sky-annoyed', [75, 76], 0, false, isPlayer);
 		animation.add('sky-mad', [77], 0, false, isPlayer);
-		animation.add('miku', [78,79], 0, false, isPlayer);
-		animation.add('miku-mad', [78,79], 0, false, isPlayer);
-		animation.add('xchara', [97,96], 0, false, isPlayer);
-		animation.add('touhou', [80,81], 0, false, isPlayer);
-		animation.add('brother', [82,83], 0, false, isPlayer);
-		animation.add('bf-star', [84,85], 0, false, isPlayer);
-		animation.add('gf-star', [86,87], 0, false, isPlayer);
-		animation.add('dad-star', [88,89], 0, false, isPlayer);
-		animation.add('spooky-star', [90,91], 0, false, isPlayer);
-		animation.add('pico-star', [92,93], 0, false, isPlayer);
-		animation.add('mom-car-star', [94,95], 0, false, isPlayer);
-		animation.add('bf-car-star', [84,85], 0, false, isPlayer);
+		animation.add('miku', [78, 79], 0, false, isPlayer);
+		animation.add('miku-mad', [78, 79], 0, false, isPlayer);
+		animation.add('xchara', [97, 96], 0, false, isPlayer);
+		animation.add('touhou', [80, 81], 0, false, isPlayer);
+		animation.add('brother', [82, 83], 0, false, isPlayer);
+		animation.add('bf-star', [84, 85], 0, false, isPlayer);
+		animation.add('gf-star', [86, 87], 0, false, isPlayer);
+		animation.add('dad-star', [88, 89], 0, false, isPlayer);
+		animation.add('spooky-star', [90, 91], 0, false, isPlayer);
+		animation.add('pico-star', [92, 93], 0, false, isPlayer);
+		animation.add('mom-car-star', [94, 95], 0, false, isPlayer);
+		animation.add('bf-car-star', [84, 85], 0, false, isPlayer);
 		animation.add('bf-holding-gf', [0, 1], 0, false, isPlayer);
-		animation.add('ink', [98,99], 0, false, isPlayer);
-		animation.add('xgaster', [100,101], 0, false, isPlayer);
+		animation.add('ink', [98, 99], 0, false, isPlayer);
+		animation.add('xgaster', [100, 101], 0, false, isPlayer);
 		animation.add('matt', [102, 103], 0, false, isPlayer);
 		animation.add('mattmad', [102, 103], 0, false, isPlayer);
 		animation.add('sarvente-dark', [104, 105], 0, false, isPlayer);
@@ -132,12 +132,16 @@ class HealthIcon extends FlxSprite
 		animation.add('hellbob', [166, 166], 0, false, isPlayer);
 		animation.add('trickyH', [167, 168], 0, false, isPlayer);
 		animation.add('exTricky', [169, 170], 0, false, isPlayer);
-
-
-
-
-
-
+		animation.add('shcarol', [171, 172], 0, false, isPlayer);
+		animation.add('tree', [173, 174], 0, false, isPlayer);
+		animation.add('tree2', [175, 176], 0, false, isPlayer);
+		animation.add('tree3', [177, 178], 0, false, isPlayer);
+		animation.add('duck', [179, 180], 0, false, isPlayer);
+		animation.add('tabi', [181, 182], 0, false, isPlayer);
+		animation.add('tabi-crazy', [183, 184], 0, false, isPlayer);
+		animation.add('bf-tabi', [0, 1], 0, false, isPlayer);
+		animation.add('bf-tabi-crazy', [0, 1], 0, false, isPlayer);
+		animation.add('bf-hell', [0, 1], 0, false, isPlayer);
 
 		animation.play(char);
 		scrollFactor.set();

@@ -14,27 +14,28 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import Controls.KeyboardScheme;
 
-
 class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
+
 	public static var babymode:String = "No";
 	public static var sickmode:String = "No";
 	public static var controlmode:String = "WASD";
 	public static var keys:FlxText;
-	
-	var menuItems:Array<String> = ['Resume', 'Restart Song', 'Kade Input', 'Only SICK MODE','Change Song','Controls' ,'Debug Menu', 'Animation Debug','Animation player','Exit to menu'];
+
+	var menuItems:Array<String> = [
+		'Resume', 'Restart Song', 'Kade Input', 'Only SICK MODE', 'Change Song', 'Change Character', 'Controls', 'Debug Menu', 'Animation Debug',
+		'Animation player', 'Exit to menu'
+	];
 
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
 
-
 	public function new(x:Float, y:Float)
 	{
-		
 		super();
-		if (PauseMenuMusic.starcatcher == 1)	
+		if (PauseMenuMusic.starcatcher == 1)
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast-star'), true, true);
 		if (PauseMenuMusic.normal == 1)
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
@@ -65,22 +66,20 @@ class PauseSubState extends MusicBeatSubstate
 		keys = new FlxText(20, 15 + 32 + 32, 0, "", 32);
 		if (FlxG.save.data.controlstype == 'wasd')
 			controlmode = "WASD";
-		
 		else if (FlxG.save.data.controlstype == 'asdf')
 			controlmode = "ASDF";
 		else if (FlxG.save.data.controlstype == 'qwop')
 			controlmode = "QWOP";
-		else if (FlxG.save.data.controlstype == 'dfjk')	
+		else if (FlxG.save.data.controlstype == 'dfjk')
 			controlmode = "DFJK";
 		else
 			trace('none');
-		
+
 		keys.text = controlmode;
 		keys.scrollFactor.set();
 		keys.setFormat(Paths.font('vcr.ttf'), 32);
 		keys.updateHitbox();
 		add(keys);
-
 
 		levelDifficulty.alpha = 0;
 		levelInfo.alpha = 0;
@@ -89,7 +88,6 @@ class PauseSubState extends MusicBeatSubstate
 		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
 		keys.x = FlxG.width - (keys.width + 20);
-
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
@@ -180,10 +178,11 @@ class PauseSubState extends MusicBeatSubstate
 					}
 				case "Change Song":
 					FlxG.switchState(new CategoryState());
+				case "Change Character":
+					FlxG.switchState(new ChangePlayerState());
 				case "Controls":
 					if (controlmode == "WASD")
 					{
-							
 						controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
 						FlxG.save.data.controlstype = 'dfjk';
 						FlxG.save.flush();
@@ -194,7 +193,6 @@ class PauseSubState extends MusicBeatSubstate
 						keys.setFormat(Paths.font('vcr.ttf'), 32);
 						keys.updateHitbox();
 						add(keys);
-				
 					}
 					else if (controlmode == "DFJK")
 					{
@@ -208,22 +206,20 @@ class PauseSubState extends MusicBeatSubstate
 						keys.setFormat(Paths.font('vcr.ttf'), 32);
 						keys.updateHitbox();
 						add(keys);
-				
 					}
 					else if (controlmode == "QWOP")
-						{
-							controls.setKeyboardScheme(KeyboardScheme.Guldi, true);
-							controlmode = "ASDF";
-							FlxG.save.data.controlstype = 'asdf';
-							FlxG.save.flush();
-							FlxTween.tween(keys, {alpha: 1, y: keys.y}, 0.4, {ease: FlxEase.quartInOut});
-							keys.text = controlmode;
-							keys.scrollFactor.set();
-							keys.setFormat(Paths.font('vcr.ttf'), 32);
-							keys.updateHitbox();
-							add(keys);
-					
-						}
+					{
+						controls.setKeyboardScheme(KeyboardScheme.Guldi, true);
+						controlmode = "ASDF";
+						FlxG.save.data.controlstype = 'asdf';
+						FlxG.save.flush();
+						FlxTween.tween(keys, {alpha: 1, y: keys.y}, 0.4, {ease: FlxEase.quartInOut});
+						keys.text = controlmode;
+						keys.scrollFactor.set();
+						keys.setFormat(Paths.font('vcr.ttf'), 32);
+						keys.updateHitbox();
+						add(keys);
+					}
 					else
 					{
 						controls.setKeyboardScheme(KeyboardScheme.Solo, true);
@@ -257,7 +253,6 @@ class PauseSubState extends MusicBeatSubstate
 
 		super.destroy();
 	}
-	
 
 	function changeSelection(change:Int = 0):Void
 	{
