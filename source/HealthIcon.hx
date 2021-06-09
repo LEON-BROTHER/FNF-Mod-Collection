@@ -122,7 +122,7 @@ class HealthIcon extends FlxSprite
 		animation.add('tord', [150, 151], 0, false, isPlayer);
 		animation.add('tordbot', [152, 153], 0, false, isPlayer);
 		animation.add('shaggy', [154, 155], 0, false, isPlayer);
-		animation.add('pshaggy', [154, 155], 0, false, isPlayer);
+		animation.add('pshaggy', [187, 188], 0, false, isPlayer);
 		animation.add('anders', [156, 157], 0, false, isPlayer);
 		animation.add('anders-fearsome', [158, 159], 0, false, isPlayer);
 		animation.add('tari', [160, 161], 0, false, isPlayer);
@@ -142,6 +142,14 @@ class HealthIcon extends FlxSprite
 		animation.add('bf-tabi', [0, 1], 0, false, isPlayer);
 		animation.add('bf-tabi-crazy', [0, 1], 0, false, isPlayer);
 		animation.add('bf-hell', [0, 1], 0, false, isPlayer);
+		animation.add('bf-ena', [0, 1], 0, false, isPlayer);
+		animation.add('bf-christmas-ena', [0, 1], 0, false, isPlayer);
+		animation.add('bf-pixel-ena', [21, 21], 0, false, isPlayer);
+		animation.add('garcelloghosty', [128, 129], 0, false, isPlayer);
+		animation.add('impostor', [185, 186], 0, false, isPlayer);
+		animation.add('impostor2', [185, 186], 0, false, isPlayer);
+		animation.add('bfg', [0, 1], 0, false, isPlayer);
+		animation.add('ggf', [0, 1], 0, false, isPlayer);
 
 		animation.play(char);
 		scrollFactor.set();

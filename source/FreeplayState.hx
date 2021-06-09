@@ -139,7 +139,8 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 29)
 		{
 			if (StoryMenuState.weekUnlocked[18] || isDebug)
-				addWeek(['Lo-Fight', 'Overhead', 'Ballistic', 'Ballistic-Old'], 18, ['whitty', 'whitty', 'whitty-crazy', 'whitty-crazy']);
+				addWeek(['Lo-Fight', 'Overhead', 'Ballistic', 'Ballistic-Old'], 18,
+					['whitty', 'whitty', 'whitty-crazy', 'whitty-crazy']);
 		}
 
 		if (CategoryState.playlist == 30)
@@ -256,9 +257,18 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 18)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Headache', 'Nerves', 'Release', 'Headache-Duet', 'Nerves-Duet', 'Release-Duet'], 35, [
+				addWeek([
+					'Headache',
+					'Nerves',
+					'Release',
+					'Fading',
+					'Headache-Duet',
+					'Nerves-Duet',
+					'Release-Duet'
+				], 35, [
 					'garcello',
 					'garcellotired',
+					'garcellodead',
 					'garcellodead',
 					'garcello',
 					'garcellotired',
@@ -324,6 +334,12 @@ class FreeplayState extends MusicBeatState
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['My-Battle', 'Last-Chance', 'Genocide'], 35, ['tabi', 'tabi', 'tabi-crazy']);
+		}
+
+		if (CategoryState.playlist == 33)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek(['Ballistic-RS', 'Release-RS', 'Foolhardy-RS', 'Genocide-RS'], 35, ['whitty-crazy', 'garcellodead', 'zardy', 'tabi-crazy']);
 		}
 
 		/* 

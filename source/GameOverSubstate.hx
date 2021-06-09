@@ -54,8 +54,10 @@ class GameOverSubstate extends MusicBeatSubstate
 				{
 					daBf = 'bf';
 				}
-			case 'hellclown' | 'expurgation':
+			case 'hellclown' | 'expurgation' | 'improbable-outset' | 'madness':
 				daBf = 'signDeath';
+			case 'genocide':
+				daBf = 'bf-knife';
 			default:
 				daBf = 'bf';
 		}

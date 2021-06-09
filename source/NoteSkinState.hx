@@ -276,7 +276,7 @@ class NoteSkinState extends MusicBeatState
 			if (curSelected == 5)
 				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-beats');
 			if (curSelected == 6)
-				babyArrow.frames = Paths.getSparrowAtlas('tabi/mad/NOTE_assets');
+				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-tabi');
 			babyArrow.animation.addByPrefix('green', 'arrowUP');
 			babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
 			babyArrow.animation.addByPrefix('purple', 'arrowLEFT');

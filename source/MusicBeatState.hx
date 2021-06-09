@@ -29,7 +29,7 @@ class MusicBeatState extends FlxUIState
 
 	override function update(elapsed:Float)
 	{
-		//everyStep();
+		// everyStep();
 		var oldStep:Int = curStep;
 
 		updateCurStep();
@@ -70,6 +70,15 @@ class MusicBeatState extends FlxUIState
 
 	public function beatHit():Void
 	{
-		//do literally nothing dumbass
+		// do literally nothing dumbass
 	}
+
+	public function setContrast(contrast:Float):Void
+		ShadersHandler.setContrast(contrast);
+
+	public function setBrightness(brightness:Float):Void
+		ShadersHandler.setBrightness(brightness);
+
+	public function setChrome(daChrome:Float):Void
+		ShadersHandler.setChrome(daChrome);
 }

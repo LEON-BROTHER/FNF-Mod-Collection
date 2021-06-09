@@ -31,6 +31,19 @@ class SiniFire extends FlxSprite
 			frameShit.push(i);
 		}
 
+		if (frameShit.length == 0)
+		{
+			for (i in 0...frames.frames.length)
+			{
+				var ourI:Int = i + frameOffset;
+				if (ourI > maxFrames - 1)
+				{
+					ourI = ourI - (maxFrames - 1);
+				}
+				frameShit.push(i);
+			}
+		}
+
 		animation.addByIndices('fire', 'FireStage', frameShit, "", fps, looped, flippedX, flippedY);
 		animation.play('fire', true);
 	}

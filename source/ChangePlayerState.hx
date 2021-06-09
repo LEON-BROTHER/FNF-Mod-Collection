@@ -23,7 +23,8 @@ using StringTools;
 class ChangePlayerState extends MusicBeatState
 {
 	var bflist:Array<String> = [
-		'bf', 'bf-christmas', 'bf-pixel', 'bf-holding-gf', 'bf-b', 'bf-christmas-b', 'bf-pixel-b', 'bf-neo', 'bf-minus', 'bf-minus-beta', 'bf-minus-blue'
+		'bf', 'bf-christmas', 'bf-pixel', 'bf-holding-gf', 'bf-b', 'bf-christmas-b', 'bf-pixel-b', 'bf-neo', 'bf-minus', 'bf-minus-beta', 'bf-minus-blue',
+		'ena', 'ena-christmas', 'ena-pixel'
 	];
 
 	var curSelected:Int = 0;
@@ -122,6 +123,12 @@ class ChangePlayerState extends MusicBeatState
 					character.animation.play('bfMinusBeta_select');
 				case 10:
 					character.animation.play('bfMinusBlue_select');
+				case 11:
+					character.animation.play('bfEna_select');
+				case 12:
+					character.animation.play('bfEnaChristmas_select');
+				case 13:
+					character.animation.play('bfEnaPixel_select');
 				default:
 					character.animation.play('bf_select');
 			}
@@ -249,8 +256,8 @@ class ChangePlayerState extends MusicBeatState
 				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/vanilla/bfAndGF.png',
 					'assets/images/charSelect/characters/vanilla/bfAndGF.xml');
 
-				character.animation.addByPrefix('bfGf_idle', 'BF idle dance', 24);
-				character.animation.addByPrefix('bfGf_select', 'BF UP NOTE instance', 24);
+				character.animation.addByPrefix('bfGf_idle', 'BF idle dance w gf', 24);
+				character.animation.addByPrefix('bfGf_select', 'BF NOTE UP', 24);
 
 				character.antialiasing = true;
 
@@ -449,6 +456,84 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfMinusBlue_idle');
+			case 11:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/ena/BOYFRIEND-ena.png',
+					'assets/images/charSelect/characters/ena/BOYFRIEND-ena.xml');
+
+				character.animation.addByPrefix('bfEna_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfEna_select', 'BF HEY!!', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG4.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfEna_idle');
+			case 12:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/ena/bfChristmas-ena.png',
+					'assets/images/charSelect/characters/ena/bfChristmas-ena.xml');
+
+				character.animation.addByPrefix('bfEnaChristmas_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfEnaChristmas_select', 'BF HEY!!', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG4.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfEnaChristmas_idle');
+			case 13:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/ena/bfPixel-ena.png',
+					'assets/images/charSelect/characters/ena/bfPixel-ena.xml');
+
+				character.animation.addByPrefix('bfEnaPixel_idle', 'BF IDLE', 24);
+				character.animation.addByPrefix('bfEnaPixel_select', 'BF UP NOTE', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG4.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfEnaPixel_idle');
 			default:
 				remove(character);
 				remove(BG);

@@ -1,7 +1,5 @@
 package;
 
-import openfl.Lib;
-import Options;
 import Controls.Control;
 import flash.text.TextField;
 import flixel.FlxG;
@@ -19,23 +17,14 @@ class OptionsMenu extends MusicBeatState
 	var selector:FlxText;
 	var curSelected:Int = 0;
 
-	var options:Array<OptionCatagory> = [
-		new OptionCatagory("Gameplay", [
-			new DFJKOption(controls),
-		]),
+	var controlsStrings:Array<String> = [];
 
-	];
-
-	private var currentDescription:String = "";
 	private var grpControls:FlxTypedGroup<Alphabet>;
-	public static var versionShit:FlxText;
-
-	var currentSelectedCat:OptionCatagory;
 
 	override function create()
 	{
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
-
+		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		controlsStrings = CoolUtil.coolTextFile(Paths.txt('controls'));
 		menuBG.color = 0xFFea71fd;
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
 		menuBG.updateHitbox();
@@ -43,147 +32,78 @@ class OptionsMenu extends MusicBeatState
 		menuBG.antialiasing = true;
 		add(menuBG);
 
-		grpControls = new FlxTypedGroup<Alphabet>();
-		add(grpControls);
+		/* 
+			grpControls = new FlxTypedGroup<Alphabet>();
+			add(grpControls);
 
-		for (i in 0...options.length)
-		{
-			var controlLabel:Alphabet = new Alphabet(0, (70 * i) + 30, options[i].getName(), true, false);
-			controlLabel.isMenuItem = true;
-			controlLabel.targetY = i;
-			grpControls.add(controlLabel);
-			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-		}
-
-		currentDescription = "none";
-
-		versionShit = new FlxText(5, FlxG.height - 18, 0, "Offset (Left, Right): " + FlxG.save.data.offset + " - Description - " + currentDescription, 12);
-		versionShit.scrollFactor.set();
-		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
+			for (i in 0...controlsStrings.length)
+			{
+				if (controlsStrings[i].indexOf('set') != -1)
+				{
+					var controlLabel:Alphabet = new Alphabet(0, (70 * i) + 30, controlsStrings[i].substring(3) + ': ' + controlsStrings[i + 1], true, false);
+					controlLabel.isMenuItem = true;
+					controlLabel.targetY = i;
+					grpControls.add(controlLabel);
+				}
+				// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
+			}
+		 */
 
 		super.create();
-	}
 
-	var isCat:Bool = false;
-	
-	public static function truncateFloat( number : Float, precision : Int): Float {
-		var num = number;
-		num = num * Math.pow(10, precision);
-		num = Math.round( num ) / Math.pow(10, precision);
-		return num;
-		}
+		openSubState(new OptionsSubState());
+	}
 
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
-			if (controls.BACK && !isCat)
-				FlxG.switchState(new MainMenuState());
-			else if (controls.BACK)
-			{
-				isCat = false;
-				grpControls.clear();
-				for (i in 0...options.length)
-					{
-						var controlLabel:Alphabet = new Alphabet(0, (70 * i) + 30, options[i].getName(), true, false);
-						controlLabel.isMenuItem = true;
-						controlLabel.targetY = i;
-						grpControls.add(controlLabel);
-						// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-					}
-				curSelected = 0;
-			}
-			if (controls.UP_P)
-				changeSelection(-1);
-			if (controls.DOWN_P)
-				changeSelection(1);
-			
-			if (isCat)
-			{
-				if (currentSelectedCat.getOptions()[curSelected].getAccept())
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						{
-							if (FlxG.keys.pressed.RIGHT)
-								currentSelectedCat.getOptions()[curSelected].right();
-							if (FlxG.keys.pressed.LEFT)
-								currentSelectedCat.getOptions()[curSelected].left();
-						}
-					else
-					{
-						if (FlxG.keys.justPressed.RIGHT)
-							currentSelectedCat.getOptions()[curSelected].right();
-						if (FlxG.keys.justPressed.LEFT)
-							currentSelectedCat.getOptions()[curSelected].left();
-					}
-				}
-				else
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						if (FlxG.keys.pressed.RIGHT)
-							FlxG.save.data.offset += 1;
-						else if (FlxG.keys.pressed.LEFT)
-							FlxG.save.data.offset -= 1;
-					else if (controls.RIGHT_P)
-							FlxG.save.data.offset += 0.1;
-					else if (controls.LEFT_P)
-						FlxG.save.data.offset -= 0.1;
-					
-					versionShit.text = "Offset (Left, Right, Shift to go faster): " + truncateFloat(FlxG.save.data.offset,2) + " - Description - " + currentDescription;
-				}
-			}
-			else
-			{
-				if (FlxG.keys.pressed.RIGHT)
-					FlxG.save.data.offset+= 0.01;
-
-				if (FlxG.keys.pressed.LEFT)
-					FlxG.save.data.offset-= 0.01;
-				
-				versionShit.text = "Offset (Left, Right, Shift to go faster): " + truncateFloat(FlxG.save.data.offset,2) + " - Description - " + currentDescription;
-			}
-		
-
+		/* 
 			if (controls.ACCEPT)
 			{
-				if (isCat)
-				{
-					if (currentSelectedCat.getOptions()[curSelected].press()) {
-						grpControls.remove(grpControls.members[curSelected]);
-						var ctrl:Alphabet = new Alphabet(0, (70 * curSelected) + 30, currentSelectedCat.getOptions()[curSelected].getDisplay(), true, false);
-						ctrl.isMenuItem = true;
-						grpControls.add(ctrl);
-					}
-				}
-				else
-				{
-					currentSelectedCat = options[curSelected];
-					isCat = true;
-					grpControls.clear();
-					for (i in 0...currentSelectedCat.getOptions().length)
-						{
-							var controlLabel:Alphabet = new Alphabet(0, (70 * i) + 30, currentSelectedCat.getOptions()[i].getDisplay(), true, false);
-							controlLabel.isMenuItem = true;
-							controlLabel.targetY = i;
-							grpControls.add(controlLabel);
-							// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-						}
-					curSelected = 0;
-				}
+				changeBinding();
 			}
-		FlxG.save.flush();
+
+			if (isSettingControl)
+				waitingInput();
+			else
+			{
+				if (controls.BACK)
+					FlxG.switchState(new MainMenuState());
+				if (controls.UP_P)
+					changeSelection(-1);
+				if (controls.DOWN_P)
+					changeSelection(1);
+			}
+		 */
+	}
+
+	function waitingInput():Void
+	{
+		if (FlxG.keys.getIsDown().length > 0)
+		{
+			PlayerSettings.player1.controls.replaceBinding(Control.LEFT, Keys, FlxG.keys.getIsDown()[0].ID, null);
+		}
+		// PlayerSettings.player1.controls.replaceBinding(Control)
 	}
 
 	var isSettingControl:Bool = false;
 
+	function changeBinding():Void
+	{
+		if (!isSettingControl)
+		{
+			isSettingControl = true;
+		}
+	}
+
 	function changeSelection(change:Int = 0)
 	{
-		#if !switch
-		// NGio.logEvent("Fresh");
-		#end
-		
-		FlxG.sound.play(Paths.sound("scrollMenu"), 0.4);
+		/*#if !switch
+		NGio.logEvent('Fresh');
+		#end*/
+
+		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
 		curSelected += change;
 
@@ -191,12 +111,6 @@ class OptionsMenu extends MusicBeatState
 			curSelected = grpControls.length - 1;
 		if (curSelected >= grpControls.length)
 			curSelected = 0;
-
-		if (isCat)
-			currentDescription = currentSelectedCat.getOptions()[curSelected].getDescription();
-		else
-			currentDescription = "Please select a catagory";
-		versionShit.text = "Offset (Left, Right): " + FlxG.save.data.offset + " - Description - " + currentDescription;
 
 		// selector.y = (70 * curSelected) + 30;
 
