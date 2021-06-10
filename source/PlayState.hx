@@ -137,6 +137,8 @@ class PlayState extends MusicBeatState
 	public static var dad:Character;
 
 	var s_ending:Bool = false;
+	
+	public static var cpuStrums:FlxTypedGroup<FlxSprite> = null;
 
 	public static var gf:Character;
 
@@ -3546,6 +3548,8 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-b';
 			case 'stage-beats':
 				gfVersion = 'gf-beat';
+			case 'philly-beat':
+				gfVersion = 'gf-beat';
 			case 'spooky-b':
 				gfVersion = 'gf-b';
 			case 'spooky-star':
@@ -4173,6 +4177,7 @@ class PlayState extends MusicBeatState
 		add(strumLineNotes);
 
 		playerStrums = new FlxTypedGroup<FlxSprite>();
+		cpuStrums = new FlxTypedGroup<FlxSprite>();
 
 		// startCountdown();
 
@@ -5005,17 +5010,7 @@ class PlayState extends MusicBeatState
 						gottaHitNote = !section.mustHitSection;
 					}
 				}
-				if (curStage == 'nevadaSpook' || curStage == 'nevada' || curStage == 'auditorHell')
-				{
-					daNoteData = Std.int(songNotes[1]);
-
-					gottaHitNote = section.mustHitSection;
-
-					if (!playerNotes.contains(songNotes[1]))
-					{
-						gottaHitNote = !section.mustHitSection;
-					}
-				}
+				
 
 				var oldNote:Note;
 				if (unspawnNotes.length > 0)
@@ -5219,6 +5214,16 @@ class PlayState extends MusicBeatState
 				hudArrYPos.push(babyArrow.y);
 				playerStrums.add(babyArrow);
 			}
+			if (player == 0)
+				{
+					
+					cpuStrums.add(babyArrow);
+				}
+		
+			cpuStrums.forEach(function(spr:FlxSprite)
+			{					
+				spr.centerOffsets(); //CPU arrows start out slightly off-center
+			});
 
 			strumLineNotes.add(babyArrow);
 		}
@@ -5855,7 +5860,6 @@ class PlayState extends MusicBeatState
 					daNote.visible = true;
 					daNote.active = true;
 				}
-
 				daNote.y = (strumLine.y - (Conductor.songPosition - daNote.strumTime) * (0.45 * FlxMath.roundDecimal(SONG.speed, 2)));
 				if (FlxG.save.data.down == 'down')
 					daNote.y = (strumLine.y + (Conductor.songPosition - daNote.strumTime) * (0.45 * FlxMath.roundDecimal(SONG.speed, 2)));
@@ -6007,6 +6011,21 @@ class PlayState extends MusicBeatState
 								dad.playAnim('singRIGHT' + altAnim, true);
 						}
 					}
+					cpuStrums.forEach(function(spr:FlxSprite)
+						{
+							if (Math.abs(daNote.noteData) == spr.ID)
+							{
+								spr.animation.play('confirm', true);
+							}
+							if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
+							{
+								spr.centerOffsets();
+								spr.offset.x -= 13;
+								spr.offset.y -= 13;
+							}
+							else
+								spr.centerOffsets();
+						});
 
 					dad.holdTimer = 0;
 
@@ -6078,6 +6097,14 @@ class PlayState extends MusicBeatState
 				minusHealth = false;
 			}
 		}
+		cpuStrums.forEach(function(spr:FlxSprite)
+			{
+				if (spr.animation.finished)
+				{
+					spr.animation.play('static');
+					spr.centerOffsets();
+				}
+			});
 		if (!inCutscene)
 			keyShit();
 
@@ -7298,13 +7325,20 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (dad.curCharacter == 'garcellodead')
+		if (dad.curCharacter == 'garcellodead'  && SONG.song.toLowerCase() == 'release')
 		{
 			if (curStep == 835)
 				garlilman = 1;
 			if (curStep == 847)
 				garlilman = 0;
 		}
+		if (dad.curCharacter == 'garcellodead'  && SONG.song.toLowerCase() == 'release-rs')
+			{
+				if (curStep == 900)
+					garlilman = 1;
+				if (curStep == 910)
+					garlilman = 0;
+			}
 		if (dad.curCharacter == 'zardy' && curStep == 2425)
 		{
 			FlxTween.tween(dad, {alpha: 0.3}, 2.5, {startDelay: 0.0});
