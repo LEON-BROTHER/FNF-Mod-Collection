@@ -24,7 +24,7 @@ class ChangePlayerState extends MusicBeatState
 {
 	var bflist:Array<String> = [
 		'bf', 'bf-christmas', 'bf-pixel', 'bf-holding-gf', 'bf-b', 'bf-christmas-b', 'bf-pixel-b', 'bf-neo', 'bf-minus', 'bf-minus-beta', 'bf-minus-blue',
-		'ena', 'ena-christmas', 'ena-pixel'
+		'ena', 'ena-christmas', 'ena-pixel', 'bf-rs', 'bf-christmas-rs', 'bf-pixel-rs', 'bf-star', 'bf-reanim', 'bf-christmas-reanim'
 	];
 
 	var curSelected:Int = 0;
@@ -129,6 +129,18 @@ class ChangePlayerState extends MusicBeatState
 					character.animation.play('bfEnaChristmas_select');
 				case 13:
 					character.animation.play('bfEnaPixel_select');
+				case 14:
+					character.animation.play('bfRs_select');
+				case 15:
+					character.animation.play('bfRsChristmas_select');
+				case 16:
+					character.animation.play('bfRsPixel_select');
+				case 17:
+					character.animation.play('bfStar_select');
+				case 18:
+					character.animation.play('bfReanim_select');
+				case 19:
+					character.animation.play('bfReanimChristmas_select');
 				default:
 					character.animation.play('bf_select');
 			}
@@ -257,7 +269,7 @@ class ChangePlayerState extends MusicBeatState
 					'assets/images/charSelect/characters/vanilla/bfAndGF.xml');
 
 				character.animation.addByPrefix('bfGf_idle', 'BF idle dance w gf', 24);
-				character.animation.addByPrefix('bfGf_select', 'BF NOTE UP', 24);
+				character.animation.addByPrefix('bfGf_select', 'BF NOTE UP0', 24);
 
 				character.antialiasing = true;
 
@@ -534,6 +546,162 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfEnaPixel_idle');
+			case 14:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/retrospecter/BOYFRIEND-rs.png',
+					'assets/images/charSelect/characters/retrospecter/BOYFRIEND-rs.xml');
+
+				character.animation.addByPrefix('bfRs_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfRs_select', 'BF HEY!!', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG0.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfRs_idle');
+			case 15:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/retrospecter/bfChristmas-rs.png',
+					'assets/images/charSelect/characters/retrospecter/bfChristmas-rs.xml');
+
+				character.animation.addByPrefix('bfRsChristmas_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfRsChristmas_select', 'BF HEY!!', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG0.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfRsChristmas_idle');
+			case 16:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/retrospecter/bfPixel-rs.png',
+					'assets/images/charSelect/characters/retrospecter/bfPixel-rs.xml');
+
+				character.animation.addByPrefix('bfRsPixel_idle', 'BF IDLE', 24);
+				character.animation.addByPrefix('bfRsPixel_select', 'BF UP NOTE', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG0.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfRsPixel_idle');
+			case 17:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/starcatcher/BOYFRIEND-star.png',
+					'assets/images/charSelect/characters/starcatcher/BOYFRIEND-star.xml');
+
+				character.animation.addByPrefix('bfStar_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfStar_select', 'BF HEY!!', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG0.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfStar_idle');
+			case 18:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/reanimated/BOYFRIEND-reanim.png',
+					'assets/images/charSelect/characters/reanimated/BOYFRIEND-reanim.xml');
+
+				character.animation.addByPrefix('bfReanim_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfReanim_select', 'BF HEY!!', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG6.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfReanim_idle');
+			case 19:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/reanimated/bfChristmas-reanim.png',
+					'assets/images/charSelect/characters/reanimated/bfChristmas-reanim.xml');
+
+				character.animation.addByPrefix('bfReanimChristmas_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfReanimChristmas_select', 'BF HEY!!', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG6.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfReanimChristmas_idle');
 			default:
 				remove(character);
 				remove(BG);

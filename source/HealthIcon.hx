@@ -150,6 +150,9 @@ class HealthIcon extends FlxSprite
 		animation.add('impostor2', [185, 186], 0, false, isPlayer);
 		animation.add('bfg', [0, 1], 0, false, isPlayer);
 		animation.add('ggf', [0, 1], 0, false, isPlayer);
+		animation.add('bf-rs', [0, 1], 0, false, isPlayer);
+		animation.add('bf-christmas-rs', [0, 1], 0, false, isPlayer);
+		animation.add('bf-pixel-rs', [21, 21], 0, false, isPlayer);
 
 		animation.play(char);
 		scrollFactor.set();

@@ -73,11 +73,9 @@ class Note extends FlxSprite
 		// MAKE SURE ITS DEFINITELY OFF SCREEN?
 		y -= 2000;
 
-	
 		// if(!isSustainNote) { burning = Std.random(3) == 1; } //Set random notes to burning
 
 		// No held fire notes :[ (Part 1)
-
 
 		this.noteData = noteData % 9;
 
@@ -150,6 +148,8 @@ class Note extends FlxSprite
 					frames = Paths.getSparrowAtlas('NOTE_assets2');
 				if (NoteSkinState.beats == 1)
 					frames = Paths.getSparrowAtlas('NOTE_assets-beats');
+				if (NoteSkinState.tabi == 1)
+					frames = Paths.getSparrowAtlas('NOTE_assets-tabi');
 
 				if (mania == 1 || mania == 2)
 					frames = Paths.getSparrowAtlas('shaggy/NOTE_assets-shaggy');
@@ -189,11 +189,7 @@ class Note extends FlxSprite
 				setGraphicSize(Std.int(width * noteScale));
 				updateHitbox();
 				antialiasing = true;
-
-				
-				
 		}
-
 
 		switch (noteData)
 		{
@@ -257,21 +253,18 @@ class Note extends FlxSprite
 
 		super.update(elapsed);
 
-				//No held fire notes :[ (Part 2)
-				
+		// No held fire notes :[ (Part 2)
 
 		if (mustPress)
 		{
-			
-				
-					if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset
-						&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.5))
-						canBeHit = true;
-					else
-						canBeHit = false;
-				
-				if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
-					tooLate = true;
+			if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset
+				&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.5))
+				canBeHit = true;
+			else
+				canBeHit = false;
+
+			if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
+				tooLate = true;
 		}
 		else
 		{

@@ -66,6 +66,8 @@ class PlayState extends MusicBeatState
 	public var doIt:Bool = true;
 	public var samShit:FlxSprite;
 
+	var crowd:MogusBoppers;
+
 	var genocideBG:FlxSprite;
 	var genocideBoard:FlxSprite;
 	var siniFireBehind:FlxTypedGroup<SiniFire>;
@@ -224,6 +226,8 @@ class PlayState extends MusicBeatState
 	var squareoverwrite:FlxSprite;
 	var squareoverwrite1:FlxSprite;
 
+	var flashSprite:FlxSprite = new FlxSprite(-70, -70).makeGraphic(5000, 5000, 0xFFb30000);
+
 	public var charactergaster:FlxSprite;
 
 	var squareoverwrite2:FlxSprite;
@@ -245,6 +249,8 @@ class PlayState extends MusicBeatState
 
 	var talking:Bool = true;
 	var songScore:Int = 0;
+
+	var _cb = 0;
 
 	public static var songMiss:Int = 0;
 
@@ -445,7 +451,8 @@ class PlayState extends MusicBeatState
 			|| SONG.song.toLowerCase() == 'philly-duet'
 			|| SONG.song.toLowerCase() == 'philly-carol'
 			|| SONG.song.toLowerCase() == 'carol-roll'
-			|| SONG.song.toLowerCase() == 'blammed-carol')
+			|| SONG.song.toLowerCase() == 'blammed-carol'
+			|| SONG.song.toLowerCase() == 'blammed-rs')
 		{
 			curStage = 'philly';
 
@@ -2311,7 +2318,7 @@ class PlayState extends MusicBeatState
 			squareoverwrite6.active = false;
 			add(squareoverwrite6);
 		}
-		else if (SONG.song.toLowerCase() == 'ram')
+		else if (SONG.song.toLowerCase() == 'ram' || SONG.song.toLowerCase() == 'ram-rs')
 		{
 			defaultCamZoom = 0.9;
 			curStage = 'hex-stage-noon';
@@ -2368,7 +2375,7 @@ class PlayState extends MusicBeatState
 			stageFront.active = false;
 			add(stageFront);
 		}
-		else if (SONG.song.toLowerCase() == 'glitcher')
+		else if (SONG.song.toLowerCase() == 'glitcher' || SONG.song.toLowerCase() == 'glitcher-rs')
 		{
 			defaultCamZoom = 0.9;
 			curStage = 'hex-stage-hack';
@@ -2492,7 +2499,7 @@ class PlayState extends MusicBeatState
 			deadpill.scrollFactor.set(0.9, 0.9);
 			deadpill.active = false;
 		}
-		else if (SONG.song.toLowerCase() == 'gospel')
+		else if (SONG.song.toLowerCase() == 'gospel' || SONG.song.toLowerCase() == 'gospel-rs')
 		{
 			defaultCamZoom = 0.8;
 			curStage = 'church-final';
@@ -3375,6 +3382,113 @@ class PlayState extends MusicBeatState
 			add(stageCurtains);
 			add(garded);
 		}
+		else if (SONG.song.toLowerCase() == 'sussus-moogus' || SONG.song.toLowerCase() == 'sabotage')
+		{
+			defaultCamZoom = 0.9;
+			curStage = 'sabotage';
+			var bg:FlxSprite = new FlxSprite(-200, -300).loadGraphic(Paths.image('polusSky'));
+			bg.setGraphicSize(Std.int(bg.width * 1.5));
+			bg.antialiasing = true;
+			bg.scrollFactor.set(0.5, 0.5);
+			bg.active = false;
+			add(bg);
+
+			var rocks:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('polusrocks'));
+			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
+			rocks.updateHitbox();
+			rocks.antialiasing = true;
+			rocks.scrollFactor.set(0.6, 0.6);
+			rocks.active = false;
+			add(rocks);
+
+			var rocks:FlxSprite = new FlxSprite(-450, -200).loadGraphic(Paths.image('polusWarehouse'));
+			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
+			rocks.updateHitbox();
+			rocks.antialiasing = true;
+			rocks.scrollFactor.set(0.9, 0.9);
+			rocks.active = false;
+			add(rocks);
+
+			var rocks:FlxSprite = new FlxSprite(-1000, 0).loadGraphic(Paths.image('polusHills'));
+			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
+			rocks.updateHitbox();
+			rocks.antialiasing = true;
+			rocks.scrollFactor.set(0.9, 0.9);
+			rocks.active = false;
+			add(rocks);
+
+			var stageFront:FlxSprite = new FlxSprite(-400, 450).loadGraphic(Paths.image('polusGround'));
+			stageFront.setGraphicSize(Std.int(stageFront.width * 1.5));
+			stageFront.updateHitbox();
+			stageFront.antialiasing = true;
+			stageFront.scrollFactor.set(1, 1);
+			stageFront.active = false;
+			add(stageFront);
+
+			var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
+			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+			stageCurtains.updateHitbox();
+			stageCurtains.antialiasing = true;
+			stageCurtains.scrollFactor.set(1.3, 1.3);
+			stageCurtains.active = false;
+		}
+		else if (SONG.song.toLowerCase() == 'meltdown')
+		{
+			defaultCamZoom = 0.9;
+			curStage = 'meltdown';
+			var bg:FlxSprite = new FlxSprite(-200, -300).loadGraphic(Paths.image('polusSky'));
+			bg.setGraphicSize(Std.int(bg.width * 1.5));
+			bg.antialiasing = true;
+			bg.scrollFactor.set(0.5, 0.5);
+			bg.active = false;
+			add(bg);
+
+			var rocks:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('polusrocks'));
+			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
+			rocks.updateHitbox();
+			rocks.antialiasing = true;
+			rocks.scrollFactor.set(0.6, 0.6);
+			rocks.active = false;
+			add(rocks);
+
+			var rocks:FlxSprite = new FlxSprite(-450, -200).loadGraphic(Paths.image('polusWarehouse'));
+			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
+			rocks.updateHitbox();
+			rocks.antialiasing = true;
+			rocks.scrollFactor.set(0.9, 0.9);
+			rocks.active = false;
+			add(rocks);
+
+			var rocks:FlxSprite = new FlxSprite(-1000, 0).loadGraphic(Paths.image('polusHills'));
+			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
+			rocks.updateHitbox();
+			rocks.antialiasing = true;
+			rocks.scrollFactor.set(0.9, 0.9);
+			rocks.active = false;
+			add(rocks);
+
+			crowd = new MogusBoppers(0, 150);
+			crowd.setGraphicSize(Std.int(crowd.width * 1.5));
+			crowd.updateHitbox();
+			crowd.scrollFactor.set(0.9, 0.9);
+			crowd.active = false;
+			add(crowd);
+
+			var stageFront:FlxSprite = new FlxSprite(-400, 450).loadGraphic(Paths.image('polusGround'));
+			stageFront.setGraphicSize(Std.int(stageFront.width * 1.5));
+			stageFront.updateHitbox();
+			stageFront.antialiasing = true;
+			stageFront.scrollFactor.set(1, 1);
+			stageFront.active = false;
+			add(stageFront);
+
+			var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
+			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+			stageCurtains.updateHitbox();
+			stageCurtains.antialiasing = true;
+			stageCurtains.scrollFactor.set(1.3, 1.3);
+			stageCurtains.active = false;
+		}
 
 		switch (curStage)
 		{
@@ -3460,6 +3574,8 @@ class PlayState extends MusicBeatState
 				destBoombox.x -= 110;
 				destBoombox.scale.set(1.2, 1.2);
 				add(destBoombox);
+			case 'sabotage' | 'meltdown':
+				gfVersion = 'ggf';
 		}
 
 		if (curStage == 'limo')
@@ -3647,7 +3763,18 @@ class PlayState extends MusicBeatState
 			case 'tabi-crazy':
 				dad.x -= 300;
 				dad.y += 50;
+			case 'impostor':
+				camPos.y += -200;
+				camPos.x += 400;
+				dad.x -= 200;
+				dad.y += 350;
+			case 'impostor2':
+				camPos.y += -200;
+				camPos.x += 400;
+				dad.x -= 200;
+				dad.y += 350;
 		}
+
 		if (isStoryMode)
 			bfsel = 1000;
 
@@ -3681,6 +3808,18 @@ class PlayState extends MusicBeatState
 				boyfriend = new Boyfriend(770, 450, 'bf-christmas-ena');
 			case 13:
 				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-ena');
+			case 14:
+				boyfriend = new Boyfriend(770, 450, 'bf-rs');
+			case 15:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-rs');
+			case 16:
+				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-rs');
+			case 17:
+				boyfriend = new Boyfriend(770, 450, 'bf-star');
+			case 18:
+				boyfriend = new Boyfriend(770, 450, 'bf-reanim');
+			case 19:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-reanim');
 			default:
 				boyfriend = new Boyfriend(770, 450, SONG.player1);
 		}
@@ -3888,11 +4027,11 @@ class PlayState extends MusicBeatState
 
 				dad.x -= 600;
 			case 'sunstage':
-				dad.y -= 200;
+				dad.y -= 160;
 			case 'witheredstage':
-				dad.y -= 200;
+				dad.y -= 160;
 			case 'hellstage':
-				dad.y -= 200;
+				dad.y -= 160;
 			case 'curse':
 				boyfriend.setZoom(1.2);
 				boyfriend.x += 300;
@@ -3907,6 +4046,10 @@ class PlayState extends MusicBeatState
 				gf.x += 100;
 				var tabiTrail = new FlxTrail(dad, null, 4, 24, 0.6, 0.9);
 				add(tabiTrail);
+			case 'meltdown':
+				gf.y -= 100;
+			case 'sabotage':
+				gf.y -= 100;
 		}
 
 		// Shitty layering but whatev it works LOL - Yeah Ninjamuffin it works lmfao
@@ -3956,6 +4099,16 @@ class PlayState extends MusicBeatState
 			add(converHole);
 			add(dad.exSpikes);
 		}
+
+		var deadass:FlxSprite = new FlxSprite(800, 650).loadGraphic(Paths.image('bfdead'));
+		deadass.setGraphicSize(Std.int(deadass.width * 1));
+		deadass.updateHitbox();
+		deadass.antialiasing = true;
+		deadass.scrollFactor.set(1, 1);
+		deadass.active = false;
+		if (curStage == 'meltdown')
+			add(deadass);
+
 		add(boyfriend);
 		if (dad.curCharacter == 'trickyH')
 		{
@@ -7022,6 +7175,8 @@ class PlayState extends MusicBeatState
 			resyncVocals();
 		}
 
+		flashSprite.alpha -= 0.08;
+
 		if (curStage == 'auditorHell' && curStep != stepOfLast)
 		{
 			switch (curStep)
@@ -7118,6 +7273,31 @@ class PlayState extends MusicBeatState
 			stepOfLast = curStep;
 		}
 
+		if (dad.curCharacter == 'garcelloghosty' && SONG.song.toLowerCase() == 'fading')
+		{
+			if (curStep == 247)
+			{
+				dad.playAnim('garFarewell', true);
+			}
+		}
+
+		if (dad.curCharacter == 'garcelloghosty' && SONG.song.toLowerCase() == 'fading')
+		{
+			if (curStep == 240)
+			{
+				new FlxTimer().start(0.1, function(tmr:FlxTimer)
+				{
+					dad.alpha -= 0.05;
+					iconP2.alpha -= 0.05;
+
+					if (dad.alpha > 0)
+					{
+						tmr.reset(0.1);
+					}
+				});
+			}
+		}
+
 		if (dad.curCharacter == 'garcellodead')
 		{
 			if (curStep == 835)
@@ -7159,11 +7339,54 @@ class PlayState extends MusicBeatState
 		{
 			dad.playAnim('ugh', true);
 		}
+
+		if (curStep == 1802 && curSong == 'Sussus-Moogus')
+		{
+			gf.playAnim('dead', false);
+		}
+		if (curStep == 1794 && curSong == 'Sussus-Moogus')
+		{
+			dad.playAnim('shoot1', false);
+		}
+		if (curStep == 1620 && curSong == 'Sabotage')
+		{
+			FlxG.sound.play(Paths.soundRandom('gunshot', 0, 15));
+			dad.playAnim('shoot2', false);
+		}
+		if (curStep == 1640 && curSong == 'Sabotage')
+		{
+			boyfriend.playAnim('scaredamong', false);
+		}
+		if (curStep == 1647 && curSong == 'Sabotage')
+		{
+			boyfriend.playAnim('deadamong', false);
+		}
+		if (curStep == 1647 && curSong == 'Sabotage')
+		{
+			boyfriend.playAnim('deadamong', false);
+		}
+		if (curStep == 2048 && curSong == 'Meltdown')
+		{
+			boyfriend.playAnim('hey', false);
+		}
+		if (curStep == 1812 && curSong == 'Sussus-Moogus')
+		{
+			dad.playAnim('idle', true);
+		}
 	}
 
 	var lightningStrikeBeat:Int = 0;
 	var lightningOffset:Int = 8;
 	var beatOfFuck:Int = 0;
+
+	function bgFlash():Void
+	{
+		// oops im stupid so commented out the tweening version
+		// flashSprite.alpha = 0;
+		// FlxTween.tween(flashSprite.alpha, 0.4, 0.15);
+		trace('BG FLASH FUNNY');
+		flashSprite.alpha = 0.4;
+	}
 
 	function shakeNote():Void
 	{
@@ -7233,6 +7456,98 @@ class PlayState extends MusicBeatState
 		if (generatedMusic)
 		{
 			notes.sort(FlxSort.byY, FlxSort.DESCENDING);
+		}
+
+		if (curStage == 'meltdown')
+		{
+			crowd.dance();
+		}
+
+		var sussusBeats = [94, 95, 288, 296, 304, 312, 318, 319];
+		var saboBeats = [16, 24, 32, 40, 48, 56, 62, 63, 272, 280, 288, 296, 302, 303, 376, 384, 892];
+		var meltBeats = [
+			0, 16, 32, 48, 64, 72, 80, 88, 96, 104, 112, 120, 126, 127, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 382, 464,
+			480, 496, 512
+		];
+		var _b = 0;
+		// FlxG.watch.addQuick("Flash Timer", _cb); debug stuff
+
+		add(flashSprite);
+		flashSprite.alpha = 0;
+		flashSprite.scrollFactor.set(0, 0);
+
+		if (curSong == 'Sussus-Moogus') // sussus flashes
+		{
+			if (curBeat == 97 || curBeat == 192 || curBeat == 320)
+				_cb = 1;
+			if (curBeat > 98 && curBeat < 160 || curBeat > 192 && curBeat < 224 || curBeat > 320 && curBeat < 382 || curBeat == 98 || curBeat == 160
+				|| curBeat == 192 || curBeat == 224 || curBeat == 320 || curBeat == 382)
+			{
+				_cb++;
+				if (_cb == 2)
+				{
+					bgFlash();
+					_cb = 0;
+				}
+			}
+			while (_b < sussusBeats.length)
+			{
+				var susflash = sussusBeats[_b];
+				++_b;
+				if (curBeat == susflash)
+				{
+					bgFlash();
+				}
+			}
+		}
+		if (curSong == 'Sabotage') // sabotage flashes
+		{
+			while (_b < saboBeats.length)
+			{
+				var sabflash = saboBeats[_b];
+				++_b;
+				if (curBeat == sabflash)
+				{
+					bgFlash();
+				}
+			}
+
+			if (curBeat == 63 || curBeat == 304)
+				_cb = 3;
+			if (curBeat > 64 && curBeat < 124 || curBeat > 304 && curBeat < 370 || curBeat == 64 || curBeat == 124 || curBeat == 304 || curBeat == 370)
+			{
+				_cb++;
+				if (_cb == 4)
+				{
+					bgFlash();
+					_cb = 0;
+				}
+			}
+		}
+		if (curSong == 'Meltdown') // meltdown flashes
+		{
+			while (_b < meltBeats.length)
+			{
+				var meltflash = meltBeats[_b];
+				++_b;
+				if (curBeat == meltflash)
+				{
+					bgFlash();
+				}
+			}
+			if (curBeat == 127)
+				_cb = 3;
+			if (curBeat == 382)
+				_cb = 1;
+			if (curBeat > 128 && curBeat < 192 || curBeat > 382 && curBeat < 448 || curBeat == 128 || curBeat == 192 || curBeat == 382 || curBeat == 448)
+			{
+				_cb++;
+				if (_cb == 4)
+				{
+					bgFlash();
+					_cb = 0;
+				}
+			}
 		}
 
 		if (SONG.notes[Math.floor(curStep / 16)] != null)
@@ -7359,7 +7674,14 @@ class PlayState extends MusicBeatState
 
 		if (curBeat % gfSpeed == 0)
 		{
-			gf.dance();
+			if (curSong != 'Sussus-Moogus')
+			{
+				gf.dance();
+			}
+			else if (curSong == 'Sussus-Moogus' && curStep <= 1801)
+			{
+				gf.dance();
+			}
 		}
 
 		if (!boyfriend.animation.curAnim.name.startsWith("sing"))

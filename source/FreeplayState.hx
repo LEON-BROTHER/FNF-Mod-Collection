@@ -139,8 +139,7 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 29)
 		{
 			if (StoryMenuState.weekUnlocked[18] || isDebug)
-				addWeek(['Lo-Fight', 'Overhead', 'Ballistic', 'Ballistic-Old'], 18,
-					['whitty', 'whitty', 'whitty-crazy', 'whitty-crazy']);
+				addWeek(['Lo-Fight', 'Overhead', 'Ballistic', 'Ballistic-Old'], 18, ['whitty', 'whitty', 'whitty-crazy', 'whitty-crazy']);
 		}
 
 		if (CategoryState.playlist == 30)
@@ -316,7 +315,7 @@ class FreeplayState extends MusicBeatState
 					'Blast',
 					'Super-saiyan',
 					'GOD-EATER'
-				], 35, ['shaggy']);
+				], 35, ['shaggy', 'shaggy', 'shaggy', 'shaggy', 'shaggy', 'shaggy', 'pshaggy']);
 		}
 		if (CategoryState.playlist == 26)
 		{
@@ -339,7 +338,20 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 33)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Ballistic-RS', 'Release-RS', 'Foolhardy-RS', 'Genocide-RS'], 35, ['whitty-crazy', 'garcellodead', 'zardy', 'tabi-crazy']);
+				addWeek([
+					'Ballistic-RS',
+					'Blammed-RS',
+					'Foolhardy-RS',
+					'Genocide-RS',
+					'RAM-RS',
+					'Release-RS'
+				], 35, ['whitty-crazy', 'pico', 'zardy', 'tabi-crazy', 'hex', 'garcellodead']);
+		}
+
+		if (CategoryState.playlist == 34)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek(['Sussus-Moogus', 'Sabotage', 'Meltdown'], 35, ['impostor', 'impostor', 'impostor2']);
 		}
 
 		/* 
