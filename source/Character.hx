@@ -3312,9 +3312,6 @@ class Character extends FlxSprite
 
 				frames = tex;
 
-				graphic.persist = true;
-				graphic.destroyOnNoUse = false;
-
 				animation.addByPrefix('idle', 'Phase 3 Tricky Idle', 24);
 
 				// they have to be left right up down, in that order.

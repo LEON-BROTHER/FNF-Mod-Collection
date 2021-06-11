@@ -133,7 +133,13 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 28)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Improbable-Outset', 'Madness', 'Hellclown', 'Expurgation'], 35, ['trickyMask', 'tricky', 'trickyH', 'exTricky']);
+				addWeek([
+					'Improbable-Outset',
+					'Madness',
+					'Improbable-Outset-Duet',
+					'Madness-Duet',
+					'Expurgation'
+				], 35, ['trickyMask', 'tricky', 'trickyMask', 'tricky', 'exTricky']);
 		}
 
 		if (CategoryState.playlist == 29)
@@ -343,9 +349,13 @@ class FreeplayState extends MusicBeatState
 					'Blammed-RS',
 					'Foolhardy-RS',
 					'Genocide-RS',
+					'Lo-Fight-RS',
 					'RAM-RS',
-					'Release-RS'
-				], 35, ['whitty-crazy', 'pico', 'zardy', 'tabi-crazy', 'hex', 'garcellodead']);
+					'Release-RS',
+					'Roses-RS',
+					'Thorns-RS',
+					'Zavodila-RS'
+				], 35, ['whitty-crazy', 'pico', 'zardy', 'tabi-crazy', 'whitty', 'hex', 'garcellodead', 'senpai', 'spirit', 'ruv']);
 		}
 
 		if (CategoryState.playlist == 34)
@@ -531,25 +541,48 @@ class FreeplayState extends MusicBeatState
 
 	function changeDiff(change:Int = 0)
 	{
-		curDifficulty += change;
-
-		if (curDifficulty < 0)
-			curDifficulty = 2;
-		if (curDifficulty > 2)
-			curDifficulty = 0;
-
-		#if !switch
-		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
-		#end
-
-		switch (curDifficulty)
+		if (CategoryState.playlist == 33)
 		{
-			case 0:
-				diffText.text = "EASY";
-			case 1:
-				diffText.text = 'NORMAL';
-			case 2:
-				diffText.text = "HARD";
+			curDifficulty = 2;
+			curDifficulty += change;
+
+			if (curDifficulty < 0)
+				curDifficulty = 2;
+			if (curDifficulty > 2)
+				curDifficulty = 2;
+
+			#if !switch
+			intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
+			#end
+
+			switch (curDifficulty)
+			{
+				case 2:
+					diffText.text = "HARD";
+			}
+		}
+		else
+		{
+			curDifficulty += change;
+
+			if (curDifficulty < 0)
+				curDifficulty = 2;
+			if (curDifficulty > 2)
+				curDifficulty = 0;
+
+			#if !switch
+			intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
+			#end
+
+			switch (curDifficulty)
+			{
+				case 0:
+					diffText.text = "EASY";
+				case 1:
+					diffText.text = 'NORMAL';
+				case 2:
+					diffText.text = "HARD";
+			}
 		}
 	}
 

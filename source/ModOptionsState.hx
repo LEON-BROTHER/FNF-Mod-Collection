@@ -29,6 +29,8 @@ class ModOptionsState extends MusicBeatState
 	public static var keys:FlxText;
 	public static var keysWeek7:FlxText;
 	public static var keysBob:FlxText;
+	public static var keysenemy:FlxText;
+	var eneyme:String;
 
 	override function create()
 	{
@@ -41,20 +43,33 @@ class ModOptionsState extends MusicBeatState
 		add(bg);
 		keysWeek7 = new FlxText(70, 0, 0, "", 32);
 		keysBob = new FlxText(70, 30, 0, "", 32);
+		keysenemy = new FlxText(70, 60, 0, "", 32);
 
 		FlxTween.tween(keysWeek7, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
-		keysWeek7.text = "CurSelected: " + FlxG.save.data.week7Cut.toUpperCase();
+		keysWeek7.text = "Week 7 Cutscenes: " + FlxG.save.data.week7Cut.toUpperCase();
 		keysWeek7.scrollFactor.set();
 		keysWeek7.setFormat(Paths.font('vcr.ttf'), 32);
 		keysWeek7.updateHitbox();
 		add(keysWeek7);
 
 		FlxTween.tween(keysBob, {alpha: 1, y: 30}, 0.4, {ease: FlxEase.quartInOut});
-		keysBob.text = "CurSelected: " + FlxG.save.data.bobCrash.toUpperCase();
+		keysBob.text = "Bob Crashing: " + FlxG.save.data.bobCrash.toUpperCase();
 		keysBob.scrollFactor.set();
 		keysBob.setFormat(Paths.font('vcr.ttf'), 32);
 		keysBob.updateHitbox();
 		add(keysBob);
+		if (FlxG.save.data.playenemy)
+			eneyme = 'Yes';
+		else
+			eneyme = 'No';
+
+		FlxTween.tween(keysenemy, {alpha: 1, y: 60}, 0.4, {ease: FlxEase.quartInOut});
+		keysenemy.text = "Play as Enemy: " + eneyme;
+		keysenemy.scrollFactor.set();
+		keysenemy.setFormat(Paths.font('vcr.ttf'), 32);
+		keysenemy.updateHitbox();
+
+
 
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('category'), true, true);
 
@@ -101,7 +116,7 @@ class ModOptionsState extends MusicBeatState
 
 		if (controls.BACK)
 		{
-			FlxG.switchState(new MainMenuState());
+			FlxG.switchState(new OptionsMenuState());
 		}
 		if (accepted)
 		{
@@ -122,7 +137,7 @@ class ModOptionsState extends MusicBeatState
 					}
 
 					FlxTween.tween(keysWeek7, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
-					keysWeek7.text = "CurSelected: " + FlxG.save.data.week7Cut.toUpperCase();
+					keysWeek7.text = "Week 7 Cutscenes: " + FlxG.save.data.week7Cut.toUpperCase();
 					keysWeek7.scrollFactor.set();
 					keysWeek7.setFormat(Paths.font('vcr.ttf'), 32);
 					keysWeek7.updateHitbox();
@@ -141,11 +156,13 @@ class ModOptionsState extends MusicBeatState
 					}
 
 					FlxTween.tween(keysBob, {alpha: 1, y: 30}, 0.4, {ease: FlxEase.quartInOut});
-					keysBob.text = "CurSelected: " + FlxG.save.data.bobCrash.toUpperCase();
+					keysBob.text = "Bob Crashing: " + FlxG.save.data.bobCrash.toUpperCase();
 					keysBob.scrollFactor.set();
 					keysBob.setFormat(Paths.font('vcr.ttf'), 32);
 					keysBob.updateHitbox();
 					add(keysBob);
+		
+					
 			}
 		}
 

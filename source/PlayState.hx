@@ -138,6 +138,8 @@ class PlayState extends MusicBeatState
 
 	var s_ending:Bool = false;
 
+	public static var cpuStrums:FlxTypedGroup<FlxSprite> = null;
+
 	public static var gf:Character;
 
 	private var boyfriend:Boyfriend;
@@ -1228,7 +1230,8 @@ class PlayState extends MusicBeatState
 			|| SONG.song.toLowerCase() == 'roses'
 			|| SONG.song.toLowerCase() == 'senpai-duet'
 			|| SONG.song.toLowerCase() == 'roses-duet'
-			|| SONG.song.toLowerCase() == 'high-school-conflict')
+			|| SONG.song.toLowerCase() == 'high-school-conflict'
+			|| SONG.song.toLowerCase() == 'roses-rs')
 		{
 			curStage = 'school';
 
@@ -1286,7 +1289,7 @@ class PlayState extends MusicBeatState
 			bgGirls = new BackgroundGirls(-100, 190);
 			bgGirls.scrollFactor.set(0.9, 0.9);
 
-			if (SONG.song.toLowerCase() == 'roses' || SONG.song.toLowerCase() == 'roses-duet')
+			if (SONG.song.toLowerCase() == 'roses' || SONG.song.toLowerCase() == 'roses-duet' || SONG.song.toLowerCase() == 'roses-rs')
 			{
 				bgGirls.getScared();
 			}
@@ -1321,7 +1324,7 @@ class PlayState extends MusicBeatState
 
 			bgStreet.updateHitbox();
 		}
-		else if (SONG.song.toLowerCase() == 'thorns' || SONG.song.toLowerCase() == 'thorns-duet')
+		else if (SONG.song.toLowerCase() == 'thorns' || SONG.song.toLowerCase() == 'thorns-duet' || SONG.song.toLowerCase() == 'thorns-rs')
 		{
 			curStage = 'schoolEvil';
 
@@ -2393,7 +2396,9 @@ class PlayState extends MusicBeatState
 			stageFront.active = false;
 			add(stageFront);
 		}
-		else if (SONG.song.toLowerCase() == 'lo-fight' || SONG.song.toLowerCase() == 'overhead')
+		else if (SONG.song.toLowerCase() == 'lo-fight'
+			|| SONG.song.toLowerCase() == 'overhead'
+			|| SONG.song.toLowerCase() == 'lo-fight-rs')
 		{
 			defaultCamZoom = 0.8;
 			curStage = 'whitty-normal';
@@ -2474,7 +2479,7 @@ class PlayState extends MusicBeatState
 			bg2.active = false;
 			add(bg2);
 		}
-		else if (SONG.song.toLowerCase() == 'zavodila')
+		else if (SONG.song.toLowerCase() == 'zavodila' || SONG.song.toLowerCase() == 'zavodila-rs')
 		{
 			defaultCamZoom = 0.8;
 			curStage = 'church-ruv';
@@ -3546,6 +3551,8 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-b';
 			case 'stage-beats':
 				gfVersion = 'gf-beat';
+			case 'philly-beat':
+				gfVersion = 'gf-beat';
 			case 'spooky-b':
 				gfVersion = 'gf-b';
 			case 'spooky-star':
@@ -3655,8 +3662,12 @@ class PlayState extends MusicBeatState
 				dad.y += 65;
 			case 'tricky':
 				camPos.x += 400;
+				dad.y += 55;
+				dad.x -= 100;
 				camPos.y += 600;
 			case 'trickyMask':
+				dad.y += 55;
+				dad.x -= 100;
 				camPos.x += 400;
 			case 'trickyH':
 				camPos.set(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y + 500);
@@ -3741,9 +3752,6 @@ class PlayState extends MusicBeatState
 				dad.x -= 150;
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'shaggy':
-				camFollow.y = dad.getMidpoint().y - 100;
-				camFollow.x = dad.getMidpoint().x - 100;
 			case 'tord':
 				dad.x = 214.2;
 				dad.y = 55.4;
@@ -4173,6 +4181,7 @@ class PlayState extends MusicBeatState
 		add(strumLineNotes);
 
 		playerStrums = new FlxTypedGroup<FlxSprite>();
+		cpuStrums = new FlxTypedGroup<FlxSprite>();
 
 		// startCountdown();
 
@@ -4333,7 +4342,12 @@ class PlayState extends MusicBeatState
 				case 'roses-b-sides':
 					FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
+				case 'roses-rs':
+					FlxG.sound.play(Paths.sound('ANGRY'));
+					schoolIntro(doof);
 				case 'thorns-b-sides':
+					schoolIntro(doof);
+				case 'thorns-rs':
 					schoolIntro(doof);
 				default:
 					startCountdown();
@@ -4407,15 +4421,6 @@ class PlayState extends MusicBeatState
 		samShit.color = FlxColor.BLACK;
 		add(samShit);
 		samShit.visible = false;
-
-		vignette = new FlxSprite().loadGraphic(Paths.image('vignette'));
-		vignette.width = 1280;
-		vignette.height = 720;
-		vignette.x = 0;
-		vignette.y = 0;
-		vignette.updateHitbox();
-		add(vignette);
-		vignette.alpha = 1;
 	}
 
 	var totalDamageTaken:Float = 0;
@@ -4602,13 +4607,16 @@ class PlayState extends MusicBeatState
 			|| SONG.song.toLowerCase() == 'roses-b-sides'
 			|| SONG.song.toLowerCase() == 'thorns'
 			|| SONG.song.toLowerCase() == 'thorns-duet'
-			|| SONG.song.toLowerCase() == 'thorns-b-sides')
+			|| SONG.song.toLowerCase() == 'thorns-b-sides'
+			|| SONG.song.toLowerCase() == 'thorns-rs'
+			|| SONG.song.toLowerCase() == 'roses-rs')
 		{
 			remove(black);
 
 			if (SONG.song.toLowerCase() == 'thorns'
 				|| SONG.song.toLowerCase() == 'thorns-b-sides'
-				|| SONG.song.toLowerCase() == 'thorns-duet')
+				|| SONG.song.toLowerCase() == 'thorns-duet'
+				|| SONG.song.toLowerCase() == 'thorns-rs')
 			{
 				add(red);
 			}
@@ -5005,17 +5013,6 @@ class PlayState extends MusicBeatState
 						gottaHitNote = !section.mustHitSection;
 					}
 				}
-				if (curStage == 'nevadaSpook' || curStage == 'nevada' || curStage == 'auditorHell')
-				{
-					daNoteData = Std.int(songNotes[1]);
-
-					gottaHitNote = section.mustHitSection;
-
-					if (!playerNotes.contains(songNotes[1]))
-					{
-						gottaHitNote = !section.mustHitSection;
-					}
-				}
 
 				var oldNote:Note;
 				if (unspawnNotes.length > 0)
@@ -5219,6 +5216,15 @@ class PlayState extends MusicBeatState
 				hudArrYPos.push(babyArrow.y);
 				playerStrums.add(babyArrow);
 			}
+			if (player == 0)
+			{
+				cpuStrums.add(babyArrow);
+			}
+
+			cpuStrums.forEach(function(spr:FlxSprite)
+			{
+				spr.centerOffsets(); // CPU arrows start out slightly off-center
+			});
 
 			strumLineNotes.add(babyArrow);
 		}
@@ -5855,7 +5861,6 @@ class PlayState extends MusicBeatState
 					daNote.visible = true;
 					daNote.active = true;
 				}
-
 				daNote.y = (strumLine.y - (Conductor.songPosition - daNote.strumTime) * (0.45 * FlxMath.roundDecimal(SONG.speed, 2)));
 				if (FlxG.save.data.down == 'down')
 					daNote.y = (strumLine.y + (Conductor.songPosition - daNote.strumTime) * (0.45 * FlxMath.roundDecimal(SONG.speed, 2)));
@@ -6007,6 +6012,21 @@ class PlayState extends MusicBeatState
 								dad.playAnim('singRIGHT' + altAnim, true);
 						}
 					}
+					cpuStrums.forEach(function(spr:FlxSprite)
+					{
+						if (Math.abs(daNote.noteData) == spr.ID)
+						{
+							spr.animation.play('confirm', true);
+						}
+						if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
+						{
+							spr.centerOffsets();
+							spr.offset.x -= 13;
+							spr.offset.y -= 13;
+						}
+						else
+							spr.centerOffsets();
+					});
 
 					dad.holdTimer = 0;
 
@@ -6078,6 +6098,14 @@ class PlayState extends MusicBeatState
 				minusHealth = false;
 			}
 		}
+		cpuStrums.forEach(function(spr:FlxSprite)
+		{
+			if (spr.animation.finished)
+			{
+				spr.animation.play('static');
+				spr.centerOffsets();
+			}
+		});
 		if (!inCutscene)
 			keyShit();
 
@@ -7298,11 +7326,18 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (dad.curCharacter == 'garcellodead')
+		if (dad.curCharacter == 'garcellodead' && SONG.song.toLowerCase() == 'release')
 		{
 			if (curStep == 835)
 				garlilman = 1;
 			if (curStep == 847)
+				garlilman = 0;
+		}
+		if (dad.curCharacter == 'garcellodead' && SONG.song.toLowerCase() == 'release-rs')
+		{
+			if (curStep == 900)
+				garlilman = 1;
+			if (curStep == 910)
 				garlilman = 0;
 		}
 		if (dad.curCharacter == 'zardy' && curStep == 2425)

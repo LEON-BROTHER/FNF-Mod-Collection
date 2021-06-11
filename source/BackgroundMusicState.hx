@@ -102,7 +102,7 @@ class BackgroundMusicState extends MusicBeatState
 		
 		if (controls.BACK)
 		{
-			FlxG.switchState(new MainMenuState());
+			FlxG.switchState(new OptionsMenuState());
 		}
 		if (accepted)
 		{

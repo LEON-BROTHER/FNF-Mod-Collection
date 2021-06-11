@@ -76,12 +76,13 @@ class Note extends FlxSprite
 		// if(!isSustainNote) { burning = Std.random(3) == 1; } //Set random notes to burning
 
 		// No held fire notes :[ (Part 1)
-
+		var daStage:String = PlayState.curStage;
 		this.noteData = noteData % 9;
+
 
 		this.strumTime = strumTime;
 
-		var daStage:String = PlayState.curStage;
+	
 
 		switch (daStage)
 		{
