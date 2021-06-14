@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="vagrantTalk.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Vagrant Speak0000" x="0" y="0" width="218" height="357" frameX="0" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0001" x="0" y="0" width="218" height="357" frameX="0" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0002" x="218" y="0" width="218" height="357" frameX="-2" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0003" x="218" y="0" width="218" height="357" frameX="-2" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0004" x="436" y="0" width="218" height="357" frameX="-4" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0005" x="436" y="0" width="218" height="357" frameX="-4" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0006" x="654" y="0" width="218" height="357" frameX="-6" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0007" x="654" y="0" width="218" height="357" frameX="-6" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0008" x="654" y="0" width="218" height="357" frameX="-6" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0009" x="654" y="0" width="218" height="357" frameX="-6" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0010" x="654" y="0" width="218" height="357" frameX="-6" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0011" x="654" y="0" width="218" height="357" frameX="-6" frameY="0" frameWidth="224" frameHeight="357"/>
+	<SubTexture name="Vagrant Speak0012" x="654" y="0" width="218" height="357" frameX="-6" frameY="0" frameWidth="224" frameHeight="357"/>
+</TextureAtlas>

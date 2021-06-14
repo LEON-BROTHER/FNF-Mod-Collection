@@ -332,7 +332,8 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 31)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Trunk', 'Warning', 'Revolution', 'Quack'], 35, ['tree', 'tree2', 'tree3', 'duck']);
+				addWeek(['Trunk', 'Warning', 'Revolution', 'Quack', 'Geesy', 'Synergy', 'Prom'], 35,
+					['tree', 'tree2', 'tree3', 'duck', 'duck', 'matt-duck', 'tree']);
 		}
 
 		if (CategoryState.playlist == 32)
@@ -345,23 +346,55 @@ class FreeplayState extends MusicBeatState
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek([
-					'Ballistic-RS',
-					'Blammed-RS',
-					'Foolhardy-RS',
-					'Genocide-RS',
-					'Lo-Fight-RS',
-					'RAM-RS',
-					'Release-RS',
-					'Roses-RS',
-					'Thorns-RS',
-					'Zavodila-RS'
-				], 35, ['whitty-crazy', 'pico', 'zardy', 'tabi-crazy', 'whitty', 'hex', 'garcellodead', 'senpai', 'spirit', 'ruv']);
+					'Ballistic-RS', 'Blammed-RS', 'Foolhardy-RS', 'Genocide-RS', 'Glitcher-RS', 'Gospel-RS', 'Lo-Fight-RS', 'RAM-RS', 'Release-RS',
+					'Roses-RS', 'Thorns-RS', 'Zavodila-RS'
+				], 35, [
+					'whitty-crazy', 'pico', 'zardy', 'tabi-crazy', 'hex-hack', 'luci-sarv', 'whitty', 'hex', 'garcellodead', 'senpai-angry', 'spirit', 'ruv'
+				]);
 		}
 
 		if (CategoryState.playlist == 34)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Sussus-Moogus', 'Sabotage', 'Meltdown'], 35, ['impostor', 'impostor', 'impostor2']);
+				addWeek(['Sussus-Moogus', 'Sabotage', 'Meltdown'], 35, ['impostor', 'impostor', 'impostor']);
+		}
+
+		if (CategoryState.playlist == 35)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek([
+					     'Tutorial-B3', 'Bopeebo-B3', 'Fresh-B3', 'Dadbattle-B3', 'Spookeez-B3',             'South-B3',   'Pico-B3', 'Philly-B3', 'Blammed-B3',
+					'Satin-Panties-B3',    'High-B3',  'Milf-B3',     'Cocoa-B3',   'Eggnog-B3', 'Winter-Horrorland-B3', 'Senpai-B3',  'Roses-B3',  'Thorns-B3'
+				], 35, [
+					'gf-b3', 'dad-b3', 'dad-b3', 'dad-b3', 'spooky-b3', 'spooky-b3', 'pico-b3', 'pico-b3', 'pico-b3', 'mom-car-b3', 'mom-car-b3',
+					'mom-car-b3', 'parents-christmas-b3', 'parents-christmas-b3', 'monster-christmas-b3', 'senpai-b3', 'senpai-b3', 'spirit-b3'
+				]);
+		}
+
+		if (CategoryState.playlist == 36)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek(['Retricus', 'Covetous', 'Terminus', 'Embark', 'Facade', 'Compel', 'Extremus'], 35,
+					['detra', 'detra', 'detra', 'vagrant', 'vagrant', 'vagrant', 'detra']);
+		}
+
+		if (CategoryState.playlist == 37)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek(['The-Date', 'Red-Flag', 'GTFO', 'Left-Swipe', 'Smol'], 35, ['neko-sweet', 'neko-crazy', 'neko-schizo', 'neko-bonus', 'nekunt']);
+		}
+
+		if (CategoryState.playlist == 38)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek([
+					'Best-Girl', 'Daddys-Girl', 'Salty-Love', 'Daughter-Complex', 'Sweet-N-Spooky', 'Sour-N-Scary', 'Opheebop', 'Protect', 'Defend',
+					'Safeguard', 'Indie-Star', 'Rising-Star', 'Superstar', 'Order-Up', 'Rush-Hour', 'Freedom', 'Buckets', 'Logarithms', 'Terminal'
+				], 35, [
+					'gf-salty', 'dad-salty', 'dad-salty', 'dad-salty', 'spooky-salty', 'spooky-salty', 'monster-salty', 'pico-salty', 'pico-salty',
+					'pico-salty', 'mom-car-salty', 'mom-car-salty', 'mom-car-salty', 'manager-salty', 'manager-salty',
+					'monster-christmas-salty', 'senpai-salty', 'senpai-salty', 'spirit-salty'
+				]);
 		}
 
 		/* 

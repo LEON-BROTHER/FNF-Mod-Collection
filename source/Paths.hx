@@ -114,4 +114,9 @@ class Paths
 	{
 		return FlxAtlasFrames.fromSpriteSheetPacker(image(key, library), file('images/$key.txt', library));
 	}
+
+	inline static public function getPackerAtlasJson(key:String, ?library:String)
+	{
+		return FlxAtlasFrames.fromTexturePackerJson(image(key, library), file('images/$key.json', library));
+	}
 }

@@ -19,9 +19,9 @@ class CategoryState extends MusicBeatState
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	public var menuItems:Array<String> = [
-		'Normal', 'Annie', 'Anders', 'B-Sides', 'Beatstreets', 'Bob', 'Carol', 'Chara', 'Duet Mod', 'Duet B-Sides', 'Garcello', 'Hex', 'Impostor', 'Kapi', 'Matt', 'Miku',
-		'Mid-Fight-Masses', 'Neo', 'Neon', 'Retrospecter', 'Sans', 'Sky', 'Shaggy', 'Starcatcher', 'Tabi', 'Tord', 'Tree', 'Tricky', 'Touhou', 'Whitty',
-		'X-Event', 'Zardy', 'Singles'
+		'Normal', 'Annie', 'Anders', 'B3 Remixes', 'B-Sides', 'Beatstreets', 'Bob', 'Carol', 'Chara', 'Detra', 'Duet Mod', 'Duet B-Sides', 'Garcello', 'Hex',
+		'Impostor', 'Kapi', 'Matt', 'Miku', 'Mid-Fight-Masses', 'Neko Freak', 'Neo', 'Neon', 'Retrospecter', 'Salty Sunday', 'Sans', 'Sky', 'Shaggy',
+		'Starcatcher', 'Tabi', 'Tord', 'Tree', 'Tricky', 'Touhou', 'Whitty', 'X-Event', 'Zardy', 'Singles'
 	];
 
 	public var curSelected:Int = 0;
@@ -280,6 +280,30 @@ class CategoryState extends MusicBeatState
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					playlist = 34;
+					FlxG.switchState(new FreeplayState());
+				case "B3 Remixes":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 35;
+					FlxG.switchState(new FreeplayState());
+				case "Detra":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 36;
+					FlxG.switchState(new FreeplayState());
+				case "Neko Freak":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 37;
+					FlxG.switchState(new FreeplayState());
+				case "Salty Sunday":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 38;
 					FlxG.switchState(new FreeplayState());
 			}
 		}

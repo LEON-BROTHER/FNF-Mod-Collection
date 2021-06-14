@@ -1,0 +1,776 @@
+{ "frames": {
+   "nfc_down instance 0": {
+    "frame": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 1": {
+    "frame": { "x": 670, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 2": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 3": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 4": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 5": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 6": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 7": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 8": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 9": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 10": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 11": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 12": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 13": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 14": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_down instance 15": {
+    "frame": { "x": 1340, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 0": {
+    "frame": { "x": 2010, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 1": {
+    "frame": { "x": 2680, "y": 0, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 2": {
+    "frame": { "x": 0, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 3": {
+    "frame": { "x": 0, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 4": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 5": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 6": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 7": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 8": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 9": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 10": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 11": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 12": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 13": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 14": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_up instance 15": {
+    "frame": { "x": 670, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 0": {
+    "frame": { "x": 1340, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 1": {
+    "frame": { "x": 2010, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 2": {
+    "frame": { "x": 2680, "y": 506, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 3": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 4": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 5": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 6": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 7": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 8": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 9": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 10": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 11": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 12": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 13": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_left instance 14": {
+    "frame": { "x": 0, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 0": {
+    "frame": { "x": 670, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 1": {
+    "frame": { "x": 1340, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 2": {
+    "frame": { "x": 2010, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 3": {
+    "frame": { "x": 2010, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 4": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 5": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 6": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 7": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 8": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 9": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 10": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 11": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 12": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 13": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_right instance 14": {
+    "frame": { "x": 2680, "y": 1012, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 0": {
+    "frame": { "x": 0, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 1": {
+    "frame": { "x": 0, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 2": {
+    "frame": { "x": 670, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 3": {
+    "frame": { "x": 1340, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 4": {
+    "frame": { "x": 2010, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 5": {
+    "frame": { "x": 2010, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 6": {
+    "frame": { "x": 2010, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 7": {
+    "frame": { "x": 2680, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 8": {
+    "frame": { "x": 2680, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 9": {
+    "frame": { "x": 2680, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 10": {
+    "frame": { "x": 2680, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 11": {
+    "frame": { "x": 2680, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 12": {
+    "frame": { "x": 2680, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 13": {
+    "frame": { "x": 1340, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 14": {
+    "frame": { "x": 1340, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_idle instance 15": {
+    "frame": { "x": 1340, "y": 1518, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 0": {
+    "frame": { "x": 0, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 1": {
+    "frame": { "x": 0, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 2": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 3": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 4": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 5": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 6": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 7": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 8": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 9": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 10": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 11": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 12": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 13": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 14": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   },
+   "nfc_freeze instance 15": {
+    "frame": { "x": 670, "y": 2024, "w": 660, "h": 496 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 660, "h": 496 },
+    "sourceSize": { "w": 660, "h": 496 },
+    "duration": 41
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.27-dev",
+  "image": "nf2.png",
+  "format": "RGBA8888",
+  "size": { "w": 3340, "h": 2520 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "nfc_down", "from": 0, "to": 15, "direction": "forward" },
+   { "name": "nfc_up", "from": 16, "to": 31, "direction": "forward" },
+   { "name": "nfc_left", "from": 32, "to": 46, "direction": "forward" },
+   { "name": "nfc_right", "from": 47, "to": 61, "direction": "forward" },
+   { "name": "nfc_idle", "from": 62, "to": 77, "direction": "forward" },
+   { "name": "nfc_freeze", "from": 78, "to": 93, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

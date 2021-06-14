@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="showcaster_assets.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="show down1" x="0" y="0" width="937" height="1250"/>
+	<SubTexture name="show down2" x="0" y="0" width="937" height="1250"/>
+	<SubTexture name="show down3" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down4" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down5" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down6" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down7" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down8" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down9" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down10" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down11" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show down12" x="937" y="0" width="937" height="1250"/>
+	<SubTexture name="show idle1" x="1874" y="0" width="937" height="1250"/>
+	<SubTexture name="show idle2" x="1874" y="0" width="937" height="1250"/>
+	<SubTexture name="show idle3" x="2811" y="0" width="937" height="1250"/>
+	<SubTexture name="show idle4" x="2811" y="0" width="937" height="1250"/>
+	<SubTexture name="show idle5" x="0" y="1250" width="937" height="1250"/>
+	<SubTexture name="show idle6" x="0" y="1250" width="937" height="1250"/>
+	<SubTexture name="show idle7" x="937" y="1250" width="937" height="1250"/>
+	<SubTexture name="show idle8" x="937" y="1250" width="937" height="1250"/>
+	<SubTexture name="show idle9" x="937" y="1250" width="937" height="1250"/>
+	<SubTexture name="show idle10" x="937" y="1250" width="937" height="1250"/>
+	<SubTexture name="show idle11" x="937" y="1250" width="937" height="1250"/>
+	<SubTexture name="show idle12" x="937" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left1" x="1874" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left2" x="1874" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left3" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left4" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left5" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left6" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left7" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left8" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left9" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left10" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left11" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show left12" x="2811" y="1250" width="937" height="1250"/>
+	<SubTexture name="show right1" x="0" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right2" x="0" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right3" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right4" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right5" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right6" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right7" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right8" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right9" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right10" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right11" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show right12" x="937" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up1" x="1874" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up2" x="1874" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up3" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up4" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up5" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up6" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up7" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up8" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up9" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up10" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up11" x="2811" y="2500" width="937" height="1250"/>
+	<SubTexture name="show up12" x="2811" y="2500" width="937" height="1250"/>
+</TextureAtlas>

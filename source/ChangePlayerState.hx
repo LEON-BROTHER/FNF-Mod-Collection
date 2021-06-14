@@ -24,7 +24,8 @@ class ChangePlayerState extends MusicBeatState
 {
 	var bflist:Array<String> = [
 		'bf', 'bf-christmas', 'bf-pixel', 'bf-holding-gf', 'bf-b', 'bf-christmas-b', 'bf-pixel-b', 'bf-neo', 'bf-minus', 'bf-minus-beta', 'bf-minus-blue',
-		'ena', 'ena-christmas', 'ena-pixel', 'bf-rs', 'bf-christmas-rs', 'bf-pixel-rs', 'bf-star', 'bf-reanim', 'bf-christmas-reanim'
+		'ena', 'ena-christmas', 'ena-pixel', 'bf-rs', 'bf-christmas-rs', 'bf-pixel-rs', 'bf-star', 'bf-reanim', 'bf-christmas-reanim', 'bf-b3',
+		'bf-christmas-b3', 'bf-pixel-b3'
 	];
 
 	var curSelected:Int = 0;
@@ -141,6 +142,12 @@ class ChangePlayerState extends MusicBeatState
 					character.animation.play('bfReanim_select');
 				case 19:
 					character.animation.play('bfReanimChristmas_select');
+				case 20:
+					character.animation.play('bfB3_select');
+				case 21:
+					character.animation.play('bfB3Christmas_select');
+				case 22:
+					character.animation.play('bfB3Pixel_select');
 				default:
 					character.animation.play('bf_select');
 			}
@@ -702,6 +709,84 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfReanimChristmas_idle');
+			case 20:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/b3/BOYFRIEND.png',
+					'assets/images/charSelect/characters/b3/BOYFRIEND.xml');
+
+				character.animation.addByPrefix('bfB3_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfB3_select', 'BF HEY!!', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG2.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfB3_idle');
+			case 21:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/b3/bfChristmas.png',
+					'assets/images/charSelect/characters/b3/bfChristmas.xml');
+
+				character.animation.addByPrefix('bfB3Christmas_idle', 'BF idle dance', 24);
+				character.animation.addByPrefix('bfB3Christmas_select', 'BF NOTE UP0', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG2.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfB3Christmas_idle');
+			case 22:
+				remove(character);
+				remove(BG);
+
+				character = new FlxSprite(0, 0);
+				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/b3/bfPixel.png',
+					'assets/images/charSelect/characters/b3/bfPixel.xml');
+
+				character.animation.addByPrefix('bfB3Pixel_idle', 'BF IDLE', 24);
+				character.animation.addByPrefix('bfB3Pixel_select', 'BF UP NOTE', 24);
+
+				character.antialiasing = false;
+
+				character.updateHitbox();
+
+				character.setGraphicSize(Std.int(275));
+
+				character.x = (FlxG.width / 2) - (character.width / 2);
+				character.y = (FlxG.height / 2) - (character.height / 2);
+
+				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG2.png');
+
+				add(BG);
+				add(character);
+
+				character.animation.play('bfB3Pixel_idle');
 			default:
 				remove(character);
 				remove(BG);

@@ -1,0 +1,27 @@
+{ "frames": {
+   "bf2p_enter instance 0": {
+    "frame": { "x": 0, "y": 0, "w": 689, "h": 185 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 689, "h": 185 },
+    "sourceSize": { "w": 689, "h": 185 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.27-dev",
+  "image": "bf2p.png",
+  "format": "RGBA8888",
+  "size": { "w": 689, "h": 185 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "bf2p_enter", "from": 0, "to": 0, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}
