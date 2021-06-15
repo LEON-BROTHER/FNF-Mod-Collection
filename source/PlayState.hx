@@ -26,6 +26,7 @@ import flixel.addons.effects.chainable.FlxEffectSprite;
 import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.graphics.atlas.FlxAtlas;
+import flixel.math.FlxAngle;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
@@ -4421,7 +4422,7 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-pixel-salty';
 			case 'schoolEvil-b3':
 				gfVersion = 'gf-pixel-b3';
-			case 'schoolEvil-b3':
+			case 'schoolEvil-salty':
 				gfVersion = 'gf-pixel-salty';
 			case 'school-b':
 				gfVersion = 'gf-pixel-b';
