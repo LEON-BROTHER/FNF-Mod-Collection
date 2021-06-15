@@ -135,6 +135,12 @@ class PlayState extends MusicBeatState
 	var MAINLIGHT:FlxSprite;
 
 	public static var dad:Character;
+	var steve:FlxSprite;
+	var johns:FlxSprite;
+	var tankSpeedJohn = [];
+	var goingRightJohn = [];
+	var strumTimeJohn = [];
+	var endingOffsetJohn = [];
 
 	var s_ending:Bool = false;
 
@@ -2985,13 +2991,13 @@ class PlayState extends MusicBeatState
 			halloweenBG.scrollFactor.set(0.55, 0.55);
 			add(halloweenBG);
 
-			var stageCurtains4:FlxSprite = new FlxSprite(-420, -150).loadGraphic(Paths.image('tank/tankGround'));
-			stageCurtains4.setGraphicSize(Std.int(stageCurtains4.width * 1.15));
-			stageCurtains4.updateHitbox();
-			stageCurtains4.antialiasing = true;
-			stageCurtains4.scrollFactor.set(1.1, 1.1);
-			stageCurtains4.active = false;
-			add(stageCurtains4);
+			steve = new FlxSprite(300, 300);
+			steve.frames = Paths.getSparrowAtlas('tank/tankRolling');
+			steve.animation.addByPrefix('idle', "BG tank w lighting", 24, true);
+			steve.animation.play('idle', true);
+			steve.antialiasing = true;
+			steve.scrollFactor.set(0.5, 0.5);
+			add(steve);
 			var stageCurtains4:FlxSprite = new FlxSprite(-420, -150).loadGraphic(Paths.image('tank/tankGround'));
 			stageCurtains4.setGraphicSize(Std.int(stageCurtains4.width * 1.15));
 			stageCurtains4.updateHitbox();
@@ -4365,7 +4371,7 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-car';
 			case 'tankman1':
 				gfVersion = 'gftank';
-				if (SONG.song.toLowerCase() == 'stress')
+				if (SONG.song.toLowerCase() == 'stress' || SONG.song.toLowerCase() == 'stress-duet')
 					gfVersion = 'picospeaker';
 			case 'church-dark':
 				gfVersion = 'gf-dark';
@@ -4830,7 +4836,7 @@ class PlayState extends MusicBeatState
 			case 'tankman1':
 				gf.x -= 200;
 				dad.x -= 150;
-				if (SONG.song.toLowerCase() == 'stress')
+				if (SONG.song.toLowerCase() == 'stress' || SONG.song.toLowerCase() == 'stress-duet')
 				{
 					gf.y -= 100;
 					gf.x += 80;
@@ -5216,11 +5222,14 @@ class PlayState extends MusicBeatState
 		if (curStage == 'garl')
 			add(halloweenBG);
 		if (curStage == 'tankman1')
-			add(halloweenBG3);
-		add(halloweenBG4);
-		add(halloweenBG5);
-		add(halloweenBG6);
-		add(halloweenBG7);
+			{
+				add(halloweenBG3);
+				add(halloweenBG4);
+				add(halloweenBG5);
+				add(halloweenBG6);
+				add(halloweenBG7);
+			}
+
 		switch (curStage)
 		{
 			case 'curse':
@@ -6445,6 +6454,8 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		if (curStage == 'tankman1')
+			moveTank();
 		floatshit += 0.1;
 		#if !debug
 		perfectMode = false;
@@ -8552,13 +8563,13 @@ class PlayState extends MusicBeatState
 			else
 				pissedsky = 1;
 		}
-		if (dad.curCharacter == 'tankman' && curStep > 734 && SONG.song.toLowerCase() == 'stress')
-		{
-			if (curStep == 735)
-				tankmangood = 1;
-			if (curStep == 763)
-				tankmangood = 0;
-		}
+		if (dad.curCharacter == 'tankman' && curStep > 734 && SONG.song.toLowerCase() == 'stress' || dad.curCharacter == 'tankman' && curStep > 734 && SONG.song.toLowerCase() == 'stress-duet')
+			{
+				if (curStep == 735)
+					tankmangood = 1;
+				if (curStep == 763)
+					tankmangood = 0;
+			}
 		if (dad.curCharacter == 'garcellodead' && curStep == 837)
 		{
 			dad.playAnim('ugh', true);
@@ -9295,5 +9306,25 @@ class PlayState extends MusicBeatState
 				if (FlxG.random.bool(10) && isbobmad && curSong.toLowerCase() == 'run')
 					Bobismad();
 		}
+	}
+	var tankAngle:Float = FlxG.random.int(-90, 45);
+	var tankSpeed = FlxG.random.float(5, 7);
+	var tankX = 400;
+	function moveTank()
+	{
+	   
+	        tankAngle += FlxG.elapsed * tankSpeed;
+	        steve.angle = tankAngle - 90 + 15;
+	        steve.x = tankX + 1500 * FlxMath.fastCos(FlxAngle.asRadians(tankAngle + 180));
+	        steve.y = 1300 + 1100 * FlxMath.fastSin(FlxAngle.asRadians(tankAngle + 180));
+	}
+	function resetJohn(x, y, goingRight, spr, johnNum) {
+		trace(johnNum);
+		spr.x = x;
+		spr.y = y;
+		goingRightJohn[johnNum] = goingRight;
+		endingOffsetJohn[johnNum] = FlxG.random.float(50, 200);
+		tankSpeedJohn[johnNum] = FlxG.random.float(0.6, 1);
+		 spr.flipX = if (goingRight) true else false;
 	}
 }
