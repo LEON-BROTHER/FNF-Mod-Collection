@@ -167,6 +167,8 @@ class FreeplayState extends MusicBeatState
 				addWeek(['Cocoa-Duet', 'Eggnog-Duet', 'Winter-Horrorland-Duet'], 26, ['parents-christmas', 'parents-christmas', 'monster-christmas']);
 			if (StoryMenuState.weekUnlocked[27] || isDebug)
 				addWeek(['Senpai-Duet', 'Roses-Duet', 'Thorns-Duet'], 27, ['senpai', 'senpai', 'spirit']);
+			if (StoryMenuState.weekUnlocked[7] || isDebug)
+				addWeek(['Ugh-Duet', 'Guns-Duet', 'Stress-Duet'], 7, ['tankman']);
 		}
 		if (CategoryState.playlist == 7)
 		{
