@@ -40,8 +40,11 @@ class Note extends FlxSprite
 	public static var EX2_NOTE:Int = 5;
 	public static var tooMuch:Float = 30;
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false)
+	public var noteType:Int = 0;
+
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?noteType:Int = 0)
 	{
+		this.noteType = noteType;
 		swagWidth = 160 * 0.7; // factor not the same as noteScale
 		noteScale = 0.7;
 		mania = 0;
@@ -79,10 +82,7 @@ class Note extends FlxSprite
 		var daStage:String = PlayState.curStage;
 		this.noteData = noteData % 9;
 
-
 		this.strumTime = strumTime;
-
-	
 
 		switch (daStage)
 		{
@@ -136,6 +136,50 @@ class Note extends FlxSprite
 
 				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 				updateHitbox();
+			case 'festival':
+				frames = Paths.getSparrowAtlas('NOTE_assets', 'shared');
+
+				switch (noteType)
+				{
+					case 4:
+						frames = Paths.getSparrowAtlas('cj/event/Indicators');
+						animation.addByPrefix('greenScroll', 'green0');
+						animation.addByPrefix('redScroll', 'green0');
+						animation.addByPrefix('blueScroll', 'green0');
+						animation.addByPrefix('purpleScroll', 'green0');
+					case 3:
+						frames = Paths.getSparrowAtlas('cj/event/Indicators');
+						animation.addByPrefix('greenScroll', 'red0');
+						animation.addByPrefix('redScroll', 'red0');
+						animation.addByPrefix('blueScroll', 'red0');
+						animation.addByPrefix('purpleScroll', 'red0');
+					case 2:
+						frames = Paths.getSparrowAtlas('cj/event/Indicators');
+						animation.addByPrefix('greenScroll', 'purple0');
+						animation.addByPrefix('redScroll', 'purple0');
+						animation.addByPrefix('blueScroll', 'purple0');
+						animation.addByPrefix('purpleScroll', 'purple0');
+					default:
+						frames = Paths.getSparrowAtlas('NOTE_assets', 'shared');
+						animation.addByPrefix('greenScroll', 'green0');
+						animation.addByPrefix('redScroll', 'red0');
+						animation.addByPrefix('blueScroll', 'blue0');
+						animation.addByPrefix('purpleScroll', 'purple0');
+				}
+
+				animation.addByPrefix('purpleholdend', 'pruple end hold');
+				animation.addByPrefix('greenholdend', 'green hold end');
+				animation.addByPrefix('redholdend', 'red hold end');
+				animation.addByPrefix('blueholdend', 'blue hold end');
+
+				animation.addByPrefix('purplehold', 'purple hold piece');
+				animation.addByPrefix('greenhold', 'green hold piece');
+				animation.addByPrefix('redhold', 'red hold piece');
+				animation.addByPrefix('bluehold', 'blue hold piece');
+
+				setGraphicSize(Std.int(width * 0.7));
+				updateHitbox();
+				antialiasing = true;
 			default:
 				if (NoteSkinState.neo == 1)
 					frames = Paths.getSparrowAtlas('NOTE_assets-neo');
@@ -151,6 +195,8 @@ class Note extends FlxSprite
 					frames = Paths.getSparrowAtlas('NOTE_assets-beats');
 				if (NoteSkinState.tabi == 1)
 					frames = Paths.getSparrowAtlas('NOTE_assets-tabi');
+				if (NoteSkinState.starlight == 1)
+					frames = Paths.getSparrowAtlas('NOTE_assets-starlight');
 
 				if (mania == 1 || mania == 2)
 					frames = Paths.getSparrowAtlas('shaggy/NOTE_assets-shaggy');

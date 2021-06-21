@@ -411,59 +411,104 @@ class TitleState extends MusicBeatState
 		}
 		FlxG.log.add(curBeat);
 
-		switch (curBeat)
+		if (FlxG.save.data.titleChanges == 'Yes')
 		{
-			case 5:
-				createCoolText(['leon brother', 'TheGabenZone', 'the makers of', 'fnf', 'and the mod makers']);
-			// credTextShit.visible = true;
-			case 6:
-				addMoreText('present');
-			// credTextShit.text += '\npresent...';
-			// credTextShit.addText();
-			case 7:
-				deleteCoolText();
-			// credTextShit.visible = false;
-			// credTextShit.text = 'In association \nwith';
-			// credTextShit.screenCenter();
-			case 9:
-				createCoolText([curWacky[0]]);
-			// credTextShit.visible = true;
-			case 11:
-				addMoreText(curWacky[1]);
-			// credTextShit.text += '\nlmao';
-			case 12:
-				deleteCoolText();
-			// credTextShit.visible = false;
-			// credTextShit.text = "Friday";
-			// credTextShit.screenCenter();
-			case 13:
-				addMoreText('Friday');
-			// credTextShit.visible = true;
-			case 14:
-				addMoreText('Night');
-			// credTextShit.text += '\nNight';
-			case 15:
-				addMoreText('Funkin');
-				addMoreText('mod collection'); // credTextShit.text += '\nFunkin';
+			switch (curBeat)
+			{
+				case 5:
+					createCoolText(['leon brother', 'TheGabenZone', 'the makers of', 'fnf', 'and the mod makers']);
+				// credTextShit.visible = true;
+				case 6:
+					addMoreText('present');
+				// credTextShit.text += '\npresent...';
+				// credTextShit.addText();
+				case 7:
+					deleteCoolText();
+				// credTextShit.visible = false;
+				// credTextShit.text = 'In association \nwith';
+				// credTextShit.screenCenter();
+				case 9:
+					createCoolText([curWacky[0]]);
+				// credTextShit.visible = true;
+				case 11:
+					addMoreText(curWacky[1]);
+				// credTextShit.text += '\nlmao';
+				case 12:
+					deleteCoolText();
+				// credTextShit.visible = false;
+				// credTextShit.text = "Friday";
+				// credTextShit.screenCenter();
+				case 13:
+					addMoreText('Friday');
+				// credTextShit.visible = true;
+				case 14:
+					addMoreText('Night');
+				// credTextShit.text += '\nNight';
+				case 15:
+					addMoreText('Funkin');
+					addMoreText('mod collection'); // credTextShit.text += '\nFunkin';
 
-			case 16:
-				skipIntro();
-			case 24:
-				FlxG.camera.flash(FlxColor.WHITE, 2);
-				gfDance.visible = false;
-				gfDance2.visible = true;
-			case 40:
-				FlxG.camera.flash(FlxColor.WHITE, 2);
-				gfDance2.visible = false;
-				gfDance3.visible = true;
-			case 48:
-				FlxG.camera.flash(FlxColor.WHITE, 2);
-				gfDance3.visible = false;
-				gfDance5.visible = true;
-			case 56:
-				FlxG.camera.flash(FlxColor.WHITE, 2);
-				gfDance5.visible = false;
-				gfDance4.visible = true;
+				case 16:
+					skipIntro();
+
+				case 24:
+					FlxG.camera.flash(FlxColor.WHITE, 2);
+					gfDance.visible = false;
+					gfDance2.visible = true;
+				case 40:
+					FlxG.camera.flash(FlxColor.WHITE, 2);
+					gfDance2.visible = false;
+					gfDance3.visible = true;
+				case 48:
+					FlxG.camera.flash(FlxColor.WHITE, 2);
+					gfDance3.visible = false;
+					gfDance5.visible = true;
+				case 56:
+					FlxG.camera.flash(FlxColor.WHITE, 2);
+					gfDance5.visible = false;
+					gfDance4.visible = true;
+			}
+		}
+		else
+		{
+			switch (curBeat)
+			{
+				case 5:
+					createCoolText(['leon brother', 'TheGabenZone', 'the makers of', 'fnf', 'and the mod makers']);
+				// credTextShit.visible = true;
+				case 6:
+					addMoreText('present');
+				// credTextShit.text += '\npresent...';
+				// credTextShit.addText();
+				case 7:
+					deleteCoolText();
+				// credTextShit.visible = false;
+				// credTextShit.text = 'In association \nwith';
+				// credTextShit.screenCenter();
+				case 9:
+					createCoolText([curWacky[0]]);
+				// credTextShit.visible = true;
+				case 11:
+					addMoreText(curWacky[1]);
+				// credTextShit.text += '\nlmao';
+				case 12:
+					deleteCoolText();
+				// credTextShit.visible = false;
+				// credTextShit.text = "Friday";
+				// credTextShit.screenCenter();
+				case 13:
+					addMoreText('Friday');
+				// credTextShit.visible = true;
+				case 14:
+					addMoreText('Night');
+				// credTextShit.text += '\nNight';
+				case 15:
+					addMoreText('Funkin');
+					addMoreText('mod collection'); // credTextShit.text += '\nFunkin';
+
+				case 16:
+					skipIntro();
+			}
 		}
 	}
 

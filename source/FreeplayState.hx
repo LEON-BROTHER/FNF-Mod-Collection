@@ -392,9 +392,21 @@ class FreeplayState extends MusicBeatState
 					'Safeguard', 'Indie-Star', 'Rising-Star', 'Superstar', 'Order-Up', 'Rush-Hour', 'Freedom', 'Buckets', 'Logarithms', 'Terminal'
 				], 35, [
 					'gf-salty', 'dad-salty', 'dad-salty', 'dad-salty', 'spooky-salty', 'spooky-salty', 'monster-salty', 'pico-salty', 'pico-salty',
-					'pico-salty', 'mom-car-salty', 'mom-car-salty', 'mom-car-salty', 'manager-salty', 'manager-salty',
-					'monster-christmas-salty', 'senpai-salty', 'senpai-salty', 'spirit-salty'
+					'pico-salty', 'mom-car-salty', 'mom-car-salty', 'mom-car-salty', 'manager-salty', 'manager-salty', 'monster-christmas-salty',
+					'senpai-salty', 'senpai-salty', 'spirit-salty'
 				]);
+		}
+
+		if (CategoryState.playlist == 39)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek(['Inverted-Ascension', 'Echoes', 'Artificial-Lust'], 35, ['cj', 'ruby', 'duet']);
+		}
+
+		if (CategoryState.playlist == 40)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek(['Medley'], 35, ['meowser']);
 		}
 
 		/* 
@@ -416,10 +428,8 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 		var bg:FlxSprite;
-		if (CategoryState.chara != 1)
-			bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
-		else
-			bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
+
+		bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		add(bg);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
@@ -641,8 +651,6 @@ class FreeplayState extends MusicBeatState
 		#if PRELOAD_ALL
 		if (CategoryState.chara != 1)
 			FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
-		else
-			FlxG.sound.playMusic(Paths.music('freakyMenu-chara'));
 		#end
 
 		var bullShit:Int = 0;

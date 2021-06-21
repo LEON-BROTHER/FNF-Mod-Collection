@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NoteblockAndGang.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Noteblock Gang0000" x="0" y="0" width="1975" height="661" frameX="-3" frameY="-13" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0001" x="0" y="0" width="1975" height="661" frameX="-3" frameY="-13" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0002" x="1985" y="0" width="1972" height="664" frameX="-4" frameY="-10" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0003" x="1985" y="0" width="1972" height="664" frameX="-4" frameY="-10" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0004" x="0" y="674" width="1973" height="672" frameX="0" frameY="-2" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0005" x="0" y="674" width="1973" height="672" frameX="0" frameY="-2" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0006" x="1983" y="674" width="1973" height="674" frameX="0" frameY="0" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0007" x="1983" y="674" width="1973" height="674" frameX="0" frameY="0" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0008" x="1983" y="674" width="1973" height="674" frameX="0" frameY="0" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0009" x="1983" y="674" width="1973" height="674" frameX="0" frameY="0" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0010" x="1983" y="674" width="1973" height="674" frameX="0" frameY="0" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0011" x="1983" y="674" width="1973" height="674" frameX="0" frameY="0" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0012" x="1983" y="674" width="1973" height="674" frameX="0" frameY="0" frameWidth="1978" frameHeight="674"/>
+	<SubTexture name="Noteblock Gang0013" x="1983" y="674" width="1973" height="674" frameX="0" frameY="0" frameWidth="1978" frameHeight="674"/>
+</TextureAtlas>
