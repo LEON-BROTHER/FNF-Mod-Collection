@@ -2987,7 +2987,7 @@ class PlayState extends MusicBeatState
 				var waveEffectBG = new FlxWaveEffect(FlxWaveMode.ALL, 2, -1, 3, 2); // creo que esta weá no hace nada
 			}
 		}
-		else if (SONG.song.toLowerCase() == 'ugh' || SONG.song.toLowerCase() == 'guns' || SONG.song.toLowerCase() == 'stress')
+		else if (SONG.song.toLowerCase() == 'ugh' || SONG.song.toLowerCase() == 'guns' || SONG.song.toLowerCase() == 'stress' || SONG.song.toLowerCase() == 'ugh-duet' || SONG.song.toLowerCase() == 'guns-duet' || SONG.song.toLowerCase() == 'stress-duet')
 		{
 			defaultCamZoom = 0.9;
 			curStage = 'tankman1';
@@ -4523,7 +4523,7 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-car';
 			case 'tankman1':
 				gfVersion = 'gftank';
-				if (SONG.song.toLowerCase() == 'stress')
+				if (SONG.song.toLowerCase() == 'stress' || SONG.song.toLowerCase() == 'stress-duet')
 					gfVersion = 'picospeaker';
 			case 'church-dark':
 				gfVersion = 'gf-dark';
@@ -7761,11 +7761,15 @@ class PlayState extends MusicBeatState
 
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 				FlxG.sound.music.stop();
-
-				if (SONG.song == 'Guns')
-					LoadingState.loadAndSwitchState(new VideoState("assets/videos/gunsCutscene.webm", new PlayState()));
-				else if (SONG.song == 'Stress')
-					LoadingState.loadAndSwitchState(new VideoState("assets/videos/stressCutscene.webm", new PlayState()));
+				if (FlxG.save.data.week7Cut == 'Yes')	
+				{
+					if (SONG.song == 'Guns')
+						LoadingState.loadAndSwitchState(new VideoState("assets/videos/gunsCutscene.webm", new PlayState()));
+					else if (SONG.song == 'Stress')
+						LoadingState.loadAndSwitchState(new VideoState("assets/videos/stressCutscene.webm", new PlayState()));
+					else
+						LoadingState.loadAndSwitchState(new PlayState());
+				}
 				else
 					LoadingState.loadAndSwitchState(new PlayState());
 			}
@@ -8993,7 +8997,7 @@ class PlayState extends MusicBeatState
 			else
 				pissedsky = 1;
 		}
-		if (dad.curCharacter == 'tankman' && curStep > 734 && SONG.song.toLowerCase() == 'stress')
+		if (dad.curCharacter == 'tankman' && curStep > 734 && SONG.song.toLowerCase() == 'stress' || dad.curCharacter == 'tankman' && curStep > 734 && SONG.song.toLowerCase() == 'stress-duet')
 		{
 			if (curStep == 735)
 				tankmangood = 1;
