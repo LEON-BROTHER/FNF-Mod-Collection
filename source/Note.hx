@@ -87,6 +87,8 @@ class Note extends FlxSprite
 		switch (daStage)
 		{
 			case 'school' | 'schoolEvil' | 'school-b' | 'schoolEvil-b' | 'school-b3' | 'schoolEvil-b3' | 'school-salty' | 'schoolEvil-salty':
+				
+
 				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 17, 17);
 
 				animation.add('greenScroll', [6]);
