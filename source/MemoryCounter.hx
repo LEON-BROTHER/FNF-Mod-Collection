@@ -38,7 +38,7 @@ class MemoryCounter extends TextField
 
 		if (visible)
 		{
-			text = "\nRAM: " + mem + " MB\nRAM peak: " + memPeak + " MB" + "\nwww.fnfmodcollection.tk";
+			text = "\nRAM: " + mem + " MB\nRAM peak: " + memPeak + " MB";
 		}
 	}
 }

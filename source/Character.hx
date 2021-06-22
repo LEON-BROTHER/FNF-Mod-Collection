@@ -23,7 +23,9 @@ class Character extends FlxSprite
 	public var exSpikes:FlxSprite;
 	public var animations:Array<FlxAnimationController> = [];
 	public var otherFrames:Array<Character>;
+	public var hasGun:Bool = false;
 	public var powerup:Bool = false;
+	public var animationNotes:Array<Dynamic> = [];
 
 	var rgbString:String = '';
 
@@ -36,7 +38,7 @@ class Character extends FlxSprite
 		animOffsets = new Map<String, Array<Dynamic>>();
 		curCharacter = character;
 		this.isPlayer = isPlayer;
-
+		
 		var tex:FlxAtlasFrames;
 		var tex2:FlxAtlasFrames;
 		antialiasing = true;
@@ -294,22 +296,25 @@ class Character extends FlxSprite
 				addOffset('scared', -2, -17);
 
 				playAnim('danceRight');
-			case 'picospeaker':
-				// GIRLFRIEND CODE
+			case 'picospeaker':		
 				tex = Paths.getSparrowAtlas('tank/picoSpeaker');
 				frames = tex;
-				animation.addByPrefix('singLEFT', 'Pico shoot 3', 24, false);
-				animation.addByPrefix('singRIGHT', 'Pico shoot 4', 24, false);
-
-				animation.addByIndices('danceLeft', 'Pico shoot 1', [0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "", 24, false);
-				animation.addByIndices('danceRight', 'Pico shoot 1', [14, 15, 16, 17, 18, 19, 20, 21, 22], "", 24, false);
-
-				addOffset('danceLeft', 0, -9);
-				addOffset('danceRight', 0, -9);
-				addOffset("singRIGHT", 0, -20);
-				addOffset("singLEFT", 0, -19);
-
-				playAnim('danceRight');
+				  animation.addByPrefix('shoot1', 'Pico shoot 1',  24, false);
+				  animation.addByPrefix('shoot2', 'Pico shoot 2',  24, false);
+				  animation.addByPrefix('shoot3', 'Pico shoot 3', 24, false);
+				  animation.addByPrefix('shoot4', 'Pico shoot 4', 24, false);
+  
+				  addOffset('shoot1', 0);
+				  addOffset('shoot2', -1, -128);
+				  addOffset('shoot3', 412, -64);
+				  addOffset('shoot4', 439, -19);
+  
+  
+				  playAnim('shoot1');
+				  loadMappedAnims();
+	  
+			
+				  hasGun = true;
 			case 'gftank':
 				// GIRLFRIEND CODE
 				tex = Paths.getSparrowAtlas('tank/gfTankmen');
@@ -5803,6 +5808,23 @@ class Character extends FlxSprite
 
 			if (curCharacter == 'dad')
 				dadVar = 6.1;
+			if (hasGun) {
+				if (0 < animationNotes.length && Conductor.songPosition > animationNotes[0][0]) {
+					var idkWhatThisISLol = 1;
+					if (2 <= animationNotes[0][1]) {
+						idkWhatThisISLol = 3;				
+					}
+	
+					idkWhatThisISLol += FlxG.random.int(0, 1);
+					playAnim("shoot" + idkWhatThisISLol, true);
+					animationNotes.shift();
+					
+				}
+				if (animation.curAnim != null && animation.curAnim.finished)
+				{
+					playAnim(animation.curAnim.name, false, false, animation.curAnim.frames.length - 3);
+				}
+			}
 			if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
 			{
 				if (curCharacter != 'trickyHLeft' && curCharacter != 'trickyHRight' && curCharacter != 'trickyHDown' && curCharacter != 'trickyHUp')
@@ -6304,13 +6326,6 @@ class Character extends FlxSprite
 						playAnim('danceRight');
 					else
 						playAnim('danceLeft');
-				case 'picospeaker':
-					danced = !danced;
-
-					if (danced)
-						playAnim('danceRight');
-					else
-						playAnim('danceLeft');
 				default:
 					playAnim('idle');
 			}
@@ -6478,6 +6493,23 @@ class Character extends FlxSprite
 				danced = !danced;
 			}
 		}
+	}
+	public function loadMappedAnims() {
+		// todo, make better
+		var picoAnims = Song.loadFromJson(curCharacter, "stress").notes;
+		for (anim in picoAnims) {
+			// this code looks fucking awful because I am reading the compiled
+			// html build
+			for (note in anim.sectionNotes) {
+				animationNotes.push(note);
+			}
+		} 
+		animationNotes.sort(sortAnims);
+	}
+	function sortAnims(a, b) {
+		var aThing = a[0];
+		var bThing = b[0];
+		return aThing < bThing ? -1 : 1;
 	}
 
 	public function addOffset(name:String, x:Float = 0, y:Float = 0)
