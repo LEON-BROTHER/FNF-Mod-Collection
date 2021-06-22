@@ -7980,6 +7980,10 @@ class PlayState extends MusicBeatState
 					if (controlArray[coolNote.noteData])
 					{
 						goodNoteHit(coolNote);
+					} 
+					else
+					{
+						badNoteCheck();
 					}
 				}
 			}
@@ -9295,11 +9299,9 @@ class PlayState extends MusicBeatState
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
 		{
 			boyfriend.playAnim('hey', true);
+			gf.playAnim('cheer', true);
 
-			if (SONG.song == 'Tutorial' && dad.curCharacter == 'gf')
-			{
-				dad.playAnim('cheer', true);
-			}
+			
 		}
 		if (curBeat == 532 && curSong.toLowerCase() == "expurgation")
 		{
@@ -9309,6 +9311,17 @@ class PlayState extends MusicBeatState
 		if (curBeat == 536 && curSong.toLowerCase() == "expurgation")
 		{
 			dad.playAnim('idle', true);
+		}
+
+		
+		if (curBeat % 2 == 0 && curStage == "tankman1")
+		{
+			halloweenBG.animation.play('idle', true);
+			halloweenBG3.animation.play('idle', true);
+			halloweenBG4.animation.play('idle', true);
+			halloweenBG5.animation.play('idle', true);
+			halloweenBG6.animation.play('idle', true);
+			halloweenBG7.animation.play('idle', true);
 		}
 
 		switch (curStage)
@@ -9323,13 +9336,6 @@ class PlayState extends MusicBeatState
 				bgGirls.dance();
 			case 'bowserstage':
 				bottomBoppers.animation.play('bop', true);
-			case 'tankman1':
-				halloweenBG.animation.play('idle', true);
-				halloweenBG3.animation.play('idle', true);
-				halloweenBG4.animation.play('idle', true);
-				halloweenBG5.animation.play('idle', true);
-				halloweenBG6.animation.play('idle', true);
-				halloweenBG7.animation.play('idle', true);
 			case 'mall':
 				upperBoppers.animation.play('bop', true);
 				bottomBoppers.animation.play('bop', true);
