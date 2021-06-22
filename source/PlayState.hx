@@ -182,6 +182,10 @@ class PlayState extends MusicBeatState
 	public var curLight:Int = 0;
 
 	private var healthBarBG:FlxSprite;
+	private var notesplashes1:FlxSprite;
+	private var notesplashes2:FlxSprite;
+	private var notesplashes2:FlxSprite;
+	private var notesplashes2:FlxSprite;
 	private var healthBar:FlxBar;
 
 	public static var generatedMusic:Bool = false;
@@ -6367,6 +6371,8 @@ class PlayState extends MusicBeatState
 			// FlxG.log.add(i);
 			var babyArrow:FlxSprite = new FlxSprite(0, strumLine.y);
 			hudArrows.push(babyArrow);
+
+			
 
 			switch (curStage)
 			{
