@@ -1,21 +1,26 @@
 package;
 
 import flixel.FlxG;
+import Song.SwagSong;
 import flixel.FlxObject;
 import flixel.FlxSubState;
 import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
+import flixel.system.FlxSound;
 import flixel.util.FlxTimer;
 
 class GameOverSubstate extends MusicBeatSubstate
 {
 	var bf:Boyfriend;
+	public static var SONG:SwagSong;
 	var camFollow:FlxObject;
+	var tankdead:FlxSound = new FlxSound().loadEmbedded(Paths.soundRandom('jeffGameover/jeffGameover-', 1, 25));
 
 	var stageSuffix:String = "";
 
 	public function new(x:Float, y:Float)
 	{
+		FlxG.sound.list.add(tankdead);
 		var daStage = PlayState.curStage;
 		var daBf:String = '';
 		switch (daStage)
@@ -110,6 +115,22 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (bf.animation.curAnim.name == 'firstDeath' && bf.animation.curAnim.finished)
 		{
 			FlxG.sound.playMusic(Paths.music('gameOver' + stageSuffix));
+			if (PlayState.curStage == 'tankman1')
+			{
+					FlxG.sound.music.volume = 0.1;
+					tankdead.play(true);
+					trace(tankdead.length);
+					var realtime:Float = tankdead.length / 1000;
+					new FlxTimer().start(realtime, function(tmr:FlxTimer)
+						{
+							FlxG.sound.music.volume = 0.9;
+						});
+			}
+
+			
+			
+			
+			
 		}
 
 		if (FlxG.sound.music.playing)
@@ -122,7 +143,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
 		super.beatHit();
 
-		FlxG.log.add('beat');
+		
 	}
 
 	var isEnding:Bool = false;
@@ -134,6 +155,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			isEnding = true;
 			bf.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
+		
 
 			FlxG.sound.play(Paths.music('gameOverEnd' + stageSuffix));
 			new FlxTimer().start(0.7, function(tmr:FlxTimer)

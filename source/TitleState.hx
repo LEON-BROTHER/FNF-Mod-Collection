@@ -479,22 +479,7 @@ class TitleState extends MusicBeatState
 				case 16:
 					skipIntro();
 
-				case 24:
-					FlxG.camera.flash(FlxColor.WHITE, 2);
-					gfDance.visible = false;
-					gfDance2.visible = true;
-				case 40:
-					FlxG.camera.flash(FlxColor.WHITE, 2);
-					gfDance2.visible = false;
-					gfDance3.visible = true;
-				case 48:
-					FlxG.camera.flash(FlxColor.WHITE, 2);
-					gfDance3.visible = false;
-					gfDance5.visible = true;
-				case 56:
-					FlxG.camera.flash(FlxColor.WHITE, 2);
-					gfDance5.visible = false;
-					gfDance4.visible = true;
+				
 			}
 		}
 		else
