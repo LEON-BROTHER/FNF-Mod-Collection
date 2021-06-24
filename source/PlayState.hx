@@ -7819,6 +7819,7 @@ class PlayState extends MusicBeatState
 					recycledNote.setupNoteSplash(daNote.x, daNote.y, daNote.noteData);
 					grpNoteSplashes.add(recycledNote);
 				}
+			}
 		}
 
 		songScore += score;
