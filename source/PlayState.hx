@@ -7812,6 +7812,7 @@ class PlayState extends MusicBeatState
 		{
 			score = 350;
 			daRating = "sick";
+			if (mania == 0){
 			if (!daNote.isSustainNote)
 				{
 					var recycledNote = grpNoteSplashes.recycle(NoteSplash);
