@@ -63,6 +63,11 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = 'signDeath';
 			case 'genocide':
 				daBf = 'bf-knife';
+			case 'tankman1':
+				if (PlayState.curSong == 'Stress' || PlayState.curSong == 'Stress-Duet'){
+					daBf = 'bf-holding-gf-dead';
+				}
+				else{daBf = 'bf';}
 			default:
 				daBf = 'bf';
 		}

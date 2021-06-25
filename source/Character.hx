@@ -2448,8 +2448,8 @@ class Character extends FlxSprite
 				flipX = true;
 
 			case 'bf-holding-gf':
-				var tex = Paths.getSparrowAtlas('tank/bfAndGF');
-				frames = tex;
+				frames = Paths.getSparrowAtlas('tank/bfAndGF');
+				 
 				animation.addByPrefix('idle', 'BF idle dance w gf', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP1', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT1', 24, false);
@@ -2473,14 +2473,23 @@ class Character extends FlxSprite
 				playAnim('idle');
 				flipX = true;
 			case 'bf-holding-gf-dead':
-				var tex = Paths.getSparrowAtlas('tank/bfHoldingGF-DEAD');
-				frames = tex;
+				frames = Paths.getSparrowAtlas('tank/bfHoldingGF-DEAD');
+				
 
+				animation.addByPrefix('singUP', "BF dies with GF", 24, false);
 				animation.addByPrefix('firstDeath', "BF dies with GF", 24, false);
 				animation.addByPrefix('deathLoop', "BF Dead with GF Loop", 24, true);
 				animation.addByPrefix('deathConfirm', "RETRY confirm holding gf", 24, false);
+				animation.play('firstDeath');
+				addOffset('firstDeath', 37, 14);
+        		addOffset('deathLoop', 37, -3);
+        		addOffset('deathConfirm', 37, 28);
 
 				playAnim('firstDeath');
+				
+
+				
+
 
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('BOYFRIEND');
