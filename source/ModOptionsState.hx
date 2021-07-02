@@ -18,7 +18,7 @@ class ModOptionsState extends MusicBeatState
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
-	public var menuItems:Array<String> = ['Toggle Week 7 Cutscenes', 'Toggle Bob Crashing'];
+	public var menuItems:Array<String> = ['Toggle Week 7 Cutscenes', 'Toggle Bob Crashing','Enemy Mode'];
 
 	public var curSelected:Int = 0;
 
