@@ -155,25 +155,25 @@ class FreeplayState extends MusicBeatState
 		}
 		if (CategoryState.playlist == 5)
 		{
-			if (StoryMenuState.weekUnlocked[22] || isDebug)
-				addWeek(['Bopeebo-Duet', 'Fresh-Duet', 'Dadbattle-Duet'], 22, ['dad']);
+			if (StoryMenuState.weekUnlocked[1] || isDebug)
+				addWeek(['Bopeebo-Duet', 'Fresh-Duet', 'Dadbattle-Duet'], 1, ['dad']);
 			if (StoryMenuState.weekUnlocked[2] || isDebug)
 				addWeek(['Spookeez-Duet', 'South-Duet', 'Monster-Duet'], 2, ['spooky', 'spooky', 'monster']);
-			if (StoryMenuState.weekUnlocked[24] || isDebug)
-				addWeek(['Pico-Duet', 'Philly-Duet', 'Blammed-Duet'], 24, ['pico']);
-			if (StoryMenuState.weekUnlocked[25] || isDebug)
-				addWeek(['Satin-Panties-Duet', 'High-Duet', 'Milf-Duet'], 25, ['mom-car']);
-			if (StoryMenuState.weekUnlocked[26] || isDebug)
-				addWeek(['Cocoa-Duet', 'Eggnog-Duet', 'Winter-Horrorland-Duet'], 26, ['parents-christmas', 'parents-christmas', 'monster-christmas']);
-			if (StoryMenuState.weekUnlocked[27] || isDebug)
-				addWeek(['Senpai-Duet', 'Roses-Duet', 'Thorns-Duet'], 27, ['senpai', 'senpai', 'spirit']);
+			if (StoryMenuState.weekUnlocked[3] || isDebug)
+				addWeek(['Pico-Duet', 'Philly-Duet', 'Blammed-Duet'], 3, ['pico']);
+			if (StoryMenuState.weekUnlocked[4] || isDebug)
+				addWeek(['Satin-Panties-Duet', 'High-Duet', 'Milf-Duet'], 4, ['mom-car']);
+			if (StoryMenuState.weekUnlocked[5] || isDebug)
+				addWeek(['Cocoa-Duet', 'Eggnog-Duet', 'Winter-Horrorland-Duet'], 5, ['parents-christmas', 'parents-christmas', 'monster-christmas']);
+			if (StoryMenuState.weekUnlocked[6] || isDebug)
+				addWeek(['Senpai-Duet', 'Roses-Duet', 'Thorns-Duet'], 6, ['senpai', 'senpai', 'spirit']);
 			if (StoryMenuState.weekUnlocked[7] || isDebug)
 				addWeek(['Ugh-Duet', 'Guns-Duet', 'Stress-Duet'], 7, ['tankman']);
 		}
 		if (CategoryState.playlist == 7)
 		{
 			if (StoryMenuState.weekUnlocked[29] || isDebug)
-				addWeek(['Dunk', 'RAM', 'Hello-World', 'Glitcher', 'Encore'], 29, ['hex', 'hex', 'hex', 'hex-hack', 'hex',]);
+				addWeek(['Dunk', 'RAM', 'Hello-World', 'Glitcher', 'Encore'], 29, ['hex', 'hex', 'hex', 'hex-hack', 'hex']);
 		}
 		if (CategoryState.playlist == 6)
 		{

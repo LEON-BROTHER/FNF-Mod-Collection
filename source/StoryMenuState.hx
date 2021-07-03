@@ -80,7 +80,9 @@ class StoryMenuState extends MusicBeatState
 
 	override function create()
 	{
-		Main.framerate = 30;
+		
+		
+
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 

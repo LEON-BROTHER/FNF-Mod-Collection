@@ -47,6 +47,7 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = 'bf-neo';
 			case 'stage-b' | 'limo-b' | 'spooky-b' | 'philly-b' | 'mall-b' | 'mallEvil-b':
 				daBf = 'bf-b';
+				stageSuffix = '-b';
 			case 'stage-star' | 'spooky-star' | 'philly-star' | 'limo-star':
 				daBf = 'bf-star';
 				stageSuffix = '-star';
