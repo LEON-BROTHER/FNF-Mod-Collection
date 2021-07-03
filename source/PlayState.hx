@@ -148,7 +148,7 @@ class PlayState extends MusicBeatState
 	private var boyfriend:Boyfriend;
 	var tstatic:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('TrickyStatic', 'clown'), true, 320, 180);
 
-	var tStaticSound:FlxSound = new FlxSound().loadEmbedded(Paths.sound("staticSound", "preload"));
+
 
 	private var notes:FlxTypedGroup<Note>;
 	private var unspawnNotes:Array<Note> = [];
@@ -1101,12 +1101,12 @@ class PlayState extends MusicBeatState
 			curStage = 'limo-neo';
 			defaultCamZoom = 0.70;
 
-			var skyBG:FlxSprite = new FlxSprite(-300, -300).loadGraphic(Paths.image('limoSunset-neo'));
+			var skyBG:FlxSprite = new FlxSprite(-300, -300).loadGraphic(Paths.image('neo/limoSunset-neo'));
 			skyBG.scrollFactor.set(0.1, 0.1);
 			skyBG.setGraphicSize(Std.int(skyBG.width * 1));
 			add(skyBG);
 
-			var limoTex = Paths.getSparrowAtlas('limoDrive-neo');
+			var limoTex = Paths.getSparrowAtlas('neo/limoDrive-neo');
 			limo = new FlxSprite(-340, 760);
 			limo.frames = limoTex;
 			limo.animation.addByPrefix('drive', "Limo stage", 24);
@@ -1668,13 +1668,13 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.9;
 			curStage = 'stage-neo';
-			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback-neo'));
+			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('neo/stageback-neo'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
 
-			var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront-neo'));
+			var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('neo/stagefront-neo'));
 			stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 			stageFront.updateHitbox();
 			stageFront.antialiasing = true;
@@ -1682,7 +1682,7 @@ class PlayState extends MusicBeatState
 			stageFront.active = false;
 			add(stageFront);
 
-			var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains-neo'));
+			var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('neo/stagecurtains-neo'));
 			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
 			stageCurtains.updateHitbox();
 			stageCurtains.antialiasing = true;
@@ -1930,7 +1930,7 @@ class PlayState extends MusicBeatState
 			curStage = "spooky-neo";
 			halloweenLevel = true;
 
-			var hallowTex = Paths.getSparrowAtlas('halloween_neo');
+			var hallowTex = Paths.getSparrowAtlas('neo/halloween_neo');
 
 			halloweenBG = new FlxSprite(-200, -100);
 			halloweenBG.frames = hallowTex;
@@ -2004,11 +2004,11 @@ class PlayState extends MusicBeatState
 		
 			curStage = 'philly-neo';
 
-			var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('sky-neo'));
+			var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('neo/sky-neo'));
 			bg.scrollFactor.set(0.1, 0.1);
 			add(bg);
 
-			var city:FlxSprite = new FlxSprite(-10).loadGraphic(Paths.image('city-neo'));
+			var city:FlxSprite = new FlxSprite(-10).loadGraphic(Paths.image('neo/city-neo'));
 			city.scrollFactor.set(0.3, 0.3);
 			city.setGraphicSize(Std.int(city.width * 0.85));
 			city.updateHitbox();
@@ -2019,7 +2019,7 @@ class PlayState extends MusicBeatState
 
 			for (i in 0...5)
 			{
-				var light:FlxSprite = new FlxSprite(city.x).loadGraphic(Paths.image('win-neo' + i));
+				var light:FlxSprite = new FlxSprite(city.x).loadGraphic(Paths.image('neo/win-neo' + i));
 				light.scrollFactor.set(0.3, 0.3);
 				light.visible = false;
 				light.setGraphicSize(Std.int(light.width * 0.85));
@@ -2028,10 +2028,10 @@ class PlayState extends MusicBeatState
 				phillyCityLights.add(light);
 			}
 
-			var streetBehind:FlxSprite = new FlxSprite(-40, 50).loadGraphic(Paths.image('behindTrain-neo'));
+			var streetBehind:FlxSprite = new FlxSprite(-40, 50).loadGraphic(Paths.image('neo/behindTrain-neo'));
 			add(streetBehind);
 
-			phillyTrain = new FlxSprite(2000, 360).loadGraphic(Paths.image('train-neo'));
+			phillyTrain = new FlxSprite(2000, 360).loadGraphic(Paths.image('neo/train-neo'));
 			add(phillyTrain);
 
 			trainSound = new FlxSound().loadEmbedded(Paths.sound('police_passes'));
@@ -2039,7 +2039,7 @@ class PlayState extends MusicBeatState
 
 			// var cityLights:FlxSprite = new FlxSprite().loadGraphic(AssetPaths.win0.png);
 
-			var street:FlxSprite = new FlxSprite(-40, streetBehind.y).loadGraphic(Paths.image('street-neo'));
+			var street:FlxSprite = new FlxSprite(-40, streetBehind.y).loadGraphic(Paths.image('neo/street-neo'));
 			add(street);
 		
 		case 'pico-beatstreets'
@@ -2280,7 +2280,7 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.8;
 			curStage = 'swordarena';
-			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('arena-bg'));
+			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('matt/arena-bg'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.setGraphicSize(Std.int(bg.width * 1));
@@ -2288,7 +2288,7 @@ class PlayState extends MusicBeatState
 			add(bg);
 
 			var bgBoppers:FlxSprite = new FlxSprite(-600, 140);
-			bgBoppers.frames = Paths.getSparrowAtlas('arena-characters');
+			bgBoppers.frames = Paths.getSparrowAtlas('matt/arena-characters');
 			bgBoppers.animation.addByPrefix('bop', "bg-characters", 24);
 			bgBoppers.animation.play('bop');
 			bgBoppers.antialiasing = true;
@@ -2297,7 +2297,7 @@ class PlayState extends MusicBeatState
 			bgBoppers.updateHitbox();
 			add(bgBoppers);
 
-			var bgRail:FlxSprite = new FlxSprite(-600, 320).loadGraphic(Paths.image('railing'));
+			var bgRail:FlxSprite = new FlxSprite(-600, 320).loadGraphic(Paths.image('matt/railing'));
 			bgRail.antialiasing = true;
 			bgRail.scrollFactor.set(0.9, 0.9);
 			bgRail.active = false;
@@ -2309,21 +2309,21 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.9;
 			curStage = 'arenanight';
-			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('boxingnight1'));
+			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('matt/boxingnight1'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0, 0);
 			bg.setGraphicSize(Std.int(bg.width * 1));
 			bg.active = false;
 			add(bg);
 
-			var bg2:FlxSprite = new FlxSprite(-800, -200).loadGraphic(Paths.image('boxingnight2'));
+			var bg2:FlxSprite = new FlxSprite(-800, -200).loadGraphic(Paths.image('matt/boxingnight2'));
 			bg2.antialiasing = true;
 			bg2.scrollFactor.set(1.2, 1.2);
 			bg2.setGraphicSize(Std.int(bg.width * 1.3));
 			bg2.active = false;
 			add(bg2);
 
-			var bg3:FlxSprite = new FlxSprite(-600, -400).loadGraphic(Paths.image('boxingnight3'));
+			var bg3:FlxSprite = new FlxSprite(-600, -400).loadGraphic(Paths.image('matt/boxingnight3'));
 			bg3.antialiasing = true;
 			bg3.scrollFactor.set(0.9, 0.9);
 			bg3.setGraphicSize(Std.int(bg.width * 0.9));
@@ -2487,13 +2487,13 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.8;
 			curStage = 'whitty-normal';
-			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('whittyBack'));
+			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('whitty/whittyBack'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
 
-			var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('whittyFront'));
+			var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('whitty/whittyFront'));
 			stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 			stageFront.updateHitbox();
 			stageFront.antialiasing = true;
@@ -2505,18 +2505,18 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.8;
 			curStage = 'church-normal';
-			var bg:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('bg'));
+			var bg:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/bg'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
 
-			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('floor'));
+			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/floor'));
 			bg1.antialiasing = true;
 			bg1.scrollFactor.set(0.9, 0.9);
 			bg1.active = false;
 			add(bg1);
-			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('pillars'));
+			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/pillars'));
 			bg2.antialiasing = true;
 			bg2.scrollFactor.set(0.9, 0.9);
 			bg2.active = false;
@@ -2526,18 +2526,18 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.8;
 			curStage = 'church-selever';
-			var bg:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('church4/bg'));
+			var bg:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church4/bg'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
 
-			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('church4/floor'));
+			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church4/floor'));
 			bg1.antialiasing = true;
 			bg1.scrollFactor.set(0.9, 0.9);
 			bg1.active = false;
 			add(bg1);
-			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('church4/pillars'));
+			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church4/pillars'));
 			bg2.antialiasing = true;
 			bg2.scrollFactor.set(0.9, 0.9);
 			bg2.active = false;
@@ -2547,18 +2547,18 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.8;
 			curStage = 'church-dark';
-			var bg:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('bg-dark'));
+			var bg:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/bg-dark'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
 
-			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('floor-dark'));
+			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/floor-dark'));
 			bg1.antialiasing = true;
 			bg1.scrollFactor.set(0.9, 0.9);
 			bg1.active = false;
 			add(bg1);
-			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('pillars-dark'));
+			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/pillars-dark'));
 			bg2.antialiasing = true;
 			bg2.scrollFactor.set(0.9, 0.9);
 			bg2.active = false;
@@ -2568,23 +2568,23 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.8;
 			curStage = 'church-ruv';
-			var bg:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('church2/bg'));
+			var bg:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church2/bg'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
 
-			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('church2/floor'));
+			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church2/floor'));
 			bg1.antialiasing = true;
 			bg1.scrollFactor.set(0.9, 0.9);
 			bg1.active = false;
 			add(bg1);
-			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('church2/pillars'));
+			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church2/pillars'));
 			bg2.antialiasing = true;
 			bg2.scrollFactor.set(0.9, 0.9);
 			bg2.active = false;
 			add(bg2);
-			deadpill = new FlxSprite(-300, -600).loadGraphic(Paths.image('church2/pillarbroke'));
+			deadpill = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church2/pillarbroke'));
 			deadpill.antialiasing = true;
 			deadpill.scrollFactor.set(0.9, 0.9);
 			deadpill.active = false;
@@ -2593,33 +2593,33 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.8;
 			curStage = 'church-final';
-			var bg:FlxSprite = new FlxSprite(-300, -550).loadGraphic(Paths.image('church3/bg'));
+			var bg:FlxSprite = new FlxSprite(-300, -550).loadGraphic(Paths.image('sarv/church3/bg'));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
 
-			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('church3/floor'));
+			var bg1:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church3/floor'));
 			bg1.antialiasing = true;
 			bg1.scrollFactor.set(0.9, 0.9);
 			bg1.active = false;
 			add(bg1);
-			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('church3/pillars'));
+			var bg2:FlxSprite = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church3/pillars'));
 			bg2.antialiasing = true;
 			bg2.scrollFactor.set(0.9, 0.9);
 			bg2.active = false;
 			add(bg2);
-			curl1 = new FlxSprite(-300, -600).loadGraphic(Paths.image('church3/circ2'));
+			curl1 = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church3/circ2'));
 			curl1.antialiasing = true;
 			curl1.scrollFactor.set(0.9, 0.9);
 			curl1.active = false;
 
-			curl2 = new FlxSprite(360, -300).loadGraphic(Paths.image('church3/circ1'));
+			curl2 = new FlxSprite(360, -300).loadGraphic(Paths.image('sarv/church3/circ1'));
 			curl2.antialiasing = true;
 			curl2.scrollFactor.set(0.9, 0.9);
 			curl2.active = false;
 
-			curl3 = new FlxSprite(-300, -600).loadGraphic(Paths.image('church3/circ0'));
+			curl3 = new FlxSprite(-300, -600).loadGraphic(Paths.image('sarv/church3/circ0'));
 			curl3.antialiasing = true;
 			curl3.scrollFactor.set(0.9, 0.9);
 			curl3.active = false;
@@ -2634,7 +2634,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.8;
 			curStage = 'whitty-crazy';
 
-			var hallowTex = Paths.getSparrowAtlas('BallisticBackground');
+			var hallowTex = Paths.getSparrowAtlas('whitty/BallisticBackground');
 			halloweenBG = new FlxSprite(-600, -200);
 			halloweenBG.frames = hallowTex;
 			halloweenBG.animation.addByPrefix('idle', 'Background Whitty Moving', 24);
@@ -2649,7 +2649,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.8;
 			curStage = 'zardy';
 
-			var hallowTex = Paths.getSparrowAtlas('Maze');
+			var hallowTex = Paths.getSparrowAtlas('zardy/Maze');
 			halloweenBG = new FlxSprite(-600, -200);
 			halloweenBG.frames = hallowTex;
 			halloweenBG.animation.addByPrefix('idle', 'Stage', 24);
@@ -2727,7 +2727,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.9;
 			curStage = 'sky';
 
-			var hallowTex = Paths.getSparrowAtlas('bg_normal');
+			var hallowTex = Paths.getSparrowAtlas('sky/bg_normal');
 			halloweenBG = new FlxSprite(-200, 0);
 			halloweenBG.frames = hallowTex;
 			halloweenBG.animation.addByPrefix('idle', 'bg', 24);
@@ -2826,7 +2826,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.9;
 			curStage = 'sky-mad';
 
-			var hallowTex = Paths.getSparrowAtlas('bg_manifest');
+			var hallowTex = Paths.getSparrowAtlas('sky/bg_manifest');
 			halloweenBG = new FlxSprite(-200, 0);
 			halloweenBG.frames = hallowTex;
 			halloweenBG.animation.addByPrefix('idle', 'bg', 24);
@@ -3459,14 +3459,14 @@ class PlayState extends MusicBeatState
 		
 			defaultCamZoom = 0.9;
 			curStage = 'sabotage';
-			var bg:FlxSprite = new FlxSprite(-200, -300).loadGraphic(Paths.image('polusSky'));
+			var bg:FlxSprite = new FlxSprite(-200, -300).loadGraphic(Paths.image('amogus/polusSky'));
 			bg.setGraphicSize(Std.int(bg.width * 1.5));
 			bg.antialiasing = true;
 			bg.scrollFactor.set(0.5, 0.5);
 			bg.active = false;
 			add(bg);
 
-			var rocks:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('polusrocks'));
+			var rocks:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('amogus/polusrocks'));
 			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
 			rocks.updateHitbox();
 			rocks.antialiasing = true;
@@ -3474,7 +3474,7 @@ class PlayState extends MusicBeatState
 			rocks.active = false;
 			add(rocks);
 
-			var rocks:FlxSprite = new FlxSprite(-450, -200).loadGraphic(Paths.image('polusWarehouse'));
+			var rocks:FlxSprite = new FlxSprite(-450, -200).loadGraphic(Paths.image('amogus/polusWarehouse'));
 			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
 			rocks.updateHitbox();
 			rocks.antialiasing = true;
@@ -3482,7 +3482,7 @@ class PlayState extends MusicBeatState
 			rocks.active = false;
 			add(rocks);
 
-			var rocks:FlxSprite = new FlxSprite(-1000, 0).loadGraphic(Paths.image('polusHills'));
+			var rocks:FlxSprite = new FlxSprite(-1000, 0).loadGraphic(Paths.image('amogus/polusHills'));
 			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
 			rocks.updateHitbox();
 			rocks.antialiasing = true;
@@ -3490,7 +3490,7 @@ class PlayState extends MusicBeatState
 			rocks.active = false;
 			add(rocks);
 
-			var stageFront:FlxSprite = new FlxSprite(-400, 450).loadGraphic(Paths.image('polusGround'));
+			var stageFront:FlxSprite = new FlxSprite(-400, 450).loadGraphic(Paths.image('amogus/polusGround'));
 			stageFront.setGraphicSize(Std.int(stageFront.width * 1.5));
 			stageFront.updateHitbox();
 			stageFront.antialiasing = true;
