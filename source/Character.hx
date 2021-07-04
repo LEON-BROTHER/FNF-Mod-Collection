@@ -2475,17 +2475,20 @@ class Character extends FlxSprite
 			case 'bf-holding-gf-dead':
 				var tex = Paths.getSparrowAtlas('tank/bfHoldingGF-DEAD');
 				frames = tex;
-				animation.addByPrefix('singUP', "BF dies with GF", 24, false);
-				animation.addByPrefix('firstDeath', "BF dies with GF", 24, false);
+				animation.addByPrefix('singUP', "BF Dies with GF", 24, false);
+				animation.addByPrefix('idle', "BF Dies with GF", 24, false);
+				animation.addByPrefix('firstDeath', "BF Dies with GF", 24, false);
 				animation.addByPrefix('deathLoop', "BF Dead with GF Loop", 24, true);
 				animation.addByPrefix('deathConfirm', "RETRY confirm holding gf", 24, false);
-				animation.play('firstDeath');
+				
 				
 				addOffset('firstDeath', 37, 14);
+				addOffset('idle', 37, 14);
+				addOffset('up', 37, 14);
         		addOffset('deathLoop', 37, -3);
         		addOffset('deathConfirm', 37, 28);
 
-				playAnim('firstDeath');
+				playAnim('idle');
 				
 				updateHitbox();
 				antialiasing = true;

@@ -22,6 +22,7 @@ class PauseSubState extends MusicBeatSubstate
 	public static var sickmode:String = "No";
 	public static var controlmode:String = "WASD";
 	public static var keys:FlxText;
+	var stopspamming:Int = 0;
 
 	var menuItems:Array<String> = [
 		'Resume', 'Restart Song', 'Kade Input', 'Only SICK MODE', 'Change Song', 'Change Character', 'Controls', 'Debug Menu', 'Animation Debug',
@@ -138,6 +139,7 @@ class PauseSubState extends MusicBeatSubstate
 			switch (daSelected)
 			{
 				case "Resume":
+
 					close();
 				case "Restart Song":
 					FlxG.resetState();
