@@ -122,7 +122,7 @@ class HealthIcon extends FlxSprite
 					animation.add('xgaster', [100, 101], 0, false, isPlayer);
 					animation.add('matt', [102, 103], 0, false, isPlayer);
 					animation.add('mattmad', [102, 103], 0, false, isPlayer);
-					animation.add('sarvente-dark', [104, 105], 0, false, isPlayer);
+					animation.add('sarvente-dark', [73, 74], 0, false, isPlayer);
 					animation.add('bf-dark', [106, 107], 0, false, isPlayer);
 					animation.add('ruv', [108, 109], 0, false, isPlayer);
 					animation.add('luci-sarv', [110, 111], 0, false, isPlayer);
@@ -230,6 +230,13 @@ class HealthIcon extends FlxSprite
 					animation.add('bowserhead', [8, 9], 13, false, isPlayer);
 					animation.add('meowser', [8, 9], 13, false, isPlayer);
 					animation.add('catshine', [8, 9], 13, false, isPlayer);
+					animation.add('playablesenpai', [16, 17], 0, false, isPlayer);
+					animation.add('monika', [10, 11], 0, false, isPlayer);
+					animation.add('monika-senpai', [12, 13], 0, false, isPlayer);
+					animation.add('monika-angry', [14, 15], 0, false, isPlayer);
+					animation.add('duet', [12, 13], 0, false, isPlayer);
+					animation.add('bf-pixel', [18, 19], 0, false, isPlayer);
+					animation.add('bf-pixelangry', [18, 19], 0, false, isPlayer);
 
 					animation.play(char);
 					scrollFactor.set();

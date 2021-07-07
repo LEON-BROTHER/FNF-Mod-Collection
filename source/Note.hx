@@ -89,12 +89,22 @@ class Note extends FlxSprite
 			case 'school' | 'schoolEvil' | 'school-b' | 'schoolEvil-b' | 'school-b3' | 'schoolEvil-b3' | 'school-salty' | 'schoolEvil-salty':
 				
 
-				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 17, 17);
+				loadGraphic(Paths.image('monika/weeb/pixelUI/arrows-pixels'), true, 17, 17);
 
-				animation.add('greenScroll', [6]);
-				animation.add('redScroll', [7]);
-				animation.add('blueScroll', [5]);
-				animation.add('purpleScroll', [4]);
+				if (noteType == 2)
+					{
+						animation.add('greenScroll', [22]);
+						animation.add('redScroll', [23]);
+						animation.add('blueScroll', [21]);
+						animation.add('purpleScroll', [20]);
+					}
+				else
+					{
+						animation.add('greenScroll', [6]);
+						animation.add('redScroll', [7]);
+						animation.add('blueScroll', [5]);
+						animation.add('purpleScroll', [4]);
+					}
 
 				if (isSustainNote)
 				{
@@ -202,16 +212,27 @@ class Note extends FlxSprite
 
 				if (mania == 1 || mania == 2)
 					frames = Paths.getSparrowAtlas('shaggy/NOTE_assets-shaggy');
+				if (noteType == 2)
+					{
+						frames = Paths.getSparrowAtlas('ALL_deathnotes');
+						x -= 170;
+						animation.addByPrefix('greenScroll', 'Green Arrow');
+						animation.addByPrefix('redScroll', 'Red Arrow');
+						animation.addByPrefix('blueScroll', 'Blue Arrow');
+						animation.addByPrefix('purpleScroll', 'Purple Arrow');
+					}
+				else {
+
 				animation.addByPrefix('greenScroll', 'green0');
 				animation.addByPrefix('redScroll', 'red0');
 				animation.addByPrefix('blueScroll', 'blue0');
 				animation.addByPrefix('purpleScroll', 'purple0');
-				if (mania == 1 || mania == 2)
-					animation.addByPrefix('whiteScroll', 'white0');
+				animation.addByPrefix('whiteScroll', 'white0');
 				animation.addByPrefix('yellowScroll', 'yellow0');
 				animation.addByPrefix('violetScroll', 'violet0');
 				animation.addByPrefix('blackScroll', 'black0');
 				animation.addByPrefix('darkScroll', 'dark0');
+				}
 
 				animation.addByPrefix('purpleholdend', 'pruple end hold');
 				animation.addByPrefix('greenholdend', 'green hold end');

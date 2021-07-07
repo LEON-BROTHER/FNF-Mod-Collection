@@ -254,6 +254,7 @@ class ChartingState extends MusicBeatState
 		stepperBPM.name = 'song_bpm';
 
 		var characters:Array<String> = CoolUtil.coolTextFile(Paths.txt('characterList'));
+		
 
 		var player1DropDown = new FlxUIDropDownMenu(10, 100, FlxUIDropDownMenu.makeStrIdLabelArray(characters, true), function(character:String)
 		{
@@ -284,6 +285,7 @@ class ChartingState extends MusicBeatState
 		tab_group_song.add(stepperSpeed);
 		tab_group_song.add(player1DropDown);
 		tab_group_song.add(player2DropDown);
+		
 
 		UI_box.addGroup(tab_group_song);
 		UI_box.scrollFactor.set();
@@ -1019,13 +1021,22 @@ class ChartingState extends MusicBeatState
 		var noteStrum = getStrumTime(dummyArrow.y) + sectionStartTime();
 		var noteData = Math.floor(FlxG.mouse.x / GRID_SIZE);
 		var noteSus = 0;
+		var noteType = 0;
+		if (FlxG.keys.pressed.ONE)
+			noteType = 1;
+		if (FlxG.keys.pressed.TWO)
+			noteType = 2;
+		
 
 		if (_song.mania == 2)
 		{
 			var noteData = Math.floor(FlxG.mouse.x / S_GRID_SIZE);
 		}
+		
+		
+		_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, noteType]);
 
-		_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus]);
+		
 
 		curSelectedNote = _song.notes[curSection].sectionNotes[_song.notes[curSection].sectionNotes.length - 1];
 

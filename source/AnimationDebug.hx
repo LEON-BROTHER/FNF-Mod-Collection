@@ -6,6 +6,7 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 
@@ -25,6 +26,7 @@ class AnimationDebug extends FlxState
 	var daAnim:String = 'spooky';
 	var camFollow:FlxObject;
 	var text3:FlxText;
+	var tankcock:FlxSound = new FlxSound().loadEmbedded(Paths.sound('jeffGameover/jeffGameover-1'));
 
 	public function new(daAnim:String = 'spooky')
 	{
@@ -35,7 +37,7 @@ class AnimationDebug extends FlxState
 	override function create()
 	{
 		FlxG.sound.music.stop();
-
+		FlxG.sound.list.add(tankcock);
 		var gridBG:FlxSprite = FlxGridOverlay.create(10, 10);
 		gridBG.scrollFactor.set(0.5, 0.5);
 		add(gridBG);
@@ -131,7 +133,10 @@ class AnimationDebug extends FlxState
 		if (FlxG.keys.justPressed.X)
 			FlxG.switchState(new MainMenuState());
 		if (FlxG.keys.pressed.B)
-			add(text3);
+			if (!tankcock.playing)
+				tankcock.play(true);
+
+			
 
 		if (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L)
 		{
