@@ -536,6 +536,10 @@ class FreeplayState extends MusicBeatState
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
+		if (vocals.volume < 0.7)
+			{
+				vocals.volume += 0.5 * FlxG.elapsed;
+			}
 
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.4));
 
@@ -660,15 +664,20 @@ class FreeplayState extends MusicBeatState
 		#if PRELOAD_ALL
 		if (CategoryState.chara != 1)
 		{
+			vocals = new FlxSound().loadEmbedded(Paths.voices(songs[curSelected].songName), true);
+			vocals.volume = 0;
+			FlxG.sound.list.add(vocals);
+			vocals.play();
+			vocals.stop();
 			FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
-		vocals = new FlxSound().loadEmbedded(Paths.voices(songs[curSelected].songName), true);
+		
 
-		vocals.volume = 0;
-		FlxG.sound.list.add(vocals);
-		vocals.time = FlxG.sound.music.time;
-		vocals.play();
-		vocals.stop();
-		vocals.play();
+		
+			vocals.time = FlxG.sound.music.time;
+		
+		
+			vocals.play();
+			
 		}
 		#end
 

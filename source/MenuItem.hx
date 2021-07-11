@@ -16,7 +16,21 @@ class MenuItem extends FlxSpriteGroup
 	public function new(x:Float, y:Float, weekNum:Int = 0)
 	{
 		super(x, y);
-		week = new FlxSprite().loadGraphic(Paths.image('storymenu/week' + weekNum));
+		switch (StoryCateState.playlist)
+		{
+			case 1:
+				week = new FlxSprite().loadGraphic(Paths.image('storymenu/week' + weekNum));
+			case 2:
+				week = new FlxSprite().loadGraphic(Paths.image('storymenu/weekneo' + weekNum));
+			case 3:
+				week = new FlxSprite().loadGraphic(Paths.image('storymenu/weekbsides' + weekNum));
+			case 4:
+				week = new FlxSprite().loadGraphic(Paths.image('storymenu/weekgar' + weekNum));
+			case 5:
+				week = new FlxSprite().loadGraphic(Paths.image('storymenu/weekmonika' + weekNum));
+			default:
+				week = new FlxSprite().loadGraphic(Paths.image('storymenu/week' + weekNum));
+		}
 		add(week);
 	}
 

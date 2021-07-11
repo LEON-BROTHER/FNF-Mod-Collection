@@ -30,8 +30,7 @@ class StoryMenuState extends MusicBeatState
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],
-		['Ugh', 'Guns', 'Stress'],
-		['High School Conflict', 'Bara no Yume', 'Your Demise','Your Reality']
+		['Ugh', 'Guns', 'Stress']
 		
 	];
 	var curDifficulty:Int = 1;
@@ -50,8 +49,8 @@ class StoryMenuState extends MusicBeatState
 		['mom', 'bf', 'gf'],
 		['parents-christmas', 'bf', 'gf'],
 		['senpai', 'bf', 'gf'],
-		['tankman', 'bf', 'gf'],
-		['senpai', 'bf', 'gf']
+		['tankman', 'bf', 'gf']
+		
 	];
 
 	var weekNames:Array<String> = [
@@ -62,8 +61,8 @@ class StoryMenuState extends MusicBeatState
 		"MOMMY MUST MURDER",
 		"RED SNOW",
 		"hating simulator ft. moawling",
-		"Tankman",
-		"Just Monika"
+		"Tankman"
+		
 	];
 
 	var txtWeekTitle:FlxText;
@@ -85,7 +84,86 @@ class StoryMenuState extends MusicBeatState
 	override function create()
 	{
 		
-		
+		switch (StoryCateState.playlist)
+		{
+			case 1:
+				weekData = [
+					['Tutorial'],
+					['Bopeebo', 'Fresh', 'Dadbattle'],
+					['Spookeez', 'South', "Monster"],
+					['Pico', 'Philly', "Blammed"],
+					['Satin-Panties', "High", "Milf"],
+					['Cocoa', 'Eggnog', 'Winter-Horrorland'],
+					['Senpai', 'Roses', 'Thorns'],
+					['Ugh', 'Guns', 'Stress']	
+				];
+				weekCharacters = [
+					['dad', 'bf', 'gf'],
+					['dad', 'bf', 'gf'],
+					['spooky', 'bf', 'gf'],
+					['pico', 'bf', 'gf'],
+					['mom', 'bf', 'gf'],
+					['parents-christmas', 'bf', 'gf'],
+					['senpai', 'bf', 'gf'],
+					['tankman', 'bf', 'gf']
+					
+				];
+			
+				weekNames = [
+					"",
+					"Daddy Dearest",
+					"Spooky Month",
+					"PICO",
+					"MOMMY MUST MURDER",
+					"RED SNOW",
+					"hating simulator ft. moawling",
+					"Tankman"
+					
+				];
+				
+			case 5:
+				weekData = [['High School Conflict', 'Bara no Yume', 'Your Demise','Your Reality']];
+				weekCharacters = [['senpai', 'bf', 'gf']];
+				weekNames = ['JUST MONIKA'];
+
+
+			default:
+				weekData = [
+					['Tutorial'],
+					['Bopeebo', 'Fresh', 'Dadbattle'],
+					['Spookeez', 'South', "Monster"],
+					['Pico', 'Philly', "Blammed"],
+					['Satin-Panties', "High", "Milf"],
+					['Cocoa', 'Eggnog', 'Winter-Horrorland'],
+					['Senpai', 'Roses', 'Thorns'],
+					['Ugh', 'Guns', 'Stress']	
+				];
+				weekCharacters = [
+					['dad', 'bf', 'gf'],
+					['dad', 'bf', 'gf'],
+					['spooky', 'bf', 'gf'],
+					['pico', 'bf', 'gf'],
+					['mom', 'bf', 'gf'],
+					['parents-christmas', 'bf', 'gf'],
+					['senpai', 'bf', 'gf'],
+					['tankman', 'bf', 'gf']
+					
+				];
+			
+				weekNames = [
+					"",
+					"Daddy Dearest",
+					"Spooky Month",
+					"PICO",
+					"MOMMY MUST MURDER",
+					"RED SNOW",
+					"hating simulator ft. moawling",
+					"Tankman"
+					
+				];
+			
+
+		}
 
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;

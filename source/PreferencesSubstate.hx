@@ -169,6 +169,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 				case 'Camera Zooms':
 					ClientPrefs.camZooms = !ClientPrefs.camZooms;
+				case 'Bob Crashing':
+					ClientPrefs.bobcrash = !ClientPrefs.bobcrash;
 			}
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 			reloadCheckboxes();
@@ -220,7 +222,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			case 'Week 7 Cutscenes':
 				descText.text = "If checked, you can see the Week 7 Cutscenes!";
 			case 'Bob Crashing':
-				descText.text = "If checked, you can see the Week 7 Cutscenes!";
+				descText.text = "If checked, the Game will crash if you die in the song: RUN!";
 		}
 
 		var bullShit:Int = 0;
@@ -291,6 +293,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 							daValue = ClientPrefs.enemymode;
 						case 'Week 7 Cutscenes':
 							daValue = ClientPrefs.week7Cut;
+						case 'Bob Crashing':
+							daValue = ClientPrefs.bobcrash;
 						
 					}
 					checkbox.set_daValue(daValue);

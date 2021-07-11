@@ -8251,7 +8251,7 @@ class PlayState extends MusicBeatState
 
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 				FlxG.sound.music.stop();
-				if (FlxG.save.data.week7Cut)	
+				if (ClientPrefs.week7Cut)	
 				{
 					if (SONG.song == 'Guns')
 						LoadingState.loadAndSwitchState(new VideoState("assets/videos/gunsCutscene.webm", new PlayState()));
