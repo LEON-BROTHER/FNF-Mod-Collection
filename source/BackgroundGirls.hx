@@ -19,6 +19,18 @@ class BackgroundGirls extends FlxSprite
 
 			animation.play('danceLeft');
 		}
+		else if (PlayState.SONG.song.toLowerCase() == 'bara no yume')
+		{
+			super(x, y);
+
+			// BG fangirls dissuaded
+			frames = Paths.getSparrowAtlas('monika/bgFreaks');
+
+			animation.addByIndices('danceLeft', 'BG fangirls dissuaded', CoolUtil.numberArray(14), "", 24, false);
+			animation.addByIndices('danceRight', 'BG fangirls dissuaded', CoolUtil.numberArray(30, 15), "", 24, false);
+
+			animation.play('danceLeft');
+		}
 		else
 		{
 			super(x, y);

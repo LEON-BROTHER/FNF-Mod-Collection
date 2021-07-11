@@ -25,6 +25,7 @@ class MainMenuState extends MusicBeatState
 	var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
+	
 
 	#if !switch
 	var optionShit:Array<String> = ['story mode', 'freeplay','options'];
@@ -79,7 +80,7 @@ class MainMenuState extends MusicBeatState
 		bg.screenCenter();
 		bg.antialiasing = true;
 		add(bg);
-
+		
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 		if (CategoryState.chara != 1)
@@ -140,13 +141,13 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
-			if (controls.UP_P)
+			if (controls.UI_UP_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(-1);
 			}
 
-			if (controls.DOWN_P)
+			if (controls.UI_DOWN_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(1);
@@ -198,7 +199,7 @@ class MainMenuState extends MusicBeatState
 										transOut = FlxTransitionableState.defaultTransOut;
 								
 									case 'options':
-										FlxG.switchState(new OptionsMenuState());
+										FlxG.switchState(new OptionsState());
 										transIn = FlxTransitionableState.defaultTransIn;
 										transOut = FlxTransitionableState.defaultTransOut;
 								}

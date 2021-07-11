@@ -115,10 +115,6 @@ class TitleState extends MusicBeatState
 
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
-	var gfDance2:FlxSprite;
-	var gfDance3:FlxSprite;
-	var gfDance4:FlxSprite;
-	var gfDance5:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 
@@ -175,34 +171,9 @@ class TitleState extends MusicBeatState
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		gfDance.antialiasing = true;
 		add(gfDance);
-		gfDance2 = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-		gfDance2.frames = Paths.getSparrowAtlas('gfDanceTitle-b');
-		gfDance2.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance2.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		gfDance2.antialiasing = true;
-		add(gfDance2);
-		gfDance2.visible = false;
-		gfDance3 = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-		gfDance3.frames = Paths.getSparrowAtlas('gfDanceTitle-neo');
-		gfDance3.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance3.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		gfDance3.antialiasing = true;
-		add(gfDance3);
-		gfDance3.visible = false;
-		gfDance4 = new FlxSprite(FlxG.width * 0.72, FlxG.height * 0.18);
-		gfDance4.frames = Paths.getSparrowAtlas('xcharaTitle');
-		gfDance4.animation.addByPrefix('idle', 'xchara idle', 24);
-		gfDance4.animation.play('idle');
-		gfDance4.antialiasing = true;
-		add(gfDance4);
-		gfDance4.visible = false;
-		gfDance5 = new FlxSprite(FlxG.width * 0.5, FlxG.height * 0.07);
-		gfDance5.frames = Paths.getSparrowAtlas('whittyDanceTitle');
-		gfDance5.animation.addByIndices('danceLeft', 'Whitty Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance5.animation.addByIndices('danceRight', 'Whitty Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		gfDance5.antialiasing = true;
-		add(gfDance5);
-		gfDance5.visible = false;
+		
+		
+		
 		add(logoBl);
 
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
@@ -426,16 +397,12 @@ class TitleState extends MusicBeatState
 		if (danceLeft)
 		{
 			gfDance.animation.play('danceRight');
-			gfDance2.animation.play('danceRight');
-			gfDance3.animation.play('danceRight');
-			gfDance5.animation.play('danceRight');
+			
 		}
 		else
 		{
 			gfDance.animation.play('danceLeft');
-			gfDance2.animation.play('danceLeft');
-			gfDance3.animation.play('danceLeft');
-			gfDance5.animation.play('danceLeft');
+		
 		}
 		FlxG.log.add(curBeat);
 

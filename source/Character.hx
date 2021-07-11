@@ -41,7 +41,7 @@ class Character extends FlxSprite
 		
 		var tex:FlxAtlasFrames;
 		var tex2:FlxAtlasFrames;
-		antialiasing = true;
+		antialiasing = ClientPrefs.globalAntialiasing;
 
 		if (isRGB)
 			rgbString = 'RGB';
@@ -2491,7 +2491,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 				
 				updateHitbox();
-				antialiasing = true;
+				antialiasing = ClientPrefs.globalAntialiasing;
 				flipX = true;
 				
 				
@@ -2651,6 +2651,39 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
+				case 'bf-pixelangry':
+					frames = Paths.getSparrowAtlas('monika/bfPixelangry');
+					animation.addByPrefix('idle', 'BF IDLE', 24, false);
+					animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
+					animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
+					animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE', 24, false);
+					animation.addByPrefix('singDOWN', 'BF DOWN NOTE', 24, false);
+					animation.addByPrefix('singUPmiss', 'BF UP MISS', 24, false);
+					animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
+					animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
+					animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
+	
+					addOffset('idle');
+					addOffset("singUP");
+					addOffset("singRIGHT");
+					addOffset("singLEFT");
+					addOffset("singDOWN");
+					addOffset("singUPmiss");
+					addOffset("singRIGHTmiss");
+					addOffset("singLEFTmiss");
+					addOffset("singDOWNmiss");
+	
+					setGraphicSize(Std.int(width * 6));
+					updateHitbox();
+	
+					playAnim('idle');
+	
+					width -= 100;
+					height -= 100;
+	
+					antialiasing = false;
+	
+					flipX = true;
 			case 'bf-pixel-salty':
 				frames = Paths.getSparrowAtlas('salty/weeb/bfPixel');
 				animation.addByPrefix('idle', 'BF IDLE', 24, false);
@@ -4641,19 +4674,23 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
-			case 'signDeath':
-				frames = Paths.getSparrowAtlas('signDeath', 'clown');
+			case 'bf-signDeath':
+				frames = Paths.getSparrowAtlas('signDeath');
+				animation.addByPrefix('idle', "BF dies", 24, false);
+				animation.addByPrefix('singUP', "BF dies", 24, false);
 				animation.addByPrefix('firstDeath', 'BF dies', 24, false);
 				animation.addByPrefix('deathLoop', 'BF Dead Loop', 24, false);
 				animation.addByPrefix('deathConfirm', 'BF Dead confirm', 24, false);
 
-				playAnim('firstDeath');
-
+				
+				addOffset('idle');
+				addOffset('singUP');
 				addOffset('firstDeath');
 				addOffset('deathLoop');
 				addOffset('deathConfirm', 0, 40);
+				playAnim('idle');
 
-				animation.pause();
+			
 
 				updateHitbox();
 				antialiasing = false;

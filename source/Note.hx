@@ -215,7 +215,7 @@ class Note extends FlxSprite
 				if (noteType == 2)
 					{
 						frames = Paths.getSparrowAtlas('ALL_deathnotes');
-						x -= 170;
+						x -= 165;
 						animation.addByPrefix('greenScroll', 'Green Arrow');
 						animation.addByPrefix('redScroll', 'Red Arrow');
 						animation.addByPrefix('blueScroll', 'Blue Arrow');
@@ -280,7 +280,7 @@ class Note extends FlxSprite
 		{
 			noteScore * 0.2;
 			alpha = 0.6;
-			if (FlxG.save.data.down == 'down')
+			if (ClientPrefs.downScroll)
 			{
 				scale.y *= -1;
 			}

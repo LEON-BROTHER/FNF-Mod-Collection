@@ -1026,6 +1026,8 @@ class ChartingState extends MusicBeatState
 			noteType = 1;
 		if (FlxG.keys.pressed.TWO)
 			noteType = 2;
+		if (FlxG.keys.pressed.THREE)
+			noteType = 3;
 		
 
 		if (_song.mania == 2)

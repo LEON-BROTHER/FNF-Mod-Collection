@@ -26,8 +26,16 @@ class GameOverSubstate extends MusicBeatSubstate
 		switch (daStage)
 		{
 			case 'school':
+				if (PlayState.curSong == 'Your Reality')
+				{
+					stageSuffix = '-senpai';
+					daBf = 'playablesenpai';
+				}
+				else	
+				{
 				stageSuffix = '-pixel';
 				daBf = 'bf-pixel-dead';
+				}
 			case 'school-neon':
 				stageSuffix = '-pixel';
 				daBf = 'bf-pixel-dead';
@@ -60,8 +68,9 @@ class GameOverSubstate extends MusicBeatSubstate
 				{
 					daBf = 'bf';
 				}
-			case 'hellclown' | 'expurgation' | 'improbable-outset' | 'madness':
-				daBf = 'signDeath';
+			case 'nevada' | 'auditorHell' | 'nevadaSpook':
+				daBf = 'bf-signDeath';
+				stageSuffix = '-tricky';
 			case 'genocide':
 				daBf = 'bf-knife';
 			case 'tankman1':
@@ -83,6 +92,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollow = new FlxObject(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y, 1, 1);
 		add(camFollow);
 
+		
 		FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
 		Conductor.changeBPM(100);
 

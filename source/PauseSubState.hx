@@ -27,7 +27,7 @@ class PauseSubState extends MusicBeatSubstate
 	var stopspamming:Int = 0;
 
 	var menuItems:Array<String> = [
-		'Resume', 'Restart Song', 'Kade Input', 'Only SICK MODE', 'Change Song', 'Change Character', 'Controls', 'Debug Menu', 'Animation Debug',
+		'Resume', 'Restart Song', 'Kade Input', 'Only SICK MODE', 'Change Song', 'Change Character', 'Debug Menu', 'Animation Debug',
 		'Animation player', 'Exit to menu'
 	];
 
@@ -82,19 +82,15 @@ class PauseSubState extends MusicBeatSubstate
 		else
 			trace('none');
 
-		keys.text = controlmode;
-		keys.scrollFactor.set();
-		keys.setFormat(Paths.font('vcr.ttf'), 32);
-		keys.updateHitbox();
-		add(keys);
+		
 
 		levelDifficulty.alpha = 0;
 		levelInfo.alpha = 0;
-		keys.alpha = 0;
+	
 
 		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
-		keys.x = FlxG.width - (keys.width + 20);
+		
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
@@ -124,8 +120,8 @@ class PauseSubState extends MusicBeatSubstate
 
 		super.update(elapsed);
 
-		var upP = controls.UP_P;
-		var downP = controls.DOWN_P;
+		var upP = controls.UI_UP_P;
+		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 		var controlsStrings:Array<String> = [];
 
@@ -195,59 +191,7 @@ class PauseSubState extends MusicBeatSubstate
 					FlxG.switchState(new CategoryState());
 				case "Change Character":
 					FlxG.switchState(new ChangePlayerState());
-				case "Controls":
-					if (controlmode == "WASD")
-					{
-						controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
-						FlxG.save.data.controlstype = 'dfjk';
-						FlxG.save.flush();
-						controlmode = "DFJK";
-						FlxTween.tween(keys, {alpha: 1, y: keys.y}, 0.4, {ease: FlxEase.quartInOut});
-						keys.text = controlmode;
-						keys.scrollFactor.set();
-						keys.setFormat(Paths.font('vcr.ttf'), 32);
-						keys.updateHitbox();
-						add(keys);
-					}
-					else if (controlmode == "DFJK")
-					{
-						controls.setKeyboardScheme(KeyboardScheme.Custom, true);
-						FlxG.save.data.controlstype = 'qwop';
-						FlxG.save.flush();
-						controlmode = "QWOP";
-						FlxTween.tween(keys, {alpha: 1, y: keys.y}, 0.4, {ease: FlxEase.quartInOut});
-						keys.text = controlmode;
-						keys.scrollFactor.set();
-						keys.setFormat(Paths.font('vcr.ttf'), 32);
-						keys.updateHitbox();
-						add(keys);
-					}
-					else if (controlmode == "QWOP")
-					{
-						controls.setKeyboardScheme(KeyboardScheme.Guldi, true);
-						controlmode = "ASDF";
-						FlxG.save.data.controlstype = 'asdf';
-						FlxG.save.flush();
-						FlxTween.tween(keys, {alpha: 1, y: keys.y}, 0.4, {ease: FlxEase.quartInOut});
-						keys.text = controlmode;
-						keys.scrollFactor.set();
-						keys.setFormat(Paths.font('vcr.ttf'), 32);
-						keys.updateHitbox();
-						add(keys);
-					}
-					else
-					{
-						controls.setKeyboardScheme(KeyboardScheme.Solo, true);
-						controlmode = "WASD";
-						FlxG.save.data.controlstype = 'wasd';
-						FlxG.save.flush();
-						FlxTween.tween(keys, {alpha: 1, y: keys.y}, 0.4, {ease: FlxEase.quartInOut});
-						keys.text = controlmode;
-						keys.scrollFactor.set();
-						keys.setFormat(Paths.font('vcr.ttf'), 32);
-						keys.updateHitbox();
-						add(keys);
-					}
+				
 				case "Animation Debug":
 					FlxG.switchState(new AnimationDebug(PlayState.SONG.player2));
 				case "Animation player":

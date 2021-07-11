@@ -30,9 +30,11 @@ class CategoryState extends MusicBeatState
 
 	public static var playlist:Int;
 	public static var chara:Int;
+	public static var inCategory:Int;
 
 	override function create()
 	{
+		PlayState.isStoryMode = false;
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		if (CategoryState.chara != 1)
 			bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
@@ -40,6 +42,7 @@ class CategoryState extends MusicBeatState
 			bg = new FlxSprite().loadGraphic(Paths.image('chara-menu'));
 		bg.scrollFactor.set();
 		add(bg);
+		inCategory = 1;
 
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('category'), true, true);
 
@@ -86,10 +89,13 @@ class CategoryState extends MusicBeatState
 
 		if (controls.BACK)
 		{
+			inCategory = 0;
 			FlxG.switchState(new MainMenuState());
+			
 		}
 		if (accepted)
 		{
+			
 			var daSelected:String = menuItems[curSelected];
 
 			switch (daSelected)

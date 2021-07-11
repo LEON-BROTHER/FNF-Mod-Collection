@@ -14,20 +14,31 @@ class HealthIcon extends FlxSprite
 	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
 		super();
-
+		
+		
+		
+		
 		if (CategoryState.playlist < 39)
-		{
-			iconList = 1;
-		}
-		else
-		{
-			iconList = 2;
-		}
+			{
+				iconList = 1;
+			}
+		else 
+			{
+				iconList = 2;
+			}
+		if (PlayState.isStoryMode)
+			{
+				trace('cool');
+				iconList = 1;
+			}
+		
 
 		switch (iconList)
 		{
 			case 1:
 				{
+					
+					
 					loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 
 					antialiasing = true;
@@ -214,8 +225,35 @@ class HealthIcon extends FlxSprite
 					animation.add('spirit-salty', [237, 238], 0, false, isPlayer);
 					animation.add('bfgf', [239, 240], 0, false, isPlayer);
 
-					animation.play(char);
-					scrollFactor.set();
+					
+
+					if (StoryMenuState.curWeek == 8 && PlayState.isStoryMode)
+						{
+							loadGraphic(Paths.image('iconGrid2'), true, 150, 150);
+
+						antialiasing = true;
+						animation.add('bf', [238, 239], 0, false, isPlayer);
+						animation.add('bfgf', [0, 1], 0, false, isPlayer);
+						animation.add('cj', [2, 3], 0, false, isPlayer);
+						animation.add('ruby', [4, 5], 0, false, isPlayer);
+						animation.add('duet', [6, 7], 0, false, isPlayer);
+						animation.add('bowserhead', [8, 9], 13, false, isPlayer);
+						animation.add('meowser', [8, 9], 13, false, isPlayer);
+						animation.add('catshine', [8, 9], 13, false, isPlayer);
+						animation.add('playablesenpai', [16, 17], 0, false, isPlayer);
+						animation.add('monika', [10, 11], 0, false, isPlayer);
+						animation.add('monika-senpai', [12, 13], 0, false, isPlayer);
+						animation.add('monika-angry', [14, 15], 0, false, isPlayer);
+						animation.add('duet-m', [12, 13], 0, false, isPlayer);
+						animation.add('bf-pixel', [18, 19], 0, false, isPlayer);
+						animation.add('bf-pixelangry', [18, 19], 0, false, isPlayer);
+					
+
+						
+						}
+						animation.play(char);
+						scrollFactor.set();
+					
 				}
 			case 2:
 				{
@@ -234,9 +272,10 @@ class HealthIcon extends FlxSprite
 					animation.add('monika', [10, 11], 0, false, isPlayer);
 					animation.add('monika-senpai', [12, 13], 0, false, isPlayer);
 					animation.add('monika-angry', [14, 15], 0, false, isPlayer);
-					animation.add('duet', [12, 13], 0, false, isPlayer);
+					animation.add('duet-m', [12, 13], 0, false, isPlayer);
 					animation.add('bf-pixel', [18, 19], 0, false, isPlayer);
 					animation.add('bf-pixelangry', [18, 19], 0, false, isPlayer);
+					
 
 					animation.play(char);
 					scrollFactor.set();

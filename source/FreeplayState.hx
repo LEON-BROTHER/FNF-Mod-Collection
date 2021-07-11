@@ -11,6 +11,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import flixel.system.FlxSound;
 import lime.utils.Assets;
 
 using StringTools;
@@ -30,6 +31,7 @@ class FreeplayState extends MusicBeatState
 
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
+	private var vocals:FlxSound;
 
 	private var iconArray:Array<HealthIcon> = [];
 
@@ -138,8 +140,9 @@ class FreeplayState extends MusicBeatState
 					'Madness',
 					'Improbable-Outset-Duet',
 					'Madness-Duet',
+					'Hellclown',
 					'Expurgation'
-				], 35, ['trickyMask', 'tricky', 'trickyMask', 'tricky', 'exTricky']);
+				], 35, ['trickyMask', 'tricky', 'trickyMask', 'tricky','trickyH', 'exTricky']);
 		}
 
 		if (CategoryState.playlist == 29)
@@ -541,29 +544,32 @@ class FreeplayState extends MusicBeatState
 
 		scoreText.text = "PERSONAL BEST:" + lerpScore;
 
-		var upP = controls.UP_P;
-		var downP = controls.DOWN_P;
+		var upP = controls.UI_UP_P;
+		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 
 		if (upP)
 		{
+			vocals.stop();
 			changeSelection(-1);
 		}
 		if (downP)
 		{
+			vocals.stop();
 			changeSelection(1);
 		}
 
-		if (controls.LEFT_P)
+		if (controls.UI_LEFT_P)
 		{
 			changeDiff(-1);
 		}
-		if (controls.RIGHT_P)
+		if (controls.UI_RIGHT_P)
 		{
 			changeDiff(1);
 		}
 		if (controls.BACK)
 		{
+			vocals.fadeOut(0.4, 0);
 			FlxG.switchState(new CategoryState());
 		}
 
@@ -580,6 +586,8 @@ class FreeplayState extends MusicBeatState
 
 			PlayState.storyWeek = songs[curSelected].week;
 			trace('CUR WEEK' + PlayState.storyWeek);
+			vocals.fadeOut(0.9, 0);
+			vocals.stop();
 			FlxG.switchState(new ChangePlayerState());
 		}
 	}
@@ -651,7 +659,17 @@ class FreeplayState extends MusicBeatState
 
 		#if PRELOAD_ALL
 		if (CategoryState.chara != 1)
+		{
 			FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
+		vocals = new FlxSound().loadEmbedded(Paths.voices(songs[curSelected].songName), true);
+
+		vocals.volume = 0;
+		FlxG.sound.list.add(vocals);
+		vocals.time = FlxG.sound.music.time;
+		vocals.play();
+		vocals.stop();
+		vocals.play();
+		}
 		#end
 
 		var bullShit:Int = 0;
