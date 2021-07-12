@@ -87,7 +87,7 @@ class OptionsState extends MusicBeatState
 					openSubState(new OptionsMenuState());
 
 				case 'Controls':
-					openSubState(new ControlsSubstate());
+					openSubState(new ControlsSubState());
 
 				case 'Preferences':
 					openSubState(new PreferencesSubstate());
