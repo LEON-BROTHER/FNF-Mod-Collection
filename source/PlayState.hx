@@ -5828,21 +5828,16 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'my-battle' | 'last-chance' | 'genocide':
 					schoolIntro(doof);
-				case 'senpai-duet':
-					schoolIntro(doof);
+				
 				case 'roses-duet':
 					FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
-				case 'thorns-duet':
-					schoolIntro(doof);
+				
 				case 'senpai-b-sides':
-					schoolIntro();
+					schoolIntro(doof);
 				case 'roses-b-sides':
 					FlxG.sound.play(Paths.sound('ANGRY'));
-					schoolIntro();
-				case 'roses-rs':
-					FlxG.sound.play(Paths.sound('ANGRY'));
-					schoolIntro();
+					schoolIntro(doof);
 				case 'thorns-b-sides':
 					schoolIntro(doof);
 				case 'thorns-rs':
@@ -6346,10 +6341,15 @@ class PlayState extends MusicBeatState
 		add(black);
 
 		var red:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFFff1b31);
+		if (SONG.song.toLowerCase() == 'thorns-b-sides')
+			var red:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFF44D5ED);
 		red.scrollFactor.set();
 
 		var senpaiEvil:FlxSprite = new FlxSprite();
 		senpaiEvil.frames = Paths.getSparrowAtlas('weeb/senpaiCrazy');
+		if (SONG.song.toLowerCase() == 'thorns-b-sides')
+			senpaiEvil.frames = Paths.getSparrowAtlas('bside/weeb/senpaiCrazy');
+
 		senpaiEvil.animation.addByPrefix('idle', 'Senpai Pre Explosion', 24, false);
 		senpaiEvil.setGraphicSize(Std.int(senpaiEvil.width * 6));
 		senpaiEvil.scrollFactor.set();
@@ -6657,12 +6657,14 @@ class PlayState extends MusicBeatState
 					altSuffix = '-pixel';
 				}
 			}
+			if (SONG.song.toLowerCase() == 'your demise')
+				altSuffix = '-glitch';
 
 			switch (swagCounter)
 
 			{
 				case 0:
-					FlxG.sound.play(Paths.sound('intro3'), 0.6);
+					FlxG.sound.play(Paths.sound('intro3' + altSuffix), 0.6);
 					songMiss = 0;
 					squaredown = 0;
 				case 1:
@@ -6682,7 +6684,7 @@ class PlayState extends MusicBeatState
 							ready.destroy();
 						}
 					});
-					FlxG.sound.play(Paths.sound('intro2'), 0.6);
+					FlxG.sound.play(Paths.sound('intro2' + altSuffix), 0.6);
 				case 2:
 					var set:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 					set.scrollFactor.set();
@@ -6699,7 +6701,7 @@ class PlayState extends MusicBeatState
 							set.destroy();
 						}
 					});
-					FlxG.sound.play(Paths.sound('intro1'), 0.6);
+					FlxG.sound.play(Paths.sound('intro1' + altSuffix), 0.6);
 				case 3:
 					var go:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 					go.scrollFactor.set();
@@ -6718,7 +6720,7 @@ class PlayState extends MusicBeatState
 							go.destroy();
 						}
 					});
-					FlxG.sound.play(Paths.sound('introGo'), 0.6);
+					FlxG.sound.play(Paths.sound('introGo' + altSuffix), 0.6);
 				case 4:
 			}
 
@@ -8390,8 +8392,8 @@ class PlayState extends MusicBeatState
 			pixelShitPart2 = '';
 			if (curStage.startsWith('school'))
 			{
-				pixelShitPart1 = 'bside/weeb/pixelUI';
-				pixelShitPart2 = '';
+				pixelShitPart1 = 'bside/weeb/pixelUI/';
+				pixelShitPart2 = '-pixel';
 			}
 
 		}

@@ -227,7 +227,7 @@ class HealthIcon extends FlxSprite
 
 					
 
-					if (StoryMenuState.curWeek == 8 && PlayState.isStoryMode)
+					if (StoryCateState.monika && PlayState.isStoryMode)
 						{
 							loadGraphic(Paths.image('iconGrid2'), true, 150, 150);
 

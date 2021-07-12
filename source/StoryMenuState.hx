@@ -121,6 +121,64 @@ class StoryMenuState extends MusicBeatState
 					
 				];
 				
+			case 2:
+				weekData = [
+					['Bopeebo-Neo', 'Fresh-Neo', 'Dadbattle-Neo'],
+					['Spookeez-Neo', 'South-Neo'],
+					['Pico-Neo', 'Philly-Neo', "Blammed-Neo"],
+					['Satin-Panties-Neo', "High-Neo", "Milf-Neo"]
+					
+					
+				];
+				weekCharacters = [
+					['dad', 'bf', 'gf'],
+					['spooky', 'bf', 'gf'],
+					['pico', 'bf', 'gf'],
+					['mom', 'bf', 'gf']
+					
+					
+				];
+			
+				weekNames = [
+					"Daddy Dearest",
+					"Spooky Month",
+					"PICO",
+					"MOMMY MUST MURDER"
+					
+					
+				];
+			case 3:
+				weekData = [
+					['Bopeebo-B-Sides', 'Fresh-B-Sides', 'Dadbattle-B-Sides'],
+					['Spookeez-B-Sides', 'South-B-Sides'],
+					['Pico-B-Sides', 'Philly-B-Sides', "Blammed-B-Sides"],
+					['Satin-Panties-B-Sides', "High-B-Sides", "Milf-B-Sides"],
+					['Cocoa-B-Sides', 'Eggnog-B-Sides', 'W-HL-B-Sides'],
+					['Senpai-B-Sides', 'Roses-B-Sides', 'Thorns-B-Sides']
+					
+					
+				];
+				weekCharacters = [
+					['dad', 'bf', 'gf'],
+					['spooky', 'bf', 'gf'],
+					['pico', 'bf', 'gf'],
+					['mom', 'bf', 'gf'],
+					['parents-christmas', 'bf', 'gf'],
+					['senpai', 'bf', 'gf']
+					
+					
+				];
+			
+				weekNames = [
+					"Daddy Dearest",
+					"Spooky Month",
+					"PICO",
+					"MOMMY MUST MURDER",
+					"RED SNOW",
+					"hating simulator ft. moawling"
+					
+					
+				];
 			case 5:
 				weekData = [['High School Conflict', 'Bara no Yume', 'Your Demise','Your Reality']];
 				weekCharacters = [['senpai', 'bf', 'gf']];
@@ -287,7 +345,10 @@ class StoryMenuState extends MusicBeatState
 		leftArrow.animation.play('idle');
 		difficultySelectors.add(leftArrow);
 
-		sprDifficulty = new FlxSprite(leftArrow.x + 130, leftArrow.y);
+		if (StoryCateState.playlist == 2)
+			sprDifficulty = new FlxSprite(leftArrow.x + 70, leftArrow.y);
+		else 
+			sprDifficulty = new FlxSprite(leftArrow.x + 130, leftArrow.y);
 		sprDifficulty.frames = ui_tex;
 		sprDifficulty.animation.addByPrefix('easy', 'EASY');
 		sprDifficulty.animation.addByPrefix('normal', 'NORMAL');
@@ -330,7 +391,7 @@ class StoryMenuState extends MusicBeatState
 		// scoreText.setFormat('VCR OSD Mono', 32);
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.5));
 
-		scoreText.text = "WEEK SCORE:" + lerpScore;
+		scoreText.text = "WEEK SCORE: DISABLED SADLY";
 
 		txtWeekTitle.text = weekNames[curWeek].toUpperCase();
 		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 10);
@@ -368,6 +429,7 @@ class StoryMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
+				
 				selectWeek();
 			}
 		}
@@ -376,6 +438,8 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
+			StoryCateState.playlist = 0;
+			StoryCateState.monika = false;
 			FlxG.switchState(new MainMenuState());
 		}
 
@@ -511,8 +575,19 @@ class StoryMenuState extends MusicBeatState
 				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 0.99));
 
 			case 'senpai':
-				grpWeekCharacters.members[0].offset.set(130, 0);
-				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.4));
+				if (StoryCateState.playlist == 5)
+				{
+					grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.1));
+					grpWeekCharacters.members[0].offset.set(-300, -50);
+				
+				}
+				else
+				{
+					grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.3));
+					grpWeekCharacters.members[0].offset.set(130, 0);
+				
+				}
+		
 			case 'monika':
 				grpWeekCharacters.members[0].offset.set(130, 0);
 				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.4));

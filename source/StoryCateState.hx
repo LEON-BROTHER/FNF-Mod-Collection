@@ -28,10 +28,12 @@ class StoryCateState extends MusicBeatState
 
 	public static var playlist:Int;
 	public static var chara:Int;
+	public static var monika:Bool = false;
 	
 
 	override function create()
 	{
+		monika = false;
 		PlayState.isStoryMode = false;
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		if (CategoryState.chara != 1)
@@ -89,7 +91,7 @@ class StoryCateState extends MusicBeatState
 		{
 			
 			FlxG.switchState(new MainMenuState());
-			
+			monika = false;
 		}
 		if (accepted)
 		{
@@ -118,7 +120,7 @@ class StoryCateState extends MusicBeatState
 					playlist = 4;
 					FlxG.switchState(new StoryMenuState());
 				case "Monika":
-					
+					monika = true;
 					playlist = 5;
 					FlxG.switchState(new StoryMenuState());
 				

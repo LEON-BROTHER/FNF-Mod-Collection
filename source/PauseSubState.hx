@@ -154,8 +154,10 @@ class PauseSubState extends MusicBeatSubstate
 					FlxG.resetState();
 					PlayState.songMiss = 0;
 				case "Exit to menu":
+					
 					FlxG.switchState(new MainMenuState());
 				case "Debug Menu":
+					
 					FlxG.switchState(new ChartingState());
 				case "Kade Input":
 					if (babymode == "No")
