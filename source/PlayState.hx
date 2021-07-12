@@ -4460,6 +4460,7 @@ class PlayState extends MusicBeatState
 			 */
 		
 		case 'inverted-ascension' | 'echoes' | 'artificial-lust':
+		{
 		
 			normalStage = new FlxTypedGroup<FlxSprite>();
 			add(normalStage);
@@ -4523,6 +4524,7 @@ class PlayState extends MusicBeatState
 				case 'echoes':
 					add(cj);
 			}
+		}
 		case 'high school conflict' | 'bara no yume' | 'your reality' | 'dreams of roses':
 			{
 					curStage = 'school';
