@@ -1,16 +1,16 @@
-:bf:beep
+:bf1:beep
 :dad:What's up, little man?
 :dad:Did the smoke catch your attention?
-:bf:bee bop
+:bf1:bee bop
 :dad:Yeah, it's pretty cool. You should try it out.
-:bf:beep bo
+:bf1:beep bo
 :dad:Are ya sure? Come on...
-:bf:beep bo
+:bf1:beep bo
 :dad:Hm...
 :dad:Tell you what.
 :dad:If you beat me in a friendly little rap battle, I'll get off your case.
 :dad:Sound cool, little man?
-:bf:beep bo bop!
+:bf1:beep bo bop!
 :dad:Heh, that got you hyped up. It's settled then.
 :dad:As long as you don't mind me smoking a bit. 
 :dad:Helps calm the nerves, y'know?

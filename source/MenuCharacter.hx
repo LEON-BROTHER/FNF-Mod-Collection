@@ -58,6 +58,15 @@ class MenuCharacter extends FlxSprite
 			animation.addByPrefix('parents-christmas', "Parent Christmas Idle", 24);
 			animation.addByPrefix('tankman', "Tankman Menu BLACK", 24);
 		case 4:
+			var tex = Paths.getSparrowAtlas('campaign_menu_UI_characters_garcello');
+			frames = tex;
+	
+			animation.addByPrefix('bf', "BF idle dance white", 24);
+			animation.addByPrefix('bfConfirm', 'BF HEY!!', 24, false);
+			animation.addByPrefix('gf', "GF Dancing Beat WHITE", 24);
+			animation.addByPrefix('dad', "garcello idle", 24);
+			
+
 		case 5:
 			var tex = Paths.getSparrowAtlas('campaign_menu_UI_characters_monika');
 			frames = tex;
@@ -66,7 +75,17 @@ class MenuCharacter extends FlxSprite
 			animation.addByPrefix('bfConfirm', 'BF HEY!!', 24, false);
 			animation.addByPrefix('gf', "GF Dancing Beat WHITE", 24);
 			animation.addByPrefix('senpai', "SENPAI idle Black Lines", 24);
+		
+		case 6:
+			var tex = Paths.getSparrowAtlas('campaign_menu_UI_characters_monika');
+			frames = tex;
+	
+			animation.addByPrefix('bf', "BF idle dance white", 24);
+			animation.addByPrefix('bfConfirm', 'BF HEY!!', 24, false);
+			animation.addByPrefix('gf', "GF Dancing Beat WHITE", 24);
+			animation.addByPrefix('senpai', "SENPAI idle Black Lines", 24);
 		}
+
 
 		// Parent Christmas Idle
 

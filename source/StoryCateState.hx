@@ -19,7 +19,7 @@ class StoryCateState extends MusicBeatState
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	public var menuItems:Array<String> = [
-		'Base Game', 'B-Sides', 'Garcello', 'Monika', 'Neo'
+		'Base Game', 'B-Sides', 'Garcello', 'Monika', 'Neo', 'Whitty'
 	];
 
 	public var curSelected:Int = 0;
@@ -122,6 +122,10 @@ class StoryCateState extends MusicBeatState
 				case "Monika":
 					monika = true;
 					playlist = 5;
+					FlxG.switchState(new StoryMenuState());
+				case "Whitty":
+					
+					playlist = 6;
 					FlxG.switchState(new StoryMenuState());
 				
 			}

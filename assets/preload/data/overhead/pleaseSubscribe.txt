@@ -1,7 +1,7 @@
-:dad:I see how it is.
-:bf:brep bappity boop 
-:dad:You're really pushing my limits, dude.
-:bf:bip bep skoo de boop
-:dad:Well how about you go die in a ditch instead.
-:bf:bepoobee skoop 
-:dad:...Don't make me do this. 
+:dad-w:I see how it is.
+:bf-w:brep bappity boop 
+:dad-w:You're really pushing my limits, dude.
+:bf-w:bip bep skoo de boop
+:dad-w:Well how about you go die in a ditch instead.
+:bf-w:bepoobee skoop 
+:dad-w:...Don't make me do this. 

@@ -530,15 +530,15 @@ class Character extends FlxSprite
 				// GIRLFRIEND CODE
 				tex = Paths.getSparrowAtlas('whitty/GF_Standing_Sway');
 				frames = tex;
-				animation.addByPrefix('sad', 'Sad', 12);
-				animation.addByPrefix('danceLeft', 'Idle Left', 5);
-				animation.addByPrefix('danceRight', 'Idle Right', 5);
-				animation.addByPrefix('scared', 'Scared', 4);
+				animation.addByPrefix('sad', 'Sad', 24, false);
+				animation.addByPrefix('danceLeft', 'Idle Left', 24, false);
+				animation.addByPrefix('danceRight', 'Idle Right', 24, false);
+				animation.addByPrefix('scared', 'Scared', 24, false);
 
-				addOffset('sad', 0, -9);
-				addOffset('danceLeft', 0, -9);
-				addOffset('danceRight', 0, -9);
-				addOffset('scared', 0, -9);
+				addOffset('sad', -140, -153);
+				addOffset('danceLeft', -140, -153);
+				addOffset('danceRight', -140, -153);
+				addOffset('scared', -140, -153);
 
 				playAnim('danceRight');
 			case 'gf-whitty-ball':

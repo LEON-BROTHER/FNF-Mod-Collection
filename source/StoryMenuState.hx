@@ -179,10 +179,18 @@ class StoryMenuState extends MusicBeatState
 					
 					
 				];
+				case 4:
+				weekData = [['Headache', 'Nerves', 'Release','Fading']];
+				weekCharacters = [['dad', 'bf', 'gf']];
+				weekNames = ['Garcello Week'];
 			case 5:
 				weekData = [['High School Conflict', 'Bara no Yume', 'Your Demise','Your Reality']];
 				weekCharacters = [['senpai', 'bf', 'gf']];
 				weekNames = ['JUST MONIKA'];
+			case 6:
+				weekData = [['Lo-Fight','Overhead','Ballistic']];
+				weekCharacters = [['senpai', 'bf', 'gf']];
+				weekNames = ['WHITTY WEEK'];
 
 
 			default:
@@ -346,6 +354,8 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors.add(leftArrow);
 
 		if (StoryCateState.playlist == 2)
+			sprDifficulty = new FlxSprite(leftArrow.x + 70, leftArrow.y);
+		else if (StoryCateState.playlist == 3)
 			sprDifficulty = new FlxSprite(leftArrow.x + 70, leftArrow.y);
 		else 
 			sprDifficulty = new FlxSprite(leftArrow.x + 130, leftArrow.y);
@@ -597,8 +607,17 @@ class StoryMenuState extends MusicBeatState
 				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1));
 
 			case 'dad':
-				grpWeekCharacters.members[0].offset.set(120, 200);
-				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1));
+				if (StoryCateState.playlist == 4)
+					{
+						grpWeekCharacters.members[0].offset.set(-300, 20);
+						grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.2));
+					}
+				else
+					{
+						grpWeekCharacters.members[0].offset.set(120, 200);
+					grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1));
+					}
+
 			case 'tankman':
 				grpWeekCharacters.members[0].offset.set(100, 0);
 				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1));
