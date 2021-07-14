@@ -12,6 +12,7 @@ import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
 import flixel.graphics.FlxGraphic;
+import flixel.addons.text.FlxTypeText;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
 import flixel.input.gamepad.FlxGamepad;
@@ -36,9 +37,26 @@ class TitleState extends MusicBeatState
 
 	var blackScreen:FlxSprite;
 	var credGroup:FlxGroup;
+	var undertaleenter:Bool = false;
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
 	var ngSpr:FlxSprite;
+	var nexttext:Bool = false;
+	var undertale:Bool = false;
+	var minecraft:Bool = false;
+	var dialogue:Alphabet;
+	var dialogueOpened:Bool = false;
+	var dialogueStarted:Bool = false;
+	var dialogueList:Array<String> = [];
+	var manyyear:Int = 0;
+	var menustart:Int = 0;
+
+	var swagDialogue:FlxTypeText;
+
+	
+
+	public var finishThing:Void->Void;
+
 
 	var curWacky:Array<String> = [];
 
@@ -58,10 +76,7 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		#if ng
-		var ng:NGio = new NGio(APIStuff.API, APIStuff.EncKey);
-		trace('NEWGROUNDS LOL');
-		#end
+		
 
 		FlxG.save.bind('funkin', 'ninjamuffin99');
 
@@ -96,6 +111,7 @@ class TitleState extends MusicBeatState
 			if (!StoryMenuState.weekUnlocked[0])
 				StoryMenuState.weekUnlocked[0] = true;
 		}
+		menustart = FlxG.random.int(1, 10);
 
 		#if FREEPLAY
 		FlxG.switchState(new FreeplayState());
@@ -104,6 +120,14 @@ class TitleState extends MusicBeatState
 		#else
 		new FlxTimer().start(1, function(tmr:FlxTimer)
 		{
+			if (menustart == 3)
+				undertale = true;
+			else if (menustart == 5)
+				minecraft = true;
+			else
+				trace('no special start shit');
+			
+
 			startIntro();
 		});
 		#end
@@ -142,20 +166,34 @@ class TitleState extends MusicBeatState
 			// music.loadStream(Paths.music('freakyMenu'));
 			// FlxG.sound.list.add(music);
 			// music.play();
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+			if (undertale)
+				{
+				FlxG.sound.playMusic(Paths.music('undertalebegin'), 0);
+				FlxG.sound.music.fadeIn(4, 0, 0.7);
+				}
+			if (!minecraft && !undertale)
+				{
+				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				FlxG.sound.music.fadeIn(4, 0, 0.7);
+				}
 
-			FlxG.sound.music.fadeIn(4, 0, 0.7);
+			
 		}
 
-		Conductor.changeBPM(102);
+		
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		
+		FlxG.mouse.visible = false;
+
+		if (!undertale && !minecraft)
+		{
+			var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		// bg.antialiasing = true;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
 		add(bg);
-
+		Conductor.changeBPM(102);
 		logoBl = new FlxSprite(-150, -100);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = true;
@@ -218,7 +256,7 @@ class TitleState extends MusicBeatState
 
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
-		FlxG.mouse.visible = false;
+		
 
 		if (initialized)
 			skipIntro();
@@ -226,8 +264,312 @@ class TitleState extends MusicBeatState
 			initialized = true;
 
 		// credGroup.add(credTextShit);
-	}
+		}
+		else if (minecraft)
+		{
+			var bgback:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('minecraft/bg'));
+			bgback.screenCenter(X);
+			bgback.screenCenter(Y);
+			add(bgback);
+			var bgun:FlxSprite = new FlxSprite(-900 ,570).makeGraphic(1280, 50, FlxColor.WHITE);
+			add(bgun);
+			var bgback1:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('minecraft/load'));
+			bgback1.screenCenter(X);
+			bgback1.screenCenter(Y);
+			add(bgback1);
+			
+			
+			new FlxTimer().start(1, function(tmr:FlxTimer)
+			{
+			FlxTween.tween(bgun, {x: bgun.x + 40}, 2.0, {startDelay: 0.0});																										
+			new FlxTimer().start(4, function(tmr:FlxTimer)
+				{
+				FlxTween.tween(bgun, {x: bgun.x + 200}, 1.0, {startDelay: 0.0});																										
+				new FlxTimer().start(2, function(tmr:FlxTimer)
+					{
+					FlxTween.tween(bgun, {x: bgun.x + 100}, 6.0, {startDelay: 0.0});																										
+					new FlxTimer().start(7, function(tmr:FlxTimer)
+						{
+						FlxTween.tween(bgun, {x: bgun.x + 500}, 4.0, {startDelay: 0.0});																										
+						new FlxTimer().start(5, function(tmr:FlxTimer)
+							{
+								new FlxTimer().start(0.1, function(tmr:FlxTimer)
+									{
+										FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+										FlxG.sound.music.fadeIn(4, 0, 0.7);
+										// Get current version of Kade Engine
+										
+										var http = new haxe.Http("https://raw.githubusercontent.com/LEON-BROTHER/mod-version/main/update.txt");
+										var returnedData:Array<String> = [];
+										
+										http.onData = function (data:String)
+										{
+											returnedData[0] = data.substring(0, data.indexOf(';'));
+											returnedData[1] = data.substring(data.indexOf('-'), data.length);
+											  if (!MainMenuState.modversion.contains(returnedData[0].trim()) && !OutdatedSubState.leftState)
+											{
+												trace('outdated lmao! ' + returnedData[0] + ' != ' + MainMenuState.modversion);
+												OutdatedSubState.needVer = returnedData[0];
+												OutdatedSubState.currChanges = returnedData[1];
+												FlxG.switchState(new OutdatedSubState());
+											}
+											else
+											{
+												FlxG.switchState(new MainMenuState());
+											}
+										}
+										
+										http.onError = function (error) {
+										  trace('error: $error');
+										  FlxG.switchState(new MainMenuState()); // fail but we go anyway
+										}
+										
+										http.request();
+									});																									
+							
+							});
+						});
+					});
+				});
+			});
 
+		}
+		else
+		{
+			
+			dialogueList = CoolUtil.coolTextFile(Paths.txt('undertale/dialog'));
+			var undertaleintro11:FlxSprite = new FlxSprite(480, -200).loadGraphic(Paths.image('undertale/intro11'));
+			undertaleintro11.updateHitbox();
+			undertaleintro11.setGraphicSize(Std.int(undertaleintro11.width * 2.5));
+			undertaleintro11.visible = false;
+		
+			
+			add(undertaleintro11);
+			var undertaleintro0:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro0'));
+			undertaleintro0.updateHitbox();
+			undertaleintro0.setGraphicSize(Std.int(undertaleintro0.width * 2.5));
+			undertaleintro0.screenCenter(X);
+			undertaleintro0.screenCenter(Y);
+			add(undertaleintro0);
+			
+			var undertaleintro1:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro1'));
+			undertaleintro1.updateHitbox();
+			undertaleintro1.setGraphicSize(Std.int(undertaleintro1.width * 2.5));
+			undertaleintro1.screenCenter(X);
+			undertaleintro1.screenCenter(Y);
+			add(undertaleintro1);
+			undertaleintro1.visible = false;
+			var undertaleintro2:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro2'));
+			undertaleintro2.updateHitbox();
+			undertaleintro2.setGraphicSize(Std.int(undertaleintro2.width * 2.5));
+			undertaleintro2.screenCenter(X);
+			undertaleintro2.screenCenter(Y);
+			add(undertaleintro2);
+			undertaleintro2.visible = false;
+			var undertaleintro3:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro3'));
+			undertaleintro3.updateHitbox();
+			undertaleintro3.setGraphicSize(Std.int(undertaleintro3.width * 2.5));
+			undertaleintro3.screenCenter(X);
+			undertaleintro3.screenCenter(Y);
+			add(undertaleintro3);
+			undertaleintro3.visible = false;
+			var undertaleintro4:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro4'));
+			undertaleintro4.updateHitbox();
+			undertaleintro4.setGraphicSize(Std.int(undertaleintro4.width * 2.5));
+			undertaleintro4.screenCenter(X);
+			undertaleintro4.screenCenter(Y);
+			add(undertaleintro4);
+			undertaleintro4.visible = false;
+			var undertaleintro5:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro5'));
+			undertaleintro5.updateHitbox();
+			undertaleintro5.setGraphicSize(Std.int(undertaleintro5.width * 2.5));
+			undertaleintro5.screenCenter(X);
+			undertaleintro5.screenCenter(Y);
+			add(undertaleintro5);
+			undertaleintro5.visible = false;
+			var undertaleintro6:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro6'));
+			undertaleintro6.updateHitbox();
+			undertaleintro6.setGraphicSize(Std.int(undertaleintro6.width * 2.5));
+			undertaleintro6.screenCenter(X);
+			undertaleintro6.screenCenter(Y);
+			add(undertaleintro6);
+			undertaleintro6.visible = false;
+			var undertaleintro7:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro7'));
+			undertaleintro7.updateHitbox();
+			undertaleintro7.setGraphicSize(Std.int(undertaleintro7.width * 2.5));
+			undertaleintro7.screenCenter(X);
+			undertaleintro7.screenCenter(Y);
+			add(undertaleintro7);
+			undertaleintro7.visible = false;
+			var undertaleintro8:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro8'));
+			undertaleintro8.updateHitbox();
+			undertaleintro8.setGraphicSize(Std.int(undertaleintro8.width * 2.5));
+			undertaleintro8.screenCenter(X);
+			undertaleintro8.screenCenter(Y);
+			add(undertaleintro8);
+			undertaleintro8.visible = false;
+			var undertaleintro9:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro9'));
+			undertaleintro9.updateHitbox();
+			undertaleintro9.setGraphicSize(Std.int(undertaleintro9.width * 2.5));
+			undertaleintro9.screenCenter(X);
+			undertaleintro9.screenCenter(Y);
+			add(undertaleintro9);
+			undertaleintro9.visible = false;
+			var undertaleintro10:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/intro10'));
+			undertaleintro10.updateHitbox();
+			undertaleintro10.setGraphicSize(Std.int(undertaleintro10.width * 2.5));
+			undertaleintro10.screenCenter(X);
+			undertaleintro10.screenCenter(Y);
+			add(undertaleintro10);
+			undertaleintro10.visible = false;
+			var bgund:FlxSprite = new FlxSprite(350 ,0).makeGraphic(600, 130, FlxColor.BLACK);
+			add(bgund);
+			var bgun:FlxSprite = new FlxSprite(350 ,405).makeGraphic(600, 700, FlxColor.BLACK);
+			add(bgun);
+
+			var hasDialog = true;
+		
+		swagDialogue = new FlxTypeText(300, 500, Std.int(FlxG.width * 0.6), "", 50);
+		swagDialogue.font = 'Determination Mono Web';
+		swagDialogue.color = 0xFF3F2021;
+		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('sound'), 0.6)];
+		
+		add(swagDialogue);
+		dialogue = new Alphabet(0, 80, "", false, true);
+		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		bg.alpha = 0;
+		add(bg);
+		
+
+		new FlxTimer().start(7, function(tmr:FlxTimer)
+			{
+				FlxG.camera.flash(FlxColor.BLACK, 1);
+				undertaleintro0.visible = false;
+				undertaleintro1.visible = true;
+				nexttext = true;
+				new FlxTimer().start(5, function(tmr:FlxTimer)
+					{
+						FlxG.camera.flash(FlxColor.BLACK, 1);
+						undertaleintro1.visible = false;
+						undertaleintro2.visible = true;
+						nexttext = true;
+						new FlxTimer().start(5, function(tmr:FlxTimer)
+							{
+								FlxG.camera.flash(FlxColor.BLACK, 1);
+								undertaleintro2.visible = false;
+								undertaleintro3.visible = true;
+								nexttext = true;
+								new FlxTimer().start(5, function(tmr:FlxTimer)
+									{
+										FlxG.camera.flash(FlxColor.BLACK, 1);
+										undertaleintro3.visible = false;
+										undertaleintro4.visible = true;
+										manyyear = 1;
+										nexttext = true;
+										new FlxTimer().start(5, function(tmr:FlxTimer)
+											{
+												FlxG.camera.flash(FlxColor.BLACK, 1);
+												undertaleintro4.visible = false;
+												undertaleintro5.visible = true;
+												
+												nexttext = true;
+												new FlxTimer().start(5, function(tmr:FlxTimer)
+													{
+														FlxG.camera.flash(FlxColor.BLACK, 1);
+														undertaleintro5.visible = false;
+														undertaleintro6.visible = true;
+														
+														nexttext = true;
+														
+														new FlxTimer().start(5, function(tmr:FlxTimer)
+															{
+																FlxG.camera.flash(FlxColor.BLACK, 1);
+																undertaleintro6.visible = false;
+																undertaleintro7.visible = true;
+																nexttext = true;
+																
+																new FlxTimer().start(5, function(tmr:FlxTimer)
+																	{
+																		FlxG.camera.flash(FlxColor.BLACK, 1);
+																		undertaleintro7.visible = false;
+																		undertaleintro8.visible = true;
+																		new FlxTimer().start(5, function(tmr:FlxTimer)
+																			{
+																				FlxG.camera.flash(FlxColor.BLACK, 1);
+																				undertaleintro8.visible = false;
+																				undertaleintro9.visible = true;
+																				new FlxTimer().start(5, function(tmr:FlxTimer)
+																					{
+																						FlxG.camera.flash(FlxColor.BLACK, 1);
+																						undertaleintro9.visible = false;
+																						undertaleintro10.visible = true;
+																						
+																						new FlxTimer().start(5, function(tmr:FlxTimer)
+																							{
+																								FlxG.camera.flash(FlxColor.BLACK, 1);
+																								undertaleintro10.visible = false;
+																								undertaleintro11.visible = true;
+																								new FlxTimer().start(5, function(tmr:FlxTimer)
+																									{
+																										FlxTween.tween(undertaleintro11, {y: undertaleintro11.y + 500}, 10.0, {startDelay: 0.0});
+																										new FlxTimer().start(10, function(tmr:FlxTimer)
+																											{
+																												FlxTween.tween(bg, {alpha: 1}, 8.0, {startDelay: 0.0});
+																												new FlxTimer().start(10, function(tmr:FlxTimer)
+																													{
+																														
+																														titlescreen();
+				
+																													});
+		
+																											});
+																									});
+																								
+																							});
+																					});
+																				
+																			});
+																		
+																	});
+															});
+													});
+											});
+									});
+							});
+					});
+			});
+		}
+	}
+	function titlescreen()
+	{
+		FlxG.sound.music.stop();
+		FlxG.sound.play(Paths.sound('intro'), 1);
+		var undertalelogo:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/cool'));
+			undertalelogo.updateHitbox();
+			undertalelogo.setGraphicSize(Std.int(undertalelogo.width * 0.8));
+			undertalelogo.screenCenter(X);
+			undertalelogo.screenCenter(Y);
+			undertalelogo.y -= 50;
+			add(undertalelogo);
+			new FlxTimer().start(2, function(tmr:FlxTimer)
+				{
+					
+				
+					var undertalelenterimg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/enter'));
+					undertalelenterimg.updateHitbox();
+					undertalelenterimg.setGraphicSize(Std.int(undertalelenterimg.width * 0.8));
+					undertalelenterimg.screenCenter(X);
+					undertalelenterimg.screenCenter(Y);
+					undertalelenterimg.alpha = 0.5;
+					undertalelenterimg.y += 70;
+					add(undertalelenterimg);
+					undertaleenter = true;
+				});
+			
+	
+				
+
+	}
 	function getIntroTextShit():Array<Array<String>>
 	{
 		var fullText:String = Assets.getText(Paths.txt('introText'));
@@ -248,18 +590,7 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (!CachedFrames.cachedInstance.loaded)
-		{
-		}
-		else if (!once)
-		{
-			once = true;
-			new FlxTimer().start(1.2, function(tmr:FlxTimer)
-			{
-				canSkip = true;
-				startIntro();
-			});
-		}
+		
 
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
@@ -295,15 +626,11 @@ class TitleState extends MusicBeatState
 			#end
 		}
 
+		if (!undertale && !minecraft) 
+		{	
 		if (pressedEnter && !transitioning && skippedIntro)
 		{
-			#if !switch
-			NGio.unlockMedal(60960);
-
-			// If it's Friday according to da clock
-			if (Date.now().getDay() == 5)
-				NGio.unlockMedal(61034);
-			#end
+		
 
 			titleText.animation.play('press');
 
@@ -351,8 +678,123 @@ class TitleState extends MusicBeatState
 		{
 			skipIntro();
 		}
+		}
+		else if (minecraft)
+		{
+
+		}
+		else
+	
+		{	
+			swagDialogue.color = FlxColor.WHITE;
+
+			
+			
+
+			dialogueOpened = true;
+	
+	if (dialogueOpened && !dialogueStarted)
+	{
+		startDialogue();
+		dialogueStarted = true;
+	}
+
+	if (nexttext && dialogueStarted)
+	{
+		nexttext = false;
+		remove(dialogue);
+
+		
+
+		if (dialogueList[1] == null && dialogueList[0] != null)
+		{
+			if (!isEnding)
+			{
+				isEnding = true;
+
+				
+
+				
+				
+					swagDialogue.alpha = 0;
+				
+				
+			}	
+		}
+		else
+		{
+			dialogueList.remove(dialogueList[0]);
+			startDialogue();
+		}
+	}
+		if (undertaleenter && pressedEnter)
+		{
+			new FlxTimer().start(0.1, function(tmr:FlxTimer)
+				{
+					// Get current version of Kade Engine
+					
+					var http = new haxe.Http("https://raw.githubusercontent.com/LEON-BROTHER/mod-version/main/update.txt");
+					var returnedData:Array<String> = [];
+					
+					http.onData = function (data:String)
+					{
+						returnedData[0] = data.substring(0, data.indexOf(';'));
+						returnedData[1] = data.substring(data.indexOf('-'), data.length);
+						  if (!MainMenuState.modversion.contains(returnedData[0].trim()) && !OutdatedSubState.leftState)
+						{
+							trace('outdated lmao! ' + returnedData[0] + ' != ' + MainMenuState.modversion);
+							OutdatedSubState.needVer = returnedData[0];
+							OutdatedSubState.currChanges = returnedData[1];
+							FlxG.switchState(new OutdatedSubState());
+						}
+						else
+						{
+							FlxG.switchState(new MainMenuState());
+						}
+					}
+					
+					http.onError = function (error) {
+					  trace('error: $error');
+					  FlxG.switchState(new MainMenuState()); // fail but we go anyway
+					}
+					
+					http.request();
+				});	
+		}
+	
+	}
+	
+
+		
 
 		super.update(elapsed);
+	}
+	
+	var isEnding:Bool = false;
+
+	function startDialogue():Void
+	{
+		cleanDialog();
+		// var theDialog:Alphabet = new Alphabet(0, 70, dialogueList[0], false, true);
+		// dialogue = theDialog;
+		// add(theDialog);
+
+		// swagDialogue.text = ;
+		swagDialogue.resetText(dialogueList[0]);
+if (manyyear == 1)
+		swagDialogue.start(0.08, true);
+else
+	swagDialogue.start(0.04, true);
+	}
+
+		
+
+	function cleanDialog():Void
+	{
+		var splitName:Array<String> = dialogueList[0].split(":");
+		
+		
+		dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
 	}
 
 	var canSkip = false;
@@ -391,6 +833,8 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
+		if (!undertale && !minecraft)
+		{
 		logoBl.animation.play('bump');
 		danceLeft = !danceLeft;
 
@@ -489,6 +933,7 @@ class TitleState extends MusicBeatState
 				case 16:
 					skipIntro();
 			}
+		}
 		}
 	}
 

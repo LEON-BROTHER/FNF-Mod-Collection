@@ -2560,7 +2560,7 @@ class PlayState extends MusicBeatState
               nwBg.active = true;
               nwBg.animation.addByPrefix('start', 'Background Whitty Start', 24, false);
               nwBg.animation.addByPrefix('gaming', 'Background Whitty Startup', 24, false);
-              nwBg.animation.addByPrefix('gameButMove', 'Background Whitty Moving', 16, true);
+              nwBg.animation.addByPrefix('gameButMove', 'Background Whitty Moving', 24, true);
               add(wBg);
               add(nwBg);
               nwBg.alpha = 0;
@@ -5996,11 +5996,11 @@ class PlayState extends MusicBeatState
 	function turnToCrazyWhitty()
 		{
 	
-			
+			remove(dad);
 			remove(gf);
-			
+			dad = new Character(100,100,'whitty-crazy');
 			add(gf);
-			
+			add(dad);
 	
 			
 	

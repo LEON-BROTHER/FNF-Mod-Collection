@@ -492,7 +492,7 @@ class StoryMenuState extends MusicBeatState
 			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
 			PlayState.storyWeek = curWeek;
 			PlayState.campaignScore = 0;
-			if (curWeek == 7 && FlxG.save.data.week7Cut)
+			if (curWeek == 7 && ClientPrefs.week7Cut)
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
 					LoadingState.loadAndSwitchState(new VideoState("assets/videos/ughCutscene.webm", new PlayState()));
