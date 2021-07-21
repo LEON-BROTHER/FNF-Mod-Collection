@@ -80,7 +80,7 @@ class AnimationDebug extends FlxState
 		textAnim.scrollFactor.set();
 		add(textAnim);
 
-		text3 = new FlxText(10, 650, 0, "Bananafighter11#1111", 15);
+		text3 = new FlxText(10, 650, 0, "banana guy#1353", 15);
 		text3.scrollFactor.set();
 		text3.color = FlxColor.BLACK;
 

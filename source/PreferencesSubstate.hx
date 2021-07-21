@@ -36,6 +36,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		#end
 		,'',
 		'OTHER',
+		'Character Changing',
 		'Week 7 Cutscenes',
 		'Bob Crashing'
 
@@ -148,7 +149,10 @@ class PreferencesSubstate extends MusicBeatSubstate
 				case 'Enemy Mode':
 					ClientPrefs.enemymode = !ClientPrefs.enemymode;
 				case 'Week 7 Cutscenes':
+					
 					ClientPrefs.week7Cut = !ClientPrefs.week7Cut;
+				case 'Character Changing':
+					ClientPrefs.characterchange = !ClientPrefs.characterchange;
 
 				
 
@@ -223,6 +227,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				descText.text = "If checked, you can see the Week 7 Cutscenes!";
 			case 'Bob Crashing':
 				descText.text = "If checked, the Game will crash if you die in the song: RUN!";
+			case 'Character Changing':
+				descText.text = "If checked, some Characters will change in some songs.";
 		}
 
 		var bullShit:Int = 0;

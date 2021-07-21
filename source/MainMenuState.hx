@@ -52,9 +52,6 @@ class MainMenuState extends MusicBeatState
 
 		if (!FlxG.sound.music.playing)
 		{
-			if (CategoryState.chara == 1)
-				FlxG.sound.playMusic(Paths.music('freakyMenu-chara'));
-			else
 				if (BackgroundMusicState.normal == 1)
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				if (BackgroundMusicState.neo == 1)
@@ -69,10 +66,9 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		if (CategoryState.chara != 1)
+		
 	 		bg = new FlxSprite(-80).loadGraphic(Paths.image('menuBGMagenta'));
-	  	else
-			bg = new FlxSprite(-80).loadGraphic(Paths.image('chara-menu'));
+	  
 
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0.18;
@@ -84,10 +80,10 @@ class MainMenuState extends MusicBeatState
 		
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
-		if (CategoryState.chara != 1)
+
 			magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuBGMagenta'));
-	 	else
-		   	magenta = new FlxSprite(-80).loadGraphic(Paths.image('chara-menu'));
+
+		   	
 		magenta.scrollFactor.x = 0;
 		magenta.scrollFactor.y = 0.18;
 		magenta.setGraphicSize(Std.int(magenta.width * 1.1));

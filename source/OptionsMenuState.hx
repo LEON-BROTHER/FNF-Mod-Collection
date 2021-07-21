@@ -88,7 +88,7 @@ class OptionsMenuState extends MusicBeatSubstate
 
 		if (controls.BACK)
 		{
-			close();
+			FlxG.switchState(new OptionsState());
 		}
 		if (accepted)
 		{

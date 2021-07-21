@@ -41,6 +41,7 @@ class Note extends FlxSprite
 	public static var tooMuch:Float = 30;
 
 	public var noteType:Int = 0;
+	public var fuck:Bool = false;
 
 	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?noteType:Int = 0)
 	{
@@ -148,50 +149,7 @@ class Note extends FlxSprite
 
 				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 				updateHitbox();
-			case 'festival':
-				frames = Paths.getSparrowAtlas('NOTE_assets', 'shared');
-
-				switch (noteType)
-				{
-					case 4:
-						frames = Paths.getSparrowAtlas('cj/event/Indicators');
-						animation.addByPrefix('greenScroll', 'green0');
-						animation.addByPrefix('redScroll', 'green0');
-						animation.addByPrefix('blueScroll', 'green0');
-						animation.addByPrefix('purpleScroll', 'green0');
-					case 3:
-						frames = Paths.getSparrowAtlas('cj/event/Indicators');
-						animation.addByPrefix('greenScroll', 'red0');
-						animation.addByPrefix('redScroll', 'red0');
-						animation.addByPrefix('blueScroll', 'red0');
-						animation.addByPrefix('purpleScroll', 'red0');
-					case 2:
-						frames = Paths.getSparrowAtlas('cj/event/Indicators');
-						animation.addByPrefix('greenScroll', 'purple0');
-						animation.addByPrefix('redScroll', 'purple0');
-						animation.addByPrefix('blueScroll', 'purple0');
-						animation.addByPrefix('purpleScroll', 'purple0');
-					default:
-						frames = Paths.getSparrowAtlas('NOTE_assets', 'shared');
-						animation.addByPrefix('greenScroll', 'green0');
-						animation.addByPrefix('redScroll', 'red0');
-						animation.addByPrefix('blueScroll', 'blue0');
-						animation.addByPrefix('purpleScroll', 'purple0');
-				}
-
-				animation.addByPrefix('purpleholdend', 'pruple end hold');
-				animation.addByPrefix('greenholdend', 'green hold end');
-				animation.addByPrefix('redholdend', 'red hold end');
-				animation.addByPrefix('blueholdend', 'blue hold end');
-
-				animation.addByPrefix('purplehold', 'purple hold piece');
-				animation.addByPrefix('greenhold', 'green hold piece');
-				animation.addByPrefix('redhold', 'red hold piece');
-				animation.addByPrefix('bluehold', 'blue hold piece');
-
-				setGraphicSize(Std.int(width * 0.7));
-				updateHitbox();
-				antialiasing = true;
+			
 			default:
 				if (NoteSkinState.neo == 1)
 					frames = Paths.getSparrowAtlas('NOTE_assets-neo');
@@ -220,6 +178,51 @@ class Note extends FlxSprite
 						animation.addByPrefix('redScroll', 'Red Arrow');
 						animation.addByPrefix('blueScroll', 'Blue Arrow');
 						animation.addByPrefix('purpleScroll', 'Purple Arrow');
+					}
+					 else if (noteType == 3)
+						{
+							frames = Paths.getSparrowAtlas('NOTE_fire', "clown");
+							if(!ClientPrefs.downScroll){
+								animation.addByPrefix('blueScroll', 'blue fire');
+								animation.addByPrefix('greenScroll', 'green fire');
+							}
+							else{
+								animation.addByPrefix('greenScroll', 'blue fire');
+								animation.addByPrefix('blueScroll', 'green fire');
+							}
+							animation.addByPrefix('redScroll', 'red fire');
+							animation.addByPrefix('purpleScroll', 'purple fire');
+	
+							if(ClientPrefs.downScroll)
+								flipY = true;
+	
+							x -= 50;
+						}
+				else if (noteType == 10)
+					{
+					frames = Paths.getSparrowAtlas('bob/CustomNotes');
+
+				animation.addByPrefix('greenScroll', 'vertedUp');
+				animation.addByPrefix('redScroll', 'vertedRight');
+				animation.addByPrefix('blueScroll', 'vertedDown');
+				animation.addByPrefix('purpleScroll', 'vertedLeft');
+
+				
+				updateHitbox();
+				antialiasing = true;
+					}
+				else if (noteType == 11)
+					{
+					frames = Paths.getSparrowAtlas('bob/CustomNotes');
+
+				animation.addByPrefix('greenScroll', 'hitUp');
+				animation.addByPrefix('redScroll', 'hitRight');
+				animation.addByPrefix('blueScroll', 'hitDown');
+				animation.addByPrefix('purpleScroll', 'hitLeft');
+
+				
+				updateHitbox();
+				antialiasing = true;
 					}
 				else {
 
@@ -322,6 +325,8 @@ class Note extends FlxSprite
 		// getStrumTime();
 
 		super.update(elapsed);
+		if (fuck)
+			alpha = 0;
 
 		// No held fire notes :[ (Part 2)
 

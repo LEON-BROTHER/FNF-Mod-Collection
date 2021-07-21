@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menuassets.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="dev basic0000" x="0" y="0" width="447" height="26" pivotX="-200.7" pivotY="1.45"/>
+	<SubTexture name="dev basic0001" x="0" y="0" width="447" height="26"/>
+	<SubTexture name="dev basic0002" x="0" y="0" width="447" height="26"/>
+	<SubTexture name="dev basic0003" x="0" y="0" width="447" height="26"/>
+	<SubTexture name="dev basic0004" x="0" y="0" width="447" height="26"/>
+	<SubTexture name="dev basic0005" x="0" y="0" width="447" height="26"/>
+	<SubTexture name="dev basic0006" x="0" y="0" width="447" height="26"/>
+	<SubTexture name="dev basic0007" x="0" y="0" width="447" height="26"/>
+	<SubTexture name="dev basic0008" x="0" y="0" width="447" height="26"/>
+	<SubTexture name="dev white0000" x="0" y="26" width="447" height="26" pivotX="-200.7" pivotY="1.45"/>
+	<SubTexture name="dev white0001" x="0" y="26" width="447" height="26"/>
+	<SubTexture name="dev white0002" x="0" y="26" width="447" height="26"/>
+	<SubTexture name="dev white0003" x="0" y="26" width="447" height="26"/>
+	<SubTexture name="dev white0004" x="0" y="26" width="447" height="26"/>
+	<SubTexture name="dev white0005" x="0" y="26" width="447" height="26"/>
+	<SubTexture name="dev white0006" x="0" y="26" width="447" height="26"/>
+	<SubTexture name="dev white0007" x="0" y="26" width="447" height="26"/>
+	<SubTexture name="dev white0008" x="0" y="26" width="447" height="26"/>
+	<SubTexture name="fnf basic0000" x="0" y="52" width="447" height="26" pivotX="-200.7" pivotY="1.45"/>
+	<SubTexture name="fnf basic0001" x="0" y="52" width="447" height="26"/>
+	<SubTexture name="fnf basic0002" x="0" y="52" width="447" height="26"/>
+	<SubTexture name="fnf basic0003" x="0" y="52" width="447" height="26"/>
+	<SubTexture name="fnf basic0004" x="0" y="52" width="447" height="26"/>
+	<SubTexture name="fnf basic0005" x="0" y="52" width="447" height="26"/>
+	<SubTexture name="fnf basic0006" x="0" y="52" width="447" height="26"/>
+	<SubTexture name="fnf basic0007" x="0" y="52" width="447" height="26"/>
+	<SubTexture name="fnf basic0008" x="0" y="52" width="447" height="26"/>
+	<SubTexture name="fnf white0000" x="0" y="78" width="447" height="26" pivotX="-200.7" pivotY="1.45"/>
+	<SubTexture name="fnf white0001" x="0" y="78" width="447" height="26"/>
+	<SubTexture name="fnf white0002" x="0" y="78" width="447" height="26"/>
+	<SubTexture name="fnf white0003" x="0" y="78" width="447" height="26"/>
+	<SubTexture name="fnf white0004" x="0" y="78" width="447" height="26"/>
+	<SubTexture name="fnf white0005" x="0" y="78" width="447" height="26"/>
+	<SubTexture name="fnf white0006" x="0" y="78" width="447" height="26"/>
+	<SubTexture name="fnf white0007" x="0" y="78" width="447" height="26"/>
+	<SubTexture name="fnf white0008" x="0" y="78" width="447" height="26"/>
+	<SubTexture name="git basic0000" x="0" y="104" width="447" height="26" pivotX="-200.7" pivotY="1.45"/>
+	<SubTexture name="git basic0001" x="0" y="104" width="447" height="26"/>
+	<SubTexture name="git basic0002" x="0" y="104" width="447" height="26"/>
+	<SubTexture name="git basic0003" x="0" y="104" width="447" height="26"/>
+	<SubTexture name="git basic0004" x="0" y="104" width="447" height="26"/>
+	<SubTexture name="git basic0005" x="0" y="104" width="447" height="26"/>
+	<SubTexture name="git basic0006" x="0" y="104" width="447" height="26"/>
+	<SubTexture name="git basic0007" x="0" y="104" width="447" height="26"/>
+	<SubTexture name="git basic0008" x="0" y="104" width="447" height="26"/>
+	<SubTexture name="git white0000" x="0" y="130" width="447" height="26" pivotX="-200.7" pivotY="1.45"/>
+	<SubTexture name="git white0001" x="0" y="130" width="447" height="26"/>
+	<SubTexture name="git white0002" x="0" y="130" width="447" height="26"/>
+	<SubTexture name="git white0003" x="0" y="130" width="447" height="26"/>
+	<SubTexture name="git white0004" x="0" y="130" width="447" height="26"/>
+	<SubTexture name="git white0005" x="0" y="130" width="447" height="26"/>
+	<SubTexture name="git white0006" x="0" y="130" width="447" height="26"/>
+	<SubTexture name="git white0007" x="0" y="130" width="447" height="26"/>
+	<SubTexture name="git white0008" x="0" y="130" width="447" height="26"/>
+</TextureAtlas>

@@ -11,8 +11,10 @@ import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
+import flixel.addons.display.FlxBackdrop;
 import flixel.graphics.FlxGraphic;
 import flixel.addons.text.FlxTypeText;
+import flixel.FlxCamera;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
 import flixel.input.gamepad.FlxGamepad;
@@ -28,7 +30,7 @@ import flixel.util.FlxTimer;
 import io.newgrounds.NG;
 import lime.app.Application;
 import openfl.Assets;
-
+import flixel.FlxObject;
 using StringTools;
 
 class TitleState extends MusicBeatState
@@ -36,6 +38,7 @@ class TitleState extends MusicBeatState
 	static var initialized:Bool = false;
 
 	var blackScreen:FlxSprite;
+	var selectedSomethin:Bool = false;
 	var credGroup:FlxGroup;
 	var undertaleenter:Bool = false;
 	var credTextShit:Alphabet;
@@ -44,12 +47,40 @@ class TitleState extends MusicBeatState
 	var nexttext:Bool = false;
 	var undertale:Bool = false;
 	var minecraft:Bool = false;
+	var doki:Bool = false;
 	var dialogue:Alphabet;
 	var dialogueOpened:Bool = false;
 	var dialogueStarted:Bool = false;
 	var dialogueList:Array<String> = [];
 	var manyyear:Int = 0;
 	var menustart:Int = 0;
+	var curSelected:Int = 0;
+
+
+	var menuItems:FlxTypedGroup<FlxSprite>;
+	var crediticons:FlxTypedGroup<FlxSprite>;
+	var fixdiff:FlxTypedGroup<FlxSprite>;
+
+	#if !switch
+	var optionShit:Array<String> = ['fnf', 'dev', 'git'];
+	#else
+	var optionShit:Array<String> = ['fnf'];
+	#end
+
+	var dokiintrodone:Bool = false;
+	var newGaming:FlxText;
+	var newGaming2:FlxText;
+	var newInput:Bool = true;
+	var logo:FlxSprite;
+	var magenta:FlxSprite;
+
+
+	var backdrop:FlxBackdrop;
+	var grpLocks:FlxTypedGroup<FlxSprite>;
+	var difficultySelectors:FlxGroup;
+	var sprDifficulty:FlxSprite;
+	var leftArrow:FlxSprite;
+	var rightArrow:FlxSprite;
 
 	var swagDialogue:FlxTypeText;
 
@@ -111,7 +142,7 @@ class TitleState extends MusicBeatState
 			if (!StoryMenuState.weekUnlocked[0])
 				StoryMenuState.weekUnlocked[0] = true;
 		}
-		menustart = FlxG.random.int(1, 10);
+		menustart = FlxG.random.int(1, 20);
 
 		#if FREEPLAY
 		FlxG.switchState(new FreeplayState());
@@ -124,10 +155,12 @@ class TitleState extends MusicBeatState
 				undertale = true;
 			else if (menustart == 5)
 				minecraft = true;
+			else if (menustart == 6)
+				doki = true;
 			else
 				trace('no special start shit');
 			
-
+				
 			startIntro();
 		});
 		#end
@@ -171,9 +204,14 @@ class TitleState extends MusicBeatState
 				FlxG.sound.playMusic(Paths.music('undertalebegin'), 0);
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
 				}
-			if (!minecraft && !undertale)
+			if (!minecraft && !undertale && !doki)
 				{
 				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				FlxG.sound.music.fadeIn(4, 0, 0.7);
+				}
+			if (doki)
+				{
+				FlxG.sound.playMusic(Paths.music('JuStMoNiKa'), 0);
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
 				}
 
@@ -186,7 +224,7 @@ class TitleState extends MusicBeatState
 		
 		FlxG.mouse.visible = false;
 
-		if (!undertale && !minecraft)
+		if (!undertale && !minecraft && !doki)
 		{
 			var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		// bg.antialiasing = true;
@@ -265,6 +303,10 @@ class TitleState extends MusicBeatState
 
 		// credGroup.add(credTextShit);
 		}
+		else if (doki)
+		{
+			startdoki();
+		}
 		else if (minecraft)
 		{
 			var bgback:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('minecraft/bg'));
@@ -284,13 +326,13 @@ class TitleState extends MusicBeatState
 			FlxTween.tween(bgun, {x: bgun.x + 40}, 2.0, {startDelay: 0.0});																										
 			new FlxTimer().start(4, function(tmr:FlxTimer)
 				{
-				FlxTween.tween(bgun, {x: bgun.x + 200}, 1.0, {startDelay: 0.0});																										
+				FlxTween.tween(bgun, {x: bgun.x + 200}, 2.0, {startDelay: 0.0});																										
 				new FlxTimer().start(2, function(tmr:FlxTimer)
 					{
 					FlxTween.tween(bgun, {x: bgun.x + 100}, 6.0, {startDelay: 0.0});																										
 					new FlxTimer().start(7, function(tmr:FlxTimer)
 						{
-						FlxTween.tween(bgun, {x: bgun.x + 500}, 4.0, {startDelay: 0.0});																										
+						FlxTween.tween(bgun, {x: bgun.x + 500}, 5.0, {startDelay: 0.0});																										
 						new FlxTimer().start(5, function(tmr:FlxTimer)
 							{
 								new FlxTimer().start(0.1, function(tmr:FlxTimer)
@@ -540,8 +582,11 @@ class TitleState extends MusicBeatState
 			});
 		}
 	}
+	
 	function titlescreen()
 	{
+		
+		
 		FlxG.sound.music.stop();
 		FlxG.sound.play(Paths.sound('intro'), 1);
 		var undertalelogo:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('undertale/cool'));
@@ -570,6 +615,192 @@ class TitleState extends MusicBeatState
 				
 
 	}
+	function startdoki()
+		{
+		
+		
+		
+			var bgd:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+			add(bgd);
+			var logodan:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('ddlc/splash'));
+			logodan.updateHitbox();
+			
+			logodan.antialiasing = true;
+			logodan.screenCenter(X);
+			logodan.screenCenter(Y);
+			add(logodan);
+			
+		
+			var introtextdoki:FlxText = new FlxText(0, 0, 0, "This game is not suitable for children", 20);
+			introtextdoki.setFormat(Paths.font("Aller_Rg.ttf"), 30, FlxColor.BLACK);
+			introtextdoki.scrollFactor.set();
+			introtextdoki.screenCenter(X);
+			introtextdoki.screenCenter(Y);
+			introtextdoki.visible = false;
+			add(introtextdoki);
+			var introtextdoki1:FlxText = new FlxText(0, introtextdoki.y + 40, 0, "or those who are easily disturbed.", 20);
+			introtextdoki1.setFormat(Paths.font("Aller_Rg.ttf"), 30, FlxColor.BLACK);
+			introtextdoki1.scrollFactor.set();
+			introtextdoki1.visible = false;
+			introtextdoki1.antialiasing = true;
+			introtextdoki.antialiasing = true;
+			introtextdoki1.screenCenter(X);
+			add(introtextdoki1);
+			var randomnumber:Int = FlxG.random.int(1, 100);
+			
+						
+			if (randomnumber > 74)
+				{
+					var hust:Int = FlxG.random.int(1, 12);
+					switch (hust)
+					{
+					case 1:
+						introtextdoki.text = 'You are my sunshine';
+						introtextdoki1.text = 'My only sunshine';
+					case 2:
+						introtextdoki.text = 'I missed you.';
+						introtextdoki1.text = '';
+					case 3:
+						introtextdoki.text = 'Play with me';
+						introtextdoki1.text = '';
+						case 4:
+						introtextdoki.text = "It's just a game, mostly.";
+						introtextdoki1.text = '';
+						case 5:
+						introtextdoki.text = 'This game is not suitable for children';
+						introtextdoki1.text = 'or those who are easily disturbed';
+						case 6:
+						introtextdoki.text = 'sdfasdklfgsdfgsgoinrfoenlvbd';
+						introtextdoki1.text = '';
+						case 7:
+						introtextdoki.text = 'null';
+						introtextdoki1.text = '';
+						case 8:
+						introtextdoki.text = 'I have granted kids to hell';
+						introtextdoki1.text = '';
+						case 9:
+						introtextdoki.text = 'PM died for this.';
+						introtextdoki1.text = '';
+						case 10:
+						introtextdoki.text = 'It was only partially your fault';
+						introtextdoki1.text = '';
+						case 11:
+						introtextdoki.text = 'This game is not suitable for children';
+						introtextdoki1.text = 'or those who are easily dismembered';
+						case 12:
+						introtextdoki.text = "Don't forget to backup Monika's character file.";
+						introtextdoki1.text = '';
+
+					}
+						
+					
+				}
+				introtextdoki.screenCenter(X);
+			introtextdoki.screenCenter(Y);
+			introtextdoki1.screenCenter(X);
+			add(backdrop = new FlxBackdrop(Paths.image('ddlc/scrolling_BG')));
+			backdrop.velocity.set(-40, -40);
+			
+		backdrop.visible = false;
+		logo = new FlxSprite(-700, -359).loadGraphic(Paths.image('ddlc/main_menu'));
+		logo.screenCenter(X);
+		logo.screenCenter(Y);
+		logo.x -= 500;
+	
+											add(logo);
+											
+									
+									
+											
+											var menuItem:FlxSprite = new FlxSprite(-370, 390);
+											menuItems = new FlxTypedGroup<FlxSprite>();
+											add(menuItems);
+									
+											var tex = Paths.getSparrowAtlas('ddlc/menuassets');
+									
+											for (i in 0...optionShit.length)
+											{
+											 menuItem = new FlxSprite(-450, 390  + (i * 40));
+												menuItem.frames = tex;
+												menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
+												menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
+												menuItem.animation.play('idle');
+												menuItem.ID = i;
+												menuItem.scale.set(1.5, 1.5);
+												//menuItem.screenCenter(X);
+												menuItems.add(menuItem);
+												menuItem.scrollFactor.set();
+												menuItem.antialiasing = true;
+											}
+											var ddlclogo:FlxSprite = new FlxSprite(20, -730).loadGraphic(Paths.image('ddlc/logo'));
+											ddlclogo.setGraphicSize(Std.int(ddlclogo.width * 0.6));
+		ddlclogo.antialiasing = true;
+		add(ddlclogo);
+		
+			var bgd1:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
+			add(bgd1);
+			
+			new FlxTimer().start(1, function(tmr:FlxTimer)
+				{
+					FlxTween.tween(bgd1, {alpha: 0}, 0.5, {startDelay: 0.0});
+					new FlxTimer().start(2, function(tmr:FlxTimer)
+						{
+							FlxTween.tween(bgd1, {alpha: 1}, 0.5, {onComplete: function(twn:FlxTween)
+								{
+									logodan.visible = false;
+									introtextdoki.visible = true;
+									introtextdoki1.visible = true;
+								}
+							});
+							
+							FlxTween.tween(bgd1, {alpha: 0}, 0.5, {startDelay: 0.6});
+							new FlxTimer().start(3, function(tmr:FlxTimer)
+								{
+									FlxTween.tween(bgd1, {alpha: 1}, 0.5, {onComplete: function(twn:FlxTween)
+										{
+											
+											introtextdoki.visible = false;
+											introtextdoki1.visible = false;
+										}
+									});
+									
+									
+									new FlxTimer().start(1, function(tmr:FlxTimer)
+										{
+											
+											backdrop.visible = true;
+											FlxTween.tween(bgd1, {alpha: 0}, 0.5, {startDelay: 1.0});
+
+											new FlxTimer().start(1, function(tmr:FlxTimer)
+												{
+													
+											menuItems.forEach(function(spr:FlxSprite)
+												{
+													FlxTween.tween(spr, {alpha: 1, x: spr.x + 500}, 0.7, {startDelay: 0.2}); 
+													
+												});
+												FlxTween.tween(logo, {alpha: 1, x: logo.x + 500}, 0.7, {startDelay: 0.0}); 
+												new FlxTimer().start(0.7, function(tmr:FlxTimer)
+													{
+														dokiintrodone = true;
+														changeItem();
+														new FlxTimer().start(2, function(tmr:FlxTimer)
+															{
+																FlxTween.tween(ddlclogo, {alpha: 1, y: ddlclogo.y + 650}, 3.0, {}); 
+															});
+													});
+												});
+											
+										
+						
+										});
+								});
+
+						});
+				});
+
+
+		}
 	function getIntroTextShit():Array<Array<String>>
 	{
 		var fullText:String = Assets.getText(Paths.txt('introText'));
@@ -626,9 +857,9 @@ class TitleState extends MusicBeatState
 			#end
 		}
 
-		if (!undertale && !minecraft) 
+		if (!undertale && !minecraft && !doki) 
 		{	
-		if (pressedEnter && !transitioning && skippedIntro)
+		if (pressedEnter && skippedIntro)
 		{
 		
 
@@ -683,6 +914,70 @@ class TitleState extends MusicBeatState
 		{
 
 		}
+		
+		else if (doki)
+			{
+				var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
+				if (FlxG.sound.music.volume < 0.8)
+				{
+					FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+				}
+		
+				if (!selectedSomethin && dokiintrodone)
+				{
+					if (controls.UI_UP_P)
+					{
+						FlxG.sound.play(Paths.sound('scrollMenuddlc'));
+						changeItem(-1);
+					}
+		
+					if (controls.UI_DOWN_P)
+					{
+						FlxG.sound.play(Paths.sound('scrollMenuddlc'));
+						changeItem(1);
+					}
+		
+					
+		
+					if (pressedEnter)
+						{
+							
+							
+								
+								
+								
+									selectedSomethin = true;
+									
+				
+									menuItems.forEach(function(spr:FlxSprite)
+									{
+										if (curSelected != spr.ID)
+										{
+											FlxTween.tween(spr, {alpha: 0}, 1.3, {
+												ease: FlxEase.quadOut,
+												onComplete: function(twn:FlxTween)
+												{
+													spr.kill();
+												}
+											});
+										}
+										else
+										{
+											
+											
+											
+												new FlxTimer().start(1, function(tmr:FlxTimer)
+												{
+													goToState();
+												});
+											
+										}
+									});
+								
+							
+						}
+				}
+			}
 		else
 	
 		{	
@@ -833,7 +1128,7 @@ else
 	{
 		super.beatHit();
 
-		if (!undertale && !minecraft)
+		if (!undertale && !minecraft && !doki)
 		{
 		logoBl.animation.play('bump');
 		danceLeft = !danceLeft;
@@ -850,8 +1145,7 @@ else
 		}
 		FlxG.log.add(curBeat);
 
-		if (FlxG.save.data.titleChanges == 'Yes')
-		{
+		
 			switch (curBeat)
 			{
 				case 5:
@@ -889,56 +1183,54 @@ else
 
 				case 16:
 					skipIntro();
+					case 18:
+					skipIntro();
+					
+			}
+		}
+		}
+	
 
+	function goToState()
+		{
+			var daChoice:String = optionShit[curSelected];
+	
+			switch (daChoice)
+			{
+				case 'fnf':
+					FlxG.switchState(new StoryCateState());
+				case 'dev':
+					FlxG.switchState(new CategoryState());
 				
+				case 'git':
+					FlxG.switchState(new OptionsState());
+					
 			}
 		}
-		else
-		{
-			switch (curBeat)
-			{
-				case 5:
-					createCoolText(['leon brother', 'TheGabenZone', 'the makers of', 'fnf', 'and the mod makers']);
-				// credTextShit.visible = true;
-				case 6:
-					addMoreText('present');
-				// credTextShit.text += '\npresent...';
-				// credTextShit.addText();
-				case 7:
-					deleteCoolText();
-				// credTextShit.visible = false;
-				// credTextShit.text = 'In association \nwith';
-				// credTextShit.screenCenter();
-				case 9:
-					createCoolText([curWacky[0]]);
-				// credTextShit.visible = true;
-				case 11:
-					addMoreText(curWacky[1]);
-				// credTextShit.text += '\nlmao';
-				case 12:
-					deleteCoolText();
-				// credTextShit.visible = false;
-				// credTextShit.text = "Friday";
-				// credTextShit.screenCenter();
-				case 13:
-					addMoreText('Friday');
-				// credTextShit.visible = true;
-				case 14:
-					addMoreText('Night');
-				// credTextShit.text += '\nNight';
-				case 15:
-					addMoreText('Funkin');
-					addMoreText('mod collection'); // credTextShit.text += '\nFunkin';
-
-				case 16:
-					skipIntro();
-			}
-		}
-		}
-	}
 
 	var skippedIntro:Bool = false;
+	function changeItem(huh:Int = 0)
+		{
+			curSelected += huh;
 
+			if (curSelected >= 3)
+				curSelected = 0;
+			if (curSelected < 0)
+				curSelected = 3 - 1;
+				
+			menuItems.forEach(function(spr:FlxSprite)
+			{
+				spr.animation.play('idle');
+
+				if (spr.ID == curSelected)
+				{
+					spr.animation.play('selected');
+				}
+
+				spr.updateHitbox();
+			});
+		}
+	
 	function skipIntro():Void
 	{
 		if (!skippedIntro)

@@ -737,7 +737,8 @@ class ChartingState extends MusicBeatState
 			+ "\nSection: "
 			+ curSection
 			+ " curstep: "
-			+ curStep;
+			+ curStep
+			+ curBeat;
 		super.update(elapsed);
 	}
 
@@ -1028,6 +1029,11 @@ class ChartingState extends MusicBeatState
 			noteType = 2;
 		if (FlxG.keys.pressed.THREE)
 			noteType = 3;
+		if (FlxG.keys.pressed.B) //bad//
+			noteType = 10;
+		if (FlxG.keys.pressed.FOUR) //good//
+			noteType = 11;
+
 		
 
 		if (_song.mania == 2)

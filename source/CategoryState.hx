@@ -19,9 +19,9 @@ class CategoryState extends MusicBeatState
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	public var menuItems:Array<String> = [
-		'Normal', 'Annie', 'Anders', 'B3 Remixes', 'B-Sides', 'Beatstreets', 'Bob', 'Carol', 'Chara', 'Detra', 'Duet Mod', 'Duet B-Sides', 'Garcello', 'Hex',
-		'Impostor', 'Kapi', 'Matt', 'Miku', 'Mid-Fight-Masses', 'Neko Freak', 'Neo', 'Neon', 'Retrospecter', 'Salty Sunday', 'Sans', 'Sky', 'Shaggy',
-		'Starcatcher', 'Starlight Mayhem', 'Tabi', 'Tord', 'Tree', 'Tricky', 'Touhou', 'Whitty', 'X-Event', 'Zardy', 'Singles', 'More Singles'
+		'Normal','Agoti' ,'Annie', 'Anders', 'B3 Remixes', 'B-Sides', 'Beatstreets', 'Bob', 'Carol', 'Chara', 'Detra', 'Duet Mod', 'Duet B-Sides', 'Garcello', 'Hex',
+		'Impostor', 'Kapi', 'Matt', 'Miku', 'Mid-Fight-Masses','Monika', 'Neko Freak', 'Neo', 'Neon', 'Retrospecter', 'Salty Sunday', 'Sans', 'Sky', 'Shaggy',
+		'Starcatcher', 'Starlight Mayhem', 'Tabi', 'Tord', 'Tree', 'Tricky', 'Touhou', 'Whitty', 'X-Event', 'Zardy', 'Singles'
 	];
 
 	public var curSelected:Int = 0;
@@ -106,6 +106,12 @@ class CategoryState extends MusicBeatState
 
 					playlist = 1;
 					FlxG.switchState(new FreeplayState());
+					case "Agoti":
+						transIn = FlxTransitionableState.defaultTransIn;
+						transOut = FlxTransitionableState.defaultTransOut;
+	
+						playlist = 43;
+						FlxG.switchState(new FreeplayState());
 				case "Neo":
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
@@ -213,7 +219,7 @@ class CategoryState extends MusicBeatState
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					playlist = 21;
-					chara = 1;
+				
 					FlxG.switchState(new FreeplayState());
 				case "Annie":
 					transIn = FlxTransitionableState.defaultTransIn;
@@ -243,7 +249,7 @@ class CategoryState extends MusicBeatState
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
 
-					playlist = 27;
+					playlist = 42;
 					FlxG.switchState(new FreeplayState());
 				case "Tricky":
 					transIn = FlxTransitionableState.defaultTransIn;
@@ -323,6 +329,10 @@ class CategoryState extends MusicBeatState
 
 					playlist = 40;
 					FlxG.switchState(new FreeplayState());
+				case 'Monika':
+					playlist = 41;
+					FlxG.switchState(new FreeplayState());
+
 			}
 		}
 

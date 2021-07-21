@@ -19,6 +19,7 @@ class ClientPrefs {
 	public static var enemymode:Bool = false;
 	public static var week7Cut:Bool = true;
 	public static var bobcrash:Bool = false;
+	public static var characterchange:Bool = false;
 
 	public static var arrowColors:Array<Int> = [0, 0, 0, 0];
 
@@ -55,6 +56,7 @@ class ClientPrefs {
 		FlxG.save.data.enemymode = enemymode;
 		FlxG.save.data.week7Cut = week7Cut;
 		FlxG.save.data.bobcrash = bobcrash;
+		FlxG.save.data.characterchange = characterchange;
 
 
 		
@@ -70,6 +72,9 @@ class ClientPrefs {
 	public static function loadPrefs() {
 		if(FlxG.save.data.downScroll != null) {
 			downScroll = FlxG.save.data.downScroll;
+		}
+		if(FlxG.save.data.characterchange != null) {
+			characterchange = FlxG.save.data.characterchange;
 		}
 		if(FlxG.save.data.bobcrash != null) {
 			bobcrash = FlxG.save.data.bobcrash;

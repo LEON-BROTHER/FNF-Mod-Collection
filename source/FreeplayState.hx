@@ -98,7 +98,7 @@ class FreeplayState extends MusicBeatState
 			if (StoryMenuState.weekUnlocked[17] || isDebug)
 				addWeek(['Senpai-B-Sides', 'Roses-B-Sides', 'Thorns-B-Sides'], 17, ['senpai-b', 'senpai-b', 'spirit-b']);
 		}
-		if (CategoryState.playlist == 27)
+		if (CategoryState.playlist == 42)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['Sunshine', 'Withered'], 35, ['bob', 'angrybob']);
@@ -130,6 +130,8 @@ class FreeplayState extends MusicBeatState
 					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run',
 					'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run'
 				], 35, ['hellbob']);
+				if (StoryMenuState.weekUnlocked[35] || isDebug)
+					addWeek(['Ron', 'Trouble','onslaught','little-man'], 35, ['ron',   'gloop-bob','glitched-bob','little-man']);
 		}
 
 		if (CategoryState.playlist == 28)
@@ -413,6 +415,16 @@ class FreeplayState extends MusicBeatState
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['Medley'], 35, ['meowser']);
 		}
+		if (CategoryState.playlist == 41)
+			{
+				if (StoryMenuState.weekUnlocked[35] || isDebug)
+					addWeek(['High School Conflict', 'bara no yume','Dreams Of Roses', 'Your Demise','Your Reality'], 35, ['monika','duet-m','duet-m','monika-angry','monika']);
+			}
+			if (CategoryState.playlist == 43)
+				{
+					if (StoryMenuState.weekUnlocked[35] || isDebug)
+						addWeek(['Screenplay', 'Parasite','A.G.O.T.I'], 35, ['agoti','agoti','agoti-crazy']);
+				}
 
 		/* 
 
@@ -536,10 +548,12 @@ class FreeplayState extends MusicBeatState
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
+		
 		if (vocals.volume < 0.7)
 			{
 				vocals.volume += 0.5 * FlxG.elapsed;
 			}
+		
 
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.4));
 
@@ -601,12 +615,9 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 33)
 		{
 			curDifficulty = 2;
-			curDifficulty += change;
+			
 
-			if (curDifficulty < 0)
-				curDifficulty = 2;
-			if (curDifficulty > 2)
-				curDifficulty = 2;
+			
 
 			#if !switch
 			intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
@@ -662,8 +673,7 @@ class FreeplayState extends MusicBeatState
 		#end
 
 		#if PRELOAD_ALL
-		if (CategoryState.chara != 1)
-		{
+		
 			vocals = new FlxSound().loadEmbedded(Paths.voices(songs[curSelected].songName), true);
 			vocals.volume = 0;
 			FlxG.sound.list.add(vocals);
@@ -678,7 +688,7 @@ class FreeplayState extends MusicBeatState
 		
 			vocals.play();
 			
-		}
+		
 		#end
 
 		var bullShit:Int = 0;

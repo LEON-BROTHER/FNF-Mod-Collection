@@ -261,6 +261,7 @@ class HealthIcon extends FlxSprite
 
 					antialiasing = true;
 					animation.add('bf', [238, 239], 0, false, isPlayer);
+					animation.add('bf-car', [238, 239], 0, false, isPlayer);
 					animation.add('bfgf', [0, 1], 0, false, isPlayer);
 					animation.add('cj', [2, 3], 0, false, isPlayer);
 					animation.add('ruby', [4, 5], 0, false, isPlayer);
@@ -275,6 +276,19 @@ class HealthIcon extends FlxSprite
 					animation.add('duet-m', [12, 13], 0, false, isPlayer);
 					animation.add('bf-pixel', [18, 19], 0, false, isPlayer);
 					animation.add('bf-pixelangry', [18, 19], 0, false, isPlayer);
+					animation.add('bob', [20, 21], 0, false, isPlayer);
+					animation.add('angrybob', [22, 23], 0, false, isPlayer);
+		animation.add('hellbob', [24, 25], 0, false, isPlayer);
+		animation.add('ron', [26, 27], 0, false, isPlayer);
+		animation.add('glitched-bob', [30, 31], 0, false, isPlayer);
+		animation.add('gloop-bob', [28, 29], 0, false, isPlayer);
+		animation.add('little-man', [32, 33], 0, false, isPlayer);
+		animation.add('pizza', [34, 35], 0, false, isPlayer);
+		animation.add('tankman', [36, 37], 0, false, isPlayer);
+		animation.add('dad', [36, 37], 0, false, isPlayer);
+		animation.add('agoti', [38, 39], 0, false, isPlayer);
+		animation.add('agoti-crazy', [40, 41], 0, false, isPlayer);
+
 					
 
 					animation.play(char);
