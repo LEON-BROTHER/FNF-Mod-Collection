@@ -727,7 +727,7 @@ class PlayState extends MusicBeatState
 				
 				bobsound = new FlxSound().loadEmbedded(Paths.sound('bobscreen'));
 				
-				case 'screenplay' | 'parasite':
+				case 'screenplay' | 'parasite' | 'guns-agoti':
 					{
 						defaultCamZoom = 0.55;
 						curStage = 'void';
@@ -5041,6 +5041,75 @@ class PlayState extends MusicBeatState
 			dad = new Character(100, 100, SONG.player2);
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
+		if (isStoryMode)
+			bfsel = 1000;
+		switch bfsel
+		{
+			case 0:
+				boyfriend = new Boyfriend(770, 450, SONG.player1);
+			case 1:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas');
+			case 2:
+				boyfriend = new Boyfriend(1000, 630, 'bf-pixel');
+			case 3:
+				boyfriend = new Boyfriend(770, 450, 'bf-holding-gf');
+			case 4:
+				boyfriend = new Boyfriend(770, 450, 'bf-b');
+			case 5:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-b');
+			case 6:
+				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-b');
+			case 7:
+				boyfriend = new Boyfriend(770, 450, 'bf-neo');
+			case 8:
+				boyfriend = new Boyfriend(770, 450, 'bf-minus');
+			case 9:
+				boyfriend = new Boyfriend(770, 450, 'bf-minus-beta');
+			case 10:
+				boyfriend = new Boyfriend(770, 520, 'bf-minus-blue');
+			case 11:
+				boyfriend = new Boyfriend(770, 450, 'bf-ena');
+			case 12:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-ena');
+			case 13:
+				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-ena');
+			case 14:
+				boyfriend = new Boyfriend(770, 450, 'bf-rs');
+			case 15:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-rs');
+			case 16:
+				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-rs');
+			case 17:
+				boyfriend = new Boyfriend(770, 450, 'bf-star');
+			case 18:
+				boyfriend = new Boyfriend(770, 450, 'bf-reanim');
+			case 19:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-reanim');
+			case 20:
+				boyfriend = new Boyfriend(770, 450, 'bf-b3');
+			case 21:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-b3');
+			case 22:
+				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-b3');
+			case 23:
+				boyfriend = new Boyfriend(770, 450, 'bf-salty');
+			case 24:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-salty');
+			case 25:
+				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-salty');
+			case 26:
+				boyfriend = new Boyfriend(770, 450, 'bf-fresh');
+			case 27:
+				boyfriend = new Boyfriend(770, 450, 'bfmii');
+			case 28:
+				boyfriend = new Boyfriend(770, 450, 'bf-sonic');
+			case 29:
+				boyfriend = new Boyfriend(770, 450, 'bf-christmas-sonic');
+			case 30:
+				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-sonic');
+			default:
+				boyfriend = new Boyfriend(770, 450, SONG.player1);
+		}
 
 		switch (SONG.player2)
 		{
@@ -5351,75 +5420,7 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
 		}
 
-		if (isStoryMode)
-			bfsel = 1000;
-		switch bfsel
-		{
-			case 0:
-				boyfriend = new Boyfriend(770, 450, SONG.player1);
-			case 1:
-				boyfriend = new Boyfriend(770, 450, 'bf-christmas');
-			case 2:
-				boyfriend = new Boyfriend(1000, 630, 'bf-pixel');
-			case 3:
-				boyfriend = new Boyfriend(770, 450, 'bf-holding-gf');
-			case 4:
-				boyfriend = new Boyfriend(770, 450, 'bf-b');
-			case 5:
-				boyfriend = new Boyfriend(770, 450, 'bf-christmas-b');
-			case 6:
-				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-b');
-			case 7:
-				boyfriend = new Boyfriend(770, 450, 'bf-neo');
-			case 8:
-				boyfriend = new Boyfriend(770, 450, 'bf-minus');
-			case 9:
-				boyfriend = new Boyfriend(770, 450, 'bf-minus-beta');
-			case 10:
-				boyfriend = new Boyfriend(770, 520, 'bf-minus-blue');
-			case 11:
-				boyfriend = new Boyfriend(770, 450, 'bf-ena');
-			case 12:
-				boyfriend = new Boyfriend(770, 450, 'bf-christmas-ena');
-			case 13:
-				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-ena');
-			case 14:
-				boyfriend = new Boyfriend(770, 450, 'bf-rs');
-			case 15:
-				boyfriend = new Boyfriend(770, 450, 'bf-christmas-rs');
-			case 16:
-				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-rs');
-			case 17:
-				boyfriend = new Boyfriend(770, 450, 'bf-star');
-			case 18:
-				boyfriend = new Boyfriend(770, 450, 'bf-reanim');
-			case 19:
-				boyfriend = new Boyfriend(770, 450, 'bf-christmas-reanim');
-			case 20:
-				boyfriend = new Boyfriend(770, 450, 'bf-b3');
-			case 21:
-				boyfriend = new Boyfriend(770, 450, 'bf-christmas-b3');
-			case 22:
-				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-b3');
-			case 23:
-				boyfriend = new Boyfriend(770, 450, 'bf-salty');
-			case 24:
-				boyfriend = new Boyfriend(770, 450, 'bf-christmas-salty');
-			case 25:
-				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-salty');
-			case 26:
-				boyfriend = new Boyfriend(770, 450, 'bf-fresh');
-			case 27:
-				boyfriend = new Boyfriend(770, 450, 'bfmii');
-			case 28:
-				boyfriend = new Boyfriend(770, 450, 'bf-sonic');
-			case 29:
-				boyfriend = new Boyfriend(770, 450, 'bf-christmas-sonic');
-			case 30:
-				boyfriend = new Boyfriend(1000, 630, 'bf-pixel-sonic');
-			default:
-				boyfriend = new Boyfriend(770, 450, SONG.player1);
-		}
+		
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
@@ -8050,7 +8051,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		if (SONG.song.toLowerCase() == 'screenplay' || SONG.song.toLowerCase() == 'parasite' || SONG.song.toLowerCase() == 'a.g.o.t.i')
+		if (SONG.song.toLowerCase() == 'screenplay' || SONG.song.toLowerCase() == 'guns-agoti' || SONG.song.toLowerCase() == 'parasite' || SONG.song.toLowerCase() == 'a.g.o.t.i')
 			{
 				if (SONG.song.toLowerCase() != 'a.g.o.t.i')
 				{

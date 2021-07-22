@@ -423,7 +423,7 @@ class FreeplayState extends MusicBeatState
 			if (CategoryState.playlist == 43)
 				{
 					if (StoryMenuState.weekUnlocked[35] || isDebug)
-						addWeek(['Screenplay', 'Parasite','A.G.O.T.I'], 35, ['agoti','agoti','agoti-crazy']);
+						addWeek(['Screenplay', 'Parasite','A.G.O.T.I','Guns-Agoti'], 35, ['agoti','agoti','agoti-crazy','agoti']);
 				}
 
 		/* 
