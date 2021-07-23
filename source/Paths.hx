@@ -10,6 +10,7 @@ using StringTools;
 class Paths
 {
 	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
+	public static var duet:String = '';
 
 	static var currentLevel:String;
 
@@ -94,7 +95,14 @@ class Paths
 
 	inline static public function inst(song:String)
 	{
-		return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
+		if (song.endsWith('-Duet'))
+			{
+				duet = song.toLowerCase();
+				trace(duet.replace('-duet',''));
+				return 'songs:assets/songs/${duet.replace('-duet','')}/Inst.$SOUND_EXT';
+			}
+		else
+			return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
 	}
 
 	inline static public function image(key:String, ?library:String)
