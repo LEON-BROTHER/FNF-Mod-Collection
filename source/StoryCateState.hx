@@ -19,8 +19,11 @@ class StoryCateState extends MusicBeatState
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	public var menuItems:Array<String> = [
-		'Base Game', 'B-Sides', 'Garcello', 'Monika', 'Neo', 'Whitty'
+		'Base Game', 'B-Sides', 'Garcello', 'Monika', 'Neo'
 	];
+	/*MAC REMOVE public var menuItems:Array<String> = [
+		'Base Game', 'B-Sides', 'Garcello', 'Monika', 'Neo', 'Whitty'
+	];*/
 
 	public var curSelected:Int = 0;
 

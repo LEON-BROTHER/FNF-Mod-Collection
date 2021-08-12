@@ -36,8 +36,11 @@ class PreferencesSubstate extends MusicBeatSubstate
 		#end
 		,'',
 		'OTHER',
+		
 		'Character Changing',
+		/*MAC REMOVE
 		'Week 7 Cutscenes',
+		*/
 		'Bob Crashing'
 
 	];
@@ -301,6 +304,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 							daValue = ClientPrefs.week7Cut;
 						case 'Bob Crashing':
 							daValue = ClientPrefs.bobcrash;
+						case 'Character Changing':
+							daValue = ClientPrefs.characterchange;
 						
 					}
 					checkbox.set_daValue(daValue);
