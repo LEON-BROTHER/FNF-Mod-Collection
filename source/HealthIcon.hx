@@ -199,7 +199,7 @@ class HealthIcon extends FlxSprite
 					animation.add('vagrant', [210, 211], 0, false, isPlayer);
 					animation.add('bf-duo', [0, 1], 0, false, isPlayer);
 					animation.add('matt-duck', [212, 212], 0, false, isPlayer);
-					animation.add('gaymen', [173, 174], 0, false, isPlayer);
+					animation.add('gaymen', [177, 178], 0, false, isPlayer);
 					animation.add('neko-sweet', [213, 214], 0, false, isPlayer);
 					animation.add('neko-crazy', [215, 216], 0, false, isPlayer);
 					animation.add('neko-schizo', [215, 216], 0, false, isPlayer);

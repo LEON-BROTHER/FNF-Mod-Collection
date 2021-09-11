@@ -342,6 +342,7 @@ class AlphaCharacter extends FlxSprite
 		{
 			case '.':
 				animation.addByPrefix(letter, 'PERIOD bold', 24);
+				y += 50;
 			case "'":
 				animation.addByPrefix(letter, 'APOSTRAPHIE bold', 24);
 			case "?":
@@ -398,9 +399,10 @@ class AlphaCharacter extends FlxSprite
 				animation.addByPrefix(letter, 'hashtag', 24);
 			case '.':
 				animation.addByPrefix(letter, 'period', 24);
+				y += 50;
 			case "'":
 				animation.addByPrefix(letter, 'apostraphie', 24);
-				y -= 50;
+				y -= 0;
 			case "?":
 				animation.addByPrefix(letter, 'question mark', 24);
 			case "!":

@@ -21,7 +21,7 @@ class CategoryState extends MusicBeatState
 	public var menuItems:Array<String> = [
 		'Normal','Agoti' ,'Annie', 'Anders', 'B3 Remixes', 'B-Sides', 'Beatstreets', 'Bob', 'Carol', 'Chara', 'Detra', 'Duet Mod', 'Duet B-Sides', 'Garcello', 'Hex',
 		'Impostor', 'Kapi', 'Matt', 'Miku', 'Mid-Fight-Masses','Monika', 'Neko Freak', 'Neo', 'Neon', 'Retrospecter', 'Salty Sunday', 'Sans', 'Sky', 'Shaggy',
-		'Starcatcher', 'Starlight Mayhem', 'Tabi', 'Tord', 'Tree', 'Tricky', 'Touhou', 'Whitty', 'X-Event', 'Zardy', 'Singles'
+		'Starcatcher', 'Tabi', 'Tord', 'Tree', 'Tricky', 'Touhou', 'Whitty', 'X-Event', 'Zardy', 'Singles'
 	];
 
 	public var curSelected:Int = 0;
@@ -106,12 +106,12 @@ class CategoryState extends MusicBeatState
 
 					playlist = 1;
 					FlxG.switchState(new FreeplayState());
-					case "Agoti":
-						transIn = FlxTransitionableState.defaultTransIn;
-						transOut = FlxTransitionableState.defaultTransOut;
+				case "Agoti":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
 	
-						playlist = 43;
-						FlxG.switchState(new FreeplayState());
+					playlist = 43;
+					FlxG.switchState(new FreeplayState());
 				case "Neo":
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
@@ -316,12 +316,6 @@ class CategoryState extends MusicBeatState
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					playlist = 38;
-					FlxG.switchState(new FreeplayState());
-				case "Starlight Mayhem":
-					transIn = FlxTransitionableState.defaultTransIn;
-					transOut = FlxTransitionableState.defaultTransOut;
-
-					playlist = 39;
 					FlxG.switchState(new FreeplayState());
 				case "More Singles":
 					transIn = FlxTransitionableState.defaultTransIn;

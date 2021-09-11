@@ -404,12 +404,6 @@ class FreeplayState extends MusicBeatState
 				]);
 		}
 
-		if (CategoryState.playlist == 39)
-		{
-			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Inverted-Ascension', 'Echoes', 'Artificial-Lust'], 35, ['cj', 'ruby', 'duet']);
-		}
-
 		if (CategoryState.playlist == 40)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
