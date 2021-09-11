@@ -13,8 +13,11 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
 import flixel.addons.display.FlxBackdrop;
 import flixel.graphics.FlxGraphic;
+<<<<<<< HEAD
 import flixel.addons.text.FlxTypeText;
 import flixel.FlxCamera;
+=======
+>>>>>>> parent of 2e6be18 (lol)
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
 import flixel.input.gamepad.FlxGamepad;
@@ -40,10 +43,10 @@ class TitleState extends MusicBeatState
 	var blackScreen:FlxSprite;
 	var selectedSomethin:Bool = false;
 	var credGroup:FlxGroup;
-	var undertaleenter:Bool = false;
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
 	var ngSpr:FlxSprite;
+<<<<<<< HEAD
 	var nexttext:Bool = false;
 	var undertale:Bool = false;
 	var minecraft:Bool = false;
@@ -88,6 +91,8 @@ class TitleState extends MusicBeatState
 
 	public var finishThing:Void->Void;
 
+=======
+>>>>>>> parent of 2e6be18 (lol)
 
 	var curWacky:Array<String> = [];
 
@@ -107,7 +112,10 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		
+		#if ng
+		var ng:NGio = new NGio(APIStuff.API, APIStuff.EncKey);
+		trace('NEWGROUNDS LOL');
+		#end
 
 		FlxG.save.bind('funkin', 'ninjamuffin99');
 
@@ -142,7 +150,10 @@ class TitleState extends MusicBeatState
 			if (!StoryMenuState.weekUnlocked[0])
 				StoryMenuState.weekUnlocked[0] = true;
 		}
+<<<<<<< HEAD
 		menustart = FlxG.random.int(1, 20);
+=======
+>>>>>>> parent of 2e6be18 (lol)
 
 		#if FREEPLAY
 		FlxG.switchState(new FreeplayState());
@@ -151,6 +162,7 @@ class TitleState extends MusicBeatState
 		#else
 		new FlxTimer().start(1, function(tmr:FlxTimer)
 		{
+<<<<<<< HEAD
 			if (menustart == 3)
 				undertale = true;
 			else if (menustart == 5)
@@ -161,6 +173,8 @@ class TitleState extends MusicBeatState
 				trace('no special start shit');
 			
 				
+=======
+>>>>>>> parent of 2e6be18 (lol)
 			startIntro();
 		});
 		#end
@@ -199,6 +213,7 @@ class TitleState extends MusicBeatState
 			// music.loadStream(Paths.music('freakyMenu'));
 			// FlxG.sound.list.add(music);
 			// music.play();
+<<<<<<< HEAD
 			if (undertale)
 				{
 				FlxG.sound.playMusic(Paths.music('undertalebegin'), 0);
@@ -214,25 +229,37 @@ class TitleState extends MusicBeatState
 				FlxG.sound.playMusic(Paths.music('JuStMoNiKa'), 0);
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
 				}
+=======
+			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+>>>>>>> parent of 2e6be18 (lol)
 
-			
+			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 
-		
+		Conductor.changeBPM(102);
 		persistentUpdate = true;
 
+<<<<<<< HEAD
 		
 		FlxG.mouse.visible = false;
 
 		if (!undertale && !minecraft && !doki)
 		{
 			var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+=======
+		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+>>>>>>> parent of 2e6be18 (lol)
 		// bg.antialiasing = true;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
 		add(bg);
+<<<<<<< HEAD
 		Conductor.changeBPM(102);
 		logoBl = new FlxSprite(100, 10);
+=======
+
+		logoBl = new FlxSprite(-150, -100);
+>>>>>>> parent of 2e6be18 (lol)
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = true;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
@@ -295,7 +322,7 @@ class TitleState extends MusicBeatState
 
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
-		
+		FlxG.mouse.visible = false;
 
 		if (initialized)
 			skipIntro();
@@ -303,6 +330,7 @@ class TitleState extends MusicBeatState
 			initialized = true;
 
 		// credGroup.add(credTextShit);
+<<<<<<< HEAD
 		}
 		else if (doki)
 		{
@@ -802,6 +830,10 @@ class TitleState extends MusicBeatState
 
 
 		}
+=======
+	}
+
+>>>>>>> parent of 2e6be18 (lol)
 	function getIntroTextShit():Array<Array<String>>
 	{
 		var fullText:String = Assets.getText(Paths.txt('introText'));
@@ -822,7 +854,18 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		
+		if (!CachedFrames.cachedInstance.loaded)
+		{
+		}
+		else if (!once)
+		{
+			once = true;
+			new FlxTimer().start(1.2, function(tmr:FlxTimer)
+			{
+				canSkip = true;
+				startIntro();
+			});
+		}
 
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
@@ -858,11 +901,21 @@ class TitleState extends MusicBeatState
 			#end
 		}
 
+<<<<<<< HEAD
 		if (!undertale && !minecraft && !doki) 
 		{	
 		if (pressedEnter && skippedIntro)
+=======
+		if (pressedEnter && !transitioning && skippedIntro)
+>>>>>>> parent of 2e6be18 (lol)
 		{
-		
+			#if !switch
+			NGio.unlockMedal(60960);
+
+			// If it's Friday according to da clock
+			if (Date.now().getDay() == 5)
+				NGio.unlockMedal(61034);
+			#end
 
 			titleText.animation.play('press');
 
@@ -910,6 +963,7 @@ class TitleState extends MusicBeatState
 		{
 			skipIntro();
 		}
+<<<<<<< HEAD
 		}
 		else if (minecraft)
 		{
@@ -1062,35 +1116,10 @@ class TitleState extends MusicBeatState
 	
 
 		
+=======
+>>>>>>> parent of 2e6be18 (lol)
 
 		super.update(elapsed);
-	}
-	
-	var isEnding:Bool = false;
-
-	function startDialogue():Void
-	{
-		cleanDialog();
-		// var theDialog:Alphabet = new Alphabet(0, 70, dialogueList[0], false, true);
-		// dialogue = theDialog;
-		// add(theDialog);
-
-		// swagDialogue.text = ;
-		swagDialogue.resetText(dialogueList[0]);
-if (manyyear == 1)
-		swagDialogue.start(0.08, true);
-else
-	swagDialogue.start(0.04, true);
-	}
-
-		
-
-	function cleanDialog():Void
-	{
-		var splitName:Array<String> = dialogueList[0].split(":");
-		
-		
-		dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
 	}
 
 	var canSkip = false;
@@ -1129,8 +1158,11 @@ else
 	{
 		super.beatHit();
 
+<<<<<<< HEAD
 		if (!undertale && !minecraft && !doki)
 		{
+=======
+>>>>>>> parent of 2e6be18 (lol)
 		logoBl.animation.play('bump');
 		
 		FlxG.log.add(curBeat);
@@ -1197,6 +1229,10 @@ else
 					
 			}
 		}
+<<<<<<< HEAD
+=======
+	}
+>>>>>>> parent of 2e6be18 (lol)
 
 	var skippedIntro:Bool = false;
 	function changeItem(huh:Int = 0)
