@@ -15,7 +15,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
-class OptionsMenuState extends MusicBeatSubstate
+class OptionsMenuState extends MusicBeatState
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
@@ -88,7 +88,7 @@ class OptionsMenuState extends MusicBeatSubstate
 
 		if (controls.BACK)
 		{
-			close();
+			FlxG.switchState(new OptionsState());
 		}
 		if (accepted)
 		{

@@ -84,7 +84,7 @@ class OptionsState extends MusicBeatState
 
 			switch(options[curSelected]) {
 				case 'Other Stuff':
-					openSubState(new OptionsMenuState());
+					FlxG.switchState(new OptionsMenuState());
 
 				case 'Controls':
 					openSubState(new ControlsSubState());
