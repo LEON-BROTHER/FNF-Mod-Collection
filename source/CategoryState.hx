@@ -20,7 +20,7 @@ class CategoryState extends MusicBeatState
 
 	public var menuItems:Array<String> = [
 		'Normal','Agoti' ,'Annie', 'Anders', 'B3 Remixes', 'B-Sides', 'Beatstreets', 'Bob', 'Carol', 'Chara', 'Detra', 'Duet Mod', 'Duet B-Sides', 'Garcello', 'Hex',
-		'Impostor', 'Kapi', 'Matt', 'Miku', 'Mid-Fight-Masses','Monika', 'Neko Freak', 'Neo', 'Neon', 'Retrospecter', 'Salty Sunday', 'Sans', 'Sky', 'Shaggy',
+		'Impostor', 'Kapi', 'Matt', 'Miku', 'Mid-Fight-Masses','Monika', 'Neko Freak', 'Neo', 'Neon', 'Retrospecter', 'Salty Sunday', 'Sans', 'Sky', 'Sketchy Remastered', 'Shaggy',
 		'Starcatcher', 'Tabi', 'Tord', 'Tree', 'Tricky', 'Touhou', 'Whitty', 'X-Event', 'Zardy', 'Singles'
 	];
 
@@ -244,6 +244,12 @@ class CategoryState extends MusicBeatState
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					playlist = 26;
+					FlxG.switchState(new FreeplayState());
+				case "Sketchy Remastered":
+					transIn = FlxTransitionableState.defaultTransIn;
+					transOut = FlxTransitionableState.defaultTransOut;
+
+					playlist = 44;
 					FlxG.switchState(new FreeplayState());
 				case "Bob":
 					transIn = FlxTransitionableState.defaultTransIn;

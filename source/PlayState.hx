@@ -207,6 +207,7 @@ class PlayState extends MusicBeatState
 	private var healthBar:FlxBar;
 	var sshake:Bool = false;
 	public static var generatedMusic:Bool = false;
+	private var shakeCam:Bool = false;
 
 	private var startingSong:Bool = false;
 
@@ -571,9 +572,9 @@ class PlayState extends MusicBeatState
 			| 'pico-duet'
 			| 'blammed-duet'
 			| 'philly-duet'
-			| 'philly-carol'
+			| 'body'
 			| 'carol-roll'
-			| 'blammed-carol'
+			| 'boogie'
 		    | 'blammed-rs':
 		
 			curStage = 'philly';
@@ -2853,6 +2854,50 @@ class PlayState extends MusicBeatState
 			add(stageFront);
 			add(halloweenBG);
 		
+		case 'line art' |'sketched out':
+			{
+				defaultCamZoom = 0.80;
+				curStage = 'normalpaper';
+				var bg:FlxSprite = new FlxSprite(-995, -478).loadGraphic(Paths.image('sketchy/notebookPage'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.895, 0.895);
+				bg.active = false;
+				add(bg);
+
+				var stageCurtains:FlxSprite = new FlxSprite(-955, -378).loadGraphic(Paths.image('sketchy/PencilErase'));
+				stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+				stageCurtains.updateHitbox();
+				stageCurtains.antialiasing = true;
+				stageCurtains.scrollFactor.set(0.95, 0.95);
+				stageCurtains.active = false;
+
+				add(stageCurtains);
+			}
+		case 'rip and tear':
+			{		
+				defaultCamZoom = 0.75;
+				curStage = 'destroyedpaper';
+				var bg:FlxSprite = new FlxSprite(-230, -95);
+				bg.frames = Paths.getSparrowAtlas('sketchy/destroyedpaperjig');
+				bg.animation.addByPrefix('idle', 'DestroyedPaper', 24);
+				bg.setGraphicSize(Std.int(bg.width * 0.5));
+				bg.animation.play('idle');
+				bg.scrollFactor.set(0.8, 1.0);
+				bg.scale.set(2.3, 2.3);
+				bg.antialiasing = true;
+				add(bg);
+
+				var rips:FlxSprite = new FlxSprite(-230, -95);
+				rips.frames = Paths.getSparrowAtlas('sketchy/PaperRips');
+				rips.animation.addByPrefix('idle', 'Ripping Graphic', 24);
+				rips.setGraphicSize(Std.int(rips.width * 0.5));
+				rips.animation.play('idle');
+				rips.scrollFactor.set(1.0, 1.0);
+				rips.scale.set(2.0, 2.0);
+				rips.antialiasing = true;
+				add(rips);
+			}
+
 		case 'wife-forever' |'sky':
 		
 			defaultCamZoom = 0.9;
@@ -4775,6 +4820,10 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-tied';
 			case 'swordarena':
 				gfVersion = 'gf-mii';
+			case 'normalpaper':
+				gfVersion = 'gf-sketch';
+			case 'destroyedpaper':
+				gfVersion = 'gf-sketch';
 			case 'arenanight':
 				gfVersion = 'gf-mii';
 			case 'touhou':
@@ -5003,7 +5052,24 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 50;
 				boyfriend.x += 100; 
 				gf.y -= 250;
+			case 'angrysketchy':
+				dad.x += 350;
+				dad.y += 260;
+			case 'sketchy':
+				dad.x += -285;
+				dad.y += 105;
+			case 'tornsketchy':
+				dad.x += -230;
+				dad.y += 165;
 			case 'gf':
+				dad.setPosition(gf.x, gf.y);
+				gf.visible = false;
+				if (isStoryMode)
+				{
+					camPos.x += 600;
+					tweenCamIn();
+				}
+			case 'gf-sketch':
 				dad.setPosition(gf.x, gf.y);
 				gf.visible = false;
 				if (isStoryMode)
@@ -5019,6 +5085,9 @@ class PlayState extends MusicBeatState
 					camPos.x += 600;
 					tweenCamIn();
 				}
+			case 'bf-sketchy':
+				camPos.x += 300;
+				camPos.y += -120;
 			case 'gf-salty':
 				dad.setPosition(gf.x, gf.y);
 				gf.visible = false;
@@ -5372,6 +5441,10 @@ class PlayState extends MusicBeatState
 				gf.scale.x -= 0.1;
 				gf.scale.y -= 0.1;
 				gf.scrollFactor.set(0.4, 0.4);
+			case 'destroyedpaper':
+				var sketchyTrail = new FlxTrail(dad, null, 4, 16, 0.25, 0.080);
+				add(sketchyTrail);
+				gf.x += -275;
 			case 'sans':
 				dad.y += 400;
 			case 'touhou':
@@ -5783,9 +5856,22 @@ class PlayState extends MusicBeatState
 				add(part);
 			}
 		}
-		if(curStage == 'inksans')
+		if(curStage == 'xgaster')
 		{
 			add(stageFront);
+			for (i in 0...30){
+	
+				var part:FlxSprite = new FlxSprite(-1200+150*i, 1100).loadGraphic(Paths.image('chara/particle'));
+				part.antialiasing = true;
+				part.scrollFactor.set(0.92, 0.92);
+				part.active = false;
+				TweenParticles(part, part.x, 120, part.y-2000, 0, (Math.random()*5+3),0, FlxEase.quadInOut);
+
+				add(part);
+			}
+		}
+		if(curStage == 'inksans')
+		{
 			for (i in 0...30){
 	
 				var part:FlxSprite = new FlxSprite(-1200+150*i, 1100).loadGraphic(Paths.image('chara/particle'));
@@ -5819,8 +5905,6 @@ class PlayState extends MusicBeatState
 		}
 		if (curStage == 'miku')
 			add(upperBoppers);
-		if (curStage == 'xgaster')
-			add(stageFront);
 		
 		
 		switch (curStage)
@@ -7898,6 +7982,10 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		if (shakeCam)
+			{
+				FlxG.camera.shake(0.02, 0.03);
+			}	
 		if (SONG.song.toLowerCase() == 'screenplay' || SONG.song.toLowerCase() == 'guns-agoti' || SONG.song.toLowerCase() == 'parasite')
 		{
 			bgRocks.y = -700 + Math.sin((Conductor.songPosition / 1000)*(Conductor.bpm/60) * 2.0) * 3.0;
@@ -10761,7 +10849,101 @@ class PlayState extends MusicBeatState
 				{
 					camGame.visible = false;
 				}
-			}
+			if (SONG.song.toLowerCase() == 'sketched out')
+				{
+					if(curStep == 1083)
+					{
+						shakeCam = true;
+					}
+					if(curStep == 1092)
+					{
+						shakeCam = false;
+					}
+				}
+			if (SONG.song.toLowerCase() == 'rip and tear')
+			{
+				if(curStep == 64)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 127)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 192)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 256)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 320)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 384)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 424)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 448)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 479)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 484)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 495)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 510)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 577)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 640)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 702)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 768)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 832)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 864)
+				{
+					shakeCam = false;
+				}
+				if(curStep == 896)
+				{
+					shakeCam = true;
+				}
+				if(curStep == 1008)
+				{
+					shakeCam = false;
+				}
+			}			
+		}
 	}
 
 	var lightningStrikeBeat:Int = 0;
@@ -10836,6 +11018,12 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
+
+		if (curBeat == 263 && curSong == 'sketched out')
+			{
+				FlxG.sound.play(Paths.sound('SketchyDropMic'));
+				dad.playAnim('tear', true);
+			}
 
 		if (curStage == 'festival') {
 			if (SONG.song.toLowerCase() == 'artificial-lust') {
@@ -11238,6 +11426,14 @@ class PlayState extends MusicBeatState
 				dad.x -= 27;
 					}
 			}
+			if (curSong.toLowerCase() == 'sketched out' && curStep == 512 )
+			{
+				if (ClientPrefs.characterchange)
+					{
+				changeDadCharacter('angrysketchy');
+					}
+			}
+
 			
 			if (curSong.toLowerCase() == 'onslaught' && curBeat == 96 )
 				{

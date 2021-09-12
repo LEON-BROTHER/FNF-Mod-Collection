@@ -211,7 +211,7 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 9)
 		{
 			if (StoryMenuState.weekUnlocked[20] || isDebug)
-				addWeek(['Carol-Roll', 'Philly-Carol', 'Blammed-Carol', 'Hellroll'], 20, ['carol', 'carol', 'carol', 'shcarol']);
+				addWeek(['Carol-Roll', 'Body', 'Boogie', 'Hellroll'], 20, ['carol', 'carol', 'carol', 'shcarol']);
 		}
 		if (CategoryState.playlist == 10)
 		{
@@ -340,7 +340,7 @@ class FreeplayState extends MusicBeatState
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['Trunk', 'Warning', 'Revolution', 'Quack', 'Geesy', 'Synergy', 'Prom'], 35,
-					['tree', 'tree2', 'tree3', 'duck', 'duck', 'matt-duck', 'tree']);
+					['tree', 'tree2', 'tree3', 'duck', 'duck', 'matt-duck', 'tree3']);
 		}
 
 		if (CategoryState.playlist == 32)
@@ -365,7 +365,7 @@ class FreeplayState extends MusicBeatState
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['Sussus-Moogus', 'Sabotage', 'Meltdown'], 35, ['impostor', 'impostor', 'impostor']);
 		}
-
+	
 		if (CategoryState.playlist == 35)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
@@ -419,6 +419,11 @@ class FreeplayState extends MusicBeatState
 					if (StoryMenuState.weekUnlocked[35] || isDebug)
 						addWeek(['Screenplay', 'Parasite','A.G.O.T.I','Guns-Agoti'], 35, ['agoti','agoti','agoti-crazy','agoti']);
 				}
+		if (CategoryState.playlist == 44)
+			{
+				if (StoryMenuState.weekUnlocked[35] || isDebug)
+					addWeek(['Line Art', 'Sketched Out', 'Rip And Tear'], 35, ['sketchy', 'sketchy', 'tornsketchy']);
+			}
 
 		/* 
 

@@ -1318,6 +1318,132 @@ class Character extends FlxSprite
 				addOffset('danceRight', 0, -9);
 
 				playAnim('danceRight');
+			case 'gf-sketch':
+				// GIRLFRIEND CODE
+				tex = Paths.getSparrowAtlas('sketchy/GF_assets');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
+				animation.addByPrefix('singRIGHT', 'GF Right Note', 24, false);
+				animation.addByPrefix('singUP', 'GF Up Note', 24, false);
+				animation.addByPrefix('singDOWN', 'GF Down Note', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
+				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
+				animation.addByPrefix('scared', 'GF FEAR', 24);
+
+				addOffset('cheer');
+				addOffset('sad', -2, -2);
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
+
+				addOffset("singUP", 0, 4);
+				addOffset("singRIGHT", 0, -20);
+				addOffset("singLEFT", 0, -19);
+				addOffset("singDOWN", 0, -20);
+				addOffset('hairBlow', 45, -8);
+				addOffset('hairFall', 0, -9);
+
+				addOffset('scared', -2, -17);
+
+				playAnim('danceRight');
+			case 'sketchy':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('sketchy/sketchy_assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'sketchy idle', 24);
+				animation.addByPrefix('singUP', 'sketchy up', 24);
+				animation.addByPrefix('singRIGHT', 'sketchy right', 24);
+				animation.addByPrefix('singDOWN', 'sketchy down', 24);
+				animation.addByPrefix('singLEFT', 'sketchy left', 24);
+
+				addOffset('idle', 10, 0);
+				addOffset("singUP", -16, 100);
+				addOffset("singRIGHT", -23, -75);
+				addOffset("singLEFT", 50, -45);
+				addOffset("singDOWN", 10, -60);
+
+				playAnim('idle');
+
+			case 'angrysketchy':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('sketchy/angry_sketch');
+				frames = tex;
+				animation.addByPrefix('idle', 'sketchyidlealt', 24);
+				animation.addByPrefix('singUP', 'sketchyupalt', 24);
+				animation.addByPrefix('singRIGHT', 'sketchyrightalt', 24);
+				animation.addByPrefix('singDOWN', 'sketchydownalt', 24);
+				animation.addByPrefix('singLEFT', 'sketchyleftalt', 24);
+				animation.addByPrefix('tear', 'sketchyrip', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP", -66, 98);
+				addOffset("singRIGHT", -90, -75);
+				addOffset("singLEFT", -43, -49);
+				addOffset("singDOWN", -64, -61);
+				addOffset('tear', 45, 89);
+
+				playAnim('idle');
+
+			case 'tornsketchy':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('sketchy/crumple');
+				frames = tex;
+				animation.addByPrefix('idle', 'crumpleidle', 24);
+				animation.addByPrefix('singUP', 'crumpleup', 24);
+				animation.addByPrefix('singRIGHT', 'crumpleright', 24);
+				animation.addByPrefix('singDOWN', 'crumpledown', 24);
+				animation.addByPrefix('singLEFT', 'crumpleleft', 24);
+
+				addOffset('idle');
+				addOffset("singUP", 34, 121);
+				addOffset("singRIGHT", -50, -13);
+				addOffset("singLEFT", 190, -20);
+				addOffset("singDOWN", 10, -62);
+
+				playAnim('idle');
+
+			case 'bf-sketch':
+				var tex = Paths.getSparrowAtlas('sketchy/bfSketch');
+				frames = tex;
+				animation.addByPrefix('idle', 'bf-sketch idle dance', 24, false);
+				animation.addByPrefix('singUP', 'bf-sketch NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'bf-sketch NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'bf-sketch NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'bf-sketch NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'bf-sketch NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'bf-sketch NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'bf-sketch NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'bf-sketch NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'bf-sketc HEY', 24, false);
+
+				animation.addByPrefix('firstDeath', "bf-sketch dies", 24, false);
+				animation.addByPrefix('deathLoop', "bf-sketch Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "bf-sketch Dead confirm", 24, false);
+
+				animation.addByPrefix('scared', 'bf-sketch idle shaking', 24);
+
+				addOffset('idle', -5);
+				addOffset("singUP", -29, 27);
+				addOffset("singRIGHT", -38, -7);
+				addOffset("singLEFT", 12, -6);
+				addOffset("singDOWN", -10, -50);
+				addOffset("singUPmiss", -29, 27);
+				addOffset("singRIGHTmiss", -30, 21);
+				addOffset("singLEFTmiss", 12, 24);
+				addOffset("singDOWNmiss", -11, -19);
+				addOffset("hey", 7, 4);
+				addOffset('firstDeath', 37, 11);
+				addOffset('deathLoop', 37, 5);
+				addOffset('deathConfirm', 37, 69);
+				addOffset('scared', -4);
+
+				playAnim('idle');
+
+				flipX = true;
+
 			case 'bfmii':
 				var tex = Paths.getSparrowAtlas('matt/BOYFRIENDMII');
 				frames = tex;
@@ -1408,15 +1534,15 @@ class Character extends FlxSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'Dad idle dance', 24);
 				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
-				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24);
+				animation.addByPrefix('singRIGHT', 'Dad Sing Note LEFT', 24);
 				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
-				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
+				animation.addByPrefix('singLEFT', 'Dad Sing Note RIGHT', 24);
 
 				addOffset('idle');
-				addOffset("singUP", 44, 30);
-				addOffset("singRIGHT", 60, 7);
-				addOffset("singLEFT", 30, 30);
-				addOffset("singDOWN", 40, 10);
+				addOffset("singUP", 45,28);
+				addOffset("singRIGHT", 16,30);
+				addOffset("singLEFT", 43, 14);
+				addOffset("singDOWN", 20, 4);
 
 				playAnim('idle');
 			case 'hex':
@@ -1624,17 +1750,17 @@ class Character extends FlxSprite
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('zardy/Zardy');
 				frames = tex;
-				animation.addByPrefix('idle', 'Idle', 24);
+				animation.addByPrefix('idle', 'Idle', 14);
 				animation.addByPrefix('singUP', 'Sing Up', 24);
 				animation.addByPrefix('singRIGHT', 'Sing Right', 24);
 				animation.addByPrefix('singDOWN', 'Sing Down', 24);
 				animation.addByPrefix('singLEFT', 'Sing Left', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -76, 30);
-				addOffset("singRIGHT", -49, 7);
-				addOffset("singLEFT", 114, 20);
-				addOffset("singDOWN", -51, 10);
+				addOffset("singUP", -80, -10);
+				addOffset("singRIGHT", -65, 5);
+				addOffset("singLEFT", 130, 5);
+				addOffset("singDOWN", -2, -26);
 
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets');
@@ -5985,6 +6111,9 @@ class Character extends FlxSprite
 			case 'gf':
 				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
 					playAnim('danceRight');
+			case 'gf-sketch':
+				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
+					playAnim('danceRight');
 			case 'gf-star':
 				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
 					playAnim('danceRight');
@@ -6054,6 +6183,16 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 				case 'gf':
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
+
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
+				case 'gf-sketch':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
@@ -6477,6 +6616,9 @@ class Character extends FlxSprite
 						playAnim('danceRight');
 					else
 						playAnim('danceLeft');
+				case 'angrysketchy':
+					if (!animation.curAnim.name.startsWith('tear'))
+						playAnim('idle');
 				case 'gaw':
 					danced = !danced;
 

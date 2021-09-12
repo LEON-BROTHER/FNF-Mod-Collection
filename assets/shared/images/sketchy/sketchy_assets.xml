@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sketchy_assets.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sketchy down0000" x="7656" y="5110" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0001" x="7656" y="5110" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0002" x="0" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0003" x="0" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0004" x="510" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0005" x="510" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0006" x="1020" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0007" x="1020" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0008" x="1020" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0009" x="1020" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0010" x="1020" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy down0011" x="1020" y="5840" width="510" height="572" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0000" x="1530" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0001" x="1530" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0002" x="2153" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0003" x="2153" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0004" x="2776" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0005" x="2776" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0006" x="3399" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0007" x="3399" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0008" x="4022" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0009" x="4022" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0010" x="4022" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0011" x="4022" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0012" x="4022" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy idle0013" x="4022" y="5840" width="623" height="634" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0000" x="4645" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0001" x="4645" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0002" x="5303" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0003" x="5303" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0004" x="5961" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0005" x="5961" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0006" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0007" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0008" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0009" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0010" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0011" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0012" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0013" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy left 0014" x="6619" y="5840" width="658" height="584" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0000" x="7277" y="5840" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0001" x="0" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0002" x="0" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0003" x="713" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0004" x="713" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0005" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0006" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0007" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0008" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0009" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0010" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0011" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0012" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0013" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0014" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0015" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy right0016" x="1426" y="6474" width="713" height="553" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0000" x="2139" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0001" x="2725" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0002" x="3311" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0003" x="3897" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0004" x="4483" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0005" x="5069" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0006" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0007" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0008" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0009" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0010" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0011" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0012" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0013" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0014" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0015" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchy up0016" x="5655" y="6474" width="586" height="733" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0000" x="0" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0001" x="696" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0002" x="1392" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0003" x="2088" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0004" x="2784" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0005" x="3480" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0006" x="4176" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0007" x="4872" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0008" x="5568" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0009" x="6264" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0010" x="6960" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0011" x="0" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0012" x="0" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0013" x="696" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0014" x="1392" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0015" x="2088" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0016" x="2784" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0017" x="3480" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0018" x="4176" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0019" x="4872" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0020" x="5568" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0021" x="6264" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0022" x="6960" y="0" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0023" x="0" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0024" x="696" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0025" x="1392" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0026" x="2088" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0027" x="2784" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0028" x="3480" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0029" x="4176" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0030" x="4872" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0031" x="5568" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0032" x="6264" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0033" x="6960" y="730" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0034" x="0" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0035" x="696" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0036" x="1392" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0037" x="2088" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0038" x="2784" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0039" x="3480" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0040" x="4176" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0041" x="4872" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0042" x="5568" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0043" x="6264" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0044" x="6960" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0045" x="0" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0046" x="696" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0047" x="696" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0048" x="1392" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0049" x="2088" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0050" x="2784" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0051" x="3480" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0052" x="4176" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0053" x="4872" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0054" x="5568" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0055" x="6264" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0056" x="6960" y="1460" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0057" x="0" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0058" x="696" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0059" x="1392" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0060" x="2088" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0061" x="2784" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0062" x="3480" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0063" x="4176" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0064" x="4872" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0065" x="5568" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0066" x="6264" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0067" x="6960" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0068" x="0" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0069" x="696" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0070" x="1392" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0071" x="2088" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0072" x="2784" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0073" x="3480" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0074" x="4176" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0075" x="4872" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0076" x="5568" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0077" x="6264" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0078" x="6960" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0079" x="0" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0080" x="696" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0081" x="1392" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0082" x="2088" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0083" x="2784" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0084" x="3480" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0085" x="4176" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0086" x="4872" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0087" x="5568" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0088" x="6264" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0089" x="6960" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0090" x="0" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0091" x="696" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0092" x="1392" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0093" x="2088" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0094" x="2784" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0095" x="3480" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0096" x="4176" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0097" x="4872" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0098" x="5568" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0099" x="6264" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0100" x="6264" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0101" x="6960" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0102" x="0" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0103" x="696" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0104" x="1392" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0105" x="2088" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0106" x="2784" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0107" x="3480" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0108" x="4176" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0109" x="4872" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0110" x="5568" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0111" x="6264" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0112" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0113" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0114" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0115" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0116" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0117" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0118" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0119" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0120" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0121" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0122" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0123" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0124" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0125" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0126" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0127" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0128" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0129" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0130" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0131" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0132" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0133" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0134" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0135" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0136" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0137" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0138" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0139" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0140" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0141" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0142" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0143" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0144" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0145" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0146" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0147" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0148" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0149" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0150" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0151" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0152" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0153" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0154" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0155" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0156" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0157" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0158" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0159" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0160" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0161" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0162" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0163" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0164" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0165" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0166" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0167" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0168" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0169" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0170" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0171" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0172" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0173" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0174" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0175" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0176" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0177" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0178" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0179" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0180" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0181" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0182" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0183" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0184" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0185" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0186" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0187" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0188" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0189" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0190" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0191" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0192" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0193" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0194" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0195" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0196" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0197" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0198" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0199" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0200" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0201" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0202" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0203" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0204" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0205" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0206" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0207" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0208" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0209" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0210" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0211" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0212" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0213" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0214" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0215" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0216" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0217" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0218" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0219" x="2088" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0220" x="2784" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0221" x="3480" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0222" x="4176" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0223" x="4872" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0224" x="5568" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0225" x="6264" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0226" x="6960" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0227" x="0" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0228" x="696" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0229" x="1392" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0230" x="2088" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0231" x="2784" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0232" x="3480" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0233" x="4176" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0234" x="4872" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0235" x="5568" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0236" x="6264" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0237" x="6960" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0238" x="0" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0239" x="696" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0240" x="1392" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0241" x="2088" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0242" x="2784" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0243" x="3480" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0244" x="4176" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0245" x="4872" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0246" x="5568" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0247" x="6264" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0248" x="6960" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0249" x="0" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0250" x="696" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0251" x="1392" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0252" x="2088" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0253" x="2784" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0254" x="3480" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0255" x="4176" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0256" x="4872" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0257" x="5568" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0258" x="6264" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0259" x="6264" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0260" x="6960" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0261" x="0" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0262" x="696" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0263" x="1392" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0264" x="2088" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0265" x="2784" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0266" x="3480" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0267" x="4176" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0268" x="4872" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0269" x="5568" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0270" x="6264" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0271" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0272" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0273" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0274" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0275" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0276" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0277" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0278" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0279" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0280" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0281" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0282" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0283" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0284" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0285" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0286" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0287" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0288" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0289" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0290" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0291" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0292" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0293" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0294" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0295" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0296" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0297" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0298" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0299" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0300" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0301" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0302" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0303" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0304" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0305" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0306" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0307" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0308" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0309" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0310" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0311" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0312" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0313" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0314" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0315" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0316" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0317" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0318" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0319" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0320" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0321" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0322" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0323" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0324" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0325" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0326" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0327" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0328" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0329" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0330" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0331" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0332" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0333" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0334" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0335" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0336" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0337" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0338" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0339" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0340" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0341" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0342" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0343" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0344" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0345" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0346" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0347" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0348" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0349" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0350" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0351" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0352" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0353" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0354" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0355" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0356" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0357" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0358" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0359" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0360" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0361" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0362" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0363" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0364" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0365" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0366" x="6960" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0367" x="6960" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0368" x="0" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0369" x="696" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0370" x="1392" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0371" x="2088" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0372" x="2784" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0373" x="3480" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0374" x="4176" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0375" x="4872" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0376" x="5568" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0377" x="6264" y="5110" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0378" x="2088" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0379" x="2784" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0380" x="3480" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0381" x="4176" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0382" x="4872" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0383" x="5568" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0384" x="6264" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0385" x="6960" y="2190" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0386" x="0" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0387" x="696" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0388" x="1392" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0389" x="2088" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0390" x="2784" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0391" x="3480" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0392" x="4176" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0393" x="4872" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0394" x="5568" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0395" x="6264" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0396" x="6960" y="2920" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0397" x="0" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0398" x="696" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0399" x="1392" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0400" x="2088" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0401" x="2784" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0402" x="3480" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0403" x="4176" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0404" x="4872" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0405" x="5568" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0406" x="6264" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0407" x="6960" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0408" x="0" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0409" x="696" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0410" x="1392" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0411" x="2088" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0412" x="2784" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0413" x="3480" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0414" x="4176" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0415" x="4872" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0416" x="5568" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0417" x="6264" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0418" x="6264" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0419" x="6960" y="3650" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0420" x="0" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0421" x="696" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0422" x="1392" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0423" x="2088" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0424" x="2784" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0425" x="3480" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+	<SubTexture name="sketchyrip0426" x="4176" y="4380" width="696" height="730" frameX="0" frameY="0" frameWidth="703" frameHeight="657"/>
+</TextureAtlas>

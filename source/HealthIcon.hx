@@ -43,6 +43,7 @@ class HealthIcon extends FlxSprite
 
 					antialiasing = true;
 					animation.add('bf', [0, 1], 0, false, isPlayer);
+					animation.add('bf-ricky', [0, 1], 0, false, isPlayer);
 					animation.add('bfkapi', [0, 1], 0, false, isPlayer);
 					animation.add('bf-car', [0, 1], 0, false, isPlayer);
 					animation.add('bf-christmas', [0, 1], 0, false, isPlayer);
@@ -69,6 +70,7 @@ class HealthIcon extends FlxSprite
 					animation.add('spirit', [23, 23], 0, false, isPlayer);
 					animation.add('bf-old', [14, 15], 0, false, isPlayer);
 					animation.add('gf', [16], 0, false, isPlayer);
+					animation.add('gf-sketch', [16], 0, false, isPlayer);
 					animation.add('gf-b3', [200], 0, false, isPlayer);
 					animation.add('parents-christmas', [17], 0, false, isPlayer);
 					animation.add('parents-christmas-b3', [201, 202], 0, false, isPlayer);
@@ -278,16 +280,25 @@ class HealthIcon extends FlxSprite
 					animation.add('bf-pixelangry', [18, 19], 0, false, isPlayer);
 					animation.add('bob', [20, 21], 0, false, isPlayer);
 					animation.add('angrybob', [22, 23], 0, false, isPlayer);
-		animation.add('hellbob', [24, 25], 0, false, isPlayer);
-		animation.add('ron', [26, 27], 0, false, isPlayer);
-		animation.add('glitched-bob', [30, 31], 0, false, isPlayer);
-		animation.add('gloop-bob', [28, 29], 0, false, isPlayer);
-		animation.add('little-man', [32, 33], 0, false, isPlayer);
-		animation.add('pizza', [34, 35], 0, false, isPlayer);
-		animation.add('tankman', [36, 37], 0, false, isPlayer);
-		animation.add('dad', [36, 37], 0, false, isPlayer);
-		animation.add('agoti', [38, 39], 0, false, isPlayer);
-		animation.add('agoti-crazy', [40, 41], 0, false, isPlayer);
+					animation.add('hellbob', [24, 25], 0, false, isPlayer);
+					animation.add('ron', [26, 27], 0, false, isPlayer);
+					animation.add('glitched-bob', [30, 31], 0, false, isPlayer);
+					animation.add('gloop-bob', [28, 29], 0, false, isPlayer);
+					animation.add('little-man', [32, 33], 0, false, isPlayer);
+					animation.add('pizza', [34, 35], 0, false, isPlayer);
+					animation.add('tankman', [36, 37], 0, false, isPlayer);
+					animation.add('dad', [36, 37], 0, false, isPlayer);
+					animation.add('agoti', [38, 39], 0, false, isPlayer);
+					animation.add('agoti-crazy', [40, 41], 0, false, isPlayer);
+					animation.add('sketchy', [42, 43], 0, false, isPlayer);
+					animation.add('angrysketchy', [42, 43], 0, false, isPlayer);
+					animation.add('bf-sketch', [44, 45], 0, false, isPlayer);
+					animation.add('tornsketchy', [46, 47], 0, false, isPlayer);
+					animation.add('cheese-default', [48, 49], 0, false, isPlayer);
+					animation.add('cheese-milkshake', [48, 49], 0, false, isPlayer);
+					animation.add('cheese-cultured', [48, 49], 0, false, isPlayer);
+					animation.add('zardyButDARK', [50, 51], 0, false, isPlayer);
+					animation.add('cableCrowPog', [52, 53], 0, false, isPlayer);
 
 					
 
