@@ -9048,6 +9048,7 @@ class PlayState extends MusicBeatState
 							else if (daNote.noteType == 11 && curStage != 'festival')
 									{
 										vocals.volume = 1;
+										HealthDrain();
 									}
 							else if (daNote.noteType == 10 && curStage != 'festival')
 										{
@@ -9332,6 +9333,12 @@ class PlayState extends MusicBeatState
 				{
 					health -= 1;
 				}
+		if (daNote.noteType == 10 && curStage != 'festival')
+				{
+					HealthDrain();
+				}
+				
+
 		if (SONG.song.toLowerCase() == 'hellclown')
 			healthDrain = 0.04;
 
