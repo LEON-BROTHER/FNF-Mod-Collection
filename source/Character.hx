@@ -1485,10 +1485,13 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'matt down note', 24, false);
 				animation.addByPrefix('singLEFT', 'matt left note', 24, false);
 				animation.addByPrefix('singRIGHT', 'matt right note', 24, false);
-				addOffset("singUP", 0, 10);
-				addOffset("singRIGHT", -15, -20);
-				addOffset("singLEFT", 30, -40);
-				addOffset("singDOWN", 0, -20);
+
+				addOffset("idle");
+				addOffset("singUP", 40, 0);
+				addOffset("singRIGHT", 80, -61);
+				addOffset("singLEFT", 60, -46);
+				addOffset("singDOWN", 10, -60);
+				
 				playAnim('idle');
 			case 'xchara':
 				// DAD ANIMATION LOADING CODE
@@ -4636,6 +4639,7 @@ class Character extends FlxSprite
 				addOffset("singLEFT-alt", 45,0);
 				addOffset("singDOWN-alt", 11, 0);
 
+				playAnim('idle');
 			case 'matt':
 				tex = Paths.getSparrowAtlas('matt/matt_assets');
 				frames = tex;
@@ -4644,14 +4648,14 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'matt down note', 24, false);
 				animation.addByPrefix('singLEFT', 'matt left note', 24, false);
 				animation.addByPrefix('singRIGHT', 'matt right note', 24, false);
-				playAnim('idle');
 
 				addOffset('idle');
-				addOffset("singUP", 14, 0);
-				addOffset("singRIGHT", -20, -3);
-				addOffset("singLEFT", 14, 0);
-				addOffset("singDOWN", 20, 0);
+				addOffset("singUP", -39, 16);
+				addOffset("singRIGHT", -8, -28);
+				addOffset("singLEFT", 44, -35);
+				addOffset("singDOWN", -61, -29);
 
+				playAnim('idle');
 			case 'miku':
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('miku/ev_miku_assets');
@@ -4667,6 +4671,8 @@ class Character extends FlxSprite
 				addOffset("singRIGHT", -22, 26);
 				addOffset("singLEFT", 26, 5);
 				addOffset("singDOWN", -17, -38);
+
+				playAnim('idle');
 			case 'trickyH':
 				tex = CachedFrames.cachedInstance.fromSparrow('idle', 'hellclwn/Tricky/Idle');
 
