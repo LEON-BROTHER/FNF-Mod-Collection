@@ -44,4 +44,6 @@ ronald
 gf-pixel-b
 whitty
 tricky
+bf-zar
+zardyBUTDARK
 

@@ -391,6 +391,7 @@ class Character extends FlxSprite
 			case 'picospeaker':		
 				tex = Paths.getSparrowAtlas('tank/picoSpeaker');
 				frames = tex;
+				  animation.addByIndices('idle', 'Pico shoot 1', [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "", 24, true);
 				  animation.addByPrefix('shoot1', 'Pico shoot 1',  24, false);
 				  animation.addByPrefix('shoot2', 'Pico shoot 2',  24, false);
 				  animation.addByPrefix('shoot3', 'Pico shoot 3', 24, false);
@@ -1658,12 +1659,14 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'SelRight', 24);
 				animation.addByPrefix('singDOWN', 'SelDown', 24);
 				animation.addByPrefix('singLEFT', 'SelLeft', 24);
+                animation.addByPrefix('hey', 'fuckboi hey', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -6, 50);
-				addOffset("singRIGHT", 0, 27);
-				addOffset("singLEFT", -10, 10);
-				addOffset("singDOWN", 0, -30);
+                addOffset("singUP", -6, 48);
+                addOffset("singRIGHT", 20, 2);
+                addOffset("singLEFT", -35, 4);
+                addOffset("singDOWN", 0, 1);
+                addOffset("hey", -14, 3);
 			case 'sarvente-dark':
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('sarv/sarvente_dark');
@@ -1750,7 +1753,6 @@ class Character extends FlxSprite
 
 				flipX = true;
 			case 'zardy':
-				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('zardy/Zardy');
 				frames = tex;
 				animation.addByPrefix('idle', 'Idle', 14);
@@ -1764,6 +1766,23 @@ class Character extends FlxSprite
 				addOffset("singRIGHT", -65, 5);
 				addOffset("singLEFT", 130, 5);
 				addOffset("singDOWN", -2, -26);
+
+			case 'zardyBUTDARK':
+				tex = Paths.getSparrowAtlas('zardy/ZardyDark');
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle', 14);
+				animation.addByPrefix('singUP', 'Sing Up', 24);
+				animation.addByPrefix('singRIGHT', 'Sing Right', 24);
+				animation.addByPrefix('singDOWN', 'Sing Down', 24);
+				animation.addByPrefix('singLEFT', 'Sing Left', 24);
+	
+				addOffset('idle');
+				addOffset("singUP", -80, -10);
+				addOffset("singRIGHT", -65, 5);
+				addOffset("singLEFT", 130, 5);
+				addOffset("singDOWN", -2, -26);
+	
+				playAnim('idle');
 
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets');
@@ -5946,94 +5965,6 @@ class Character extends FlxSprite
 				height -= 100;
 
 				antialiasing = false;
-
-				flipX = true;
-			case 'bowserhead':
-				frames = Paths.getSparrowAtlas('bowser/bowserhead_assets');
-				animation.addByPrefix('idle', 'bowser Christmas Idle', 24, false);
-				animation.addByPrefix('singUP', 'bowser Up Note Dad', 24, false);
-				animation.addByPrefix('singDOWN', 'bowser Down Note Dad', 24, false);
-				animation.addByPrefix('singLEFT', 'bowser Left Note Dad', 24, false);
-				animation.addByPrefix('singRIGHT', 'bowser Right Note Dad', 24, false);
-
-				animation.addByPrefix('singUP-alt', 'bowser Up Note Mom', 24, false);
-
-				animation.addByPrefix('singDOWN-alt', 'bowser Down Note Mom', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'bowser Left Note Mom', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'bowser Right Note Mom', 24, false);
-
-				addOffset('idle');
-				addOffset("singUP", -47, 74);
-				addOffset("singRIGHT", -3, 6);
-				addOffset("singLEFT", -27, 26);
-				addOffset("singDOWN", -21, -29);
-				addOffset("singUP-alt", -47, 24);
-				addOffset("singRIGHT-alt", -1, -24);
-				addOffset("singLEFT-alt", -30, 15);
-				addOffset("singDOWN-alt", -30, -27);
-
-				playAnim('idle');
-
-			case 'meowser':
-				frames = Paths.getSparrowAtlas('bowser/meowser_assets');
-				animation.addByPrefix('idle', 'meowser Christmas Idle', 24, false);
-				animation.addByPrefix('singUP', 'meowser Up Note Dad', 24, false);
-				animation.addByPrefix('singDOWN', 'meowser Down Note Dad', 24, false);
-				animation.addByPrefix('singLEFT', 'meowser Left Note Dad', 24, false);
-				animation.addByPrefix('singRIGHT', 'meowser Right Note Dad', 24, false);
-
-				animation.addByPrefix('singUP-alt', 'meowser Up Note Mom', 24, false);
-
-				animation.addByPrefix('singDOWN-alt', 'meowser Down Note Mom', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'meowser Left Note Mom', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'meowser Right Note Mom', 24, false);
-
-				addOffset('idle');
-				addOffset("singUP", -17, 40);
-				addOffset("singRIGHT", -1, -24);
-				addOffset("singLEFT", -24, 26);
-				addOffset("singDOWN", -12, -9);
-				addOffset("singUP-alt", -47, 24);
-				addOffset("singRIGHT-alt", -1, -24);
-				addOffset("singLEFT-alt", -30, 15);
-				addOffset("singDOWN-alt", -30, -27);
-
-				playAnim('idle');
-			case 'catshine':
-				var tex = Paths.getSparrowAtlas('bowser/catshine_assets');
-				frames = tex;
-				animation.addByPrefix('idle', "Catshine Idle Dance", 24);
-				animation.addByPrefix('singUP', 'Catshine Up note0', 24, false);
-				animation.addByPrefix('singDOWN', 'Catshine Down Note0', 24, false);
-				if (isPlayer)
-				{
-					animation.addByPrefix('singLEFT', 'Catshine NOTE LEFT0', 24, false);
-					animation.addByPrefix('singRIGHT', 'Catshine Note Right0', 24, false);
-					animation.addByPrefix('singRIGHTmiss', 'Catshine Note Right Miss', 24, false);
-					animation.addByPrefix('singLEFTmiss', 'Catshine NOTE LEFT miss', 24, false);
-				}
-				else
-				{
-					animation.addByPrefix('singLEFT', 'Catshine Note Right0', 24, false);
-					animation.addByPrefix('singRIGHT', 'Catshine NOTE LEFT0', 24, false);
-					animation.addByPrefix('singRIGHTmiss', 'Catshine NOTE LEFT miss', 24, false);
-					animation.addByPrefix('singLEFTmiss', 'Catshine Note Right Miss', 24, false);
-				}
-
-				animation.addByPrefix('singUPmiss', 'Catshine Up note miss', 24);
-				animation.addByPrefix('singDOWNmiss', 'Catshine Down Note MISS', 24);
-
-				addOffset('idle');
-				addOffset("singUP", -39, 27);
-				addOffset("singRIGHT", -68, -7);
-				addOffset("singLEFT", 65, 9);
-				addOffset("singDOWN", 200, -70);
-				addOffset("singUPmiss", -19, 67);
-				addOffset("singRIGHTmiss", -60, 41);
-				addOffset("singLEFTmiss", 62, 64);
-				addOffset("singDOWNmiss", 210, -28);
-
-				playAnim('idle');
 
 				flipX = true;
 		}

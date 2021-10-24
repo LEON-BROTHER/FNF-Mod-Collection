@@ -167,6 +167,10 @@ class Note extends FlxSprite
 					frames = Paths.getSparrowAtlas('NOTE_assets-tabi');
 				if (NoteSkinState.starlight == 1)
 					frames = Paths.getSparrowAtlas('NOTE_assets-starlight');
+				if (NoteSkinState.kapi == 1)
+					frames = Paths.getSparrowAtlas('NOTE_assets-kapi');
+				if (NoteSkinState.agoti == 1)
+					frames = Paths.getSparrowAtlas('NOTE_assets-agoti');
 
 				if (mania == 1 || mania == 2)
 					frames = Paths.getSparrowAtlas('shaggy/NOTE_assets-shaggy');

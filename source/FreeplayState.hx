@@ -156,7 +156,7 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 30)
 		{
 			if (StoryMenuState.weekUnlocked[30] || isDebug)
-				addWeek(['Foolhardy', 'Foolhardy-Duet'], 30, ['zardy']);
+				addWeek(['Foolhardy', 'Foolhardy-Duet', 'Bushwhack'], 30, ['zardy']);
 		}
 		if (CategoryState.playlist == 5)
 		{

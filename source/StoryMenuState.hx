@@ -182,7 +182,7 @@ class StoryMenuState extends MusicBeatState
 				case 4:
 				weekData = [['Headache', 'Nerves', 'Release','Fading']];
 				weekCharacters = [['dad', 'bf', 'gf']];
-				weekNames = ['Garcello Week'];
+				weekNames = ['Smoke \'Em Out Struggle'];
 			case 5:
 				weekData = [['High School Conflict', 'Bara no Yume', 'Your Demise','Your Reality']];
 				weekCharacters = [['senpai', 'bf', 'gf']];
@@ -190,7 +190,7 @@ class StoryMenuState extends MusicBeatState
 			case 6:
 				weekData = [['Lo-Fight','Overhead','Ballistic']];
 				weekCharacters = [['senpai', 'bf', 'gf']];
-				weekNames = ['WHITTY WEEK'];
+				weekNames = ['BACK ALLEY BLITZ'];
 
 
 			default:

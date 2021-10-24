@@ -28,6 +28,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'',
 		'GAMEPLAY',
 		'Downscroll',
+		'Middlescroll',
 		'Note Splashes',
 		'Flashing Lights',
 		'Camera Zooms'
@@ -173,7 +174,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 				case 'Downscroll':
 					ClientPrefs.downScroll = !ClientPrefs.downScroll;
-
+				case 'Middlescroll':
+					ClientPrefs.middleScroll = !ClientPrefs.middleScroll;
 				case 'Camera Zooms':
 					ClientPrefs.camZooms = !ClientPrefs.camZooms;
 				case 'Bob Crashing':
@@ -214,6 +216,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				descText.text = "If unchecked, disables anti-aliasing, increases performance\nat the cost of the graphics not looking as smooth.";
 			case 'Downscroll':
 				descText.text = "If checked, notes go Down instead of Up, simple enough.";
+			case 'Middlescroll':
+				descText.text = "If checked, the player's notes are set in the middle of the screen.";
 			case 'Swearing':
 				descText.text = "If unchecked, your mom won't be angry at you.";
 			case 'Violence':
@@ -292,6 +296,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 							daValue = ClientPrefs.globalAntialiasing;
 						case 'Downscroll':
 							daValue = ClientPrefs.downScroll;
+						case 'Middlescroll':
+							daValue = ClientPrefs.middleScroll;
 						case 'Swearing':
 							daValue = ClientPrefs.cursing;
 						case 'Violence':

@@ -114,6 +114,7 @@ class HealthIcon extends FlxSprite
 					animation.add('hex-hack', [68, 69], 0, false, isPlayer);
 					animation.add('bf-hack', [0, 1], 0, false, isPlayer);
 					animation.add('zardy', [71, 72], 0, false, isPlayer);
+					animation.add('zardyBUTDARK', [71, 72], 0, false, isPlayer);
 					animation.add('sarvente', [73, 74], 0, false, isPlayer);
 					animation.add('sky', [75, 76], 0, false, isPlayer);
 					animation.add('sky-annoyed', [75, 76], 0, false, isPlayer);

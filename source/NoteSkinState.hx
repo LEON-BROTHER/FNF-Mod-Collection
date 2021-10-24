@@ -28,7 +28,9 @@ class NoteSkinState extends MusicBeatState
 		'Sarv-Notes',
 		'Beatstreets',
 		'Tabi-Notes',
-		'Starlight-Notes'
+		'Starlight-Notes',
+		"Kapi-Notes",
+		"Agoti-Notes"
 	];
 
 	public var curSelected:Int = 0;
@@ -43,6 +45,8 @@ class NoteSkinState extends MusicBeatState
 	public static var beats:Int = 0;
 	public static var tabi:Int = 0;
 	public static var starlight:Int = 0;
+	public static var kapi:Int = 0;
+	public static var agoti:Int = 0;
 	public static var keys:FlxText;
 	public static var sel:String = "Normal";
 
@@ -146,6 +150,8 @@ class NoteSkinState extends MusicBeatState
 					sarv = 0;
 					tabi = 0;
 					starlight = 0;
+					kapi = 0;
+					agoti = 0;
 					sel = "Normal";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -162,6 +168,8 @@ class NoteSkinState extends MusicBeatState
 					beats = 0;
 					tabi = 0;
 					starlight = 0;
+					kapi = 0;
+					agoti = 0;
 					sel = "Neo";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -178,6 +186,8 @@ class NoteSkinState extends MusicBeatState
 					beats = 0;
 					tabi = 0;
 					starlight = 0;
+					kapi = 0;
+					agoti = 0;
 					sel = "X-Event";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -194,6 +204,8 @@ class NoteSkinState extends MusicBeatState
 					beats = 0;
 					tabi = 0;
 					starlight = 0;
+					kapi = 0;
+					agoti = 0;
 					sel = "Starcatcher";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -210,6 +222,8 @@ class NoteSkinState extends MusicBeatState
 					beats = 1;
 					tabi = 0;
 					starlight = 0;
+					kapi = 0;
+					agoti = 0;
 					sel = "Beatstreets";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -226,6 +240,8 @@ class NoteSkinState extends MusicBeatState
 					beats = 0;
 					tabi = 0;
 					starlight = 0;
+					kapi = 0;
+					agoti = 0;
 					sel = "Sarv-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -242,6 +258,8 @@ class NoteSkinState extends MusicBeatState
 					beats = 0;
 					tabi = 1;
 					starlight = 0;
+					kapi = 0;
+					agoti = 0;
 					sel = "Tabi-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -258,7 +276,45 @@ class NoteSkinState extends MusicBeatState
 					beats = 0;
 					tabi = 0;
 					starlight = 1;
+					kapi = 0;
+					agoti = 0;
 					sel = "Starlight-Notes";
+					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
+					keys.text = "CurSelected: " + sel;
+					keys.scrollFactor.set();
+					keys.setFormat(Paths.font('vcr.ttf'), 32);
+					keys.updateHitbox();
+					add(keys);
+				case "Kapi-Notes":
+					normal = 0;
+					neo = 0;
+					star = 0;
+					xe = 0;
+					sarv = 0;
+					beats = 0;
+					tabi = 0;
+					starlight = 0;
+					kapi = 1;
+					agoti = 0;
+					sel = "Kapi-Notes";
+					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
+					keys.text = "CurSelected: " + sel;
+					keys.scrollFactor.set();
+					keys.setFormat(Paths.font('vcr.ttf'), 32);
+					keys.updateHitbox();
+					add(keys);
+				case "Agoti-Notes":
+					normal = 0;
+					neo = 0;
+					star = 0;
+					xe = 0;
+					sarv = 0;
+					beats = 0;
+					tabi = 0;
+					starlight = 0;
+					kapi = 0;
+					agoti = 1;
+					sel = "Agoti-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
 					keys.scrollFactor.set();
@@ -304,6 +360,10 @@ class NoteSkinState extends MusicBeatState
 				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-tabi');
 			if (curSelected == 7)
 				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-starlight');
+			if (curSelected == 8)
+				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-kapi');
+			if (curSelected == 9)
+				babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-agoti');
 			babyArrow.animation.addByPrefix('green', 'arrowUP');
 			babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
 			babyArrow.animation.addByPrefix('purple', 'arrowLEFT');

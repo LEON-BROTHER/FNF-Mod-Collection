@@ -18,7 +18,7 @@ import flixel.util.FlxColor;
 class BackgroundMusicState extends MusicBeatState
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
-	public var menuItems:Array<String> = ['Normal','Neo','B-Sides','Hex','Beatstreets'];
+	public var menuItems:Array<String> = ['Normal','Neo','B-Sides','Hex', 'Agoti', 'Beatstreets'];
 
 	public var curSelected:Int = 0;
 
@@ -28,6 +28,7 @@ class BackgroundMusicState extends MusicBeatState
 	public static var neo:Int = 0;
 	public static var beat:Int = 0;
 	public static var bsides:Int = 0;
+	public static var agoti:Int = 0;
 
 	
 
@@ -116,6 +117,7 @@ class BackgroundMusicState extends MusicBeatState
 					bsides = 0;
 					hex = 0;
 					beat = 0;
+					agoti = 0;
 					FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				case "Neo":
@@ -124,6 +126,7 @@ class BackgroundMusicState extends MusicBeatState
 					bsides = 0;
 					hex = 0;
 					beat = 0;
+					agoti = 0;
 					FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu-n'));
 				case "B-Sides":
@@ -132,6 +135,7 @@ class BackgroundMusicState extends MusicBeatState
 					bsides = 1;
 					hex = 0;
 					beat = 0;
+					agoti = 0;
 					FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu-b'));
 				case "Hex":
@@ -140,14 +144,25 @@ class BackgroundMusicState extends MusicBeatState
 					bsides = 0;
 					beat = 0;
 					hex = 1;
+					agoti = 0;
 					FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu-h'));
+				case "Agoti":
+					normal = 0;
+					neo = 0;
+					bsides = 0;
+					beat = 0;
+					hex = 0;
+					agoti = 1;
+					FlxG.sound.music.stop();
+					FlxG.sound.playMusic(Paths.music('freakyMenu-agoti'));
 				case "Beatstreets":
 					normal = 0;
 					neo = 0;
 					bsides = 0;
 					hex = 0;
 					beat = 1;
+					agoti = 0;
 					FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu-beat'));
 					
