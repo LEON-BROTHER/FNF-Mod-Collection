@@ -3644,112 +3644,6 @@ class PlayState extends MusicBeatState
 						  corpse.active = false;
 						  add(corpse);
 		
-		case 'sussus-moogus' | 'sabotage':
-		
-			defaultCamZoom = 0.9;
-			curStage = 'sabotage';
-			var bg:FlxSprite = new FlxSprite(-200, -300).loadGraphic(Paths.image('amogus/polusSky'));
-			bg.setGraphicSize(Std.int(bg.width * 1.5));
-			bg.antialiasing = ClientPrefs.globalAntialiasing;
-			bg.scrollFactor.set(0.5, 0.5);
-			bg.active = false;
-			add(bg);
-
-			var rocks:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('amogus/polusrocks'));
-			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
-			rocks.updateHitbox();
-			rocks.antialiasing = ClientPrefs.globalAntialiasing;
-			rocks.scrollFactor.set(0.6, 0.6);
-			rocks.active = false;
-			add(rocks);
-
-			var rocks:FlxSprite = new FlxSprite(-450, -200).loadGraphic(Paths.image('amogus/polusWarehouse'));
-			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
-			rocks.updateHitbox();
-			rocks.antialiasing = ClientPrefs.globalAntialiasing;
-			rocks.scrollFactor.set(0.9, 0.9);
-			rocks.active = false;
-			add(rocks);
-
-			var rocks:FlxSprite = new FlxSprite(-1000, 0).loadGraphic(Paths.image('amogus/polusHills'));
-			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
-			rocks.updateHitbox();
-			rocks.antialiasing = ClientPrefs.globalAntialiasing;
-			rocks.scrollFactor.set(0.9, 0.9);
-			rocks.active = false;
-			add(rocks);
-
-			var stageFront:FlxSprite = new FlxSprite(-400, 450).loadGraphic(Paths.image('amogus/polusGround'));
-			stageFront.setGraphicSize(Std.int(stageFront.width * 1.5));
-			stageFront.updateHitbox();
-			stageFront.antialiasing = ClientPrefs.globalAntialiasing;
-			stageFront.scrollFactor.set(1, 1);
-			stageFront.active = false;
-			add(stageFront);
-
-			var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
-			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-			stageCurtains.updateHitbox();
-			stageCurtains.antialiasing = ClientPrefs.globalAntialiasing;
-			stageCurtains.scrollFactor.set(1.3, 1.3);
-			stageCurtains.active = false;
-		
-		case 'meltdown':
-		
-			defaultCamZoom = 0.9;
-			curStage = 'meltdown';
-			var bg:FlxSprite = new FlxSprite(-200, -300).loadGraphic(Paths.image('polusSky'));
-			bg.setGraphicSize(Std.int(bg.width * 1.5));
-			bg.antialiasing = ClientPrefs.globalAntialiasing;
-			bg.scrollFactor.set(0.5, 0.5);
-			bg.active = false;
-			add(bg);
-
-			var rocks:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('polusrocks'));
-			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
-			rocks.updateHitbox();
-			rocks.antialiasing = ClientPrefs.globalAntialiasing;
-			rocks.scrollFactor.set(0.6, 0.6);
-			rocks.active = false;
-			add(rocks);
-
-			var rocks:FlxSprite = new FlxSprite(-450, -200).loadGraphic(Paths.image('polusWarehouse'));
-			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
-			rocks.updateHitbox();
-			rocks.antialiasing = ClientPrefs.globalAntialiasing;
-			rocks.scrollFactor.set(0.9, 0.9);
-			rocks.active = false;
-			add(rocks);
-
-			var rocks:FlxSprite = new FlxSprite(-1000, 0).loadGraphic(Paths.image('polusHills'));
-			rocks.setGraphicSize(Std.int(rocks.width * 1.5));
-			rocks.updateHitbox();
-			rocks.antialiasing = ClientPrefs.globalAntialiasing;
-			rocks.scrollFactor.set(0.9, 0.9);
-			rocks.active = false;
-			add(rocks);
-
-			crowd = new MogusBoppers(0, 150);
-			crowd.setGraphicSize(Std.int(crowd.width * 1.5));
-			crowd.updateHitbox();
-			crowd.scrollFactor.set(0.9, 0.9);
-			crowd.active = false;
-			add(crowd);
-
-			var stageFront:FlxSprite = new FlxSprite(-400, 450).loadGraphic(Paths.image('polusGround'));
-			stageFront.setGraphicSize(Std.int(stageFront.width * 1.5));
-			stageFront.updateHitbox();
-			stageFront.antialiasing = ClientPrefs.globalAntialiasing;
-			stageFront.scrollFactor.set(1, 1);
-			stageFront.active = false;
-			add(stageFront);
-
-			var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
-			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-			stageCurtains.updateHitbox();
-			stageCurtains.antialiasing = ClientPrefs.globalAntialiasing;
-			stageCurtains.scrollFactor.set(1.3, 1.3);
-			stageCurtains.active = false;
 		
 		case 'bopeebo-b3' 
 			| 'tutorial-b3'
@@ -4938,8 +4832,7 @@ class PlayState extends MusicBeatState
 				destBoombox.x -= 110;
 				destBoombox.scale.set(1.2, 1.2);
 				add(destBoombox);
-			case 'sabotage' | 'meltdown':
-				gfVersion = 'ggf';
+		
 		}
 
 		if (curStage == 'limo')
@@ -5137,9 +5030,6 @@ class PlayState extends MusicBeatState
 				dad.x -= 50;
 				dad.y += 230;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'meowser':
-				dad.x -= 300;
-				dad.y += 50;
 			case 'neko-schizo':
 				dad.x += 50;
 				dad.y += 230;
@@ -5364,16 +5254,6 @@ class PlayState extends MusicBeatState
 			case 'tabi-crazy':
 				dad.x -= 300;
 				dad.y += 50;
-			case 'impostor':
-				camPos.y += -200;
-				camPos.x += 400;
-				dad.x -= 200;
-				dad.y += 350;
-			case 'impostor2':
-				camPos.y += -200;
-				camPos.x += 400;
-				dad.x -= 200;
-				dad.y += 350;
 			case 'detra':
 				dad.x = 140;
 				dad.y = 280;
@@ -5393,8 +5273,8 @@ class PlayState extends MusicBeatState
 				{
 				//gf.y += 10;
 				//gf.x -= 30;
-				gf.y += -155;
-				gf.x -= 90;
+				gf.y += 15;
+				gf.x += 90;
 				boyfriend.x += 40;
 				}
 
@@ -5747,10 +5627,7 @@ class PlayState extends MusicBeatState
 				var tabiTrail = new FlxTrail(dad, null, 4, 24, 0.6, 0.9);
 
 				add(tabiTrail);
-			case 'meltdown':
-				gf.y -= 100;
-			case 'sabotage':
-				gf.y -= 100;
+	
 			case 'garAlleyDead':
 				// evilTrail.changeValuesEnabled(false, false, false, false);
 				// evilTrail.changeGraphic()
@@ -5846,8 +5723,7 @@ class PlayState extends MusicBeatState
 		deadass.antialiasing = ClientPrefs.globalAntialiasing;
 		deadass.scrollFactor.set(1, 1);
 		deadass.active = false;
-		if (curStage == 'meltdown')
-			add(deadass);
+		
 		add(boyfriend);
 		if (curStage == 'tankman1')
 		{
@@ -9349,7 +9225,7 @@ class PlayState extends MusicBeatState
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 				FlxG.sound.music.stop();
 
-				/*MAC REMOVE if (ClientPrefs.week7Cut)	
+				if (ClientPrefs.week7Cut)	
 				{
 					if (SONG.song == 'Guns')
 						LoadingState.loadAndSwitchState(new VideoState("assets/videos/gunsCutscene.webm", new PlayState()));
@@ -9359,7 +9235,7 @@ class PlayState extends MusicBeatState
 						showCutscene = true;
 						LoadingState.loadAndSwitchState(new PlayState());
 				}
-				else*/
+				else
 					showCutscene = true;
 					LoadingState.loadAndSwitchState(new PlayState());
 			}
@@ -11190,17 +11066,8 @@ class PlayState extends MusicBeatState
 			notes.sort(FlxSort.byY, FlxSort.DESCENDING);
 		}
 
-		if (curStage == 'meltdown')
-		{
-			crowd.dance();
-		}
 
-		var sussusBeats = [94, 95, 288, 296, 304, 312, 318, 319];
-		var saboBeats = [16, 24, 32, 40, 48, 56, 62, 63, 272, 280, 288, 296, 302, 303, 376, 384, 892];
-		var meltBeats = [
-			0, 16, 32, 48, 64, 72, 80, 88, 96, 104, 112, 120, 126, 127, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 382, 464,
-			480, 496, 512
-		];
+	
 		var _b = 0;
 		// FlxG.watch.addQuick("Flash Timer", _cb); debug stuff
 
@@ -11208,80 +11075,7 @@ class PlayState extends MusicBeatState
 		flashSprite.alpha = 0;
 		flashSprite.scrollFactor.set(0, 0);
 
-		if (curSong == 'Sussus-Moogus') // sussus flashes
-		{
-			if (curBeat == 97 || curBeat == 192 || curBeat == 320)
-				_cb = 1;
-			if (curBeat > 98 && curBeat < 160 || curBeat > 192 && curBeat < 224 || curBeat > 320 && curBeat < 382 || curBeat == 98 || curBeat == 160
-				|| curBeat == 192 || curBeat == 224 || curBeat == 320 || curBeat == 382)
-			{
-				_cb++;
-				if (_cb == 2)
-				{
-					bgFlash();
-					_cb = 0;
-				}
-			}
-			while (_b < sussusBeats.length)
-			{
-				var susflash = sussusBeats[_b];
-				++_b;
-				if (curBeat == susflash)
-				{
-					bgFlash();
-				}
-			}
-		}
-		if (curSong == 'Sabotage') // sabotage flashes
-		{
-			while (_b < saboBeats.length)
-			{
-				var sabflash = saboBeats[_b];
-				++_b;
-				if (curBeat == sabflash)
-				{
-					bgFlash();
-				}
-			}
-
-			if (curBeat == 63 || curBeat == 304)
-				_cb = 3;
-			if (curBeat > 64 && curBeat < 124 || curBeat > 304 && curBeat < 370 || curBeat == 64 || curBeat == 124 || curBeat == 304 || curBeat == 370)
-			{
-				_cb++;
-				if (_cb == 4)
-				{
-					bgFlash();
-					_cb = 0;
-				}
-			}
-		}
-		if (curSong == 'Meltdown') // meltdown flashes
-		{
-			while (_b < meltBeats.length)
-			{
-				var meltflash = meltBeats[_b];
-				++_b;
-				if (curBeat == meltflash)
-				{
-					bgFlash();
-				}
-			}
-			if (curBeat == 127)
-				_cb = 3;
-			if (curBeat == 382)
-				_cb = 1;
-			if (curBeat > 128 && curBeat < 192 || curBeat > 382 && curBeat < 448 || curBeat == 128 || curBeat == 192 || curBeat == 382 || curBeat == 448)
-			{
-				_cb++;
-				if (_cb == 4)
-				{
-					bgFlash();
-					_cb = 0;
-				}
-			}
-		}
-
+		
 		if (curBeat == 326 && SONG.song == 'Extremus')
 		{
 			dreamOneBG.alpha = 0;

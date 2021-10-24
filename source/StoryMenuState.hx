@@ -495,7 +495,7 @@ class StoryMenuState extends MusicBeatState
 
 
 			LoadingState.loadAndSwitchState(new PlayState(), true);
-			/*MAC REMOVE if (curWeek == 7 && ClientPrefs.week7Cut)
+			 if (curWeek == 7 && ClientPrefs.week7Cut)
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
 					LoadingState.loadAndSwitchState(new VideoState("assets/videos/ughCutscene.webm", new PlayState()));
@@ -504,7 +504,7 @@ class StoryMenuState extends MusicBeatState
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
 					LoadingState.loadAndSwitchState(new PlayState(), true);
-				});*/
+				});
 
 
 
