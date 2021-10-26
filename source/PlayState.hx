@@ -1024,14 +1024,57 @@ class PlayState extends MusicBeatState
 			limo.animation.addByPrefix('drive', "Limo stage", 24);
 			limo.animation.play('drive');
 			limo.antialiasing = ClientPrefs.globalAntialiasing;
-		
+		case 'ex-girlfriend':
+			curStage = 'limo-ex';
+			defaultCamZoom = 0.90;
+
+			var skyBG:FlxSprite = new FlxSprite(-120, -50).loadGraphic(Paths.image('exgf/limo/limoSunset'));
+			skyBG.scrollFactor.set(0.1, 0.1);
+			add(skyBG);
+
+			var bgLimo:FlxSprite = new FlxSprite(-200, 480);
+			bgLimo.frames = Paths.getSparrowAtlas('exgf/limo/bgLimo');
+			bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
+			bgLimo.animation.play('drive');
+			bgLimo.scrollFactor.set(0.4, 0.4);
+			add(bgLimo);
+
+			grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
+			add(grpLimoDancers);
+
+			for (i in 0...5)
+			{
+				var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 130, bgLimo.y - 400);
+				dancer.scrollFactor.set(0.4, 0.4);
+				grpLimoDancers.add(dancer);
+			}
+
+			var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('exgf/limo/limoOverlay'));
+			overlayShit.alpha = 0.5;
+			// add(overlayShit);
+
+			// var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
+
+			// FlxG.camera.setFilters([new ShaderFilter(cast shaderBullshit.shader)]);
+
+			// overlayShit.shader = shaderBullshit;
+
+			var limoTex = Paths.getSparrowAtlas('exgf/limo/limoDrive');
+
+			limo = new FlxSprite(-120, 550);
+			limo.frames = limoTex;
+			limo.animation.addByPrefix('drive', "Limo stage", 24);
+			limo.animation.play('drive');
+			limo.antialiasing = ClientPrefs.globalAntialiasing;
+
+			fastCar = new FlxSprite(-300, 160).loadGraphic(Paths.image('exgf/limo/fastCarLol'));
+			
 		case 'milf'
 			| 'satin-panties'
 			| 'high'
 			| 'milf-duet'
 			| 'satin-panties-duet'
-			| 'high-duet'
-			|'ex-girlfriend':
+			| 'high-duet':
 		
 			curStage = 'limo';
 			defaultCamZoom = 0.90;
@@ -2816,7 +2859,7 @@ class PlayState extends MusicBeatState
 
 			tstatic.alpha = 0;
 
-			var bg:FlxSprite = new FlxSprite(-350, -300).loadGraphic(Paths.image('red', 'clown'));
+			var bg:FlxSprite = new FlxSprite(-350, -300).loadGraphic(Paths.image('tricky/red'));
 			// bg.setGraphicSize(Std.int(bg.width * 2.5));
 			// bg.updateHitbox();
 			bg.antialiasing = ClientPrefs.globalAntialiasing;
@@ -2825,10 +2868,10 @@ class PlayState extends MusicBeatState
 			if (SONG.song.toLowerCase() != 'madness')
 			{
 				add(bg);
-				stageFront = new FlxSprite(-1100, -460).loadGraphic(Paths.image('island_but_dumb', 'clown'));
+				stageFront = new FlxSprite(-1100, -460).loadGraphic(Paths.image('tricky/island_but_dumb'));
 			}
 			else
-				stageFront = new FlxSprite(-1100, -460).loadGraphic(Paths.image('island_but_rocks_float', 'clown'));
+				stageFront = new FlxSprite(-1100, -460).loadGraphic(Paths.image('tricky/island_but_rocks_float'));
 
 			stageFront.setGraphicSize(Std.int(stageFront.width * 1.4));
 			stageFront.antialiasing = ClientPrefs.globalAntialiasing;
@@ -2836,7 +2879,7 @@ class PlayState extends MusicBeatState
 			stageFront.active = false;
 			add(stageFront);
 
-			MAINLIGHT = new FlxSprite(-470, -150).loadGraphic(Paths.image('hue', 'clown'));
+			MAINLIGHT = new FlxSprite(-470, -150).loadGraphic(Paths.image('tricky/hue'));
 			MAINLIGHT.alpha - 0.3;
 			MAINLIGHT.setGraphicSize(Std.int(MAINLIGHT.width * 0.9));
 			MAINLIGHT.blend = "screen";
@@ -4837,6 +4880,9 @@ class PlayState extends MusicBeatState
 
 		if (curStage == 'limo')
 			gfVersion = 'gf-car';
+		if (curStage == 'limo-ex')
+			gfVersion = 'gf-car';
+
 
 		if (curStage == 'limo-b3')
 			gfVersion = 'gf-car-b3';
@@ -5334,6 +5380,14 @@ class PlayState extends MusicBeatState
 				gf.scale.x -= 0.1;
 				gf.scale.y -= 0.1;
 				gf.scrollFactor.set(0.4, 0.4);
+			case 'limo-ex':
+				boyfriend.y -= 220;
+				boyfriend.x += 260;
+				gf.y += 80;
+				gf.x += 80;
+				gf.scale.x -= 0.1;
+				gf.scale.y -= 0.1;
+				gf.scrollFactor.set(0.4, 0.4);
 			case 'destroyedpaper':
 				var sketchyTrail = new FlxTrail(dad, null, 4, 16, 0.25, 0.080);
 				add(sketchyTrail);
@@ -5677,6 +5731,11 @@ class PlayState extends MusicBeatState
 			add(gf);
 			add(limo);
 		}
+		if (curStage == 'limo-ex')
+			{
+				add(gf);
+				add(limo);
+			}
 		if (curStage == 'touhou')
 		{
 			add(gf);
@@ -5841,17 +5900,22 @@ class PlayState extends MusicBeatState
 		cutsceneOp = data.getCutscenes();
 		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
 		strumLine.scrollFactor.set();
+
 		if (ClientPrefs.downScroll)
 		strumLine = new FlxSprite(10, 600).makeGraphic(FlxG.width, 10);
-		strumLine.scrollFactor.set();
-		strumLineNotes = new FlxTypedGroup<FlxSprite>();
-		add(strumLineNotes);
-		if (ClientPrefs.middleScroll)
+		
+
+		if (ClientPrefs.middleScroll && ClientPrefs.downScroll)
 		// my nuts hurt
-		strumLine = new FlxSprite(-278, 50).makeGraphic(FlxG.width, 10);
-		strumLine.scrollFactor.set();
-		strumLineNotes = new FlxTypedGroup<FlxSprite>();
-		add(strumLineNotes);
+		strumLine = new FlxSprite(-278, 600).makeGraphic(FlxG.width, 10);
+		
+		else if  (ClientPrefs.middleScroll)
+			strumLine = new FlxSprite(10, 50).makeGraphic(FlxG.width, 10);
+
+			strumLine.scrollFactor.set();
+			strumLineNotes = new FlxTypedGroup<FlxSprite>();
+			add(strumLineNotes);
+
 		if (ClientPrefs.noteSplashes)
 		{
 		add(grpNoteSplashes);
@@ -8525,6 +8589,8 @@ class PlayState extends MusicBeatState
 					case 'limo-salty':
 						camFollow.x = boyfriend.getMidpoint().x - 300;
 					case 'limo-b':
+						camFollow.x = boyfriend.getMidpoint().x - 300;
+					case 'limo-ex':
 						camFollow.x = boyfriend.getMidpoint().x - 300;
 					case 'festival':
 						camFollow.x = FlxMath.lerp(camFollow.x, boyfriend.getMidpoint().x - 202.33, 0.5);
@@ -11535,6 +11601,11 @@ class PlayState extends MusicBeatState
 				{
 					dancer.dance();
 				});
+				case 'limo-ex':
+					grpLimoDancers.forEach(function(dancer:BackgroundDancer)
+					{
+						dancer.dance();
+					});
 
 			case "philly":
 				if (!trainMoving)
