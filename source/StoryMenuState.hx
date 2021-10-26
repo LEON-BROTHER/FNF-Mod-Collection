@@ -494,11 +494,11 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignScore = 0;
 
 
-			LoadingState.loadAndSwitchState(new PlayState(), true);
+			
 			 if (curWeek == 7 && ClientPrefs.week7Cut)
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
-					LoadingState.loadAndSwitchState(new VideoState("assets/videos/ughCutscene.webm", new PlayState()));
+					LoadingState.loadAndSwitchState(new VideoState("videos/ughCutscene.webm", new PlayState()));
 				});
 			else
 				new FlxTimer().start(1, function(tmr:FlxTimer)

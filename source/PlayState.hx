@@ -7852,25 +7852,25 @@ class PlayState extends MusicBeatState
 							babyArrow.animation.add('confirm', [15, 19], 24, false);
 					}
 				default:
-					if (NoteSkinState.neo == 1)
+					if (NoteSkinState.sel == "Neo")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-neo');
-					if (NoteSkinState.xe == 1)
+					if (NoteSkinState.sel == "X-Event")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-xe');
-					if (NoteSkinState.normal == 1)
+					if (NoteSkinState.sel == "Normal")
 						babyArrow.frames = Paths.getSparrowAtlas('shaggy/NOTE_assets-shaggy');
-					if (NoteSkinState.star == 1)
+					if (NoteSkinState.sel == "Starcatcher")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-star');
-					if (NoteSkinState.sarv == 1)
+					if (NoteSkinState.sel == "Sarv-Notes")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets2');
-					if (NoteSkinState.beats == 1)
+					if (NoteSkinState.sel == "Beatstreets")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-beats');
-					if (NoteSkinState.tabi == 1)
+					if (NoteSkinState.sel == "Tabi-Notes")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-tabi');
-					if (NoteSkinState.starlight == 1)
+					if (NoteSkinState.sel == "Starlight-Notes")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-starlight');
-					if (NoteSkinState.kapi == 1)
+					if (NoteSkinState.sel == "Kapi-Notes")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-kapi');
-					if (NoteSkinState.agoti == 1)
+					if (NoteSkinState.sel == "Agoti-Notes")
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets-agoti');
 					babyArrow.animation.addByPrefix('green', 'arrowUP');
 					babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
@@ -9104,6 +9104,11 @@ class PlayState extends MusicBeatState
 									{
 										vocals.volume = 1;
 										HealthDrain();
+									}
+							else if (daNote.noteType == 3 && curStage != 'festival')
+									{
+										vocals.volume = 1;
+									
 									}
 							else if (daNote.noteType == 10 && curStage != 'festival')
 										{
