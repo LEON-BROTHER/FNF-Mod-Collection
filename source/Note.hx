@@ -151,25 +151,25 @@ class Note extends FlxSprite
 				updateHitbox();
 			
 			default:
-				if (NoteSkinState.neo == 1)
+				if (NoteSkinState.sel == "Neo")
 					frames = Paths.getSparrowAtlas('NOTE_assets-neo');
-				if (NoteSkinState.xe == 1)
+				if (NoteSkinState.sel == "X-Event")
 					frames = Paths.getSparrowAtlas('NOTE_assets-xe');
-				if (NoteSkinState.normal == 1)
+				if (NoteSkinState.sel == "Normal")
 					frames = Paths.getSparrowAtlas('shaggy/NOTE_assets-shaggy');
-				if (NoteSkinState.star == 1)
+				if (NoteSkinState.sel == "Starcatcher")
 					frames = Paths.getSparrowAtlas('NOTE_assets-star');
-				if (NoteSkinState.sarv == 1)
+				if (NoteSkinState.sel == "Sarv-Notes")
 					frames = Paths.getSparrowAtlas('NOTE_assets2');
-				if (NoteSkinState.beats == 1)
+				if (NoteSkinState.sel == "Beatstreets")
 					frames = Paths.getSparrowAtlas('NOTE_assets-beats');
-				if (NoteSkinState.tabi == 1)
+				if (NoteSkinState.sel == "Tabi-Notes")
 					frames = Paths.getSparrowAtlas('NOTE_assets-tabi');
-				if (NoteSkinState.starlight == 1)
+				if (NoteSkinState.sel == "Starlight-Notes")
 					frames = Paths.getSparrowAtlas('NOTE_assets-starlight');
-				if (NoteSkinState.kapi == 1)
+				if (NoteSkinState.sel == "Kapi-Notes")
 					frames = Paths.getSparrowAtlas('NOTE_assets-kapi');
-				if (NoteSkinState.agoti == 1)
+				if (NoteSkinState.sel == "Agoti-Notes")
 					frames = Paths.getSparrowAtlas('NOTE_assets-agoti');
 				if (NoteSkinState.sketchy == 1)
 					frames = Paths.getSparrowAtlas('NOTE_assets-sketchy');

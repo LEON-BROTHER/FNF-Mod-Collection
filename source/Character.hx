@@ -2059,7 +2059,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			case 'ex-gf':
-				tex = Paths.getSparrowAtlas('momCar');
+				tex = Paths.getSparrowAtlas('exgf/momCar');
 				frames = tex;
 
 				animation.addByPrefix('idle', "Mom Idle", 24, false);
@@ -2267,7 +2267,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'ronald':
-				tex = Paths.getSparrowAtlas('ronald');
+				tex = Paths.getSparrowAtlas('ronald/ronald');
 				frames = tex;
 				animation.addByPrefix('idle', 'monster idle', 24, false);
 				animation.addByPrefix('singUP', 'monster up note', 24, false);
@@ -2297,7 +2297,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN", -40, -94);
 				playAnim('idle');
 			case 'tricky':
-				tex = Paths.getSparrowAtlas('tricky');
+				tex = Paths.getSparrowAtlas('tricky/tricky');
 				frames = tex;
 				animation.addByPrefix('idle', 'Idle', 24, false);
 				animation.addByPrefix('singUP', 'Sing Up', 24, false);
@@ -2327,7 +2327,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN", -20, 20);
 				playAnim('idle');
 			case 'trickyMask':
-				tex = Paths.getSparrowAtlas('TrickyMask');
+				tex = Paths.getSparrowAtlas('tricky/TrickyMask');
 				frames = tex;
 				animation.addByPrefix('idle', 'Idle', 24, false);
 				animation.addByPrefix('singUP', 'Sing Up', 24, false);

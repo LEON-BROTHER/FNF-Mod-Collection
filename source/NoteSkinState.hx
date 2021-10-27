@@ -38,19 +38,8 @@ class NoteSkinState extends MusicBeatState
 
 	public var pauseMusic:FlxSound;
 
-	public static var normal:Int = 1;
-	public static var neo:Int = 0;
-	public static var xe:Int = 0;
-	public static var star:Int = 0;
-	public static var sarv:Int = 0;
-	public static var beats:Int = 0;
-	public static var tabi:Int = 0;
-	public static var starlight:Int = 0;
-	public static var kapi:Int = 0;
-	public static var agoti:Int = 0;
-	public static var sketchy:Int = 0;
 	public static var keys:FlxText;
-	public static var sel:String = "Normal";
+	public static var sel:String = ClientPrefs.noteskin;
 
 	public var strumLine:FlxSprite;
 	public var strumLineNotes:FlxTypedGroup<FlxSprite>;
@@ -135,6 +124,7 @@ class NoteSkinState extends MusicBeatState
 
 		if (controls.BACK)
 		{
+			ClientPrefs.saveSettings();
 			FlxG.switchState(new OptionsMenuState());
 		}
 		if (accepted)
@@ -144,17 +134,6 @@ class NoteSkinState extends MusicBeatState
 			switch (daSelected)
 			{
 				case "Normal":
-					normal = 1;
-					neo = 0;
-					xe = 0;
-					star = 0;
-					beats = 0;
-					sarv = 0;
-					tabi = 0;
-					starlight = 0;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 0;
 					sel = "Normal";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -163,17 +142,6 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Neo":
-					normal = 0;
-					neo = 1;
-					xe = 0;
-					star = 0;
-					sarv = 0;
-					beats = 0;
-					tabi = 0;
-					starlight = 0;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 0;
 					sel = "Neo";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -182,17 +150,7 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "X-Event":
-					normal = 0;
-					neo = 0;
-					star = 0;
-					xe = 1;
-					sarv = 0;
-					beats = 0;
-					tabi = 0;
-					starlight = 0;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 0;
+				
 					sel = "X-Event";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -201,17 +159,7 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Starcatcher":
-					normal = 0;
-					neo = 0;
-					star = 1;
-					xe = 0;
-					sarv = 0;
-					beats = 0;
-					tabi = 0;
-					starlight = 0;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 0;
+					
 					sel = "Starcatcher";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -220,17 +168,7 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Beatstreets":
-					normal = 0;
-					neo = 0;
-					star = 0;
-					xe = 0;
-					sarv = 0;
-					beats = 1;
-					tabi = 0;
-					starlight = 0;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 0;
+					
 					sel = "Beatstreets";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -239,17 +177,7 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Sarv-Notes":
-					normal = 0;
-					neo = 0;
-					star = 0;
-					xe = 0;
-					sarv = 1;
-					beats = 0;
-					tabi = 0;
-					starlight = 0;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 0;
+					
 					sel = "Sarv-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -258,17 +186,7 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Tabi-Notes":
-					normal = 0;
-					neo = 0;
-					star = 0;
-					xe = 0;
-					sarv = 0;
-					beats = 0;
-					tabi = 1;
-					starlight = 0;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 0;
+					
 					sel = "Tabi-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -277,17 +195,7 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Starlight-Notes":
-					normal = 0;
-					neo = 0;
-					star = 0;
-					xe = 0;
-					sarv = 0;
-					beats = 0;
-					tabi = 0;
-					starlight = 1;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 0;
+					
 					sel = "Starlight-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -296,17 +204,7 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Kapi-Notes":
-					normal = 0;
-					neo = 0;
-					star = 0;
-					xe = 0;
-					sarv = 0;
-					beats = 0;
-					tabi = 0;
-					starlight = 0;
-					kapi = 1;
-					agoti = 0;
-					sketchy = 0;
+					
 					sel = "Kapi-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -315,17 +213,7 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Agoti-Notes":
-					normal = 0;
-					neo = 0;
-					star = 0;
-					xe = 0;
-					sarv = 0;
-					beats = 0;
-					tabi = 0;
-					starlight = 0;
-					kapi = 0;
-					agoti = 1;
-					sketchy = 0;
+					
 					sel = "Agoti-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;
@@ -334,17 +222,6 @@ class NoteSkinState extends MusicBeatState
 					keys.updateHitbox();
 					add(keys);
 				case "Sketchy-Notes":
-					normal = 0;
-					neo = 0;
-					star = 0;
-					xe = 0;
-					sarv = 0;
-					beats = 0;
-					tabi = 0;
-					starlight = 0;
-					kapi = 0;
-					agoti = 0;
-					sketchy = 1;
 					sel = "Sketchy-Notes";
 					FlxTween.tween(keys, {alpha: 1, y: 0}, 0.4, {ease: FlxEase.quartInOut});
 					keys.text = "CurSelected: " + sel;

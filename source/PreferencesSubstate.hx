@@ -39,9 +39,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'OTHER',
 		'Freeplay Cutscenes',
 		'Character Changing',
-		/*MAC REMOVE
+		
 		'Week 7 Cutscenes',
-		*/
+	
 		'Bob Crashing'
 
 	];
