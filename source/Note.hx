@@ -171,7 +171,7 @@ class Note extends FlxSprite
 					frames = Paths.getSparrowAtlas('NOTE_assets-kapi');
 				if (NoteSkinState.sel == "Agoti-Notes")
 					frames = Paths.getSparrowAtlas('NOTE_assets-agoti');
-				if (NoteSkinState.sketchy == 1)
+				if (NoteSkinState.sel == "Sketchy-Notes")
 					frames = Paths.getSparrowAtlas('NOTE_assets-sketchy');
 
 				if (mania == 1 || mania == 2)
