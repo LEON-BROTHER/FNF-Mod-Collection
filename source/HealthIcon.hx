@@ -72,7 +72,7 @@ class HealthIcon extends FlxSprite
 					animation.add('gf', [16], 0, false, isPlayer);
 					animation.add('gf-sketch', [16], 0, false, isPlayer);
 					animation.add('gf-b3', [200], 0, false, isPlayer);
-					animation.add('parents-christmas', [17], 0, false, isPlayer);
+					animation.add('parents-christmas', [17,18], 0, false, isPlayer);
 					animation.add('parents-christmas-b3', [201, 202], 0, false, isPlayer);
 					animation.add('monster', [19, 20], 0, false, isPlayer);
 					animation.add('monster-christmas', [19, 20], 0, false, isPlayer);
@@ -123,7 +123,6 @@ class HealthIcon extends FlxSprite
 					animation.add('miku-mad', [78, 79], 0, false, isPlayer);
 					animation.add('xchara', [97, 96], 0, false, isPlayer);
 					animation.add('touhou', [80, 81], 0, false, isPlayer);
-					animation.add('brother', [82, 83], 0, false, isPlayer);
 					animation.add('bf-star', [84, 85], 0, false, isPlayer);
 					animation.add('gf-star', [86, 87], 0, false, isPlayer);
 					animation.add('dad-star', [88, 89], 0, false, isPlayer);
@@ -136,10 +135,10 @@ class HealthIcon extends FlxSprite
 					animation.add('xgaster', [100, 101], 0, false, isPlayer);
 					animation.add('matt', [102, 103], 0, false, isPlayer);
 					animation.add('mattmad', [102, 103], 0, false, isPlayer);
-					animation.add('sarvente-dark', [73, 74], 0, false, isPlayer);
+					animation.add('sarvente-dark', [104, 105], 0, false, isPlayer);
 					animation.add('bf-dark', [106, 107], 0, false, isPlayer);
 					animation.add('ruv', [108, 109], 0, false, isPlayer);
-					animation.add('luci-sarv', [110, 111], 0, false, isPlayer);
+					animation.add('sarvente-lucifer', [110, 111], 0, false, isPlayer);
 					animation.add('bfmii', [0, 1], 0, false, isPlayer);
 					animation.add('bf-beat', [112, 113], 0, false, isPlayer);
 					animation.add('dad-beat', [118, 119], 0, false, isPlayer);
@@ -240,9 +239,7 @@ class HealthIcon extends FlxSprite
 						animation.add('cj', [2, 3], 0, false, isPlayer);
 						animation.add('ruby', [4, 5], 0, false, isPlayer);
 						animation.add('duet', [6, 7], 0, false, isPlayer);
-						animation.add('bowserhead', [8, 9], 13, false, isPlayer);
-						animation.add('meowser', [8, 9], 13, false, isPlayer);
-						animation.add('catshine', [8, 9], 13, false, isPlayer);
+						animation.add('sonic', [8, 9], 0, false, isPlayer);
 						animation.add('playablesenpai', [16, 17], 0, false, isPlayer);
 						animation.add('monika', [10, 11], 0, false, isPlayer);
 						animation.add('monika-senpai', [12, 13], 0, false, isPlayer);
@@ -269,9 +266,7 @@ class HealthIcon extends FlxSprite
 					animation.add('cj', [2, 3], 0, false, isPlayer);
 					animation.add('ruby', [4, 5], 0, false, isPlayer);
 					animation.add('duet', [6, 7], 0, false, isPlayer);
-					animation.add('bowserhead', [8, 9], 13, false, isPlayer);
-					animation.add('meowser', [8, 9], 13, false, isPlayer);
-					animation.add('catshine', [8, 9], 13, false, isPlayer);
+					animation.add('sonic', [9, 8], 13, false, isPlayer);
 					animation.add('playablesenpai', [16, 17], 0, false, isPlayer);
 					animation.add('monika', [10, 11], 0, false, isPlayer);
 					animation.add('monika-senpai', [12, 13], 0, false, isPlayer);
@@ -300,6 +295,9 @@ class HealthIcon extends FlxSprite
 					animation.add('cheese-cultured', [48, 49], 0, false, isPlayer);
 					animation.add('zardyButDARK', [50, 51], 0, false, isPlayer);
 					animation.add('cableCrowPog', [52, 53], 0, false, isPlayer);
+					animation.add('sunky', [54, 55], 0, false, isPlayer);
+					animation.add('sonicfun', [56, 57], 0, false, isPlayer);
+					animation.add('sonicLordX', [58, 59], 0, false, isPlayer);
 
 					
 

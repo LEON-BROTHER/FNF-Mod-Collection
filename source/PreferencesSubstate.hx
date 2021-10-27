@@ -37,7 +37,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		#end
 		,'',
 		'OTHER',
-		
+		'Freeplay Cutscenes',
 		'Character Changing',
 		/*MAC REMOVE
 		'Week 7 Cutscenes',
@@ -157,6 +157,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 					ClientPrefs.week7Cut = !ClientPrefs.week7Cut;
 				case 'Character Changing':
 					ClientPrefs.characterchange = !ClientPrefs.characterchange;
+				case 'Freeplay Cutscenes':
+					ClientPrefs.freeplayscenes = !ClientPrefs.freeplayscenes;
 
 				
 
@@ -236,6 +238,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				descText.text = "If checked, the Game will crash if you die in the song: RUN!";
 			case 'Character Changing':
 				descText.text = "If checked, some Characters will change in some songs.";
+			case 'Freeplay Cutscenes':
+				descText.text = "If checked, allows cutscenes to play in freeplay.";
 		}
 
 		var bullShit:Int = 0;
@@ -312,7 +316,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 							daValue = ClientPrefs.bobcrash;
 						case 'Character Changing':
 							daValue = ClientPrefs.characterchange;
-						
+						case 'Freeplay Cutscenes':
+							daValue = ClientPrefs.freeplayscenes;
+
 					}
 					checkbox.set_daValue(daValue);
 					break;

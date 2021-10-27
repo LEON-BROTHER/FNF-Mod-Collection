@@ -171,6 +171,8 @@ class Note extends FlxSprite
 					frames = Paths.getSparrowAtlas('NOTE_assets-kapi');
 				if (NoteSkinState.agoti == 1)
 					frames = Paths.getSparrowAtlas('NOTE_assets-agoti');
+				if (NoteSkinState.sketchy == 1)
+					frames = Paths.getSparrowAtlas('NOTE_assets-sketchy');
 
 				if (mania == 1 || mania == 2)
 					frames = Paths.getSparrowAtlas('shaggy/NOTE_assets-shaggy');
@@ -212,6 +214,30 @@ class Note extends FlxSprite
 				animation.addByPrefix('purpleScroll', 'vertedLeft');
 
 				
+				updateHitbox();
+				antialiasing = true;
+					}
+				else if (noteType == 12)
+					{
+					frames = Paths.getSparrowAtlas('sonic/staticNotes');
+
+				animation.addByPrefix('greenScroll', 'green static');
+				animation.addByPrefix('redScroll', 'red static');
+				animation.addByPrefix('blueScroll', 'blue static');
+				animation.addByPrefix('purpleScroll', 'purple static');
+ 
+				animation.addByPrefix('purpleholdend', 'pruple end hold');
+				animation.addByPrefix('greenholdend', 'green hold end');
+				animation.addByPrefix('redholdend', 'red hold end');
+				animation.addByPrefix('blueholdend', 'blue hold end');
+ 
+				animation.addByPrefix('purplehold', 'purple hold piece');
+				animation.addByPrefix('greenhold', 'green hold piece');
+				animation.addByPrefix('redhold', 'red hold piece');
+				animation.addByPrefix('bluehold', 'blue hold piece');
+ 
+				setGraphicSize(Std.int(width * 0.9));
+								
 				updateHitbox();
 				antialiasing = true;
 					}

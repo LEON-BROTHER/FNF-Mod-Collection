@@ -24,7 +24,7 @@ class ChangePlayerState extends MusicBeatState
 {
 	var bflist:Array<String> = [
 		'bf', 'bf-christmas', 'bf-pixel', 'bf-holding-gf', 'bf-b', 'bf-christmas-b', 'bf-pixel-b', 'bf-neo', 'bf-minus', 'bf-minus-beta', 'bf-minus-blue',
-		'ena', 'ena-christmas', 'ena-pixel', 'bf-rs', 'bf-christmas-rs', 'bf-pixel-rs', 'bf-star', 'bf-reanim', 'bf-christmas-reanim', 'bf-b3',
+		'ena', 'ena-christmas', 'ena-pixel', 'bf-star', 'bf-reanim', 'bf-christmas-reanim', 'bf-b3',
 		'bf-christmas-b3', 'bf-pixel-b3', 'bf-salty', 'bf-christmas-salty', 'bf-pixel-salty', 'bf-fresh', 'bf-mii', 'bf-sonic', 'bf-sonic-christmas',
 		'bf-pixel-sonic'
 	];
@@ -132,38 +132,32 @@ class ChangePlayerState extends MusicBeatState
 				case 13:
 					character.animation.play('bfEnaPixel_select');
 				case 14:
-					character.animation.play('bfRs_select');
-				case 15:
-					character.animation.play('bfRsChristmas_select');
-				case 16:
-					character.animation.play('bfRsPixel_select');
-				case 17:
 					character.animation.play('bfStar_select');
-				case 18:
+				case 15:
 					character.animation.play('bfReanim_select');
-				case 19:
+				case 16:
 					character.animation.play('bfReanimChristmas_select');
-				case 20:
+				case 17:
 					character.animation.play('bfB3_select');
-				case 21:
+				case 18:
 					character.animation.play('bfB3Christmas_select');
-				case 22:
+				case 19:
 					character.animation.play('bfB3Pixel_select');
-				case 23:
+				case 20:
 					character.animation.play('bfSalty_select');
-				case 24:
+				case 21:
 					character.animation.play('bfSaltyChristmas_select');
-				case 25:
+				case 22:
 					character.animation.play('bfSaltyPixel_select');
-				case 26:
+				case 23:
 					character.animation.play('bfFresh_select');
-				case 27:
+				case 24:
 					character.animation.play('bfMii_select');
-				case 28:
+				case 25:
 					character.animation.play('bfSonic_select');
-				case 29:
+				case 26:
 					character.animation.play('bfSonicChristmas_select');
-				case 30:
+				case 27:
 					character.animation.play('bfSonicPixel_select');
 				default:
 					character.animation.play('bf_select');
@@ -575,84 +569,6 @@ class ChangePlayerState extends MusicBeatState
 				remove(BG);
 
 				character = new FlxSprite(0, 0);
-				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/retrospecter/BOYFRIEND-rs.png',
-					'assets/images/charSelect/characters/retrospecter/BOYFRIEND-rs.xml');
-
-				character.animation.addByPrefix('bfRs_idle', 'BF idle dance', 24);
-				character.animation.addByPrefix('bfRs_select', 'BF HEY!!', 24);
-
-				character.antialiasing = false;
-
-				character.updateHitbox();
-
-				character.setGraphicSize(Std.int(275));
-
-				character.x = (FlxG.width / 2) - (character.width / 2);
-				character.y = (FlxG.height / 2) - (character.height / 2);
-
-				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG0.png');
-
-				add(BG);
-				add(character);
-
-				character.animation.play('bfRs_idle');
-			case 15:
-				remove(character);
-				remove(BG);
-
-				character = new FlxSprite(0, 0);
-				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/retrospecter/bfChristmas-rs.png',
-					'assets/images/charSelect/characters/retrospecter/bfChristmas-rs.xml');
-
-				character.animation.addByPrefix('bfRsChristmas_idle', 'BF idle dance', 24);
-				character.animation.addByPrefix('bfRsChristmas_select', 'BF HEY!!', 24);
-
-				character.antialiasing = false;
-
-				character.updateHitbox();
-
-				character.setGraphicSize(Std.int(275));
-
-				character.x = (FlxG.width / 2) - (character.width / 2);
-				character.y = (FlxG.height / 2) - (character.height / 2);
-
-				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG0.png');
-
-				add(BG);
-				add(character);
-
-				character.animation.play('bfRsChristmas_idle');
-			case 16:
-				remove(character);
-				remove(BG);
-
-				character = new FlxSprite(0, 0);
-				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/retrospecter/bfPixel-rs.png',
-					'assets/images/charSelect/characters/retrospecter/bfPixel-rs.xml');
-
-				character.animation.addByPrefix('bfRsPixel_idle', 'BF IDLE', 24);
-				character.animation.addByPrefix('bfRsPixel_select', 'BF UP NOTE', 24);
-
-				character.antialiasing = false;
-
-				character.updateHitbox();
-
-				character.setGraphicSize(Std.int(275));
-
-				character.x = (FlxG.width / 2) - (character.width / 2);
-				character.y = (FlxG.height / 2) - (character.height / 2);
-
-				BG = new FlxSprite(0, 0).loadGraphic('assets/images/charSelect/bgs/BG0.png');
-
-				add(BG);
-				add(character);
-
-				character.animation.play('bfRsPixel_idle');
-			case 17:
-				remove(character);
-				remove(BG);
-
-				character = new FlxSprite(0, 0);
 				character.frames = FlxAtlasFrames.fromSparrow('assets/images/charSelect/characters/starcatcher/BOYFRIEND-star.png',
 					'assets/images/charSelect/characters/starcatcher/BOYFRIEND-star.xml');
 
@@ -674,7 +590,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfStar_idle');
-			case 18:
+			case 15:
 				remove(character);
 				remove(BG);
 
@@ -700,7 +616,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfReanim_idle');
-			case 19:
+			case 16:
 				remove(character);
 				remove(BG);
 
@@ -726,7 +642,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfReanimChristmas_idle');
-			case 20:
+			case 17:
 				remove(character);
 				remove(BG);
 
@@ -752,7 +668,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfB3_idle');
-			case 21:
+			case 18:
 				remove(character);
 				remove(BG);
 
@@ -778,7 +694,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfB3Christmas_idle');
-			case 22:
+			case 19:
 				remove(character);
 				remove(BG);
 
@@ -804,7 +720,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfB3Pixel_idle');
-			case 23:
+			case 20:
 				remove(character);
 				remove(BG);
 
@@ -830,7 +746,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfSalty_idle');
-			case 24:
+			case 21:
 				remove(character);
 				remove(BG);
 
@@ -856,7 +772,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfSaltyChristmas_idle');
-			case 25:
+			case 22:
 				remove(character);
 				remove(BG);
 
@@ -882,7 +798,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfSaltyPixel_idle');
-			case 26:
+			case 23:
 				remove(character);
 				remove(BG);
 
@@ -908,7 +824,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfFresh_idle');
-			case 27:
+			case 24:
 				remove(character);
 				remove(BG);
 
@@ -934,7 +850,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfMii_idle');
-			case 28:
+			case 25:
 				remove(character);
 				remove(BG);
 
@@ -960,7 +876,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfSonic_idle');
-			case 29:
+			case 26:
 				remove(character);
 				remove(BG);
 
@@ -986,7 +902,7 @@ class ChangePlayerState extends MusicBeatState
 				add(character);
 
 				character.animation.play('bfSonicChristmas_idle');
-			case 30:
+			case 27:
 				remove(character);
 				remove(BG);
 

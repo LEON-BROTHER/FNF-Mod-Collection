@@ -21,6 +21,7 @@ class ClientPrefs {
 	public static var week7Cut:Bool = true;
 	public static var bobcrash:Bool = false;
 	public static var characterchange:Bool = false;
+	public static var freeplayscenes:Bool = false;
 
 	public static var arrowColors:Array<Int> = [0, 0, 0, 0];
 
@@ -59,6 +60,7 @@ class ClientPrefs {
 		FlxG.save.data.week7Cut = week7Cut;
 		FlxG.save.data.bobcrash = bobcrash;
 		FlxG.save.data.characterchange = characterchange;
+		FlxG.save.data.freeplayscenes = freeplayscenes;
 
 
 		
@@ -80,6 +82,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.characterchange != null) {
 			characterchange = FlxG.save.data.characterchange;
+		}
+		if(FlxG.save.data.freeplayscenes != null) {
+			freeplayscenes = FlxG.save.data.freeplayscenes;
 		}
 		if(FlxG.save.data.bobcrash != null) {
 			bobcrash = FlxG.save.data.bobcrash;

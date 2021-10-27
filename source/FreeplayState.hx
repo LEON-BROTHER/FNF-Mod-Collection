@@ -192,6 +192,10 @@ class FreeplayState extends MusicBeatState
 				addWeek(['Fresh-Remix'], 1, ['dad']);
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
 				addWeek(['Always-Running'], 35, ['belle']);
+			if (StoryMenuState.weekUnlocked[36] || isDebug)
+				addWeek(['Shiver'], 2, ['spooky']);
+			if (StoryMenuState.weekUnlocked[37] || isDebug)
+				addWeek(['Eerie'], 2, ['spooky']);
 		}
 		if (CategoryState.playlist == 8)
 		{
@@ -253,7 +257,7 @@ class FreeplayState extends MusicBeatState
 		if (CategoryState.playlist == 16)
 		{
 			if (StoryMenuState.weekUnlocked[32] || isDebug)
-				addWeek(['parish', 'Worship', 'Zavodila', 'Gospel', 'Casanova'], 32, ['sarvente', 'sarvente-dark', 'ruv', 'luci-sarv', 'selever']);
+				addWeek(['parish', 'Worship', 'Zavodila', 'Gospel', 'Casanova'], 32, ['sarvente', 'sarvente-dark', 'ruv', 'sarvente-lucifer', 'selever']);
 		}
 		if (CategoryState.playlist == 17)
 		{
@@ -356,7 +360,7 @@ class FreeplayState extends MusicBeatState
 					'Ballistic-RS', 'Blammed-RS', 'Foolhardy-RS', 'Genocide-RS', 'Glitcher-RS', 'Gospel-RS', 'Lo-Fight-RS', 'RAM-RS', 'Release-RS',
 					'Roses-RS', 'Thorns-RS', 'Zavodila-RS'
 				], 35, [
-					'whitty-crazy', 'pico', 'zardy', 'tabi-crazy', 'hex-hack', 'luci-sarv', 'whitty', 'hex', 'garcellodead', 'senpai-angry', 'spirit', 'ruv'
+					'whitty-crazy', 'pico', 'zardy', 'tabi-crazy', 'hex-hack', 'sarvente-lucifer', 'whitty', 'hex', 'garcellodead', 'senpai-angry', 'spirit', 'ruv'
 				]);
 		}
 
@@ -366,6 +370,12 @@ class FreeplayState extends MusicBeatState
 				addWeek(['Sussus-Moogus', 'Sabotage', 'Meltdown'], 35, ['impostor', 'impostor', 'impostor']);
 		}
 	
+		if (CategoryState.playlist == 41)
+		{
+			if (StoryMenuState.weekUnlocked[35] || isDebug)
+				addWeek(['too-slow', 'endless', 'execution', 'milk'], 35, ['sonic', 'sonicfun', 'sonicLordX', 'sunky']);
+		}
+
 		if (CategoryState.playlist == 35)
 		{
 			if (StoryMenuState.weekUnlocked[35] || isDebug)
@@ -405,11 +415,6 @@ class FreeplayState extends MusicBeatState
 		}
 
 		if (CategoryState.playlist == 40)
-		{
-			if (StoryMenuState.weekUnlocked[35] || isDebug)
-				addWeek(['Medley'], 35, ['meowser']);
-		}
-		if (CategoryState.playlist == 41)
 			{
 				if (StoryMenuState.weekUnlocked[35] || isDebug)
 					addWeek(['High School Conflict', 'bara no yume','Dreams Of Roses', 'Your Demise','Your Reality'], 35, ['monika','duet-m','duet-m','monika-angry','monika']);

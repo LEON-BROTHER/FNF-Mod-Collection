@@ -1033,6 +1033,8 @@ class ChartingState extends MusicBeatState
 			noteType = 10;
 		if (FlxG.keys.pressed.FOUR) //good//
 			noteType = 11;
+		if (FlxG.keys.pressed.FIVE)
+			noteType = 12;
 
 		
 
